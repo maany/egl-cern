@@ -15,10 +15,10 @@ def sites(request):
     return HttpResponse(output.text)
 
 def data_links(request):
-    kml_url = "http://dashb-earth.cern.ch/dashboard/dashb-earth-all.kml"
-    output = requests.get(kml_url)
-    with open("google_earth_kml.xml", "w") as file:
-        file.write(output.text)
+    #kml_url = "http://dashb-earth.cern.ch/dashboard/dashb-earth-all.kml"
+    #output = requests.get(kml_url)
+    #with open("google_earth_kml.xml", "w") as file:
+    #    file.write(output.text)
 
     parsed = ET.parse('google_earth_kml.xml')
     root = parsed.getroot()
