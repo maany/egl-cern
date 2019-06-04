@@ -22,6 +22,7 @@ class EventHubTest(TestCase):
 
     announce_status = False
     event = None
+
     def setUp(self):
         self.test_event = TestEvent('test_sequence', 'django_tests', 'Event Testing')
         TestListener()
