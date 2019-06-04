@@ -13,6 +13,7 @@ class MD5Test(TestCase):
         self.google_earth_kml_file = "{TEST_DIR}/../data/google_earth_kml.xml".format(TEST_DIR=TEST_DIR)
         self.google_earth_kml = open(self.google_earth_kml_file, 'r')
         self.recon_chewbacca = ReconChewbacca()
+        self.recon_chewbacca.google_earth_kml = self.google_earth_kml_file
         print(self.google_earth_kml)
 
     def test_md5(self):
@@ -25,3 +26,4 @@ class MD5Test(TestCase):
     def test_chewbacca_hunt_for_updates(self):
         kml_message = self.recon_chewbacca.hunt_for_updates()
         self.assertIsNotNone(kml_message)
+

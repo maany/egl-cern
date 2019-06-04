@@ -30,7 +30,10 @@ class ReconChewbacca:
                 EventHub.announce_event(NewDataAvailableOnlineEvent(
                     sequence="Google_Earth_{timestamp}".format(timestamp=datetime.datetime.now()),
                     created_by=self.__class__.__name__,
-                    holder=self.google_earth_kml
+                    holder={
+                        "source": "google_earth",
+                        "data": self.google_earth_kml
+                    }
                 ))
             return kml_message
 
