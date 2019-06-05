@@ -16,7 +16,7 @@ class ReconChewbacca:
 
     class __ReconChewbacca:
         def __init__(self):
-            self.google_earth_kml = "google_earth_kml.xml"
+            self.google_earth_kml = "google_earth_recon_test_kml.xml"
             self.kml_url = "http://dashb-earth.cern.ch/dashboard/dashb-earth-all.kml"
 
         def hunt_for_updates(self):
@@ -29,7 +29,7 @@ class ReconChewbacca:
             if was_kml_updated:
                 EventHub.announce_event(NewDataAvailableOnlineEvent(
                     sequence="Google_Earth_{timestamp}".format(timestamp=datetime.datetime.now()),
-                    created_by=self.__class__.__name__,
+                    created_by=ReconChewbacca.__name__,
                     holder={
                         "source": "google_earth",
                         "data": self.google_earth_kml

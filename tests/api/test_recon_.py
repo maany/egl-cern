@@ -1,7 +1,6 @@
 from django.test import TestCase
 from api.helpers import md5_string
 from api.recon_chewbacca import ReconChewbacca
-from api.event_hub.event_managers import  IEGLEventListener
 import os
 
 TEST_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -10,7 +9,7 @@ TEST_DIR = os.path.dirname(os.path.abspath(__file__))
 class MD5Test(TestCase):
 
     def setUp(self):
-        self.google_earth_kml_file = "{TEST_DIR}/../data/google_earth_kml.xml".format(TEST_DIR=TEST_DIR)
+        self.google_earth_kml_file = "{TEST_DIR}/../data/google_earth_recon_test_kml.xml".format(TEST_DIR=TEST_DIR)
         self.google_earth_kml = open(self.google_earth_kml_file, 'r')
         self.recon_chewbacca = ReconChewbacca()
         self.recon_chewbacca.google_earth_kml = self.google_earth_kml_file

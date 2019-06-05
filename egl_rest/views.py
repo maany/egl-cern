@@ -17,10 +17,10 @@ def sites(request):
 def data_links(request):
     #kml_url = "http://dashb-earth.cern.ch/dashboard/dashb-earth-all.kml"
     #output = requests.get(kml_url)
-    #with open("google_earth_kml.xml", "w") as file:
+    #with open("google_earth_recon_test_kml.xml", "w") as file:
     #    file.write(output.text)
 
-    parsed = ET.parse('google_earth_kml.xml')
+    parsed = ET.parse('google_earth_recon_test_kml.xml')
     root = parsed.getroot()
     document = root.find('Document')
     folders = document.findall('Folder')
