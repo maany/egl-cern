@@ -2,6 +2,7 @@ from django.test import TestCase
 from api.helpers import md5_string
 from api.recon_chewbacca import ReconChewbacca
 import os
+from shutil import copyfile
 
 TEST_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -10,10 +11,12 @@ class MD5Test(TestCase):
 
     def setUp(self):
         self.google_earth_kml_file = "{TEST_DIR}/../data/google_earth_recon_test_kml.xml".format(TEST_DIR=TEST_DIR)
-        self.google_earth_kml = open(self.google_earth_kml_file, 'r')
+        self.ref_kml = "{TEST_DIR}/../data/google_earth_recon_test_kml_ref.xml".format(TEST_DIR=TEST_DIR)
+        if os.path.isfile(self.google_earth_kml_file):
+            os.remove(self.google_earth_kml_file)
+        copyfile(self.ref_kml, self.google_earth_kml_file)
         self.recon_chewbacca = ReconChewbacca()
         self.recon_chewbacca.google_earth_kml = self.google_earth_kml_file
-        print(self.google_earth_kml)
 
     def test_md5(self):
         str1 = "Y023hAJK#@)(#<><>"
@@ -25,4 +28,9 @@ class MD5Test(TestCase):
     def test_chewbacca_hunt_for_updates(self):
         kml_message = self.recon_chewbacca.hunt_for_updates()
         self.assertIsNotNone(kml_message)
+
+    def tearDown(self) -> None:
+        super().tearDown()
+        os.remove(self.google_earth_kml_file)
+
 

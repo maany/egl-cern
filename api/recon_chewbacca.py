@@ -16,7 +16,7 @@ class ReconChewbacca:
 
     class __ReconChewbacca:
         def __init__(self):
-            self.google_earth_kml = "google_earth_recon_test_kml.xml"
+            self.google_earth_kml = "google_earth_recon_test_kml_ref.xml"
             self.kml_url = "http://dashb-earth.cern.ch/dashboard/dashb-earth-all.kml"
 
         def hunt_for_updates(self):
