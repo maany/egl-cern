@@ -26,6 +26,8 @@ SECRET_KEY = 'i9*vhx&7q4v=q=oxfdk*faw@cs*!xkf94en7n*_+a2l5s71c^u'
 DEBUG = config('DEBUG', default=True, cast=bool)
 
 ALLOWED_HOSTS = ['{host}'.format(host=config('HOST', default='localhost'))]
+if config('MODE') == 'docker':
+    ALLOWED_HOSTS.append('0.0.0.0')
 
 
 # Application definition
@@ -73,14 +75,36 @@ WSGI_APPLICATION = 'EGL.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+DATABASES = None
+if config('MODE') == 'docker':
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': config('POSTGRES_DB', default='egl'),
+            'USER': config('POSTGRES_USER', default='egl_admin'),
+            'PASSWORD': config('POSTGRES_PASSWORD'),
+            'HOST': 'db',
+            'PORT': '5432',
+        }
     }
-}
-
+elif config('MODE') == 'local':
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': config('POSTGRES_DB_LOCAL', default='postgres'),
+            'USER': config('POSTGRES_USER_LOCAL', default='postgres'),
+            'PASSWORD': config('POSTGRES_PASSWORD_LOCAL', default=''),
+            'HOST': 'localhost',
+            'PORT': config('POSTGRES_PORT_LOCAL', default='5430'),
+        }
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators

@@ -3,13 +3,19 @@ version: '3'
 services:
   db:
     image: postgres
+    restart: always
     volumes:
       - ./postgres-data:/var/lib/postgresql/data
+      - ./.env:/.env
+    env_file:
+      - .env
+
   web:
     build: .
-    command: ./init.sh
+    command: ["./wait-for-it.sh", "db:5432", "--", "./init.sh"]
     environment:
       - "SECRET_KEY=#9n5v_uwn+880+53w_avj&fp!ul=wf^jlls7t+v5f^z4553i98"
+      - "MODE=docker"
     volumes:
       - .:/code
     ports:
