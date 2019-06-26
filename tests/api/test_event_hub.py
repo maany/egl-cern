@@ -1,6 +1,6 @@
 from django.test import TestCase
-from egl_rest.api import IEGLEvent, IEGLEventListener
-from egl_rest.api import EventHub
+from egl_rest.api.event_hub.event_managers import IEGLEvent, IEGLEventListener
+from egl_rest.api.event_hub import EventHub
 
 
 class TestEvent(IEGLEvent):

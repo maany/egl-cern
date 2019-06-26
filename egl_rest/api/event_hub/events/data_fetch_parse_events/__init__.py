@@ -1,4 +1,4 @@
-from egl_rest.api import IEGLEvent
+from egl_rest.api.event_hub.event_managers import IEGLEvent
 
 
 class NewDataAvailableOnlineEvent(IEGLEvent):

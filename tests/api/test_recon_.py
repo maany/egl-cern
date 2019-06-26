@@ -1,6 +1,6 @@
 from django.test import TestCase
-from egl_rest.api import md5_string
-from egl_rest.api import ReconChewbacca
+from egl_rest.api.helpers import md5_string
+from egl_rest.api.recon_chewbacca import ReconChewbacca
 import os
 from shutil import copyfile
 

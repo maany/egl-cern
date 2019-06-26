@@ -17,5 +17,5 @@ class SiteService(Singleton):
     def get_by_country(self, country_code):
         pass
 
-    def analyse(self):
+    def analyse(self, google_earth_sites, cric_sites):
         pass

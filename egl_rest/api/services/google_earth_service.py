@@ -1,8 +1,8 @@
-from egl_rest.api import IEGLEventListener
-from egl_rest.api import NewDataAvailableOnlineEvent
-from egl_rest.api import EventHub
-from egl_rest.api import Singleton
-from egl_rest.api import ReconChewbacca
+from egl_rest.api.event_hub.event_managers import IEGLEventListener
+from egl_rest.api.event_hub.events.data_fetch_parse_events import NewDataAvailableOnlineEvent
+from egl_rest.api.event_hub import EventHub
+from egl_rest.api.helpers import Singleton
+from egl_rest.api.recon_chewbacca import ReconChewbacca
 from xml.etree import ElementTree as ET
 
 

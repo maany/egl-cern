@@ -1,10 +1,10 @@
 from django.test import TestCase
-from egl_rest.api import EGL
-from egl_rest.api import ReconChewbacca
+from egl_rest.api.egl import EGL
+from egl_rest.api.recon_chewbacca import ReconChewbacca
 import os
 from unittest.mock import patch
 
-from egl_rest.api import GoogleEarthService
+from egl_rest.api.services.google_earth_service import GoogleEarthService
 
 TEST_DIR = os.path.dirname(os.path.abspath(__file__))
 
