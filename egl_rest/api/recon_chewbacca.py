@@ -42,9 +42,35 @@ class ReconChewbacca:
                     }
                 ))
             output['kml_message'] = kml_message
+
             was_cric_federation_updated, cric_federation_message = self.update_cric_federations_file()
+            if not was_cric_federation_updated:
+                logger.error(cric_federation_message)
+            else:
+                logger.info(kml_message)
+                EventHub.announce_event(NewDataAvailableOnlineEvent(
+                    sequence="CRIC_Federations_{timestamp}".format(timestamp=datetime.datetime.now()),
+                    created_by=ReconChewbacca.__name__,
+                    holder={
+                        "source": "cric_federations",
+                        "data": self.cric_federations_file
+                    }
+                ))
             output['cric_federations_message'] = cric_federation_message
+
             was_cric_sites_updated, cric_sites_message = self.update_cric_sites_file()
+            if not was_cric_sites_updated:
+                logger .error(cric_sites_message)
+            else:
+                logger.info(cric_sites_message)
+                EventHub.announce_event(NewDataAvailableOnlineEvent(
+                    sequence="CRIC_Sites_{timestamp}".format(timestamp=datetime.datetime.now()),
+                    created_by=ReconChewbacca.__name__,
+                    holder={
+                        "source": "cric_sites",
+                        "data": self.cric_sites_file
+                    }
+                ))
             output['cric_sites_message'] = cric_sites_message
             return output
 

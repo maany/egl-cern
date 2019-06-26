@@ -42,8 +42,12 @@ class MD5Test(TestCase):
 
     def tearDown(self) -> None:
         super().tearDown()
+        if os.path.isfile(self.cric_federations_file):
+            os.remove(self.cric_federations_file)
+
         os.remove(self.google_earth_kml_file)
-        os.remove(self.cric_federations_file)
-        os.remove(self.cric_sites_file)
+
+        if os.path.isfile(self.cric_sites_file):
+            os.remove(self.cric_sites_file)
 
 
