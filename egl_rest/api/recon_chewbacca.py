@@ -16,10 +16,16 @@ class ReconChewbacca:
 
     class __ReconChewbacca:
         def __init__(self):
-            self.google_earth_kml = "google_earth_recon_test_kml_ref.xml"
+            self.google_earth_kml = "./data/google_earth_recon_test_kml_ref.xml"
             self.kml_url = "http://dashb-earth.cern.ch/dashboard/dashb-earth-all.kml"
+            self.cric_base_url = "http://wlcg-cric.cern.ch/"
+            self.cric_federations_url = "{cric_base_url}/api/core/federation/query/?json".format(cric_base_url=self.cric_base_url)
+            self.cric_sites_url = "{cric_base_url}/api/core/rcsite/query/?json".format(cric_base_url=self.cric_base_url)
+            self.cric_federations_file = "./data/cric_federations.json"
+            self.cric_sites_file = "./data/cric_sites.json"
 
         def hunt_for_updates(self):
+            output = {}
             was_kml_updated, kml_message = self.update_google_earth_kml()
             if not was_kml_updated:
                 logger.error(kml_message)
@@ -35,36 +41,50 @@ class ReconChewbacca:
                         "data": self.google_earth_kml
                     }
                 ))
-            return kml_message
+            output['kml_message'] = kml_message
+            was_cric_federation_updated, cric_federation_message = self.update_cric_federations_file()
+            output['cric_federations_message'] = cric_federation_message
+            was_cric_sites_updated, cric_sites_message = self.update_cric_sites_file()
+            output['cric_sites_message'] = cric_sites_message
+            return output
 
         def update_google_earth_kml(self):
+            return self.sync_file(self.kml_url, self.google_earth_kml)
+
+        def update_cric_federations_file(self):
+            return self.sync_file(self.cric_federations_url, self.cric_federations_file)
+
+        def update_cric_sites_file(self):
+            return self.sync_file(self.cric_sites_url, self.cric_sites_file)
+
+        def sync_file(self, url, file):
             try:
-                kml_response = requests.get(self.kml_url)
+                response = requests.get(url)
             except HTTPError as http_err:
-                message = "Error occurred while fetching Google Earth KML: {err}".format(err=http_err)
+                message = "Error occurred while fetching {url} : {err}".format(url=url, err=http_err)
                 return False, message
             except Exception as err:
-                message = "Error occurred while fetching Google Earth KML: {err}".format(err=err)
+                message = "Error occurred while fetching {url} : {err}".format(url=url, err=err)
                 return False, message
-            new_string = kml_response.text
-
-            kml_exists = os.path.isfile(self.google_earth_kml)
-            if not kml_exists:
-                message = "Saved KML file for the first time."
-                with open(self.google_earth_kml, 'w') as file:
-                    file.write(new_string)
+            new_string = response.text
+            file_exists = os.path.isfile(file)
+            if not file_exists:
+                message = "Saved {file} for the first time"
+                with open(file, 'w') as f:
+                    f.write(new_string)
                 return True, message
             else:
-                with open(self.google_earth_kml, "r") as file:
-                    old_string = file.read()
+                with open(file, 'r') as f:
+                    old_string = f.read()
                     old_hash = md5_string(old_string)
                     new_hash = md5_string(new_string)
                     if old_hash == new_hash:
-                        message = "The hash for old and new kml data match. KML file was not updated"
+                        message = "The hash values for old and new data for {file} match. Therefore, " \
+                                  "the file was not updated.".format(file=file)
                         return False, message
-                with open(self.google_earth_kml, 'w') as file:
-                    message = "The google earth kml file was updated!"
-                    file.write(new_string)
+                with open(file, 'w') as f:
+                    message = "The file {file} was updated!".format(file=file)
+                    f.write(new_string)
                     return True, message
 
     def __init__(self):
