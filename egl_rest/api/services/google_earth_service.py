@@ -12,7 +12,8 @@ class GoogleEarthService(Singleton, IEGLEventListener):
         Singleton.__init__(self)
         EventHub.register_listener(self, NewDataAvailableOnlineEvent)
 
-    def process_kml(self, google_earth_file):
+    @staticmethod
+    def process_kml(google_earth_file):
         print("Processing KML")
         root = ET.parse(google_earth_file).getroot()
         document = root.find('Document')
@@ -23,7 +24,6 @@ class GoogleEarthService(Singleton, IEGLEventListener):
                 sites = folder.findall('Placemark')
         for site in sites:
             print(site.find('name').text)
-
 
     def notify(self, egl_event):
         if egl_event.created_by is ReconChewbacca.__name__ and egl_event.data['source'] is "google_earth":

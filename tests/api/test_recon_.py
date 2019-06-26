@@ -19,6 +19,13 @@ class MD5Test(TestCase):
         if os.path.isfile(self.google_earth_kml_file):
             os.remove(self.google_earth_kml_file)
         copyfile(self.ref_kml, self.google_earth_kml_file)
+
+        if os.path.isfile(self.ref_cric_federations):
+            os.remove(self.ref_cric_federations)
+
+        if os.path.isfile(self.ref_cric_sites):
+            os.remove(self.ref_cric_sites)
+
         self.recon_chewbacca = ReconChewbacca()
         self.recon_chewbacca.google_earth_kml = self.google_earth_kml_file
         self.recon_chewbacca.cric_federations_file = self.cric_federations_file
@@ -43,11 +50,13 @@ class MD5Test(TestCase):
     def tearDown(self) -> None:
         super().tearDown()
         if os.path.isfile(self.cric_federations_file):
+            copyfile(self.cric_federations_file, self.ref_cric_federations)
             os.remove(self.cric_federations_file)
 
         os.remove(self.google_earth_kml_file)
 
         if os.path.isfile(self.cric_sites_file):
+            copyfile(self.cric_sites_file, self.ref_cric_sites)
             os.remove(self.cric_sites_file)
 
 
