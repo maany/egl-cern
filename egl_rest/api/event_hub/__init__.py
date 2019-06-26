@@ -1,6 +1,3 @@
-from api.event_hub.events.data_fetch_parse_events import *
-
-
 class EventHub:
 
     event_and_listeners = []

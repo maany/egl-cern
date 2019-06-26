@@ -1,5 +1,5 @@
-from api.helpers import Singleton
-from api.models import Site
+from egl_rest.api import Singleton
+from egl_rest.api import Site
 
 
 class SiteService(Singleton):

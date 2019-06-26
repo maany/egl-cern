@@ -2,9 +2,9 @@ import requests
 from requests.exceptions import HTTPError
 import logging
 import os
-from api.helpers import md5_string
-from api.event_hub import EventHub
-from api.event_hub.events.data_fetch_parse_events import NewDataAvailableOnlineEvent
+from egl_rest.api import md5_string
+from egl_rest.api import EventHub
+from egl_rest.api import NewDataAvailableOnlineEvent
 import datetime
 # Get instance of logger
 logger = logging.getLogger(__name__)

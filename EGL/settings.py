@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'egl_rest.apps.EglRestConfig'
 ]
 
 MIDDLEWARE = [
