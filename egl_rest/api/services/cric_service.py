@@ -7,6 +7,7 @@ import json
 from egl_rest.api.models import Federation, Pledge, VO
 from egl_rest.api.services.federations_service import FederationsService
 from egl_rest.api.services.pledge_service import PledgeService
+from egl_rest.api.services.site_service import SiteService
 from egl_rest.api.services.vo_service import VOService
 
 
@@ -26,7 +27,7 @@ class CRICService(Singleton, IEGLEventListener):
     def process_cric_sites(cric_sites_file):
         with open(cric_sites_file) as file:
             sites = json.load(file)
-            #print(sites)
+            print(sites)
 
     @staticmethod
     def process_cric_federations(cric_federations_file):
@@ -35,11 +36,16 @@ class CRICService(Singleton, IEGLEventListener):
             for federation_name, federation in federations.items():
                 fed_obj = FederationsService.get_or_create(federation_name)
                 fed_obj.accounting_name = federation['accounting_name']
-                print(fed_obj.accounting_name)
                 for vo_name in federation['vos']:
                     vo = VOService.get_or_create(vo_name)
                     fed_obj.supported_vos.add(vo)
                 pledges = federation['pledges']
+                if federation['rcsites'] is not None:
+                    for site in federation['rcsites']:
+                        if len(site) > 50:
+                            print(site + "***")
+                        site_obj = SiteService.get_or_create(site, fed_obj)
+                        fed_obj.site_set.add(site_obj)
                 for year, vos in pledges.items():
                     for vo, pledge in vos.items():
                         vo_obj = VOService.get_or_create(vo)

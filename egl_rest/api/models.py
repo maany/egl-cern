@@ -27,9 +27,9 @@ class VO(models.Model):
 
 class Site(models.Model):
     id = models.AutoField(primary_key=True)
-    name = models.CharField(max_length=30, unique=True)
-    latitude = models.FloatField()
-    longitude = models.FloatField()
+    name = models.CharField(max_length=70, unique=True)
+    latitude = models.FloatField(default=0)
+    longitude = models.FloatField(default=0)
     tier = models.IntegerField(default=-1)
     supported_vos = models.ManyToManyField(VO)
     country = models.CharField(max_length=30)

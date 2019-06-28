@@ -6,10 +6,11 @@ from egl_rest.api.services.federations_service import FederationsService
 class SiteService(Singleton):
 
     @staticmethod
-    def get_or_create(site_name):
+    def get_or_create(site_name, federation):
         return Site.objects.get_or_create(
-            name=site_name
-        )
+            name=site_name,
+            federation=federation
+        )[0]
 
     @staticmethod
     def get(site_name):
