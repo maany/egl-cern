@@ -23,7 +23,7 @@ class GoogleEarthService(Singleton, IEGLEventListener):
             if folder.find('name').text == "Sites":
                 sites = folder.findall('Placemark')
         for site in sites:
-            print(site.find('name').text)
+            pass#print(site.find('name').text)
 
     def notify(self, egl_event):
         if egl_event.created_by is ReconChewbacca.__name__ and egl_event.data['source'] is "google_earth":

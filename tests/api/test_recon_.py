@@ -20,12 +20,6 @@ class MD5Test(TestCase):
             os.remove(self.google_earth_kml_file)
         copyfile(self.ref_kml, self.google_earth_kml_file)
 
-        if os.path.isfile(self.ref_cric_federations):
-            os.remove(self.ref_cric_federations)
-
-        if os.path.isfile(self.ref_cric_sites):
-            os.remove(self.ref_cric_sites)
-
         self.recon_chewbacca = ReconChewbacca()
         self.recon_chewbacca.google_earth_kml = self.google_earth_kml_file
         self.recon_chewbacca.cric_federations_file = self.cric_federations_file
