@@ -4,6 +4,9 @@ from egl_rest.api.models import Pledge
 
 class PledgeService(Singleton):
 
+    def __init__(self):
+        Singleton.__init__(self)
+
     @staticmethod
     def get_or_create(federation, vo):
         return Pledge.objects.get_or_create(

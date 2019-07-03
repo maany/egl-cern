@@ -4,12 +4,12 @@ from egl_rest.api.event_hub.events.data_fetch_parse_events import NewDataAvailab
 from egl_rest.api.helpers import Singleton
 from egl_rest.api.recon_chewbacca import ReconChewbacca
 import json
-from egl_rest.api.models import Federation, Pledge, VO
 from egl_rest.api.services.federations_service import FederationsService
 from egl_rest.api.services.pledge_service import PledgeService
 from egl_rest.api.services.site_service import SiteService
 from egl_rest.api.services.vo_service import VOService
-
+from egl_rest.api.services.site_vo_service import SiteVOService
+from egl_rest.api.helpers import get_country, get_geo_cords
 
 class CRICService(Singleton, IEGLEventListener):
 
@@ -27,7 +27,86 @@ class CRICService(Singleton, IEGLEventListener):
     def process_cric_sites(cric_sites_file):
         with open(cric_sites_file) as file:
             sites = json.load(file)
+            for site_name, site in sites.items():
+                if site_name == "NULL":
+                    continue
+                print(site_name)
+                site = CRICService.cric_sites_location_patch(site_name, site)
+                site_obj = SiteService.get_or_create(site_name)
+                site_obj.sources.append('cric_sites')
+                site_obj.latitude = site['latitude']
+                site_obj.longitude = site['longitude']
+                for site_vo in site['sites']:
+                    vo_obj = VOService.get_or_create(site_vo['vo_name'])
+                    site_vo_obj = SiteVOService.get_or_create(site_vo['name'], site_obj, vo_obj)
+
+                    site_obj.supported_vos.add(vo_obj)
+                    site_obj.sitevo_set.add(site_vo_obj)
+
+                    vo_obj.sitevo_set.add(site_vo_obj)
+                    vo_obj.site_set.add(site_obj)
+                if site['country'] == "NULL":
+                    if "KISTI" in site_name:
+                        site_obj.country = "South Korea"
+                    else:
+                        site_obj.country = get_country(site['latitude'], site['longitude']).name
+                else:
+                    site_obj.country = site['country']
+                if site['country_code'] is not None or len(site['country_code']) > 0:
+                    site_obj.country_code = site['country_code']
+                else:
+                    if "KISTI" in site_name:
+                        site_obj.country_code = "KR"
+                    else:
+                        site_obj.country = get_country(site['latitude'], site['longitude']).alpha_2
+                # site_obj.federations_service
             print(sites)
+
+    @staticmethod
+    def cric_sites_location_patch(site_name, site):
+        if site["latitude"]!= 0.0 and site['longitude'] != 0.0:
+            return site
+        if "CERN" in site_name:
+            geo_cords = get_geo_cords("CERN")
+        if "WIGNER" in site_name:
+            geo_cords = get_geo_cords("Wigner Datacenter")
+        elif "CIEMAT-TIC" in site_name:
+            geo_cords = get_geo_cords("CIEMAT")
+        elif "FZU" in site_name:
+            geo_cords = {
+                "latitude": 50.123489,
+                "longitude": 14.469153
+            }
+        elif site_name == "GR-05-DEMOKRITOS":
+            geo_cords = {
+                "latitude": 37.999229,
+                "longitude": 23.819099
+            }
+        elif site_name == "GROW-PROD":
+            geo_cords = get_geo_cords("University of Iowa")
+        elif site_name == "IN2P3-LPSC":
+            geo_cords = get_geo_cords(" Centre de calcul IN2P3")
+        elif site_name == "INFN-FIRENZE":
+            geo_cords = get_geo_cords("INFN florence")
+        elif site_name == "NYSGRID-CCR-U2":
+            geo_cords = get_geo_cords("University at Buffalo")
+        elif site_name == "NYSGRID_CORNELL_NYS1":
+            geo_cords = get_geo_cords("Cornell University")
+        elif site_name == "ORNL-T2":
+            geo_cords = get_geo_cords("oak ridge national laboratory")
+        elif site_name == "Oslo":
+            geo_cords = get_geo_cords("University of Oslo")
+        elif site_name == "UB-LCG2":
+            geo_cords = get_geo_cords("University of Barcelona")
+        elif "USTC" in site_name:
+            geo_cords = get_geo_cords("USTC China")
+        elif site_name == "ru-Moscow-SINP-LCG2":
+            geo_cords = get_geo_cords("Moscow State University")
+        elif site_name == "ucsb-cms":
+            geo_cords = get_geo_cords("University of California Santa Barbara")
+        site['latitude'] = geo_cords['latitude']
+        site['longitude'] = geo_cords['longitude']
+        return site
 
     @staticmethod
     def process_cric_federations(cric_federations_file):
@@ -42,9 +121,9 @@ class CRICService(Singleton, IEGLEventListener):
                 pledges = federation['pledges']
                 if federation['rcsites'] is not None:
                     for site in federation['rcsites']:
-                        if len(site) > 50:
-                            print(site + "***")
-                        site_obj = SiteService.get_or_create(site, fed_obj)
+                        site_obj = SiteService.get_or_create(site)
+                        site_obj.federation = fed_obj
+                        site_obj.sources.append('cric-federations')
                         fed_obj.site_set.add(site_obj)
                 for year, vos in pledges.items():
                     for vo, pledge in vos.items():

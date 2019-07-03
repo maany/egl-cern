@@ -4,6 +4,9 @@ from egl_rest.api.models import VO, Federation, Site
 
 class VOService(Singleton):
 
+    def __init__(self):
+        Singleton.__init__(self)
+
     @staticmethod
     def get_or_create(name):
         return VO.objects.get_or_create(

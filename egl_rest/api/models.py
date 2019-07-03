@@ -20,6 +20,13 @@ class Pledge(models.Model):
     vo = models.ForeignKey('VO', on_delete=models.PROTECT, default=None)
 
 
+class SiteVO(models.Model):
+    id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=70, default="Null", unique=True)
+    site = models.ForeignKey('Site', on_delete=models.PROTECT)
+    vo = models.ForeignKey('VO', on_delete=models.PROTECT)
+
+
 class VO(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=30, unique=True)
@@ -34,7 +41,7 @@ class Site(models.Model):
     supported_vos = models.ManyToManyField(VO)
     country = models.CharField(max_length=30)
     country_code = models.CharField(max_length=10)
-    federation = models.ForeignKey(Federation, on_delete=models.PROTECT)
+    federation = models.ForeignKey(Federation, on_delete=models.PROTECT, null=True)
     active = models.BooleanField(default=False)
     sources = ArrayField(models.CharField(max_length=30), default=list)
 

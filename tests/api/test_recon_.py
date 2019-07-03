@@ -1,5 +1,5 @@
 from django.test import TestCase
-from egl_rest.api.helpers import md5_string
+from egl_rest.api.helpers import md5_string, get_country, get_geo_cords
 from egl_rest.api.recon_chewbacca import ReconChewbacca
 import os
 from shutil import copyfile
@@ -31,6 +31,17 @@ class MD5Test(TestCase):
         str3 = "Y023"
         self.assertEqual(md5_string(str1), md5_string(str2))
         self.assertNotEqual(md5_string(str1), md5_string(str3))
+
+    def test_get_country(self):
+        country = get_country(41.947239, -87.655636)
+        self.assertEquals(country.official_name, "United States of America")
+
+    def test_get_gro_cords(self):
+        geo_cords = get_geo_cords("CERN")
+        latitude = geo_cords['latitude']
+        longitude = geo_cords['longitude']
+        self.assertEquals(latitude, 46.2338702)
+        self.assertEquals(longitude, 6.04698691754795)
 
     def test_chewbacca_hunt_for_updates(self):
         output = self.recon_chewbacca.hunt_for_updates()

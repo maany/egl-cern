@@ -4,6 +4,9 @@ from egl_rest.api.models import Federation
 
 class FederationsService(Singleton):
 
+    def __init__(self):
+        Singleton.__init__(self)
+
     @staticmethod
     def get_or_create(federation_name):
         return Federation.objects.get_or_create(
