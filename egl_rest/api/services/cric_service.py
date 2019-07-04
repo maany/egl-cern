@@ -60,7 +60,7 @@ class CRICService(Singleton, IEGLEventListener):
                         site_obj.country_code = "KR"
                     else:
                         site_obj.country = get_country(site['latitude'], site['longitude']).alpha_2
-                # site_obj.federations_service
+                SiteService.save(site_obj)
             EventHub.announce_event(OfflineParsingAllSitesCompletionEvent(
                 sequence=sequence,
                 created_by=CRICService.__name__,
@@ -118,6 +118,8 @@ class CRICService(Singleton, IEGLEventListener):
         with open(cric_federations_file) as file:
             federations = json.load(file)
             for federation_name, federation in federations.items():
+                if federation_name == "NULL":
+                    continue
                 fed_obj = FederationsService.get_or_create(federation_name)
                 fed_obj.accounting_name = federation['accounting_name']
                 for vo_name in federation['vos']:
@@ -129,6 +131,8 @@ class CRICService(Singleton, IEGLEventListener):
                         site_obj = SiteService.get_or_create(site)
                         site_obj.federation = fed_obj
                         site_obj.sources.append('cric-federations')
+                        site_obj.tier = federation['tier_level']
+                        SiteService.save(site_obj)
                         fed_obj.site_set.add(site_obj)
                 for year, vos in pledges.items():
                     for vo, pledge in vos.items():
@@ -141,5 +145,6 @@ class CRICService(Singleton, IEGLEventListener):
                             pledge_obj.disk = pledge['Disk']
                         if 'Tape' in pledge:
                             pledge_obj.tape = pledge['Tape']
+                        PledgeService.save(pledge_obj)
                         fed_obj.pledge_set.add(pledge_obj)
                 FederationsService.save(fed_obj)

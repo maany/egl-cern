@@ -38,7 +38,6 @@ def get_geo_cords(address):
         "longitude": output.longitude
     }
 
-
 class Singleton:
     _shared_state = {}
 

@@ -29,6 +29,10 @@ class SiteService(Singleton, IEGLEventListener):
         return site.save()
 
     @staticmethod
+    def get_all():
+        return Site.objects.all()
+
+    @staticmethod
     def get_by_name(name):
         return Site.objects.get(name=name)
 
@@ -69,9 +73,30 @@ class SiteService(Singleton, IEGLEventListener):
 
     @staticmethod
     def analyse():
-        print("Ready to Analyse Sites!!")
+        # tier_neg1_sites = Site.objects.get(tier=-1)
+        tier0_sites = Site.objects.filter(tier=0)
+        tier1_sites = Site.objects.filter(tier=1)
+        tier2_sites = Site.objects.filter(tier=2)
+        tier3_sites = Site.objects.filter(tier=3)
+        # print(tier_neg1_sites)
+        print(tier0_sites)
+        print(tier1_sites)
+        print(tier2_sites)
+        print(tier3_sites)
+
+    @staticmethod
+    def post_process():
+        print("Ready to Post Process!!")
         sites = SiteService.get_all()
+        for site in sites:
+            if site.federation is None:
+                site.tier = 3
+            SiteService.activate(site)
+            SiteService.save(site)
+        SiteService.analyse()
+
+
     def notify(self, egl_event):
         from egl_rest.api.services.cric_service import CRICService
         if egl_event.created_by is CRICService.__name__:
-            SiteService.analyse()
+            SiteService.post_process()
