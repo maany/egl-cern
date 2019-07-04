@@ -1,7 +1,9 @@
 from egl_rest.api.event_hub import EventHub
 from egl_rest.api.services.cric_service import CRICService
 from egl_rest.api.services.google_earth_service import GoogleEarthService
+from egl_rest.api.services.site_service import SiteService
 from egl_rest.api.helpers import Singleton
+
 
 ### Service loading and Event Hub loading ###
 class EGL(Singleton):
@@ -10,3 +12,4 @@ class EGL(Singleton):
         self.event_hub = EventHub()
         self.google_earth_service = GoogleEarthService()
         self.cric_service = CRICService()
+        self.site_service = SiteService()

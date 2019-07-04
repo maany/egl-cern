@@ -1,6 +1,6 @@
 from egl_rest.api.event_hub import EventHub
 from egl_rest.api.event_hub.event_managers import IEGLEventListener
-from egl_rest.api.event_hub.events.data_fetch_parse_events import NewDataAvailableOnlineEvent
+from egl_rest.api.event_hub.events.data_fetch_parse_events import NewDataAvailableOnlineEvent, OfflineParsingAllSitesCompletionEvent
 from egl_rest.api.helpers import Singleton
 from egl_rest.api.recon_chewbacca import ReconChewbacca
 import json
@@ -10,6 +10,7 @@ from egl_rest.api.services.site_service import SiteService
 from egl_rest.api.services.vo_service import VOService
 from egl_rest.api.services.site_vo_service import SiteVOService
 from egl_rest.api.helpers import get_country, get_geo_cords
+
 
 class CRICService(Singleton, IEGLEventListener):
 
@@ -21,10 +22,10 @@ class CRICService(Singleton, IEGLEventListener):
         if egl_event.created_by is ReconChewbacca.__name__ and egl_event.data['source'] is "cric_federations":
             self.process_cric_federations(egl_event.data['data'])
         elif egl_event.created_by is ReconChewbacca.__name__ and egl_event.data['source'] is "cric_sites":
-            self.process_cric_sites(egl_event.data['data'])
+            self.process_cric_sites(egl_event.data['data'], egl_event.sequence)
 
     @staticmethod
-    def process_cric_sites(cric_sites_file):
+    def process_cric_sites(cric_sites_file, sequence):
         with open(cric_sites_file) as file:
             sites = json.load(file)
             for site_name, site in sites.items():
@@ -60,7 +61,11 @@ class CRICService(Singleton, IEGLEventListener):
                     else:
                         site_obj.country = get_country(site['latitude'], site['longitude']).alpha_2
                 # site_obj.federations_service
-            print(sites)
+            EventHub.announce_event(OfflineParsingAllSitesCompletionEvent(
+                sequence=sequence,
+                created_by=CRICService.__name__,
+                holder=None
+            ))
 
     @staticmethod
     def cric_sites_location_patch(site_name, site):

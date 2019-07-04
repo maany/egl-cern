@@ -1,12 +1,16 @@
+from egl_rest.api.event_hub import EventHub
+from egl_rest.api.event_hub.event_managers import IEGLEventListener
+from egl_rest.api.event_hub.events.data_fetch_parse_events import OfflineParsingAllSitesCompletionEvent
 from egl_rest.api.helpers import Singleton
 from egl_rest.api.models import Site
 from egl_rest.api.services.federations_service import FederationsService
 
 
-class SiteService(Singleton):
+class SiteService(Singleton, IEGLEventListener):
 
     def __init__(self):
         Singleton.__init__(self)
+        EventHub.register_listener(self, OfflineParsingAllSitesCompletionEvent)
 
     @staticmethod
     def get_or_create(site_name):
@@ -64,5 +68,10 @@ class SiteService(Singleton):
         )
 
     @staticmethod
-    def analyse(self, google_earth_sites, cric_sites):
-        pass
+    def analyse():
+        print("Ready to Analyse Sites!!")
+        sites = SiteService.get_all()
+    def notify(self, egl_event):
+        from egl_rest.api.services.cric_service import CRICService
+        if egl_event.created_by is CRICService.__name__:
+            SiteService.analyse()
