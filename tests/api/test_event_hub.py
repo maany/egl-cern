@@ -4,8 +4,8 @@ from egl_rest.api.event_hub import EventHub
 
 
 class TestEvent(IEGLEvent):
-    def __init__(self, sequence, created_by, holder):
-        super(TestEvent, self).__init__(sequence, created_by)
+    def __init__(self, created_by, holder):
+        super(TestEvent, self).__init__(created_by)
         self.data = holder
 
 
@@ -24,7 +24,7 @@ class EventHubTest(TestCase):
     event = None
 
     def setUp(self):
-        self.test_event = TestEvent('test_sequence', 'django_tests', 'Event Testing')
+        self.test_event = TestEvent('django_tests', 'Event Testing')
         TestListener()
 
     def test_event_framework(self):

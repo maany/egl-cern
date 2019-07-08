@@ -4,9 +4,8 @@ import datetime
 
 class IEGLEvent:
     """ Converts an implementing class into a EGL API Event. """
-    def __init__(self, sequence, created_by):
+    def __init__(self, created_by):
         self.data = None
-        self.sequence = sequence
         self.created_by = created_by
         self.created_on = datetime.datetime.now()
 

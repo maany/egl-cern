@@ -5,7 +5,9 @@ import os
 from egl_rest.api.helpers import md5_string
 from egl_rest.api.event_hub import EventHub
 from egl_rest.api.event_hub.events.data_fetch_parse_events import NewDataAvailableOnlineEvent
+from egl_rest.api.sequence import Sequence
 import datetime
+
 # Get instance of logger
 logger = logging.getLogger(__name__)
 
@@ -23,24 +25,19 @@ class ReconChewbacca:
             self.cric_sites_url = "{cric_base_url}/api/core/rcsite/query/?json".format(cric_base_url=self.cric_base_url)
             self.cric_federations_file = "./data/cric_federations.json"
             self.cric_sites_file = "./data/cric_sites.json"
+            self.rebus_sites_url = "http://wlcg-rebus.cern.ch/apps/capacities/sites/ALL/{year}/{month}/json".format(year=datetime.datetime.now().year, month=datetime.datetime.now().month)
+            self.rebus_sites_file = "./data/rebus_sites.json"
 
         def hunt_for_updates(self):
             output = {}
+            data = {}
             was_kml_updated, kml_message = self.update_google_earth_kml()
             if not was_kml_updated:
                 logger.error(kml_message)
             else:
                 logger.info(kml_message)
+                data["google_earth"] = self.google_earth_kml
 
-            if was_kml_updated:
-                EventHub.announce_event(NewDataAvailableOnlineEvent(
-                    sequence="Google_Earth_{timestamp}".format(timestamp=datetime.datetime.now()),
-                    created_by=ReconChewbacca.__name__,
-                    holder={
-                        "source": "google_earth",
-                        "data": self.google_earth_kml
-                    }
-                ))
             output['kml_message'] = kml_message
 
             was_cric_federation_updated, cric_federation_message = self.update_cric_federations_file()
@@ -48,14 +45,8 @@ class ReconChewbacca:
                 logger.error(cric_federation_message)
             else:
                 logger.info(kml_message)
-                EventHub.announce_event(NewDataAvailableOnlineEvent(
-                    sequence="CRIC_Federations_{timestamp}".format(timestamp=datetime.datetime.now()),
-                    created_by=ReconChewbacca.__name__,
-                    holder={
-                        "source": "cric_federations",
-                        "data": self.cric_federations_file
-                    }
-                ))
+                data["cric_federations"] = self.cric_federations_file
+
             output['cric_federations_message'] = cric_federation_message
 
             was_cric_sites_updated, cric_sites_message = self.update_cric_sites_file()
@@ -63,29 +54,41 @@ class ReconChewbacca:
                 logger .error(cric_sites_message)
             else:
                 logger.info(cric_sites_message)
-                EventHub.announce_event(NewDataAvailableOnlineEvent(
-                    sequence="CRIC_Sites_{timestamp}".format(timestamp=datetime.datetime.now()),
-                    created_by=ReconChewbacca.__name__,
-                    holder={
-                        "source": "cric_sites",
-                        "data": self.cric_sites_file
-                    }
-                ))
+                data["cric_sites"] = self.cric_sites_file
+
             output['cric_sites_message'] = cric_sites_message
+
+            was_rebus_sites_updated, rebus_sites_message = self.update_rebus_sites_file()
+            if not was_rebus_sites_updated:
+                logger.error(rebus_sites_message)
+            else:
+                logger.info(rebus_sites_message)
+                data["rebus_sites"] = self.rebus_sites_file
+
+            output['rebus_sites_message'] = rebus_sites_message
+
+            if was_rebus_sites_updated or was_cric_sites_updated or was_cric_federation_updated or was_kml_updated:
+                EventHub.announce_event(NewDataAvailableOnlineEvent(
+                    created_by=ReconChewbacca.__name__,
+                    holder=data
+                ))
             return output
 
         def update_google_earth_kml(self):
-            return self.sync_file(self.kml_url, self.google_earth_kml)
+            return self.sync_file(self.kml_url, self.google_earth_kml, ssl=True)
 
         def update_cric_federations_file(self):
-            return self.sync_file(self.cric_federations_url, self.cric_federations_file)
+            return self.sync_file(self.cric_federations_url, self.cric_federations_file, ssl=True)
 
         def update_cric_sites_file(self):
-            return self.sync_file(self.cric_sites_url, self.cric_sites_file)
+            return self.sync_file(self.cric_sites_url, self.cric_sites_file, ssl=True)
 
-        def sync_file(self, url, file):
+        def update_rebus_sites_file(self):
+            return self.sync_file(self.rebus_sites_url, self.rebus_sites_file, ssl=False)
+
+        def sync_file(self, url, file, ssl):
             try:
-                response = requests.get(url)
+                response = requests.get(url, verify=ssl)
             except HTTPError as http_err:
                 message = "Error occurred while fetching {url} : {err}".format(url=url, err=http_err)
                 return False, message

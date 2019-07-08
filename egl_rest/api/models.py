@@ -44,6 +44,10 @@ class Site(models.Model):
     federation = models.ForeignKey(Federation, on_delete=models.PROTECT, null=True)
     active = models.BooleanField(default=False)
     sources = ArrayField(models.CharField(max_length=30), default=list)
+    hepspec06 = models.IntegerField(default=-1)
+    cores = models.IntegerField(default=-1)
+    total_online_storage = models.IntegerField(default=-1, null=True)
+    total_nearline_storage = models.IntegerField(default=-1, null=True)
 
 
 class Transfer(models.Model):

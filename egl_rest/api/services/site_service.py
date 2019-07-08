@@ -1,6 +1,5 @@
 from egl_rest.api.event_hub import EventHub
 from egl_rest.api.event_hub.event_managers import IEGLEventListener
-from egl_rest.api.event_hub.events.data_fetch_parse_events import OfflineParsingAllSitesCompletionEvent
 from egl_rest.api.helpers import Singleton
 from egl_rest.api.models import Site
 from egl_rest.api.services.federations_service import FederationsService
@@ -10,7 +9,6 @@ class SiteService(Singleton, IEGLEventListener):
 
     def __init__(self):
         Singleton.__init__(self)
-        EventHub.register_listener(self, OfflineParsingAllSitesCompletionEvent)
 
     @staticmethod
     def get_or_create(site_name):
@@ -78,11 +76,14 @@ class SiteService(Singleton, IEGLEventListener):
         tier1_sites = Site.objects.filter(tier=1)
         tier2_sites = Site.objects.filter(tier=2)
         tier3_sites = Site.objects.filter(tier=3)
+        atlantic_sites = Site.objects.filter(latitude=0.0, active=True)
+        storage_info_available_sites = Site.objects.exclude(total_online_storage__in=[0, -1])
         # print(tier_neg1_sites)
         print(tier0_sites)
         print(tier1_sites)
         print(tier2_sites)
         print(tier3_sites)
+        print(atlantic_sites)
 
     @staticmethod
     def post_process():
@@ -93,10 +94,3 @@ class SiteService(Singleton, IEGLEventListener):
                 site.tier = 3
             SiteService.activate(site)
             SiteService.save(site)
-        SiteService.analyse()
-
-
-    def notify(self, egl_event):
-        from egl_rest.api.services.cric_service import CRICService
-        if egl_event.created_by is CRICService.__name__:
-            SiteService.post_process()
