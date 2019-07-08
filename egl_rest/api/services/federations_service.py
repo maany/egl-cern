@@ -18,6 +18,10 @@ class FederationsService(Singleton):
         return Federation.objects.get(name=federation_name)
 
     @staticmethod
+    def get_all():
+        return Federation.objects.all()
+
+    @staticmethod
     def save(federation):
         return federation.save()
 

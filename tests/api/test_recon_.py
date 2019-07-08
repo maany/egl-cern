@@ -3,6 +3,7 @@ from egl_rest.api.recon_chewbacca import ReconChewbacca
 import os
 from shutil import copyfile
 from egl_rest.api.render.site_data import SiteData
+from egl_rest.api.render.federation_data import FederationData
 
 TEST_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -39,6 +40,7 @@ class ReconChewbaccaSequenceTests(TestCase):
         cric_sites = output['cric_sites_message']
         rebus_sites = output['rebus_sites_message']
         print(SiteData().generate_v1_0())
+        print(FederationData().generate_v1_0())
         self.assertIsNotNone(kml_message)
         self.assertIsNotNone(cric_federations)
         self.assertIsNotNone(cric_sites)

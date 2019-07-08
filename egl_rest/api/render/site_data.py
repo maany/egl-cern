@@ -1,5 +1,5 @@
 from egl_rest.api.helpers import Singleton
-from egl_rest.api.models import Site
+from egl_rest.api.services.site_service import SiteService
 import json
 
 
@@ -10,7 +10,7 @@ class SiteData(Singleton):
 
     @staticmethod
     def generate_v1_0():
-        sites = Site.objects.filter(active=True)
+        sites = SiteService.get_active_sites()
         sites_dict = {}
         for site in sites:
             site_vo_set = site.sitevo_set.all()
@@ -53,7 +53,7 @@ class SiteData(Singleton):
                 "latitude": site.latitude,
                 "longitude": site.longitude,
                 "tier": site.tier,
-                "supported_vos": site_vo_array,
+                "supported_vos_and_site_name": site_vo_array,
                 "country": site.country,
                 "country_code": site.country_code,
                 "hepspec06": hepspec06,
