@@ -5,7 +5,6 @@ import os
 from egl_rest.api.helpers import md5_string
 from egl_rest.api.event_hub import EventHub
 from egl_rest.api.event_hub.events.data_fetch_parse_events import NewDataAvailableOnlineEvent
-from egl_rest.api.sequence import Sequence
 import datetime
 
 # Get instance of logger
@@ -27,6 +26,7 @@ class ReconChewbacca:
             self.cric_sites_file = "./data/cric_sites.json"
             self.rebus_sites_url = "http://wlcg-rebus.cern.ch/apps/capacities/sites/ALL/{year}/{month}/json".format(year=datetime.datetime.now().year, month=datetime.datetime.now().month)
             self.rebus_sites_file = "./data/rebus_sites.json"
+
 
         def hunt_for_updates(self):
             output = {}

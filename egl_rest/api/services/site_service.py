@@ -78,12 +78,7 @@ class SiteService(Singleton, IEGLEventListener):
         tier3_sites = Site.objects.filter(tier=3)
         atlantic_sites = Site.objects.filter(latitude=0.0, active=True)
         storage_info_available_sites = Site.objects.exclude(total_online_storage__in=[0, -1])
-        # print(tier_neg1_sites)
-        print(tier0_sites)
-        print(tier1_sites)
-        print(tier2_sites)
-        print(tier3_sites)
-        print(atlantic_sites)
+
 
     @staticmethod
     def post_process():

@@ -2,7 +2,7 @@ from egl_rest.api.event_hub import EventHub
 from egl_rest.api.event_hub.events.data_fetch_parse_events import SequenceCompletedEvent
 from egl_rest.api.services.cric_service import CRICService
 from egl_rest.api.services.rebus_service import RebusService
-from enum import  Enum
+from enum import Enum
 
 from egl_rest.api.services.site_service import SiteService
 

@@ -3,7 +3,7 @@ from egl_rest.api.event_hub.event_managers import IEGLEventListener
 from egl_rest.api.event_hub.events.data_fetch_parse_events import NewDataAvailableOnlineEvent, SequenceCompletedEvent
 from egl_rest.api.helpers import Singleton
 from egl_rest.api.recon_chewbacca import ReconChewbacca
-from egl_rest.api.sequence import Sequence, SequenceStatus
+from egl_rest.api.sequence import Sequence
 import datetime
 import logging
 
@@ -30,6 +30,7 @@ class SequenceService(Singleton, IEGLEventListener):
         for index, sequence in enumerate(self.sequence_queue):
             if sequence == completed_sequence:
                 completed_sequence_id = index
+                break
         if completed_sequence_id == -1:
             logger.error(
                 "Cannot find Sequence {name} {timestamp} in the sequence queue. Unable to terminate Sequence".format(name=completed_sequence.name,

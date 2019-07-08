@@ -32,7 +32,7 @@ class ReconChewbaccaSequenceTests(TestCase):
         self.recon_chewbacca.rebus_sites_file = self.rebus_sites_file
 
     def test_chewbacca_hunt_for_updates(self):
-        output = self.recon_chewbacca.hunt_for_updates()
+        output = self.recon_chewbacca.hunt_for_updates.now(self)
         kml_message = output['kml_message']
         cric_federations = output['cric_federations_message']
         cric_sites = output['cric_sites_message']
