@@ -1,0 +1,3100 @@
+{
+  "AT-HEPHY-VIENNA-UIBK": {
+    "accounting_name": "Austrian Tier-2 Federation", 
+    "country": "Austria", 
+    "country_code": "AT", 
+    "id": 2, 
+    "name": "AT-HEPHY-VIENNA-UIBK", 
+    "pledges": {
+      "2019": {
+        "alice": {
+          "CPU": 5000, 
+          "Disk": 250
+        }, 
+        "atlas": {
+          "CPU": 1800
+        }, 
+        "cms": {
+          "CPU": 10000, 
+          "Disk": 500
+        }
+      }
+    }, 
+    "rcsites": [
+      "HEPHY-UIBK", 
+      "Hephy-Vienna"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "atlas", 
+      "cms", 
+      "alice"
+    ]
+  }, 
+  "AU-ATLAS": {
+    "accounting_name": "University of Melbourne", 
+    "country": "Australia", 
+    "country_code": "AU", 
+    "id": 56, 
+    "name": "AU-ATLAS", 
+    "pledges": {
+      "2019": {
+        "atlas": {
+          "CPU": 20400, 
+          "Disk": 1390
+        }
+      }
+    }, 
+    "rcsites": [
+      "Australia-ATLAS"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "atlas"
+    ]
+  }, 
+  "BE-TIER2": {
+    "accounting_name": "Belgian Tier-2 Federation", 
+    "country": "Belgium", 
+    "country_code": "BE", 
+    "id": 76, 
+    "name": "BE-TIER2", 
+    "pledges": {
+      "2019": {
+        "cms": {
+          "CPU": 62000, 
+          "Disk": 6290
+        }
+      }
+    }, 
+    "rcsites": [
+      "BEgrid-ULB-VUB", 
+      "BelGrid-UCL"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "cms"
+    ]
+  }, 
+  "BR-SP-SPRACE": {
+    "accounting_name": "SPRACE, Sao Paulo", 
+    "country": "Brazil", 
+    "country_code": "BR", 
+    "id": 82, 
+    "name": "BR-SP-SPRACE", 
+    "pledges": {
+      "2019": {
+        "cms": {
+          "CPU": 25200, 
+          "Disk": 1900
+        }
+      }
+    }, 
+    "rcsites": [
+      "SPRACE"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "cms"
+    ]
+  }, 
+  "CA-EAST-T2": {
+    "accounting_name": "Canada-East Federation", 
+    "country": "Canada", 
+    "country_code": "CA", 
+    "id": 40, 
+    "name": "CA-EAST-T2", 
+    "pledges": {
+      "2019": {
+        "atlas": {
+          "CPU": 32300, 
+          "Disk": 2700
+        }
+      }
+    }, 
+    "rcsites": [
+      "CA-WATERLOO-T2"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "atlas"
+    ]
+  }, 
+  "CA-TRIUMF": {
+    "accounting_name": "TRIUMF-LCG2", 
+    "country": "Canada", 
+    "country_code": "CA", 
+    "id": 68, 
+    "name": "CA-TRIUMF", 
+    "pledges": {
+      "2019": {
+        "atlas": {
+          "CPU": 105700, 
+          "Disk": 8800, 
+          "Tape": 22100
+        }
+      }
+    }, 
+    "rcsites": [
+      "TRIUMF-LCG2"
+    ], 
+    "tier_level": 1, 
+    "vos": [
+      "atlas"
+    ]
+  }, 
+  "CA-WEST-T2": {
+    "accounting_name": "Canada-West Federation", 
+    "country": "Canada", 
+    "country_code": "CA", 
+    "id": 83, 
+    "name": "CA-WEST-T2", 
+    "pledges": {
+      "2019": {
+        "atlas": {
+          "CPU": 32300, 
+          "Disk": 2700
+        }
+      }
+    }, 
+    "rcsites": [
+      "CA-SFU-T2", 
+      "CA-VICTORIA-WESTGRID-T2"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "atlas"
+    ]
+  }, 
+  "CH-CERN": {
+    "accounting_name": "CERN-PROD", 
+    "country": "Switzerland", 
+    "country_code": "CH", 
+    "id": 53, 
+    "name": "CH-CERN", 
+    "pledges": {
+      "2019": {
+        "alice": {
+          "CPU": 350000, 
+          "Disk": 31200, 
+          "Tape": 44200
+        }, 
+        "atlas": {
+          "CPU": 411000, 
+          "Disk": 26000, 
+          "Tape": 94000
+        }, 
+        "cms": {
+          "CPU": 423000, 
+          "Disk": 26100, 
+          "Tape": 99000
+        }, 
+        "lhcb": {
+          "CPU": 86000, 
+          "Disk": 13400, 
+          "Tape": 35000
+        }
+      }
+    }, 
+    "rcsites": [
+      "CERN-PROD"
+    ], 
+    "tier_level": 0, 
+    "vos": [
+      "atlas", 
+      "lhcb", 
+      "cms", 
+      "alice"
+    ]
+  }, 
+  "CH-CHIPP-CSCS": {
+    "accounting_name": "CHIPP", 
+    "country": "Switzerland", 
+    "country_code": "CH", 
+    "id": 60, 
+    "name": "CH-CHIPP-CSCS", 
+    "pledges": {
+      "2019": {
+        "atlas": {
+          "CPU": 92000, 
+          "Disk": 2440
+        }, 
+        "cms": {
+          "CPU": 50000, 
+          "Disk": 1840
+        }, 
+        "lhcb": {
+          "CPU": 25000, 
+          "Disk": 920
+        }
+      }
+    }, 
+    "rcsites": [
+      "CSCS-LCG2", 
+      "UNIBE-LHEP"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "atlas", 
+      "lhcb", 
+      "cms"
+    ]
+  }, 
+  "CN-IHEP": {
+    "accounting_name": "IHEP, Beijing", 
+    "country": "China", 
+    "country_code": "CN", 
+    "id": 11, 
+    "name": "CN-IHEP", 
+    "pledges": {
+      "2019": {
+        "atlas": {
+          "CPU": 8000, 
+          "Disk": 400
+        }, 
+        "cms": {
+          "CPU": 8000, 
+          "Disk": 540
+        }
+      }
+    }, 
+    "rcsites": [
+      "BEIJING-LCG2"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "atlas", 
+      "cms"
+    ]
+  }, 
+  "CZ-Prague-T2": {
+    "accounting_name": "FZU AS, Prague", 
+    "country": "Czechia", 
+    "country_code": "CZ", 
+    "id": 36, 
+    "name": "CZ-Prague-T2", 
+    "pledges": {
+      "2019": {
+        "alice": {
+          "CPU": 10000, 
+          "Disk": 1400
+        }, 
+        "atlas": {
+          "CPU": 20000, 
+          "Disk": 2000
+        }
+      }
+    }, 
+    "rcsites": [
+      "praguelcg2"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "atlas", 
+      "alice"
+    ]
+  }, 
+  "DE-DESY-ATLAS-T2": {
+    "accounting_name": "ATLAS Federation DESY", 
+    "country": "Germany", 
+    "country_code": "DE", 
+    "id": 39, 
+    "name": "DE-DESY-ATLAS-T2", 
+    "pledges": {
+      "2019": {
+        "atlas": {
+          "CPU": 43000, 
+          "Disk": 3600
+        }
+      }
+    }, 
+    "rcsites": null, 
+    "tier_level": 2, 
+    "vos": [
+      "atlas"
+    ]
+  }, 
+  "DE-DESY-GOE-ATLAS-T2": {
+    "accounting_name": "ATLAS Federation, HH/Goe", 
+    "country": "Germany", 
+    "country_code": "DE", 
+    "id": 55, 
+    "name": "DE-DESY-GOE-ATLAS-T2", 
+    "pledges": {
+      "2019": {
+        "atlas": {
+          "CPU": 21533, 
+          "Disk": 1800
+        }
+      }
+    }, 
+    "rcsites": [
+      "GoeGrid"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "atlas"
+    ]
+  }, 
+  "DE-DESY-LHCB": {
+    "accounting_name": "LHCb Federation DESY", 
+    "country": "Germany", 
+    "country_code": "DE", 
+    "id": 62, 
+    "name": "DE-DESY-LHCB", 
+    "pledges": {
+      "2019": {
+        "lhcb": {
+          "CPU": 8700, 
+          "Disk": 20
+        }
+      }
+    }, 
+    "rcsites": [
+      "DESY-ZN"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "lhcb"
+    ]
+  }, 
+  "DE-DESY-RWTH-CMS-T2": {
+    "accounting_name": "CMS Federation DESY RWTH Aachen", 
+    "country": "Germany", 
+    "country_code": "DE", 
+    "id": 47, 
+    "name": "DE-DESY-RWTH-CMS-T2", 
+    "pledges": {
+      "2019": {
+        "cms": {
+          "CPU": 75100, 
+          "Disk": 5850
+        }
+      }
+    }, 
+    "rcsites": [
+      "DESY-HH", 
+      "RWTH-Aachen"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "cms"
+    ]
+  }, 
+  "DE-FREIBURGWUPPERTAL": {
+    "accounting_name": "ATLAS Federation FR/W", 
+    "country": "Germany", 
+    "country_code": "DE", 
+    "id": 18, 
+    "name": "DE-FREIBURGWUPPERTAL", 
+    "pledges": {
+      "2019": {
+        "atlas": {
+          "CPU": 43066, 
+          "Disk": 3600
+        }
+      }
+    }, 
+    "rcsites": [
+      "UNI-FREIBURG", 
+      "wuppertalprod"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "atlas"
+    ]
+  }, 
+  "DE-GSI": {
+    "accounting_name": "GSI, Darmstadt", 
+    "country": "Germany", 
+    "country_code": "DE", 
+    "id": 31, 
+    "name": "DE-GSI", 
+    "pledges": {
+      "2019": {
+        "alice": {
+          "CPU": 28000, 
+          "Disk": 2600
+        }
+      }
+    }, 
+    "rcsites": [
+      "GSI-LCG2"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "alice"
+    ]
+  }, 
+  "DE-KIT": {
+    "accounting_name": "FZK-LCG2", 
+    "country": "Germany", 
+    "country_code": "DE", 
+    "id": 48, 
+    "name": "DE-KIT", 
+    "pledges": {
+      "2019": {
+        "alice": {
+          "CPU": 91250, 
+          "Disk": 9475, 
+          "Tape": 9425
+        }, 
+        "atlas": {
+          "CPU": 132125, 
+          "Disk": 11000, 
+          "Tape": 27625
+        }, 
+        "cms": {
+          "CPU": 65000, 
+          "Disk": 6800, 
+          "Tape": 22000
+        }, 
+        "lhcb": {
+          "CPU": 45257, 
+          "Disk": 4659, 
+          "Tape": 8500
+        }
+      }
+    }, 
+    "rcsites": [
+      "FZK-LCG2"
+    ], 
+    "tier_level": 1, 
+    "vos": [
+      "atlas", 
+      "lhcb", 
+      "cms", 
+      "alice"
+    ]
+  }, 
+  "DE-MCAT": {
+    "accounting_name": "ATLAS Federation, Munich", 
+    "country": "Germany", 
+    "country_code": "DE", 
+    "id": 38, 
+    "name": "DE-MCAT", 
+    "pledges": {
+      "2019": {
+        "atlas": {
+          "CPU": 43066, 
+          "Disk": 3600
+        }
+      }
+    }, 
+    "rcsites": [
+      "LRZ-LMU", 
+      "MPPMU"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "atlas"
+    ]
+  }, 
+  "EE-NICPB": {
+    "accounting_name": "NICPB, Tallinn", 
+    "country": "Estonia", 
+    "country_code": "EE", 
+    "id": 13, 
+    "name": "EE-NICPB", 
+    "pledges": {
+      "2019": {
+        "cms": {
+          "CPU": 70000, 
+          "Disk": 2000
+        }
+      }
+    }, 
+    "rcsites": [
+      "T2_Estonia"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "cms"
+    ]
+  }, 
+  "ES-ATLAS-T2": {
+    "accounting_name": "ATLAS Federation", 
+    "country": "Spain", 
+    "country_code": "ES", 
+    "id": 69, 
+    "name": "ES-ATLAS-T2", 
+    "pledges": {
+      "2019": {
+        "atlas": {
+          "CPU": 55680, 
+          "Disk": 4048
+        }
+      }
+    }, 
+    "rcsites": [
+      "ifae", 
+      "IFIC-LCG2", 
+      "UAM-LCG2"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "atlas"
+    ]
+  }, 
+  "ES-CMS-T2": {
+    "accounting_name": "CMS Federation", 
+    "country": "Spain", 
+    "country_code": "ES", 
+    "id": 9, 
+    "name": "ES-CMS-T2", 
+    "pledges": {
+      "2019": {
+        "cms": {
+          "CPU": 40000, 
+          "Disk": 3120
+        }
+      }
+    }, 
+    "rcsites": [
+      "CIEMAT-LCG2", 
+      "IFCA-LCG2"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "cms"
+    ]
+  }, 
+  "ES-LHCb-T2": {
+    "accounting_name": "LHCb Federation", 
+    "country": "Spain", 
+    "country_code": "ES", 
+    "id": 22, 
+    "name": "ES-LHCb-T2", 
+    "pledges": {
+      "2019": {
+        "lhcb": {
+          "CPU": 7000, 
+          "Disk": 1
+        }
+      }
+    }, 
+    "rcsites": [
+      "UB-LCG2", 
+      "USC-LCG2"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "lhcb"
+    ]
+  }, 
+  "ES-PIC": {
+    "accounting_name": "pic", 
+    "country": "Spain", 
+    "country_code": "ES", 
+    "id": 43, 
+    "name": "ES-PIC", 
+    "pledges": {
+      "2019": {
+        "atlas": {
+          "CPU": 42317, 
+          "Disk": 3523, 
+          "Tape": 8848
+        }, 
+        "cms": {
+          "CPU": 26023, 
+          "Disk": 2722, 
+          "Tape": 8808
+        }, 
+        "lhcb": {
+          "CPU": 10840, 
+          "Disk": 1116, 
+          "Tape": 2036
+        }
+      }
+    }, 
+    "rcsites": [
+      "pic"
+    ], 
+    "tier_level": 1, 
+    "vos": [
+      "atlas", 
+      "lhcb", 
+      "cms"
+    ]
+  }, 
+  "FI-HIP-T2": {
+    "accounting_name": "NDGF/HIP Tier2", 
+    "country": "Finland", 
+    "country_code": "FI", 
+    "id": 17, 
+    "name": "FI-HIP-T2", 
+    "pledges": {
+      "2019": {
+        "cms": {
+          "CPU": 10000, 
+          "Disk": 1100
+        }
+      }
+    }, 
+    "rcsites": [
+      "FI_HIP_T2"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "cms"
+    ]
+  }, 
+  "FR-CCIN2P3": {
+    "accounting_name": "IN2P3-CC", 
+    "country": "France", 
+    "country_code": "FR", 
+    "id": 44, 
+    "name": "FR-CCIN2P3", 
+    "pledges": {
+      "2019": {
+        "alice": {
+          "CPU": 41000, 
+          "Disk": 5100, 
+          "Tape": 6200
+        }, 
+        "atlas": {
+          "CPU": 118500, 
+          "Disk": 10100, 
+          "Tape": 25900
+        }, 
+        "cms": {
+          "CPU": 49000, 
+          "Disk": 5250, 
+          "Tape": 16900
+        }, 
+        "lhcb": {
+          "CPU": 39000, 
+          "Disk": 3800, 
+          "Tape": 7500
+        }
+      }
+    }, 
+    "rcsites": [
+      "IN2P3-CC"
+    ], 
+    "tier_level": 1, 
+    "vos": [
+      "atlas", 
+      "lhcb", 
+      "cms", 
+      "alice"
+    ]
+  }, 
+  "FR-GRIF": {
+    "accounting_name": "GRIF, Paris", 
+    "country": "France", 
+    "country_code": "FR", 
+    "id": 32, 
+    "name": "FR-GRIF", 
+    "pledges": {
+      "2019": {
+        "alice": {
+          "CPU": 20433, 
+          "Disk": 1619
+        }, 
+        "atlas": {
+          "CPU": 46930, 
+          "Disk": 3840
+        }, 
+        "cms": {
+          "CPU": 32310, 
+          "Disk": 2602
+        }, 
+        "lhcb": {
+          "CPU": 11241, 
+          "Disk": 300
+        }
+      }
+    }, 
+    "rcsites": [
+      "GRIF"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "atlas", 
+      "lhcb", 
+      "cms", 
+      "alice"
+    ]
+  }, 
+  "FR-IN2P3-CC-T2": {
+    "accounting_name": "CC-IN2P3 AF", 
+    "country": "France", 
+    "country_code": "FR", 
+    "id": 25, 
+    "name": "FR-IN2P3-CC-T2", 
+    "pledges": {
+      "2019": {
+        "cms": {
+          "CPU": 7730, 
+          "Disk": 510
+        }
+      }
+    }, 
+    "rcsites": [
+      "IN2P3-CC-T2"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "cms"
+    ]
+  }, 
+  "FR-IN2P3-CPPM": {
+    "accounting_name": "CPPM, Marseille", 
+    "country": "France", 
+    "country_code": "FR", 
+    "id": 87, 
+    "name": "FR-IN2P3-CPPM", 
+    "pledges": {
+      "2019": {
+        "atlas": {
+          "CPU": 14000, 
+          "Disk": 1500
+        }, 
+        "lhcb": {
+          "CPU": 7000, 
+          "Disk": 500
+        }
+      }
+    }, 
+    "rcsites": [
+      "IN2P3-CPPM"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "atlas", 
+      "lhcb"
+    ]
+  }, 
+  "FR-IN2P3-IPHC": {
+    "accounting_name": "IPHC, Strasbourg", 
+    "country": "France", 
+    "country_code": "FR", 
+    "id": 50, 
+    "name": "FR-IN2P3-IPHC", 
+    "pledges": {
+      "2019": {
+        "alice": {
+          "CPU": 6000, 
+          "Disk": 320
+        }, 
+        "cms": {
+          "CPU": 18000, 
+          "Disk": 1970
+        }
+      }
+    }, 
+    "rcsites": [
+      "IN2P3-IRES"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "cms", 
+      "alice"
+    ]
+  }, 
+  "FR-IN2P3-LAPP": {
+    "accounting_name": "LAPP, Annecy", 
+    "country": "France", 
+    "country_code": "FR", 
+    "id": 84, 
+    "name": "FR-IN2P3-LAPP", 
+    "pledges": {
+      "2019": {
+        "atlas": {
+          "CPU": 21000, 
+          "Disk": 2100
+        }, 
+        "lhcb": {
+          "CPU": 7000
+        }
+      }
+    }, 
+    "rcsites": [
+      "IN2P3-LAPP"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "atlas", 
+      "lhcb"
+    ]
+  }, 
+  "FR-IN2P3-LPC": {
+    "accounting_name": "LPC, Clermont-Ferrand", 
+    "country": "France", 
+    "country_code": "FR", 
+    "id": 12, 
+    "name": "FR-IN2P3-LPC", 
+    "pledges": {
+      "2019": {
+        "alice": {
+          "CPU": 5400, 
+          "Disk": 385
+        }, 
+        "atlas": {
+          "CPU": 11800, 
+          "Disk": 1400
+        }, 
+        "lhcb": {
+          "CPU": 2300, 
+          "Disk": 2
+        }
+      }
+    }, 
+    "rcsites": [
+      "IN2P3-LPC"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "atlas", 
+      "lhcb", 
+      "alice"
+    ]
+  }, 
+  "FR-IN2P3-LPSC": {
+    "accounting_name": "LPSC Grenoble", 
+    "country": "France", 
+    "country_code": "FR", 
+    "id": 64, 
+    "name": "FR-IN2P3-LPSC", 
+    "pledges": {
+      "2019": {
+        "alice": {
+          "CPU": 4440, 
+          "Disk": 335
+        }, 
+        "atlas": {
+          "CPU": 13325, 
+          "Disk": 850
+        }
+      }
+    }, 
+    "rcsites": [
+      "IN2P3-LPSC"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "atlas", 
+      "alice"
+    ]
+  }, 
+  "FR-IN2P3-SUBATECH": {
+    "accounting_name": "SUBATECH, Nantes", 
+    "country": "France", 
+    "country_code": "FR", 
+    "id": 58, 
+    "name": "FR-IN2P3-SUBATECH", 
+    "pledges": {
+      "2019": {
+        "alice": {
+          "CPU": 8500, 
+          "Disk": 1500
+        }
+      }
+    }, 
+    "rcsites": [
+      "IN2P3-SUBATECH"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "alice"
+    ]
+  }, 
+  "GR-GRIDLAB-KAVALA": {
+    "accounting_name": "GRID LAB, KAVALA Institute of Technology", 
+    "country": "Greece", 
+    "country_code": "GR", 
+    "id": 65, 
+    "name": "GR-GRIDLAB-KAVALA", 
+    "pledges": {}, 
+    "rcsites": [
+      "GR-12-TEIKAV"
+    ], 
+    "tier_level": 2, 
+    "vos": []
+  }, 
+  "GR-Ioannina-HEP": {
+    "accounting_name": "HEP Laboratory, University of Ioannina", 
+    "country": "Greece", 
+    "country_code": "GR", 
+    "id": 70, 
+    "name": "GR-Ioannina-HEP", 
+    "pledges": {
+      "2019": {
+        "cms": {
+          "CPU": 1870, 
+          "Disk": 200
+        }
+      }
+    }, 
+    "rcsites": [
+      "GR-07-UOI-HEPLAB"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "cms"
+    ]
+  }, 
+  "HU-HGCC-T2": {
+    "accounting_name": "HGCC Federation", 
+    "country": "Hungary", 
+    "country_code": "HU", 
+    "id": 26, 
+    "name": "HU-HGCC-T2", 
+    "pledges": {
+      "2019": {
+        "alice": {
+          "CPU": 6000, 
+          "Disk": 700
+        }, 
+        "cms": {
+          "CPU": 12000, 
+          "Disk": 900
+        }
+      }
+    }, 
+    "rcsites": [
+      "BUDAPEST"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "cms", 
+      "alice"
+    ]
+  }, 
+  "IL-HEPTier-2": {
+    "accounting_name": "IL-HEP Tier-2 Federation", 
+    "country": "Israel", 
+    "country_code": "IL", 
+    "id": 86, 
+    "name": "IL-HEPTier-2", 
+    "pledges": {
+      "2019": {
+        "atlas": {
+          "CPU": 18300, 
+          "Disk": 1820
+        }
+      }
+    }, 
+    "rcsites": [
+      "IL-TAU-HEP", 
+      "TECHNION-HEP", 
+      "WEIZMANN-LCG2"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "atlas"
+    ]
+  }, 
+  "IN-DAE-KOLKATA-TIER2": {
+    "accounting_name": "VECC/SINP, Kolkata", 
+    "country": "India", 
+    "country_code": "IN", 
+    "id": 59, 
+    "name": "IN-DAE-KOLKATA-TIER2", 
+    "pledges": {
+      "2019": {
+        "alice": {
+          "CPU": 30000, 
+          "Disk": 3500
+        }
+      }
+    }, 
+    "rcsites": [
+      "IN-DAE-VECC-02"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "alice"
+    ]
+  }, 
+  "IN-INDIACMS-TIFR": {
+    "accounting_name": "TIFR, Mumbai", 
+    "country": "India", 
+    "country_code": "IN", 
+    "id": 4, 
+    "name": "IN-INDIACMS-TIFR", 
+    "pledges": {
+      "2019": {
+        "cms": {
+          "CPU": 35000, 
+          "Disk": 3000
+        }
+      }
+    }, 
+    "rcsites": [
+      "INDIACMS-TIFR"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "cms"
+    ]
+  }, 
+  "IT-INFN-CNAF": {
+    "accounting_name": "INFN-T1", 
+    "country": "Italy", 
+    "country_code": "IT", 
+    "id": 63, 
+    "name": "IT-INFN-CNAF", 
+    "pledges": {
+      "2019": {
+        "alice": {
+          "CPU": 60600, 
+          "Disk": 6148, 
+          "Tape": 11687
+        }, 
+        "atlas": {
+          "CPU": 90270, 
+          "Disk": 7200, 
+          "Tape": 18720
+        }, 
+        "cms": {
+          "CPU": 78251, 
+          "Disk": 8020, 
+          "Tape": 26520
+        }, 
+        "lhcb": {
+          "CPU": 48461, 
+          "Disk": 6023, 
+          "Tape": 11891
+        }
+      }
+    }, 
+    "rcsites": [
+      "INFN-T1"
+    ], 
+    "tier_level": 1, 
+    "vos": [
+      "atlas", 
+      "lhcb", 
+      "cms", 
+      "alice"
+    ]
+  }, 
+  "IT-INFN-T2": {
+    "accounting_name": "INFN T2 Federation", 
+    "country": "Italy", 
+    "country_code": "IT", 
+    "id": 8, 
+    "name": "IT-INFN-T2", 
+    "pledges": {
+      "2019": {
+        "alice": {
+          "CPU": 70845, 
+          "Disk": 6659
+        }, 
+        "atlas": {
+          "CPU": 108830, 
+          "Disk": 6858
+        }, 
+        "cms": {
+          "CPU": 119000, 
+          "Disk": 9271
+        }, 
+        "lhcb": {
+          "CPU": 27103
+        }
+      }
+    }, 
+    "rcsites": [
+      "INFN-BARI", 
+      "INFN-CATANIA", 
+      "INFN-CNAF-LHCB", 
+      "INFN-FRASCATI", 
+      "INFN-LNL-2", 
+      "INFN-MILANO-ATLASC", 
+      "INFN-NAPOLI-ATLAS", 
+      "INFN-PISA", 
+      "INFN-ROMA1", 
+      "INFN-ROMA1-CMS", 
+      "INFN-TORINO"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "atlas", 
+      "lhcb", 
+      "cms", 
+      "alice"
+    ]
+  }, 
+  "JP-Tokyo-ATLAS-T2": {
+    "accounting_name": "ICEPP, Tokyo", 
+    "country": "Japan", 
+    "country_code": "JP", 
+    "id": 28, 
+    "name": "JP-Tokyo-ATLAS-T2", 
+    "pledges": {
+      "2019": {
+        "atlas": {
+          "CPU": 40000, 
+          "Disk": 5600
+        }
+      }
+    }, 
+    "rcsites": [
+      "TOKYO-LCG2"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "atlas"
+    ]
+  }, 
+  "KR-KISTI-GSDC": {
+    "accounting_name": "KR-KISTI-GSDC-01", 
+    "country": "Korea, Republic of", 
+    "country_code": "KR", 
+    "id": 85, 
+    "name": "KR-KISTI-GSDC", 
+    "pledges": {
+      "2019": {
+        "alice": {
+          "CPU": 41000, 
+          "Disk": 3500, 
+          "Tape": 3000
+        }
+      }
+    }, 
+    "rcsites": [
+      "KR-KISTI-GSDC-01"
+    ], 
+    "tier_level": 1, 
+    "vos": [
+      "alice"
+    ]
+  }, 
+  "KR-KISTI-GSDC-02": {
+    "accounting_name": "KR-KISTI-GSDC-02", 
+    "country": "Korea, Republic of", 
+    "country_code": "KR", 
+    "id": 27, 
+    "name": "KR-KISTI-GSDC-02", 
+    "pledges": {
+      "2019": {
+        "cms": {
+          "CPU": 10000, 
+          "Disk": 800
+        }
+      }
+    }, 
+    "rcsites": [
+      "KR-KISTI-GSDC-02"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "cms"
+    ]
+  }, 
+  "MY-T2-UM": {
+    "accounting_name": "University of Malaya", 
+    "country": "Malaysia", 
+    "country_code": "MY", 
+    "id": 5, 
+    "name": "MY-T2-UM", 
+    "pledges": {}, 
+    "rcsites": null, 
+    "tier_level": 2, 
+    "vos": []
+  }, 
+  "NDGF": {
+    "accounting_name": "NDGF-T1", 
+    "country": "Nordic", 
+    "country_code": "", 
+    "id": 67, 
+    "name": "NDGF", 
+    "pledges": {
+      "2019": {
+        "alice": {
+          "CPU": 43850, 
+          "Disk": 4240, 
+          "Tape": 2990
+        }, 
+        "atlas": {
+          "CPU": 63470, 
+          "Disk": 5310, 
+          "Tape": 12510
+        }
+      }
+    }, 
+    "rcsites": [
+      "NDGF-T1"
+    ], 
+    "tier_level": 1, 
+    "vos": [
+      "atlas", 
+      "alice"
+    ]
+  }, 
+  "NL-T1": {
+    "accounting_name": "NIKHEF-ELPROD", 
+    "country": "Netherlands", 
+    "country_code": "NL", 
+    "id": 23, 
+    "name": "NL-T1", 
+    "pledges": {
+      "2019": {
+        "alice": {
+          "CPU": 13140, 
+          "Disk": 1364, 
+          "Tape": 1357
+        }, 
+        "atlas": {
+          "CPU": 80332, 
+          "Disk": 6688, 
+          "Tape": 16796
+        }, 
+        "lhcb": {
+          "CPU": 26287, 
+          "Disk": 2706, 
+          "Tape": 4937
+        }
+      }
+    }, 
+    "rcsites": [
+      "NIKHEF-ELPROD", 
+      "SARA-MATRIX"
+    ], 
+    "tier_level": 1, 
+    "vos": [
+      "atlas", 
+      "lhcb", 
+      "alice"
+    ]
+  }, 
+  "NRC-KI-T1": {
+    "accounting_name": "NRC-KI-T1", 
+    "country": "Russian Federation", 
+    "country_code": "RU", 
+    "id": 33, 
+    "name": "NRC-KI-T1", 
+    "pledges": {
+      "2019": {
+        "alice": {
+          "CPU": 32800, 
+          "Disk": 4500, 
+          "Tape": 5700
+        }, 
+        "atlas": {
+          "CPU": 32800, 
+          "Disk": 4500, 
+          "Tape": 5700
+        }, 
+        "lhcb": {
+          "CPU": 16400, 
+          "Disk": 2300, 
+          "Tape": 3000
+        }
+      }
+    }, 
+    "rcsites": [
+      "RRC-KI-T1"
+    ], 
+    "tier_level": 1, 
+    "vos": [
+      "atlas", 
+      "lhcb", 
+      "alice"
+    ]
+  }, 
+  "NULL": {
+    "accounting_name": "", 
+    "country": "NULL", 
+    "country_code": "", 
+    "id": 1, 
+    "name": "NULL", 
+    "pledges": {}, 
+    "rcsites": [
+      "100IT", 
+      "Advanced Technology Lab", 
+      "AEGIS01-IPB-SCL", 
+      "AEGIS02-RCUB", 
+      "AEGIS03-ELEF-LEDA", 
+      "AEGIS04-KG", 
+      "AEGIS05-ETFBG", 
+      "AEGIS07-IPB-ATLAS", 
+      "AEGIS09-FTN-KM", 
+      "AEGIS10-VINCA-CMS", 
+      "AEGIS11-MISANU", 
+      "AGH-ICSR", 
+      "AGLT2_TEST", 
+      "ALBERTA-LCG2", 
+      "AM-01-IIAP", 
+      "AM-02-SEUA", 
+      "AM-03-YSU", 
+      "AM-04-YERPHI", 
+      "AM-05-YSU", 
+      "AMD64.PSNC.PL", 
+      "AMNH", 
+      "AmsterdamPRPCachingInfrastructure", 
+      "ANLASC", 
+      "Aragon", 
+      "ARAGRID-CIENCIAS", 
+      "ARAGRID-HUESCA", 
+      "ARAGRID-TERUEL", 
+      "AREA-BO", 
+      "ARNES", 
+      "ASRT", 
+      "AstrogridPUC", 
+      "ATLAND", 
+      "Australia-T2", 
+      "AUVERGRID", 
+      "AZ-IFAN", 
+      "Baylor-Kodiak", 
+      "BCBR", 
+      "BEgrid-BELNET", 
+      "BEgrid-KULeuven", 
+      "BEgrid-UGent", 
+      "BEgrid-UniversiteitAntwerpen", 
+      "BEIJING-CNIC-LCG2-IA64", 
+      "BEIJING-LCG2-t", 
+      "BELLARMINE_TIER2", 
+      "Beocat", 
+      "BG-INRNE", 
+      "BG01-IPP", 
+      "BG02-IM", 
+      "BG03-NGCC", 
+      "BG04-ACAD", 
+      "BG05-SUGrid", 
+      "BG06-GPHI", 
+      "BG07-EDU", 
+      "BG08-MADARA", 
+      "BIFI", 
+      "BIFI-IBERGRID", 
+      "BIOCOMP", 
+      "BMEGrid", 
+      "BMRZ-FRANKFURT", 
+      "BNL-ATLAS-ITB", 
+      "BNL-ATLAS-OPP", 
+      "BNL-Belle-II", 
+      "BNL-SDCC", 
+      "BNL_ATLAS_1", 
+      "BNL_Test_2", 
+      "Brandeis-Atlas-T3", 
+      "BRGM-ORLEANS", 
+      "BrookhavenCachingInfrastructure", 
+      "brown-cms", 
+      "BSC-Cloud", 
+      "BY-NCPHEP", 
+      "CA-ALBERTA-WESTGRID-T2", 
+      "CA-MCGILL-CLUMEQ-PPS", 
+      "CA-MCGILL-CLUMEQ-T2", 
+      "CA-TRIUMF-DYNAFED", 
+      "CA-TRIUMF-T2K", 
+      "CachingInfrastructure", 
+      "CachingInfrastrucutre", 
+      "CAFPE-GRANADA", 
+      "CAMK", 
+      "CancerComputer_Hotel", 
+      "CancerComputer_Kitchener", 
+      "CancerComputer_MinneUEL", 
+      "CardiffPRPCachingInfrastructure", 
+      "CARLETONU-LCG2", 
+      "CENF_Neutrino_Computing_Cluster", 
+      "CERN-CIC", 
+      "CERN-PROD-AI", 
+      "CERN-PROD-HLT", 
+      "CERN-PROD-WIGNER", 
+      "CERN-SC", 
+      "CERN_PPS", 
+      "CESGA", 
+      "CESGA-PPS", 
+      "CESIC-UNICAL", 
+      "CESNET-MCC", 
+      "CESNET-MetaCloud", 
+      "CETA-GRID", 
+      "CFP-IST", 
+      "CGG-LCG2", 
+      "CHPC Group", 
+      "CHTC", 
+      "CICESE", 
+      "CIEMAT-TIC", 
+      "CIGI-ITB", 
+      "CIGI-OSG", 
+      "CIN2", 
+      "cinvestav", 
+      "CIRMMP", 
+      "CIT_CMS_Cloud", 
+      "CIT_CMS_T2_HPC", 
+      "CIT_ITB_1", 
+      "CIT_LIGO", 
+      "Clemson-Palmetto", 
+      "CLOSED-BY-BNTU", 
+      "CLOSED-BY-JIPNR-SOSNY", 
+      "CLOSED-BY-JIPNR-SOSNY-2", 
+      "CLOSED-BY-NCPHEP", 
+      "CLOSED-BY-UIIP", 
+      "CLOUDIFIN", 
+      "ClusterUL", 
+      "CMS Glidein Systems", 
+      "CMS-BURT-ITB", 
+      "CN-BEIJING-PKU", 
+      "CNB-LCG2", 
+      "CNR-ILC-PISA", 
+      "CNR-PROD-PISA", 
+      "cns", 
+      "CREATIS-INSA-LYON", 
+      "CRS4", 
+      "CSC", 
+      "CSC-cloud", 
+      "CSIC-BELLATERRA", 
+      "CSIC-EBD-LW", 
+      "CSIU Services", 
+      "CYF-CERTIF-TB", 
+      "CYFRONET-CLOUD", 
+      "CYFRONET-IA64", 
+      "CYFRONET-PROMETHEUS", 
+      "CYFRONET-S1", 
+      "DataInfrastructure", 
+      "DataInfrastructureFlatiron", 
+      "DI-UMinho", 
+      "Discovery", 
+      "DZ-01-ARN", 
+      "e-ca-iaa", 
+      "ECHISM-GOC", 
+      "EdgesAtHome", 
+      "EELA-UNLP", 
+      "EENet", 
+      "EG-BUE-CTP", 
+      "EG-PHY-ASU-T3", 
+      "EG-ZC-T3", 
+      "egee.fesb.hr", 
+      "egee.irb.hr", 
+      "egee.man.poznan.pl", 
+      "egee.srce.hr", 
+      "EGI-CLOUD-OPS", 
+      "EGI-DATA-TRANSFER", 
+      "EGI-DATAHUB", 
+      "EGI-FGSG", 
+      "EGI-MARKETPLACE", 
+      "EGI-NOTEBOOKS", 
+      "EMBL-EBI", 
+      "ESA-ESAC", 
+      "ESA-ESRIN", 
+      "ESRF", 
+      "FBF-Brescia-IT", 
+      "fedcloud.srce.hr", 
+      "FENIX", 
+      "FI-LCG2", 
+      "FIUPG", 
+      "FI_AA", 
+      "FI_Aalto", 
+      "FI_Helsinki", 
+      "FI_JYU", 
+      "FI_LUT", 
+      "FI_Oulu", 
+      "FI_TUT", 
+      "FI_UEF", 
+      "FI_UTU", 
+      "FLTECH", 
+      "FNAL_FERMIGRID", 
+      "FNAL_FIFE_SUBMIT", 
+      "FNAL_PUBLIC_DCACHE", 
+      "FRANCE-GRILLES-TESTBED", 
+      "FRESNO-ATLAS-T3", 
+      "FSU-HEP", 
+      "FZJ", 
+      "FZU", 
+      "FZU-IPV6", 
+      "GARR-01-DIR", 
+      "GC1", 
+      "GCVO_PUJ", 
+      "GE-01-GRENA", 
+      "Geant perfSONAR", 
+      "Georgia Tech LIGO", 
+      "Georgia Tech PACE", 
+      "GILDA-INFN-CATANIA", 
+      "GILDA-NeSC", 
+      "GILDA-PADOVA", 
+      "GILDA-SIRIUS", 
+      "GILDA-VEGA", 
+      "GPGRID", 
+      "GR-01-AUTH", 
+      "GR-02-UoM", 
+      "GR-03-HEPNTUA", 
+      "GR-04-FORTH-ICS", 
+      "GR-05-DEMOKRITOS", 
+      "GR-06-IASA", 
+      "GR-08-CEID", 
+      "GR-09-UoA", 
+      "GR-10-UOI", 
+      "GR-11-UPATRAS", 
+      "GRATIA-OSG", 
+      "GRID-UNAM", 
+      "GRID-UNISON", 
+      "GRIDIFIN", 
+      "GRIDOPS-ACCPORTAL", 
+      "GRIDOPS-APEL", 
+      "GRIDOPS-APPDB", 
+      "GRIDOPS-CATCHALL", 
+      "GRIDOPS-CheckIn", 
+      "GRIDOPS-CRM", 
+      "GRIDOPS-CSGF", 
+      "GRIDOPS-CTOOLS", 
+      "GRIDOPS-CVMFS", 
+      "GRIDOPS-DATAHUB", 
+      "GRIDOPS-DATATRANSFER", 
+      "GRIDOPS-DIRAC4EGI", 
+      "GRIDOPS-EC3", 
+      "GRIDOPS-eGRANT", 
+      "GRIDOPS-GGUS", 
+      "GRIDOPS-GOCDB", 
+      "GRIDOPS-GRIDVIEW", 
+      "GRIDOPS-GSTAT", 
+      "GRIDOPS-LTOS", 
+      "GRIDOPS-MARKETPLACE", 
+      "GRIDOPS-METRICSPORTAL", 
+      "GRIDOPS-MON", 
+      "GRIDOPS-MSG", 
+      "GRIDOPS-OPSPORTAL", 
+      "GRIDOPS-PERUN", 
+      "GRIDOPS-SAM", 
+      "GRIDOPS-SECTOOLS", 
+      "GRIDOPS-TMP", 
+      "GRIDOPS-UMDREPO", 
+      "GRIDOPS-WS-PGRADE", 
+      "GRIDOPS-XGUS", 
+      "GridUNESP", 
+      "GrimaPUC", 
+      "GRISU-COMETA-INAF-CT", 
+      "GRISU-COMETA-INFN-CT", 
+      "GRISU-COMETA-INFN-LNS", 
+      "GRISU-COMETA-ING-MESSINA", 
+      "GRISU-COMETA-UNICT-DIIT", 
+      "GRISU-COMETA-UNICT-DMI", 
+      "GRISU-COMETA-UNIPA", 
+      "GRISU-CYBERSAR-CAGLIARI", 
+      "GRISU-ENEA-GRID", 
+      "GRISU-SPACI-LECCE", 
+      "GRISU-SPACI-NAPOLI", 
+      "GRISU-UNINA", 
+      "GROW-PROD", 
+      "GWDG-CLOUD", 
+      "HCC Submitters", 
+      "HG-01-GRNET", 
+      "HG-02-IASA", 
+      "HG-03-AUTH", 
+      "HG-04-CTI-CEID", 
+      "HG-05-FORTH", 
+      "HG-06-EKT", 
+      "HG-08-Okeanos", 
+      "HG-09-Okeanos-Cloud", 
+      "HK-HKU-CC-01", 
+      "HK-LCG2", 
+      "hp-bristol", 
+      "HPBR-LCG2", 
+      "HPCOSG", 
+      "HPTC-LCG2", 
+      "HPTC-LCG2ia64", 
+      "HR-01-RBI (closed)", 
+      "HRL_KZ", 
+      "HTC-BIGGRID", 
+      "Hyak", 
+      "IAA-CSIC", 
+      "IBCP-GBIO", 
+      "IC-UFAL", 
+      "ICEAGE-CATANIA", 
+      "IceCube", 
+      "ICM-PLGRID", 
+      "IEETA", 
+      "IFISC-GRID", 
+      "IGI-BOLOGNA", 
+      "IISAS-Bratislava", 
+      "IISAS-FedCloud", 
+      "IISAS-GILDA", 
+      "IISAS-GPUCloud", 
+      "IISAS-Nebula", 
+      "IIT", 
+      "IL-BGU", 
+      "IL-BGU-PPS", 
+      "IL-IUCC", 
+      "IL-TAU-CS", 
+      "IllinoisHEP", 
+      "IL_IUCC_IG", 
+      "IMCSUL", 
+      "IMCSUL-INF", 
+      "IN-DAE-VECC-01", 
+      "IN2P3-IPNL", 
+      "INAF-TRIESTE", 
+      "INAF-TRIESTE-STACK", 
+      "INAF-TS", 
+      "INDIGO-CATANIA-STACK", 
+      "INFN-BOLOGNA", 
+      "INFN-BOLOGNA-CMS", 
+      "INFN-BOLOGNA-T3", 
+      "INFN-CAGLIARI", 
+      "INFN-CASCINA", 
+      "INFN-CATANIA-NEBULA", 
+      "INFN-CATANIA-STACK", 
+      "INFN-COSENZA", 
+      "INFN-FERRARA", 
+      "INFN-FIRENZE", 
+      "INFN-GENOVA", 
+      "INFN-IGI-CNAF-FedCloud", 
+      "INFN-LECCE", 
+      "INFN-LNS", 
+      "INFN-MIB", 
+      "INFN-MILANO", 
+      "INFN-NAPOLI", 
+      "INFN-NAPOLI-ARGO", 
+      "INFN-NAPOLI-CMS", 
+      "INFN-NAPOLI-PAMELA", 
+      "INFN-PADOVA", 
+      "INFN-PADOVA-CMS", 
+      "INFN-PADOVA-CREAMTEST", 
+      "INFN-PADOVA-STACK", 
+      "INFN-PARMA", 
+      "INFN-PAVIA", 
+      "INFN-PERUGIA", 
+      "INFN-ROMA1-TEO", 
+      "INFN-ROMA1-VIRGO", 
+      "INFN-ROMA2", 
+      "INFN-ROMA3", 
+      "INFN-TRIESTE", 
+      "INSU01-PARIS", 
+      "IPSL-IPGP-LCG2", 
+      "IR-IPM-HEP", 
+      "ISI", 
+      "ISIS-UNIANDES", 
+      "ISMB", 
+      "ITB-BARI", 
+      "IUCC_Fed_Cloud", 
+      "Jetstream", 
+      "JetStreamTACC", 
+      "JINR-Tier2", 
+      "JINR_CLOUD", 
+      "JP-HIROSHIMA-WLCG", 
+      "JP-KEK-CRC-02", 
+      "Jupiter", 
+      "KAGROSS-GOC", 
+      "KANSAS_HOSTED_BOSCO_CE", 
+      "KEELE-NGS", 
+      "Kennesaw_Dell_Nodes", 
+      "KISTIPRPCachingInfrastructure", 
+      "KMU-PRI-LCG2", 
+      "KR-KISTI-CLOUD", 
+      "KR-KISTI-GCRT-01", 
+      "KR-KISTI-HEP", 
+      "KR-KNU-T3", 
+      "KR-UOS-SSCC", 
+      "KTH-CLOUD", 
+      "KTU-BG-GLITE", 
+      "KTU-ELEN-LCG2", 
+      "LBL_Testbed", 
+      "LCCV-UFAL", 
+      "LCG-IL-OU", 
+      "LCG-USTC", 
+      "LCG_KNU", 
+      "LEI-GLITE", 
+      "LIGO_UWM_NEMO", 
+      "LIP-Coimbra", 
+      "LIP-Lisbon", 
+      "LNCC-COMCIDIS", 
+      "LNCC-LCG", 
+      "LONI_OSG2", 
+      "LRZ", 
+      "LSG-AMC", 
+      "LSG-AMS", 
+      "LSG-BCBR", 
+      "LSG-EMC", 
+      "LSG-HTC", 
+      "LSG-HUB", 
+      "LSG-KG", 
+      "LSG-KUN", 
+      "LSG-LUMC", 
+      "LSG-NKI", 
+      "LSG-RUG", 
+      "LSG-TUD", 
+      "LSG-UM", 
+      "LSG-UU", 
+      "LSG-VU", 
+      "LSG-WUR", 
+      "LSU_SuperMIC", 
+      "LTU_Tier3", 
+      "LUH", 
+      "LUHEP_OSG", 
+      "M3PEC", 
+      "MA-01-CNRST", 
+      "MA-04-CNRST-ATLAS", 
+      "mainz", 
+      "mainzgrid", 
+      "manchester-ngs2", 
+      "MANLAN perfSONAR", 
+      "MD-01-TUM", 
+      "MD-02-IMI", 
+      "MD-03-USM", 
+      "MD-04-RENAM", 
+      "MIT_CMS_T3", 
+      "MIT_SUBMIT", 
+      "MK-01-UKIM_II", 
+      "MK-02-ETF", 
+      "MK-03-FINKI", 
+      "MK-04-FINKICLOUD", 
+      "MPI-K", 
+      "MREN-01-CIS", 
+      "MSFG-MULTI", 
+      "MSFG-OPEN", 
+      "MSU-OSG", 
+      "MSU-OSG_SE", 
+      "MWT2CachingInfrastructure", 
+      "MY-MIMOS-GC-01", 
+      "MY-NM-NEUTRON", 
+      "MY-UM-CRYSTAL", 
+      "MY-UM-SIFIR", 
+      "MY-UPM-BIRUNI-01", 
+      "MY-UPM-FSKTM-01", 
+      "MY-UPM-UGRID-01", 
+      "MY-USM-GCL", 
+      "MY-UTM-GRID", 
+      "NACAD_UFRJ", 
+      "NBI_T3", 
+      "NCBJ-CIS", 
+      "NCSA-DES", 
+      "NDGF-BENEDICT-T3", 
+      "NERSC-PDSFSRM", 
+      "Nevis", 
+      "ngi-ceta-ciemat", 
+      "NGI_BY_SERVICES", 
+      "NGI_DE_SERVICES", 
+      "NGI_IL", 
+      "NGI_IL_MED1", 
+      "NGI_IT", 
+      "NGI_MD_SERVICES", 
+      "NGI_PL_SERVICES", 
+      "NGI_UA_SERVICES", 
+      "NGS-BELFAST", 
+      "NGS-BRISTOL", 
+      "NGS-CARDIFF", 
+      "NGS-DURHAM", 
+      "NGS-EDINBURGH", 
+      "NGS-GLASGOW", 
+      "NGS-HECTOR", 
+      "NGS-HPCX", 
+      "NGS-HUDDERSFIELD", 
+      "NGS-IMPERIAL", 
+      "NGS-LANCASTER", 
+      "NGS-LEEDS", 
+      "NGS-RALVIS", 
+      "NGS-READING", 
+      "NGS-SHEFFIELD", 
+      "NGS-SOUTHAMPTON", 
+      "NGS-WESTMINSTER", 
+      "NGS-WTSI", 
+      "NGS-YORK", 
+      "NIU_ATLAS_CE", 
+      "NL-T1", 
+      "NMSU_AGGIE_GRID", 
+      "NMSU_DISCOVERY", 
+      "NO-NORGRID-T2", 
+      "NSC-IJS", 
+      "NULL", 
+      "NUMEP-OSG", 
+      "NU_CMS_TIER3_CE", 
+      "NU_CMS_TIER3_SE", 
+      "NWICG_Earth", 
+      "NWICG_Eddie", 
+      "NWICG_NDCMS", 
+      "NWICG_NotreDame", 
+      "NYSGRID-CCR-U2", 
+      "NYSGRID_CORNELL_NYS1", 
+      "NYU-ATLAS", 
+      "NZ-UOA", 
+      "OBSPM", 
+      "ORNL-T2", 
+      "OSC_OSG", 
+      "OSG_DELL_M420_ASU", 
+      "OSG_DELL_M420_ASU_hosted_ce", 
+      "OSG_IN_IUCAA_SARATHI", 
+      "OSG_SAM_TESTS", 
+      "OSG_UChicago", 
+      "OSG_US_DANFORTH_HOSTED_CE", 
+      "OSG_US_FSU_HNPGRID", 
+      "OSG_US_GSU_ACORE", 
+      "OSG_US_NDSU_CCAST_CLUSTER2", 
+      "OSG_US_NMSU_DISCOVERY", 
+      "OSG_US_USD_LEGACY", 
+      "OSG_US_WSU_GRID", 
+      "Oslo", 
+      "osu-cms", 
+      "OUHEP_ITB", 
+      "OUHEP_OSG", 
+      "OU_OSCER_CONDOR", 
+      "oxford-ngs2", 
+      "PAKGRID-LCG2", 
+      "PAKGRID3-LCG2", 
+      "PARIS-UREC-IPV6", 
+      "PDC", 
+      "PDC-arc-new", 
+      "PEARL-AMU", 
+      "PennT3", 
+      "perfSONAR Services", 
+      "PH-ASTI-BUHAWI", 
+      "PH-ASTI-DALUBHASAAN", 
+      "PH-ASTI-LIKNAYAN", 
+      "PH-ATENEO", 
+      "PIC-PPS", 
+      "PNNL_BelleII", 
+      "PNNL_HEP", 
+      "PPS-CYFRONET", 
+      "PPS-ENG", 
+      "PPS-IFIC", 
+      "PPS-LIP", 
+      "PPS-RAL", 
+      "PPS-RO-01-UPB", 
+      "PPS-SiGNET", 
+      "PPS-SNS", 
+      "PPS-TRIUMF", 
+      "prague_cesnet_lcg2", 
+      "prague_cesnet_lcg2_cert", 
+      "prague_cesnet_pps", 
+      "prague_cesnet_pt", 
+      "preprod.nikhef.nl", 
+      "Princeton_ICSE_T3_CMS", 
+      "PRISMA-INFN-BARI", 
+      "PSC Bridges", 
+      "PSK_KIELCE", 
+      "PSNC-GILDA", 
+      "ral-cloud", 
+      "ral-ngs2", 
+      "RC-GISELA-CETA", 
+      "RECAS-BARI", 
+      "RECAS-NAPOLI", 
+      "RedIRIS", 
+      "RedIRIS_GILDA", 
+      "Rhino", 
+      "Rice", 
+      "RO-01-ICI", 
+      "RO-09-UTCN", 
+      "RO-12-ICI", 
+      "RO-15-NIPNE", 
+      "ROC_Canada_SERVICES", 
+      "RTUETF", 
+      "ru-Chernogolovka-IPCP-LCG2", 
+      "RU-ISA-CGTDC", 
+      "ru-Moscow-MEPHI-LCG2", 
+      "ru-Moscow-SINP-LCG2", 
+      "ru-Moscow-SINP-T3", 
+      "RU-Novosibirsk-BINP", 
+      "RU-Phys-SPbSU", 
+      "rutgers-cms", 
+      "SARA-ASI", 
+      "SARA-LISA", 
+      "SBGrid", 
+      "SBGrid-Harvard", 
+      "SBGrid-Harvard-Infrastructure", 
+      "SBU_Tier3", 
+      "SCAI", 
+      "ScotGRID-Edinburgh", 
+      "scotgrid-gla", 
+      "SDSC-PRP", 
+      "SDSCCompInfrastructure", 
+      "SDU-LCG2", 
+      "SFU-LCG2", 
+      "SGAI-CSIC", 
+      "SISSA-Trieste", 
+      "SLING-Test", 
+      "SMU_HPC", 
+      "SMU_HPC_ITB", 
+      "SN-UCAD", 
+      "SNS-PISA", 
+      "SOLEIL", 
+      "SPACI-LECCE-IA64", 
+      "SPACI-NAPOLI-IA64", 
+      "Stampede2", 
+      "STANFORD_HOSTED_BOSCO_CE", 
+      "STAR-BNL", 
+      "STAR-OnlinePool", 
+      "Starlight perfSONARs", 
+      "StashCaches", 
+      "StratusLab", 
+      "SU-GRID", 
+      "SU-ITS", 
+      "SU-Protvino-IHEP", 
+      "SU-SUGAR", 
+      "Submitters", 
+      "SUSQU-ATLAS-T3", 
+      "SWITCH", 
+      "SWT2_CPB_TEST", 
+      "SyracuseCachingInfrastructure", 
+      "SZDG", 
+      "SZTAKI", 
+      "T2-TH-ALICE-NSTDA", 
+      "T3-TH-CHULA", 
+      "T3_CH_CERN_HelixNebula", 
+      "T3_CH_PSI", 
+      "T3_HU_Debrecen", 
+      "T3_IN_TIFRCloud", 
+      "T3_KR_KISTI", 
+      "T3_US_NEU", 
+      "Taiwan-IPAS-LCG2", 
+      "Taiwan-NCUCC-LCG2", 
+      "TAMU_BRAZOS", 
+      "TAMU_Calclab", 
+      "TASK", 
+      "TAU-LCG2", 
+      "TECHNION-LCG2", 
+      "TH-HAII", 
+      "TH-NECTEC-LSR", 
+      "TH-SUT-NPP", 
+      "Thomas Jefferson National Accelerator Facility GLUEX Glidein", 
+      "TIFR-CMS", 
+      "TIFR-LCG2", 
+      "TORONTO-LCG2", 
+      "TR-01-ULAKBIM", 
+      "TR-02-ATATURK", 
+      "TR-04-ERCIYES", 
+      "TR-05-BOUN", 
+      "TR-08-CUKUROVA", 
+      "TR-09-ITU", 
+      "TR-FC1-ULAKBIM", 
+      "TRANSP_simulations_for_EAST", 
+      "TRIGRID-INFN-CATANIA", 
+      "TTU-ANTAEUS", 
+      "TTU-TESTWULF", 
+      "TU-Kosice", 
+      "TUDresden-ZIH", 
+      "Turing", 
+      "TW-ASGC-CERT", 
+      "TW-DiCOS", 
+      "TW-EMI-PPS", 
+      "TW-eScience", 
+      "TW-NCHU-AAC-01", 
+      "TW-NCUHEP", 
+      "TW-NIU-EECS-01", 
+      "TW-NTCU-HPC-01", 
+      "TW-NTU-CC", 
+      "TW-NTU-HEP", 
+      "UA-IFBG", 
+      "UA-IMBG", 
+      "UA-IRE", 
+      "UA-MHI", 
+      "UA-NSCMBR", 
+      "UA-PIMEE", 
+      "UA_BITP_ARC", 
+      "UA_ICMP_ARC", 
+      "UA_ICYB_ARC", 
+      "UA_ILTPE_ARC", 
+      "UCD", 
+      "UChicagoCachingInfrastructure", 
+      "UCL-CCC", 
+      "UCM", 
+      "UColorado_HEP", 
+      "UColorado_HEP_ITB", 
+      "UColorado_SE", 
+      "UConn-OSG", 
+      "UCR-HEP", 
+      "ucsb-cms", 
+      "UCSCT3", 
+      "UCSD CMS Glideins", 
+      "UCSD glidein", 
+      "UCSDCachingInfrastructure", 
+      "UCSDT2-ITB", 
+      "UC_ITB", 
+      "UC_ITB_SE_BESTMAN", 
+      "UC_ITB_SE_DCACHE", 
+      "UFL-LCG2", 
+      "UFlorida-PG", 
+      "UFRJ-IF", 
+      "UGA_SGrid", 
+      "UiB", 
+      "UIOWA-LCG2", 
+      "UJ-OSG", 
+      "UKI-GridPP-Cloud-IC", 
+      "UKI-LT2-IC-HEP-PPS", 
+      "UKI-LT2-IC-LeSC", 
+      "UKI-LT2-UCL-CENTRAL", 
+      "UKI-ScotGrid-Gla-PPS", 
+      "UKI-SOUTHGRID-BHAM-PPS", 
+      "UKI-SOUTHGRID-RDG", 
+      "ULA-MERIDA", 
+      "UMB-BB", 
+      "umd-cms", 
+      "UMD-IGS", 
+      "UMD_SIAB", 
+      "UMinho-CP", 
+      "UMissHEP", 
+      "UMN-CMS", 
+      "Umontreal-LCG2", 
+      "umsnh-ce", 
+      "UNI-BONN", 
+      "UNI-DORTMUND", 
+      "UNI-KARLSRUHE", 
+      "UNI-PERUGIA", 
+      "UNI-SIEGEN-HEP", 
+      "UNIANDES", 
+      "UNIBE-ID", 
+      "UNICAN", 
+      "UNICAN-IMATH", 
+      "UNICPH-NBI", 
+      "UNIGE-DPNC", 
+      "UNINA-EGEE", 
+      "UNIV-LILLE", 
+      "University of California Irvine", 
+      "UNM_HPC", 
+      "UOGRID", 
+      "UPittTier3", 
+      "UPJS-Kosice", 
+      "UPorto", 
+      "uprm-cms", 
+      "UPR_HPCF", 
+      "UPV-GRyCAP", 
+      "USF_SC", 
+      "USTC-T3", 
+      "UTD-HEP", 
+      "UT_CS", 
+      "UZH", 
+      "Vanderbilt", 
+      "Vanderbilt-ITB", 
+      "Vanderbilt_EC2", 
+      "VC3", 
+      "VDT-ITB", 
+      "VDU-IF-LCG2", 
+      "VGTU-CREAM", 
+      "VGTU-gLite", 
+      "VGTU-TEST-gLite", 
+      "VICTORIA-LCG2", 
+      "VJNEAL-GOC", 
+      "VN-HPCC-HUT-HN", 
+      "VN-IFI", 
+      "VN-IFI-PPS", 
+      "VN-IOIT-DCNET", 
+      "VN-IOIT-DFCK", 
+      "VN-IOIT-HN", 
+      "VN-IOIT-KEYLAB", 
+      "VU-MIF-LCG2", 
+      "VU-MIF-TEST", 
+      "WARSAW-EGEE", 
+      "WCSS", 
+      "WCSS-PPS", 
+      "WCSS64", 
+      "Wilson Facility", 
+      "WISC-ATLAS", 
+      "WIX PerfSONAR", 
+      "WT2", 
+      "Wuhan", 
+      "Wuhan-t", 
+      "WUT", 
+      "YerPhI", 
+      "ZA-MERAKA", 
+      "ZA-UCT-ICTS", 
+      "ZA-UFS", 
+      "ZA-UJ", 
+      "ZA-WITS-CORE", 
+      "ZIB"
+    ], 
+    "tier_level": null, 
+    "vos": []
+  }, 
+  "PK-CIIT-ALICE": {
+    "accounting_name": "Pakistan ALICE Federation", 
+    "country": "Pakistan", 
+    "country_code": "PK", 
+    "id": 71, 
+    "name": "PK-CIIT-ALICE", 
+    "pledges": {}, 
+    "rcsites": [
+      "PK-CIIT"
+    ], 
+    "tier_level": 2, 
+    "vos": []
+  }, 
+  "PK-CMS-T2": {
+    "accounting_name": "Pakistan Tier-2 Federation", 
+    "country": "Pakistan", 
+    "country_code": "PK", 
+    "id": 42, 
+    "name": "PK-CMS-T2", 
+    "pledges": {
+      "2019": {
+        "cms": {
+          "CPU": 6365, 
+          "Disk": 500
+        }
+      }
+    }, 
+    "rcsites": [
+      "NCP-LCG2"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "cms"
+    ]
+  }, 
+  "PL-TIER2-WLCG": {
+    "accounting_name": "Polish Tier-2 Federation", 
+    "country": "Poland", 
+    "country_code": "PL", 
+    "id": 79, 
+    "name": "PL-TIER2-WLCG", 
+    "pledges": {
+      "2019": {
+        "alice": {
+          "CPU": 12000, 
+          "Disk": 900
+        }, 
+        "atlas": {
+          "CPU": 15000, 
+          "Disk": 1200
+        }, 
+        "cms": {
+          "CPU": 7000, 
+          "Disk": 300
+        }, 
+        "lhcb": {
+          "CPU": 4100
+        }
+      }
+    }, 
+    "rcsites": [
+      "CYFRONET-LCG2", 
+      "ICM", 
+      "PSNC"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "atlas", 
+      "lhcb", 
+      "cms", 
+      "alice"
+    ]
+  }, 
+  "PT-LIP-LCG-Tier2": {
+    "accounting_name": "LIP Tier-2 Federation", 
+    "country": "Portugal", 
+    "country_code": "PT", 
+    "id": 51, 
+    "name": "PT-LIP-LCG-Tier2", 
+    "pledges": {
+      "2019": {
+        "atlas": {
+          "CPU": 4000, 
+          "Disk": 220
+        }, 
+        "cms": {
+          "CPU": 4000, 
+          "Disk": 200
+        }
+      }
+    }, 
+    "rcsites": [
+      "NCG-INGRID-PT"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "atlas", 
+      "cms"
+    ]
+  }, 
+  "RO-LCG": {
+    "accounting_name": "Romanian Tier-2 Federation", 
+    "country": "Romania", 
+    "country_code": "RO", 
+    "id": 34, 
+    "name": "RO-LCG", 
+    "pledges": {
+      "2019": {
+        "alice": {
+          "CPU": 27300, 
+          "Disk": 2700
+        }, 
+        "atlas": {
+          "CPU": 40000, 
+          "Disk": 1600
+        }, 
+        "lhcb": {
+          "CPU": 6700, 
+          "Disk": 400
+        }
+      }
+    }, 
+    "rcsites": [
+      "NIHAM", 
+      "RO-02-NIPNE", 
+      "RO-03-UPB", 
+      "RO-07-NIPNE", 
+      "RO-11-NIPNE", 
+      "RO-13-ISS", 
+      "RO-14-ITIM", 
+      "RO-16-UAIC"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "atlas", 
+      "lhcb", 
+      "alice"
+    ]
+  }, 
+  "RU-JINR-T1": {
+    "accounting_name": "JINR-T1", 
+    "country": "Russian Federation", 
+    "country_code": "RU", 
+    "id": 20, 
+    "name": "RU-JINR-T1", 
+    "pledges": {
+      "2019": {
+        "cms": {
+          "CPU": 90000, 
+          "Disk": 8000, 
+          "Tape": 9000
+        }
+      }
+    }, 
+    "rcsites": [
+      "JINR-T1"
+    ], 
+    "tier_level": 1, 
+    "vos": [
+      "cms"
+    ]
+  }, 
+  "RU-RDIG": {
+    "accounting_name": "Russian Data-Intensive GRID", 
+    "country": "Russian Federation", 
+    "country_code": "RU", 
+    "id": 88, 
+    "name": "RU-RDIG", 
+    "pledges": {
+      "2019": {
+        "alice": {
+          "CPU": 35253, 
+          "Disk": 2152
+        }, 
+        "atlas": {
+          "CPU": 28500, 
+          "Disk": 2185
+        }, 
+        "cms": {
+          "CPU": 29853, 
+          "Disk": 2473
+        }, 
+        "lhcb": {
+          "CPU": 18112, 
+          "Disk": 65
+        }
+      }
+    }, 
+    "rcsites": [
+      "ITEP", 
+      "JINR-LCG2", 
+      "RRC-KI", 
+      "ru-Moscow-FIAN-LCG2", 
+      "ru-PNPI", 
+      "RU-Protvino-IHEP", 
+      "RU-SARFTI", 
+      "RU-SPbSU", 
+      "Ru-Troitsk-INR-LCG2"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "atlas", 
+      "lhcb", 
+      "cms", 
+      "alice"
+    ]
+  }, 
+  "SE-SNIC-T2": {
+    "accounting_name": "SNIC Tier-2", 
+    "country": "Sweden", 
+    "country_code": "SE", 
+    "id": 80, 
+    "name": "SE-SNIC-T2", 
+    "pledges": {
+      "2019": {
+        "alice": {
+          "CPU": 2820, 
+          "Disk": 400
+        }, 
+        "atlas": {
+          "CPU": 5050, 
+          "Disk": 520
+        }
+      }
+    }, 
+    "rcsites": [
+      "SE-SNIC-T2"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "atlas", 
+      "alice"
+    ]
+  }, 
+  "SI-SiGNET": {
+    "accounting_name": "SiGNET", 
+    "country": "Slovenia", 
+    "country_code": "SI", 
+    "id": 3, 
+    "name": "SI-SiGNET", 
+    "pledges": {
+      "2019": {
+        "atlas": {
+          "CPU": 50000, 
+          "Disk": 4000
+        }
+      }
+    }, 
+    "rcsites": [
+      "SiGNET"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "atlas"
+    ]
+  }, 
+  "SK-Tier2-Federation": {
+    "accounting_name": "Slovak Tier2 Federation", 
+    "country": "Slovakia", 
+    "country_code": "SK", 
+    "id": 6, 
+    "name": "SK-Tier2-Federation", 
+    "pledges": {
+      "2019": {
+        "alice": {
+          "CPU": 7000, 
+          "Disk": 800
+        }, 
+        "atlas": {
+          "CPU": 7000, 
+          "Disk": 800
+        }
+      }
+    }, 
+    "rcsites": [
+      "FMPhI-UNIBA", 
+      "IEPSAS-Kosice"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "atlas", 
+      "alice"
+    ]
+  }, 
+  "T2-LATINAMERICA": {
+    "accounting_name": "Latin America Federation", 
+    "country": "Latin America", 
+    "country_code": "", 
+    "id": 10, 
+    "name": "T2-LATINAMERICA", 
+    "pledges": {
+      "2019": {
+        "alice": {
+          "CPU": 27500, 
+          "Disk": 900
+        }, 
+        "atlas": {
+          "CPU": 4500, 
+          "Disk": 300
+        }, 
+        "cms": {
+          "CPU": 8600, 
+          "Disk": 700
+        }, 
+        "lhcb": {
+          "CPU": 37152, 
+          "Disk": 300
+        }
+      }
+    }, 
+    "rcsites": [
+      "CBPF", 
+      "EELA-UTFSM", 
+      "ICN-UNAM", 
+      "SAMPA", 
+      "UERJ"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "atlas", 
+      "lhcb", 
+      "cms", 
+      "alice"
+    ]
+  }, 
+  "T2_UNAM": {
+    "accounting_name": "UNAM", 
+    "country": "Mexico", 
+    "country_code": "MX", 
+    "id": 75, 
+    "name": "T2_UNAM", 
+    "pledges": {
+      "2019": {
+        "alice": {
+          "CPU": 4900, 
+          "Disk": 1000
+        }
+      }
+    }, 
+    "rcsites": [
+      "SUPERCOMPUTO-UNAM"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "alice"
+    ]
+  }, 
+  "T2_US_Caltech": {
+    "accounting_name": "Caltech CMS T2", 
+    "country": "United States", 
+    "country_code": "US", 
+    "id": 57, 
+    "name": "T2_US_Caltech", 
+    "pledges": {
+      "2019": {
+        "cms": {
+          "CPU": 35715, 
+          "Disk": 2785
+        }
+      }
+    }, 
+    "rcsites": [
+      "CIT_CMS_T2"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "cms"
+    ]
+  }, 
+  "T2_US_Florida": {
+    "accounting_name": "Florida CMS T2", 
+    "country": "United States", 
+    "country_code": "US", 
+    "id": 35, 
+    "name": "T2_US_Florida", 
+    "pledges": {
+      "2019": {
+        "cms": {
+          "CPU": 35715, 
+          "Disk": 2785
+        }
+      }
+    }, 
+    "rcsites": [
+      "UFlorida-HPC"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "cms"
+    ]
+  }, 
+  "T2_US_MIT": {
+    "accounting_name": "MIT CMS T2", 
+    "country": "United States", 
+    "country_code": "US", 
+    "id": 77, 
+    "name": "T2_US_MIT", 
+    "pledges": {
+      "2019": {
+        "cms": {
+          "CPU": 35715, 
+          "Disk": 2785
+        }
+      }
+    }, 
+    "rcsites": [
+      "MIT_CMS"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "cms"
+    ]
+  }, 
+  "T2_US_Nebraska": {
+    "accounting_name": "Nebraska CMS T2", 
+    "country": "United States", 
+    "country_code": "US", 
+    "id": 66, 
+    "name": "T2_US_Nebraska", 
+    "pledges": {
+      "2019": {
+        "cms": {
+          "CPU": 35715, 
+          "Disk": 2785
+        }
+      }
+    }, 
+    "rcsites": [
+      "Crane", 
+      "Nebraska", 
+      "Sandhills", 
+      "Tusker"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "cms"
+    ]
+  }, 
+  "T2_US_Purdue": {
+    "accounting_name": "Purdue CMS T2", 
+    "country": "United States", 
+    "country_code": "US", 
+    "id": 73, 
+    "name": "T2_US_Purdue", 
+    "pledges": {
+      "2019": {
+        "cms": {
+          "CPU": 35715, 
+          "Disk": 2785
+        }
+      }
+    }, 
+    "rcsites": [
+      "Purdue-Brown", 
+      "Purdue-Conte", 
+      "Purdue-Hadoop", 
+      "Purdue-Halstead", 
+      "Purdue-Hammer", 
+      "Purdue-Rice"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "cms"
+    ]
+  }, 
+  "T2_US_UCSD": {
+    "accounting_name": "UC San Diego CMS T2", 
+    "country": "United States", 
+    "country_code": "US", 
+    "id": 14, 
+    "name": "T2_US_UCSD", 
+    "pledges": {
+      "2019": {
+        "cms": {
+          "CPU": 35715, 
+          "Disk": 2785
+        }
+      }
+    }, 
+    "rcsites": [
+      "UCSDT2"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "cms"
+    ]
+  }, 
+  "T2_US_Wisconsin": {
+    "accounting_name": "U. Wisconsin CMS T2", 
+    "country": "United States", 
+    "country_code": "US", 
+    "id": 41, 
+    "name": "T2_US_Wisconsin", 
+    "pledges": {
+      "2019": {
+        "cms": {
+          "CPU": 35715, 
+          "Disk": 2785
+        }
+      }
+    }, 
+    "rcsites": [
+      "GLOW"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "cms"
+    ]
+  }, 
+  "TH-Tier2": {
+    "accounting_name": "National e-Science Infrastructure Consortium", 
+    "country": "Thailand", 
+    "country_code": "TH", 
+    "id": 29, 
+    "name": "TH-Tier2", 
+    "pledges": {}, 
+    "rcsites": [
+      "T2-TH-CUNSTDA", 
+      "T2-TH-SUT"
+    ], 
+    "tier_level": 2, 
+    "vos": []
+  }, 
+  "TR-Tier2-federation": {
+    "accounting_name": "Turkish Tier-2 Federation", 
+    "country": "Turkey", 
+    "country_code": "TR", 
+    "id": 81, 
+    "name": "TR-Tier2-federation", 
+    "pledges": {
+      "2019": {
+        "atlas": {
+          "CPU": 7508, 
+          "Disk": 750
+        }, 
+        "cms": {
+          "CPU": 5160, 
+          "Disk": 550
+        }
+      }
+    }, 
+    "rcsites": [
+      "TR-03-METU", 
+      "TR-10-ULAKBIM"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "atlas", 
+      "cms"
+    ]
+  }, 
+  "TW-ASGC": {
+    "accounting_name": "Taiwan-LCG2", 
+    "country": "Taiwan, Province of China", 
+    "country_code": "TW", 
+    "id": 7, 
+    "name": "TW-ASGC", 
+    "pledges": {
+      "2019": {
+        "atlas": {
+          "CPU": 43000, 
+          "Disk": 6100
+        }
+      }
+    }, 
+    "rcsites": [
+      "Taiwan-LCG2"
+    ], 
+    "tier_level": 1, 
+    "vos": [
+      "atlas"
+    ]
+  }, 
+  "TW-CMS-T2": {
+    "accounting_name": "Taiwan CMS Federation", 
+    "country": "Taiwan, Province of China", 
+    "country_code": "TW", 
+    "id": 78, 
+    "name": "TW-CMS-T2", 
+    "pledges": {
+      "2019": {
+        "cms": {
+          "CPU": 5000, 
+          "Disk": 500
+        }
+      }
+    }, 
+    "rcsites": [
+      "TW-NCHC"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "cms"
+    ]
+  }, 
+  "TW-FTT-T2": {
+    "accounting_name": "Taiwan Analysis Facility Federation", 
+    "country": "Taiwan, Province of China", 
+    "country_code": "TW", 
+    "id": 24, 
+    "name": "TW-FTT-T2", 
+    "pledges": {
+      "2019": {
+        "atlas": {
+          "CPU": 8372, 
+          "Disk": 726
+        }
+      }
+    }, 
+    "rcsites": [
+      "TW-FTT"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "atlas"
+    ]
+  }, 
+  "UA-Tier2-Federation": {
+    "accounting_name": "Ukrainian Tier-2 Federation", 
+    "country": "Ukraine", 
+    "country_code": "UA", 
+    "id": 37, 
+    "name": "UA-Tier2-Federation", 
+    "pledges": {
+      "2019": {
+        "alice": {
+          "CPU": 3000, 
+          "Disk": 200
+        }, 
+        "cms": {
+          "CPU": 9300, 
+          "Disk": 950
+        }
+      }
+    }, 
+    "rcsites": [
+      "Kharkov-KIPT-LCG2", 
+      "UA-BITP", 
+      "UA-ISMA", 
+      "UA-KNU"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "cms", 
+      "alice"
+    ]
+  }, 
+  "UK-London-Tier2": {
+    "accounting_name": "London Tier 2", 
+    "country": "United Kingdom", 
+    "country_code": "GB", 
+    "id": 49, 
+    "name": "UK-London-Tier2", 
+    "pledges": {
+      "2019": {
+        "atlas": {
+          "CPU": 32641, 
+          "Disk": 3423
+        }, 
+        "cms": {
+          "CPU": 32674, 
+          "Disk": 2925
+        }, 
+        "lhcb": {
+          "CPU": 6537, 
+          "Disk": 300
+        }
+      }
+    }, 
+    "rcsites": [
+      "UKI-LT2-Brunel", 
+      "UKI-LT2-IC-HEP", 
+      "UKI-LT2-QMUL", 
+      "UKI-LT2-RHUL", 
+      "UKI-LT2-UCL-HEP"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "atlas", 
+      "lhcb", 
+      "cms"
+    ]
+  }, 
+  "UK-NorthGrid": {
+    "accounting_name": "NorthGrid", 
+    "country": "United Kingdom", 
+    "country_code": "GB", 
+    "id": 46, 
+    "name": "UK-NorthGrid", 
+    "pledges": {
+      "2019": {
+        "atlas": {
+          "CPU": 39173, 
+          "Disk": 4196
+        }, 
+        "lhcb": {
+          "CPU": 6801, 
+          "Disk": 600
+        }
+      }
+    }, 
+    "rcsites": [
+      "UKI-NORTHGRID-LANCS-HEP", 
+      "UKI-NORTHGRID-LIV-HEP", 
+      "UKI-NORTHGRID-MAN-HEP", 
+      "UKI-NORTHGRID-SHEF-HEP"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "atlas", 
+      "lhcb"
+    ]
+  }, 
+  "UK-ScotGrid": {
+    "accounting_name": "ScotGrid", 
+    "country": "United Kingdom", 
+    "country_code": "GB", 
+    "id": 15, 
+    "name": "UK-ScotGrid", 
+    "pledges": {
+      "2019": {
+        "atlas": {
+          "CPU": 37339, 
+          "Disk": 2635
+        }, 
+        "lhcb": {
+          "CPU": 12890, 
+          "Disk": 300
+        }
+      }
+    }, 
+    "rcsites": [
+      "UKI-SCOTGRID-DURHAM", 
+      "UKI-SCOTGRID-ECDF", 
+      "UKI-SCOTGRID-GLASGOW"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "atlas", 
+      "lhcb"
+    ]
+  }, 
+  "UK-SouthGrid": {
+    "accounting_name": "SouthGrid", 
+    "country": "United Kingdom", 
+    "country_code": "GB", 
+    "id": 52, 
+    "name": "UK-SouthGrid", 
+    "pledges": {
+      "2019": {
+        "alice": {
+          "CPU": 7520, 
+          "Disk": 678
+        }, 
+        "atlas": {
+          "CPU": 20047, 
+          "Disk": 547
+        }, 
+        "cms": {
+          "CPU": 17326, 
+          "Disk": 975
+        }, 
+        "lhcb": {
+          "CPU": 5692, 
+          "Disk": 300
+        }
+      }
+    }, 
+    "rcsites": [
+      "EFDA-JET", 
+      "UKI-SOUTHGRID-BHAM-HEP", 
+      "UKI-SOUTHGRID-BRIS-HEP", 
+      "UKI-SOUTHGRID-CAM-HEP", 
+      "UKI-SOUTHGRID-OX-HEP", 
+      "UKI-SOUTHGRID-RALPP", 
+      "UKI-SOUTHGRID-SUSX"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "atlas", 
+      "lhcb", 
+      "cms", 
+      "alice"
+    ]
+  }, 
+  "UK-T1-RAL": {
+    "accounting_name": "RAL-LCG2", 
+    "country": "United Kingdom", 
+    "country_code": "GB", 
+    "id": 54, 
+    "name": "UK-T1-RAL", 
+    "pledges": {
+      "2019": {
+        "alice": {
+          "CPU": 7300, 
+          "Disk": 758, 
+          "Tape": 754
+        }, 
+        "atlas": {
+          "CPU": 132125, 
+          "Disk": 11000, 
+          "Tape": 27625
+        }, 
+        "cms": {
+          "CPU": 52000, 
+          "Disk": 5440, 
+          "Tape": 17600
+        }, 
+        "lhcb": {
+          "CPU": 81300, 
+          "Disk": 8370, 
+          "Tape": 15270
+        }
+      }
+    }, 
+    "rcsites": [
+      "RAL-LCG2"
+    ], 
+    "tier_level": 1, 
+    "vos": [
+      "atlas", 
+      "lhcb", 
+      "cms", 
+      "alice"
+    ]
+  }, 
+  "US-AGLT2": {
+    "accounting_name": "Great Lakes ATLAS T2", 
+    "country": "United States", 
+    "country_code": "US", 
+    "id": 16, 
+    "name": "US-AGLT2", 
+    "pledges": {
+      "2019": {
+        "atlas": {
+          "CPU": 66000, 
+          "Disk": 5500
+        }
+      }
+    }, 
+    "rcsites": [
+      "AGLT2"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "atlas"
+    ]
+  }, 
+  "US-FNAL-CMS": {
+    "accounting_name": "USCMS-FNAL-WC1-CE", 
+    "country": "United States", 
+    "country_code": "US", 
+    "id": 21, 
+    "name": "US-FNAL-CMS", 
+    "pledges": {
+      "2019": {
+        "cms": {
+          "CPU": 260000, 
+          "Disk": 27200, 
+          "Tape": 88000
+        }
+      }
+    }, 
+    "rcsites": [
+      "USCMS-FNAL-WC1"
+    ], 
+    "tier_level": 1, 
+    "vos": [
+      "cms"
+    ]
+  }, 
+  "US-LBNL-ALICE": {
+    "accounting_name": "LBNL ALICE Berkeley CA", 
+    "country": "United States", 
+    "country_code": "US", 
+    "id": 45, 
+    "name": "US-LBNL-ALICE", 
+    "pledges": {
+      "2019": {
+        "alice": {
+          "CPU": 36000, 
+          "Disk": 3000
+        }
+      }
+    }, 
+    "rcsites": [
+      "NERSC-PDSF"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "alice"
+    ]
+  }, 
+  "US-MWT2": {
+    "accounting_name": "Midwest ATLAS T2", 
+    "country": "United States", 
+    "country_code": "US", 
+    "id": 72, 
+    "name": "US-MWT2", 
+    "pledges": {
+      "2019": {
+        "atlas": {
+          "CPU": 99000, 
+          "Disk": 8300
+        }
+      }
+    }, 
+    "rcsites": [
+      "MWT2"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "atlas"
+    ]
+  }, 
+  "US-NET2": {
+    "accounting_name": "Northeast ATLAS T2", 
+    "country": "United States", 
+    "country_code": "US", 
+    "id": 19, 
+    "name": "US-NET2", 
+    "pledges": {
+      "2019": {
+        "atlas": {
+          "CPU": 66000, 
+          "Disk": 5500
+        }
+      }
+    }, 
+    "rcsites": [
+      "BU_ATLAS_Tier2", 
+      "HU_ATLAS_Tier2"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "atlas"
+    ]
+  }, 
+  "US-SWT2": {
+    "accounting_name": "Southwest ATLAS T2", 
+    "country": "United States", 
+    "country_code": "US", 
+    "id": 61, 
+    "name": "US-SWT2", 
+    "pledges": {
+      "2019": {
+        "atlas": {
+          "CPU": 66000, 
+          "Disk": 5500
+        }
+      }
+    }, 
+    "rcsites": [
+      "LUCILLE", 
+      "OU_OCHEP_SWT2", 
+      "OU_OSCER_ATLAS", 
+      "SWT2_CPB", 
+      "UTA_SWT2"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "atlas"
+    ]
+  }, 
+  "US-T1-BNL": {
+    "accounting_name": "BNL_ATLAS_1", 
+    "country": "United States", 
+    "country_code": "US", 
+    "id": 30, 
+    "name": "US-T1-BNL", 
+    "pledges": {
+      "2019": {
+        "atlas": {
+          "CPU": 243000, 
+          "Disk": 20200, 
+          "Tape": 51000
+        }
+      }
+    }, 
+    "rcsites": [
+      "BNL-ATLAS"
+    ], 
+    "tier_level": 1, 
+    "vos": [
+      "atlas"
+    ]
+  }, 
+  "ZA-CHPC-T2": {
+    "accounting_name": "CHPC Tier2", 
+    "country": "South Africa", 
+    "country_code": "ZA", 
+    "id": 74, 
+    "name": "ZA-CHPC-T2", 
+    "pledges": {
+      "2019": {
+        "alice": {
+          "CPU": 12000, 
+          "Disk": 1500
+        }, 
+        "atlas": {
+          "CPU": 10000, 
+          "Disk": 1000
+        }
+      }
+    }, 
+    "rcsites": [
+      "ZA-CHPC"
+    ], 
+    "tier_level": 2, 
+    "vos": [
+      "atlas", 
+      "alice"
+    ]
+  }
+}
