@@ -4386,10 +4386,10 @@
   "FZK-LCG2": {
     "admin_email": "lcg-admin@lists.kit.edu", 
     "altname": "KIT, Karlsruhe, Germany", 
-    "capacity": 330081, 
+    "capacity": 332367, 
     "cert_status": "certified", 
     "corepower": 11.4289939774064, 
-    "cores": 1590, 
+    "cores": 1600, 
     "country": "Germany", 
     "country_code": "DE", 
     "description": "Tier 1", 
@@ -4662,7 +4662,7 @@
         "vo_name": "cms"
       }
     ], 
-    "slots": 28881, 
+    "slots": 29081, 
     "state": "ACTIVE", 
     "status": "production", 
     "timezone": "Europe/Berlin"
@@ -6250,10 +6250,10 @@
   "IEPSAS-Kosice": {
     "admin_email": "grid.support@saske.sk", 
     "altname": "Institute of Experimental Physics, Slovak Academy of Sciences, Kosice", 
-    "capacity": 14683, 
+    "capacity": 14556, 
     "cert_status": "certified", 
     "corepower": 15.9597826086957, 
-    "cores": 115, 
+    "cores": 114, 
     "country": "Slovakia", 
     "country_code": "SK", 
     "description": "IEPSAS-Kosice", 
@@ -6406,7 +6406,7 @@
         "vo_name": "alice"
       }
     ], 
-    "slots": 920, 
+    "slots": 912, 
     "state": "ACTIVE", 
     "status": "production", 
     "timezone": "Europe/Bratislava"
@@ -11685,7 +11685,7 @@
   "LRZ-LMU": {
     "admin_email": "lcg-admin@lists.lrz.de", 
     "altname": "LMU LCG Tier-2", 
-    "capacity": 103158, 
+    "capacity": 103148, 
     "cert_status": "certified", 
     "corepower": 9.70094684541108, 
     "cores": 1329, 
@@ -11809,7 +11809,7 @@
         "vo_name": "atlas"
       }
     ], 
-    "slots": 10634, 
+    "slots": 10633, 
     "state": "ACTIVE", 
     "status": "production", 
     "timezone": "Europe/Berlin"
@@ -20456,9 +20456,9 @@
   "UKI-LT2-QMUL": {
     "admin_email": "edg-site-admin@qmul.ac.uk;daniela.bauer.grid@googlemail.com;d.colling@imperial.ac.uk", 
     "altname": "QMUL, GridPP/LT2, London UK", 
-    "capacity": 379018, 
+    "capacity": 44575, 
     "cert_status": "certified", 
-    "corepower": 94.9443887775551, 
+    "corepower": 11.1660821643287, 
     "cores": 360, 
     "country": "United Kingdom", 
     "country_code": "GB", 

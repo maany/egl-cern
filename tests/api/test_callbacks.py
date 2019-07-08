@@ -34,7 +34,7 @@ class TestApiLoad(TestCase):
     @patch.object(CRICService, 'process_cric_federations')
     @patch.object(RebusService, 'process_rebus_sites')
     def test_service_callbacks_are_called(self, rebus_callback, cric_federations_callback, cric_sites_callback):
-        self.recon_chewbacca.hunt_for_updates.now(self)
+        self.recon_chewbacca.hunt_for_updates()
         cric_sites_callback.assert_called_once()
         cric_federations_callback.assert_called_once()
         rebus_callback.assert_called_once()

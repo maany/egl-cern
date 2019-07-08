@@ -2,6 +2,7 @@ from django.test import TestCase
 from egl_rest.api.recon_chewbacca import ReconChewbacca
 import os
 from shutil import copyfile
+from egl_rest.api.render.site_data import SiteData
 
 TEST_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -32,11 +33,12 @@ class ReconChewbaccaSequenceTests(TestCase):
         self.recon_chewbacca.rebus_sites_file = self.rebus_sites_file
 
     def test_chewbacca_hunt_for_updates(self):
-        output = self.recon_chewbacca.hunt_for_updates.now(self)
+        output = self.recon_chewbacca.hunt_for_updates()
         kml_message = output['kml_message']
         cric_federations = output['cric_federations_message']
         cric_sites = output['cric_sites_message']
         rebus_sites = output['rebus_sites_message']
+        print(SiteData().generate_v1_0())
         self.assertIsNotNone(kml_message)
         self.assertIsNotNone(cric_federations)
         self.assertIsNotNone(cric_sites)
