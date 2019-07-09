@@ -16,10 +16,15 @@ def sites(request):
     else:
         schema_version = float(schema_version)
 
+    supported_vos = request.GET.get('supported_vos')
+    if supported_vos is None:
+        supported_vos = None
+    else:
+        supported_vos = supported_vos.split(',')
     filters = {
         'name': request.GET.get('name'),
         'tier': request.GET.get('tier'),
-        'sitevo__vo__name__in': request.GET.get('supported_vos').split(','),
+        'sitevo__vo__name__in': supported_vos,
         'country': request.GET.get('country'),
         'country_code': request.GET.get('country_code'),
         'federation': request.GET.get('federation')
