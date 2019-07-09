@@ -8,6 +8,7 @@ class Federation(models.Model):
     name = models.CharField(max_length=50, unique=True)
     accounting_name = models.CharField(max_length=100)
     supported_vos = models.ManyToManyField('VO')
+    tier = models.IntegerField(default=-1)
 
 
 class Pledge(models.Model):

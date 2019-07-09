@@ -37,7 +37,7 @@ class Sequence:
         self.status = SequenceStatus.PROCESS_SITES
         SiteService.post_process()
         self.status = SequenceStatus.ANALYSE
-        SiteService.analyse()
+        SiteService.analyse(SiteService.get_all())
         self.status = SequenceStatus.END
         EventHub.announce_event(SequenceCompletedEvent(
             created_by=Sequence.__name__,

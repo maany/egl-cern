@@ -30,13 +30,17 @@ class ReconChewbacca:
 
         def hunt_for_updates(self):
             output = {}
-            data = {}
+            data = {
+                'cric_federations': self.cric_federations_file,
+                'google_earth': self.google_earth_kml,
+                'cric_sites': self.cric_sites_file,
+                'rebus_sites': self.rebus_sites_file
+            }
             was_kml_updated, kml_message = self.update_google_earth_kml()
             if not was_kml_updated:
                 logger.error(kml_message)
             else:
                 logger.info(kml_message)
-                data["google_earth"] = self.google_earth_kml
 
             output['kml_message'] = kml_message
 
@@ -45,7 +49,6 @@ class ReconChewbacca:
                 logger.error(cric_federation_message)
             else:
                 logger.info(kml_message)
-                data["cric_federations"] = self.cric_federations_file
 
             output['cric_federations_message'] = cric_federation_message
 
@@ -54,7 +57,6 @@ class ReconChewbacca:
                 logger .error(cric_sites_message)
             else:
                 logger.info(cric_sites_message)
-                data["cric_sites"] = self.cric_sites_file
 
             output['cric_sites_message'] = cric_sites_message
 
@@ -63,7 +65,6 @@ class ReconChewbacca:
                 logger.error(rebus_sites_message)
             else:
                 logger.info(rebus_sites_message)
-                data["rebus_sites"] = self.rebus_sites_file
 
             output['rebus_sites_message'] = rebus_sites_message
 

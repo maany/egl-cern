@@ -1,12 +1,12 @@
-from django.db.models import QuerySet, Q
 from django.http import HttpResponse, Http404
 import json
 
 from egl_rest.api.models import Site
 from egl_rest.api.render.site_data import SiteData
-from egl_rest.api.render.vo_data import VOData
+from egl_rest.api.services.federations_service import FederationsService
 from egl_rest.api.services.site_service import SiteService
 from egl_rest.api.services.vo_service import VOService
+
 
 # Create your views here.
 def sites(request):
@@ -60,6 +60,17 @@ def vos(request):
         schema_version = float(schema_version)
 
     output = VOService.generate_vo_data(vos,schema_version)
+    return HttpResponse(output)
+
+
+def federations(request):
+    all_federations =FederationsService.get_all()
+    schema_version = request.GET.get('schema_version')
+    if schema_version is None:
+        schema_version = SiteData.get_latest_schema()
+    else:
+        schema_version = float(schema_version)
+    output = FederationsService.generate_federation_data(all_federations, schema_version)
     return HttpResponse(output)
 
 

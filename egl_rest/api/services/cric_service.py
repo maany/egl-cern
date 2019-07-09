@@ -108,6 +108,7 @@ class CRICService(Singleton):
                     continue
                 fed_obj = FederationsService.get_or_create(federation_name)
                 fed_obj.accounting_name = federation['accounting_name']
+                fed_obj.tier = federation['tier_level']
                 for vo_name in federation['vos']:
                     vo = VOService.get_or_create(vo_name)
                     fed_obj.supported_vos.add(vo)

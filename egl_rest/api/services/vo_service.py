@@ -42,7 +42,7 @@ class VOService(Singleton):
     @staticmethod
     def analyse(vos):
         return {
-            'vos': len(vos)
+            'count': len(vos)
         }
 
     @staticmethod
