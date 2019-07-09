@@ -16,10 +16,12 @@ services:
     environment:
       - "SECRET_KEY=#9n5v_uwn+880+53w_avj&fp!ul=wf^jlls7t+v5f^z4553i98"
       - "MODE=docker"
-      - "RECON_CHEWBACCA_CRON_INTERVAL=1"
+      - "RECON_CHEWBACCA_CRON_INTERVAL=10"
     volumes:
       - .:/code
+    privileged: true
     ports:
       - "8000:8000"
+    restart: always
     depends_on:
       - db
