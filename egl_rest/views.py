@@ -1,8 +1,10 @@
 from django.http import HttpResponse, Http404
 import json
 
-from egl_rest.api.models import Site
+from egl_rest.api.models import Site, VO, Federation
+from egl_rest.api.render.federation_data import FederationData
 from egl_rest.api.render.site_data import SiteData
+from egl_rest.api.render.vo_data import VOData
 from egl_rest.api.services.federations_service import FederationsService
 from egl_rest.api.services.site_service import SiteService
 from egl_rest.api.services.vo_service import VOService
@@ -60,7 +62,7 @@ def vos(request):
     vos = VOService.get_all()
     schema_version = request.GET.get('schema_version')
     if schema_version is None:
-        schema_version = SiteData.get_latest_schema()
+        schema_version = VOData.get_latest_schema()
     else:
         schema_version = float(schema_version)
 
@@ -68,14 +70,43 @@ def vos(request):
     return HttpResponse(output)
 
 
+def vo(request, vo_id):
+    schema_version = request.GET.get('schema_version')
+    if schema_version is None:
+        schema_version = VOData.get_latest_schema()
+    else:
+        schema_version = float(schema_version)
+
+    try:
+        the_vo = VOService.get_by_id(vo_id)
+    except VO.DoesNotExist:
+        raise Http404("VO does not exist!")
+    output = VOService.generate_vo_data(the_vo, schema_version)
+    return HttpResponse(output)
+
+
 def federations(request):
     all_federations =FederationsService.get_all()
     schema_version = request.GET.get('schema_version')
     if schema_version is None:
-        schema_version = SiteData.get_latest_schema()
+        schema_version = FederationData.get_latest_schema()
     else:
         schema_version = float(schema_version)
     output = FederationsService.generate_federation_data(all_federations, schema_version)
+    return HttpResponse(output)
+
+
+def federation(request, federation_id):
+    schema_version = request.GET.get('schema_version')
+    if schema_version is None:
+        schema_version = FederationData.get_latest_schema()
+    else:
+        schema_version = float(schema_version)
+    try:
+        the_federation = FederationsService.get_by_id(federation_id)
+    except Federation.DoesNotExist:
+        raise Http404("Federation does not exist!")
+    output = FederationsService.generate_federation_data(the_federation, schema_version)
     return HttpResponse(output)
 
 

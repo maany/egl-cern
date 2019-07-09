@@ -5,6 +5,8 @@ urlpatterns = [
     path('sites', views.sites, name='sites'),
     path('sites/<int:site_id>', views.site, name='site'),
     path('vos', views.vos, name='vos'),
+    path('vos/<int:vo_id>', views.vo, name='vo'),
     path('federations', views.federations, name='federations'),
+    path('federations/<int:federation_id>', views.federation, name='federation'),
     path('data_links', views.data_links, name='data_links'),
 ]

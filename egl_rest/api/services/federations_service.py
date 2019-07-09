@@ -17,7 +17,11 @@ class FederationsService(Singleton):
 
     @staticmethod
     def get(federation_name):
-        return Federation.objects.get(name=federation_name)
+        return Federation.objects.get(name=federation_name) @staticmethod
+
+    @staticmethod
+    def get_by_id(id):
+        return Federation.objects.filter(id=id)
 
     @staticmethod
     def get_all():

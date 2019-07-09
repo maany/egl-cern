@@ -19,7 +19,11 @@ class VOService(Singleton):
 
     @staticmethod
     def get(name):
-        return VO.objects.get(name=name)
+        return VO.objects.get(name=name)@staticmethod
+
+    @staticmethod
+    def get_by_id(id):
+        return VO.objects.filter(id=id)
 
     @staticmethod
     def get_all():
