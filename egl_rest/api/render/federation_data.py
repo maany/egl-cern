@@ -43,13 +43,13 @@ class FederationData(Singleton):
             else:
                 disk = pledge.disk
 
-            pledges.append({
+            pledges[pledge.vo] = {
                 pledge.year: {
                     "cpu": cpu,
                     "disk": disk,
                     "tape": tape
                 }
-            })
+            }
         federation_dict = {
             "name": federation.name,
             "accounting_name": federation.accounting_name,
