@@ -1,4 +1,3 @@
-from egl_rest.api.event_hub.event_managers import IEGLEventListener
 from egl_rest.api.helpers import Singleton
 from egl_rest.api.models import Site
 from egl_rest.api.services.federations_service import FederationsService
@@ -6,7 +5,7 @@ from egl_rest.api.render.site_data import SiteData
 import json
 
 
-class SiteService(Singleton, IEGLEventListener):
+class SiteService(Singleton):
 
     def __init__(self):
         Singleton.__init__(self)
@@ -34,6 +33,10 @@ class SiteService(Singleton, IEGLEventListener):
     @staticmethod
     def get_by_name(name):
         return Site.objects.get(name=name)
+
+    @staticmethod
+    def get_by_id(id):
+        return Site.objects.get(id=id)
 
     @staticmethod
     def get_active_sites():
@@ -71,8 +74,7 @@ class SiteService(Singleton, IEGLEventListener):
         )
 
     @staticmethod
-    def generate_site_data(version):
-        sites = SiteService.get_active_sites()
+    def generate_site_data(sites, version):
         if version not in SiteData.supported_schemas:
             return "Schema version {version} is not supported. Try one of {supported_schemas}".format(
                 version=version,
@@ -84,20 +86,20 @@ class SiteService(Singleton, IEGLEventListener):
         for site in sites:
             output['sites'][site.name] = SiteData.render(site, version)
 
-        output['meta'] = SiteService.analyse()
+        output['meta'] = SiteService.analyse(sites)
         return json.dumps(output)
 
     @staticmethod
-    def analyse():
-        tier0_sites = Site.objects.filter(tier=0)
-        tier1_sites = Site.objects.filter(tier=1)
-        tier2_sites = Site.objects.filter(tier=2)
-        tier3_sites = Site.objects.filter(tier=3)
-        atlantic_sites = Site.objects.filter(latitude=0.0, active=True)
-        storage_info_available_sites = Site.objects.exclude(total_online_storage__in=[0, -1])
+    def analyse(sites):
+        tier0_sites = sites.filter(tier=0)
+        tier1_sites = sites.filter(tier=1)
+        tier2_sites = sites.filter(tier=2)
+        tier3_sites = sites.filter(tier=3)
+        atlantic_sites = sites.filter(latitude=0.0, active=True)
+        storage_info_available_sites = sites.exclude(total_online_storage__in=[0, -1])
         return{
-            "total_sites": len(SiteService.get_all()),
-            "active_sites": len(SiteService.get_active_sites()),
+            "total_sites": len(sites),
+            "active_sites": len(sites.filter(active=True)),
             "tier_0": len(tier0_sites),
             "tier_1": len(tier1_sites),
             "tier_2": len(tier2_sites),
@@ -108,7 +110,6 @@ class SiteService(Singleton, IEGLEventListener):
 
     @staticmethod
     def post_process():
-        print("Ready to Post Process!!")
         sites = SiteService.get_all()
         for site in sites:
             if site.federation is None:

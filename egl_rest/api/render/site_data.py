@@ -15,6 +15,11 @@ class SiteData(Singleton):
             raise Exception("Schema version {version} not supported for sites.".format(version=version))
 
     @staticmethod
+    def get_latest_schema():
+        SiteData.supported_schemas.sort()
+        return SiteData.supported_schemas[-1]
+
+    @staticmethod
     def generate_v1_0(site):
         site_vo_set = site.sitevo_set.all()
         site_vo_array = []
@@ -53,6 +58,8 @@ class SiteData(Singleton):
             hepspec06 = site.hepspec06
 
         site_dict = {
+            "id": site.id,
+            "name": site.name,
             "latitude": site.latitude,
             "longitude": site.longitude,
             "tier": site.tier,
