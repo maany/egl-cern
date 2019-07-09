@@ -24,7 +24,7 @@ class FederationData(Singleton):
     def generate_v1_0(federation):
         supported_vos = []
         sites = []
-        pledges = []
+        pledges = {}
         for vo in federation.supported_vos.all():
             supported_vos.append(vo.name)
         for site in federation.site_set.filter(active=True):
@@ -43,7 +43,7 @@ class FederationData(Singleton):
             else:
                 disk = pledge.disk
 
-            pledges[pledge.vo] = {
+            pledges[pledge.vo.name] = {
                 pledge.year: {
                     "cpu": cpu,
                     "disk": disk,
