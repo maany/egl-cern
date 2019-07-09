@@ -4,8 +4,9 @@ import json
 
 from egl_rest.api.models import Site
 from egl_rest.api.render.site_data import SiteData
+from egl_rest.api.render.vo_data import VOData
 from egl_rest.api.services.site_service import SiteService
-
+from egl_rest.api.services.vo_service import VOService
 
 # Create your views here.
 def sites(request):
@@ -46,8 +47,20 @@ def site(request, site_id):
         the_site = SiteService.get_by_id(site_id)
     except Site.DoesNotExist:
         raise Http404("Site does not exist!")
-    rendered_site = SiteData.render(the_site, schema_version)
-    return HttpResponse(json.dumps(rendered_site))
+    output = SiteService.generate_site_data(the_site, schema_version)
+    return HttpResponse(output)
+
+
+def vos(request):
+    vos = VOService.get_all()
+    schema_version = request.GET.get('schema_version')
+    if schema_version is None:
+        schema_version = SiteData.get_latest_schema()
+    else:
+        schema_version = float(schema_version)
+
+    output = VOService.generate_vo_data(vos,schema_version)
+    return HttpResponse(output)
 
 
 def data_links(request):

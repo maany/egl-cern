@@ -36,7 +36,7 @@ class SiteService(Singleton):
 
     @staticmethod
     def get_by_id(id):
-        return Site.objects.get(id=id)
+        return Site.objects.filter(id=id)
 
     @staticmethod
     def get_active_sites():
@@ -80,9 +80,8 @@ class SiteService(Singleton):
                 version=version,
                 supported_schemas=SiteData.supported_schemas
             )
-        SiteData.supported_schemas.sort()
         output = {'sites': {}, 'meta': [], 'current_schema_version': version,
-                  'latest_schema_version': SiteData.supported_schemas[-1]}
+                  'latest_schema_version': SiteData.get_latest_schema()}
         for site in sites:
             output['sites'][site.name] = SiteData.render(site, version)
 
