@@ -4,9 +4,11 @@ import json
 from egl_rest.api.models import Site, VO, Federation
 from egl_rest.api.render.federation_data import FederationData
 from egl_rest.api.render.site_data import SiteData
+from egl_rest.api.render.transfer_data import TransferData
 from egl_rest.api.render.vo_data import VOData
 from egl_rest.api.services.federations_service import FederationsService
 from egl_rest.api.services.site_service import SiteService
+from egl_rest.api.services.transfers_service import TransfersService
 from egl_rest.api.services.vo_service import VOService
 
 
@@ -112,4 +114,58 @@ def federation(request, federation_id):
 
 def data_links(request):
     all_links = []
-    return HttpResponse(json.dumps(all_links))
+    schema_version = request.GET.get('schema_version')
+    if schema_version is None:
+        schema_version = TransferData.get_latest_schema()
+    else:
+        schema_version = float(schema_version)
+    filters = {
+        "source": request.GET.get('source'),
+        "destination": request.GET.get('destination'),
+        "vo": request.GET.get('vo'),
+        "technology": request.GET.get('technology'),
+        "starts_between": request.GET.get('starts_between'),
+        "ends_between": request.GET.get('ends_between'),
+        "minimum_transferred_volume": request.GET.get('minimum_transferred_volume'),
+        "maximum_transferred_volume": request.GET.get('maximum_transferred_volume'),
+        "limit": request.GET.get('limit')
+    }
+
+    trimmed_filters = {}
+    for key, val in filters.items():
+        if val is not None:
+            trimmed_filters[key] = val
+    if "starts_between" not in trimmed_filters.keys() and "ends_between" not in trimmed_filters.keys():
+        raise Http404("Please specify the filter 'starts_between' or 'ends_between'")
+    filtered_transfers = TransfersService.fetch_transfers(trimmed_filters)
+    output = TransfersService.generate_transfer_data(filtered_transfers, schema_version)
+    return HttpResponse(output)
+
+
+def raw_data_links(request):
+    schema_version = request.GET.get('schema_version')
+    if schema_version is None:
+        schema_version = TransferData.get_latest_schema()
+    else:
+        schema_version = float(schema_version)
+    filters = {
+        "source": request.GET.get('source'),
+        "destination": request.GET.get('destination'),
+        "vo": request.GET.get('vo'),
+        "technology": request.GET.get('technology'),
+        "starts_between": request.GET.get('starts_between'),
+        "ends_between": request.GET.get('ends_between'),
+        "minimum_transferred_volume": request.GET.get('minimum_transferred_volume'),
+        "maximum_transferred_volume": request.GET.get('maximum_transferred_volume'),
+        "limit": request.GET.get('limit')
+    }
+
+    trimmed_filters = {}
+    for key, val in filters.items():
+        if val is not None:
+            trimmed_filters[key] = val
+    if "starts_between" not in trimmed_filters.keys() and "ends_between" not in trimmed_filters.keys():
+        raise Http404("Please specify the filter 'starts_between' or 'ends_between'")
+    filtered_transfers = TransfersService.fetch_raw_transfers(trimmed_filters)
+    output = TransfersService.generate_raw_transfer_data(filtered_transfers, schema_version)
+    return HttpResponse(output)

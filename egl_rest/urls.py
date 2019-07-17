@@ -9,4 +9,5 @@ urlpatterns = [
     path('federations', views.federations, name='federations'),
     path('federations/<int:federation_id>', views.federation, name='federation'),
     path('data_links', views.data_links, name='data_links'),
+    path('raw_data_links', views.raw_data_links, name='data_links'),
 ]

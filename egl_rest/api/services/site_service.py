@@ -82,7 +82,13 @@ class SiteService(Singleton):
             )
         output = {'sites': {}, 'meta': [], 'current_schema_version': version,
                   'latest_schema_version': SiteData.get_latest_schema()}
+        all_sites = SiteService.get_all()
+        for site in all_sites:
+            if len(site.name) > 40:
+                print(site.name)
         for site in sites:
+            if len(site.name) > 30:
+                print(site.name)
             output['sites'][site.name] = SiteData.render(site, version)
 
         output['meta'] = SiteService.analyse(sites)
