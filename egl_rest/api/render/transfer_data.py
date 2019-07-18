@@ -38,7 +38,6 @@ class TransferData:
             "total_file_size": transfer.count * transfer.average_file_size,
             "average_operation_time": transfer.average_operation_time,
             "total_operation_time": transfer.count * transfer.average_operation_time,
-            "count": transfer.count,
-            "efficiency": transfer.efficiency
+            "count": transfer.count
         }
         return transfer_dict
