@@ -17,7 +17,7 @@ class ReconChewbacca:
 
     class __ReconChewbacca:
         def __init__(self):
-            self.google_earth_kml = "./data/google_earth_recon_test_kml_ref.xml"
+            self.google_earth_kml = "./data/google_earth.xml"
             self.kml_url = "http://dashb-earth.cern.ch/dashboard/dashb-earth-all.kml"
             self.cric_base_url = "http://wlcg-cric.cern.ch/"
             self.cric_federations_url = "{cric_base_url}/api/core/federation/query/?json".format(cric_base_url=self.cric_base_url)

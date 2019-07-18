@@ -55,6 +55,7 @@ class SiteService(Singleton):
         if site.latitude is not 0 \
             and site.longitude is not 0 \
             and site.tier is not -1 \
+            and site.country_code is not "" \
             and site.country is not None \
                 and len(site.supported_vos.all())is not 0:
                     site.active = True

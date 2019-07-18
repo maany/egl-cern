@@ -35,9 +35,9 @@ class TransferData:
             "end": transfer.end,
             "technology": transfer.technology,
             "average_file_size": transfer.average_file_size,
-            "total_file_size": transfer.count * transfer.average_file_size,
             "average_operation_time": transfer.average_operation_time,
             "total_operation_time": transfer.count * transfer.average_operation_time,
+            "transferred_volume": transfer.transferred_volume,
             "count": transfer.count
         }
         return transfer_dict

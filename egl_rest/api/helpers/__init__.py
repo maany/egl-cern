@@ -13,6 +13,13 @@ def md5_string(str):
     return m.hexdigest()
 
 
+def get_py_country(country):
+    py_country = pycountry.countries.get(official_name=country.strip())
+    if py_country is None:
+        py_country = pycountry.countries.get(name=country.strip())
+    return py_country
+
+
 def get_country(latitude, longitude):
     ctx = ssl.create_default_context(cafile=certifi.where())
     geopy.geocoders.options.default_ssl_context = ctx

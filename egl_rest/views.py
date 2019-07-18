@@ -2,10 +2,12 @@ from django.http import HttpResponse, Http404
 import json
 
 from egl_rest.api.models import Site, VO, Federation
+from egl_rest.api.render.country_data import CountryData
 from egl_rest.api.render.federation_data import FederationData
 from egl_rest.api.render.site_data import SiteData
 from egl_rest.api.render.transfer_data import TransferData
 from egl_rest.api.render.vo_data import VOData
+from egl_rest.api.services.country_service import CountryService
 from egl_rest.api.services.federations_service import FederationsService
 from egl_rest.api.services.site_service import SiteService
 from egl_rest.api.services.transfers_service import TransfersService
@@ -168,4 +170,15 @@ def raw_data_links(request):
         raise Http404("Please specify the filter 'starts_between' or 'ends_between'")
     filtered_transfers = TransfersService.fetch_raw_transfers(trimmed_filters)
     output = TransfersService.generate_raw_transfer_data(filtered_transfers, schema_version)
+    return HttpResponse(output)
+
+
+def countries(request):
+    schema_version = request.GET.get('schema_version')
+    if schema_version is None:
+        schema_version = CountryData.get_latest_schema()
+    else:
+        schema_version = float(schema_version)
+    countries = CountryService.get_all()
+    output = CountryService.generate_country_data(countries, schema_version)
     return HttpResponse(output)
