@@ -1,0 +1,840 @@
+<!doctype html>
+<html>
+  <head>
+    <title>EGL REST API</title>
+    <style type="text/css">
+      body {
+      	font-family: Trebuchet MS, sans-serif;
+      	font-size: 15px;
+      	color: #444;
+      	margin-right: 24px;
+      }
+      
+      h1	{
+      	font-size: 25px;
+      }
+      h2	{
+      	font-size: 20px;
+      }
+      h3	{
+      	font-size: 16px;
+      	font-weight: bold;
+      }
+      hr	{
+      	height: 1px;
+      	border: 0;
+      	color: #ddd;
+      	background-color: #ddd;
+      }
+      
+      .app-desc {
+        clear: both;
+        margin-left: 20px;
+      }
+      .param-name {
+        width: 100%;
+      }
+      .license-info {
+        margin-left: 20px;
+      }
+      
+      .license-url {
+        margin-left: 20px;
+      }
+      
+      .model {
+        margin: 0 0 0px 20px;
+      }
+      
+      .method {
+        margin-left: 20px;
+      }
+      
+      .method-notes	{
+      	margin: 10px 0 20px 0;
+      	font-size: 90%;
+      	color: #555;
+      }
+      
+      pre {
+        padding: 10px;
+        margin-bottom: 2px;
+      }
+      
+      .http-method {
+       text-transform: uppercase;
+      }
+      
+      pre.get {
+        background-color: #0f6ab4;
+      }
+      
+      pre.post {
+        background-color: #10a54a;
+      }
+      
+      pre.put {
+        background-color: #c5862b;
+      }
+      
+      pre.delete {
+        background-color: #a41e22;
+      }
+      
+      .huge	{
+      	color: #fff;
+      }
+      
+      pre.example {
+        background-color: #f3f3f3;
+        padding: 10px;
+        border: 1px solid #ddd;
+      }
+      
+      code {
+        white-space: pre;
+      }
+      
+      .nickname {
+        font-weight: bold;
+      }
+      
+      .method-path {
+        font-size: 1.5em;
+        background-color: #0f6ab4;
+      }
+      
+      .up {
+        float:right;
+      }
+      
+      .parameter {
+        width: 500px;
+      }
+      
+      .param {
+        width: 500px;
+        padding: 10px 0 0 20px;
+        font-weight: bold;
+      }
+      
+      .param-desc {
+        width: 700px;
+        padding: 0 0 0 20px;
+        color: #777;
+      }
+      
+      .param-type {
+        font-style: italic;
+      }
+      
+      .param-enum-header {
+      width: 700px;
+      padding: 0 0 0 60px;
+      color: #777;
+      font-weight: bold;
+      }
+      
+      .param-enum {
+      width: 700px;
+      padding: 0 0 0 80px;
+      color: #777;
+      font-style: italic;
+      }
+      
+      .field-label {
+        padding: 0;
+        margin: 0;
+        clear: both;
+      }
+      
+      .field-items	{
+      	padding: 0 0 15px 0;
+      	margin-bottom: 15px;
+      }
+      
+      .return-type {
+        clear: both;
+        padding-bottom: 10px;
+      }
+      
+      .param-header {
+        font-weight: bold;
+      }
+      
+      .method-tags {
+        text-align: right;
+      }
+      
+      .method-tag {
+        background: none repeat scroll 0% 0% #24A600;
+        border-radius: 3px;
+        padding: 2px 10px;
+        margin: 2px;
+        color: #FFF;
+        display: inline-block;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+  <h1>EGL REST API</h1>
+    <div class="app-desc">This is a simple EGL server API</div>
+    <div class="app-desc">More information: <a href="https://helloreverb.com">https://helloreverb.com</a></div>
+    <div class="app-desc">Contact Info: <a href="mayank.sharma@cern.ch">mayank.sharma@cern.ch</a></div>
+    <div class="app-desc">Version: 1.0.0-oas3</div>
+    <div class="app-desc">BasePath:/maany/egl/1.0.0</div>
+    <div class="license-info">Apache 2.0</div>
+    <div class="license-url">http://www.apache.org/licenses/LICENSE-2.0.html</div>
+  <h2>Access</h2>
+
+  <h2><a name="__Methods">Methods</a></h2>
+  [ Jump to <a href="#__Models">Models</a> ]
+
+  <h3>Table of Contents </h3>
+  <div class="method-summary"></div>
+  <h4><a href="#Developers">Developers</a></h4>
+  <ul>
+  <li><a href="#countriesGet"><code><span class="http-method">get</span> /countries</code></a></li>
+  <li><a href="#dataLinksGet"><code><span class="http-method">get</span> /data_links</code></a></li>
+  <li><a href="#federationsGet"><code><span class="http-method">get</span> /federations</code></a></li>
+  <li><a href="#sitesGet"><code><span class="http-method">get</span> /sites</code></a></li>
+  <li><a href="#sitesSiteIdGet"><code><span class="http-method">get</span> /sites/{site_id}</code></a></li>
+  <li><a href="#vosGet"><code><span class="http-method">get</span> /vos</code></a></li>
+  </ul>
+
+  <h1><a name="Developers">Developers</a></h1>
+  <div class="method"><a name="countriesGet"></a>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /countries</code></pre></div>
+    <div class="method-summary">Returns countries with more than 0 WLCG sites and lists the sites. (<span class="nickname">countriesGet</span>)</div>
+    <div class="method-notes"></div>
+
+
+
+
+
+    <h3 class="field-label">Query parameters</h3>
+    <div class="field-items">
+      <div class="param">schema_version (optional)</div>
+      
+            <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The schema version to be used when returning results. </div>    </div>  <!-- field-items -->
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      
+      Object
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{ }</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    The countries and associated sites
+        <a href="#Object">Object</a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="dataLinksGet"></a>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /data_links</code></pre></div>
+    <div class="method-summary">Endpoint for searching through the data transfers that have completed until the time this request is made (<span class="nickname">dataLinksGet</span>)</div>
+    <div class="method-notes"></div>
+
+
+
+
+
+    <h3 class="field-label">Query parameters</h3>
+    <div class="field-items">
+      <div class="param">source (optional)</div>
+      
+            <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The site name from where transfers originate from </div>      <div class="param">destination (optional)</div>
+      
+            <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The site name from where transfers terminate </div>      <div class="param">vo (optional)</div>
+      
+            <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The VO associated with the transfers. Example: 1) alice 2) atlas </div>      <div class="param">technology (optional)</div>
+      
+            <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The data transfer protocol used. Valus is one of xrootd or fts. </div>      <div class="param">starts_between (required)</div>
+      
+            <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; One of starts_between and ends_between is REQUIRED. The time range in which the transfers begin. Format: {begining of time range}, {end of time range}. Value can be integer timestamps or influx db query parameters like now()-6h, now(). Examples: 1) /data_links?starts_between&#x3D;1560851060,1563443060 2) /data_links?starts_between&#x3D;now()-1h, now() </div>      <div class="param">ends_between (required)</div>
+      
+            <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; One of starts_between and ends_between is REQUIRED. The time range in which the transfers finish. Format: {begining of time range}, {end of time range}. Value can be integer timestamps or influx db query parameters like now()-6h, now(). Examples: 1) /data_links?ends_between&#x3D;1560851060,1563443060 2) /data_links?ends_between&#x3D;now()-1h, now() </div>      <div class="param">minimum_transferred_volume (optional)</div>
+      
+            <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The minimum threshold for transferred volume. Unit is yet to be revtrieved from the monitoring team. </div>      <div class="param">maximum_transferred_volume (optional)</div>
+      
+            <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The maximum threshold for transferred volume. Unit is yet to be revtrieved from the monitoring team. </div>      <div class="param">limit (optional)</div>
+      
+            <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; Limit the number of results. At present, we query two transfer databases. The limit is set on the query made to each database. Therefore, if the limit is set to x, the total number of results retrieved by the server are 2x. After validation checks, the maximum results returned by the server are 2x. </div>    </div>  <!-- field-items -->
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#TransfersResponse">TransfersResponse</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "transfers" : [ {
+    "average_file_size" : 851770034.962312,
+    "average_operation_time" : 2189.95,
+    "transferred_volune" : 34070801398.5,
+    "destination" : {
+      "name" : "GSI-LCG2",
+      "geo_coordinates" : {
+        "latitude" : 49.9313755,
+        "longitude" : 8.676753
+      }
+    },
+    "count" : 40,
+    "vo" : "atlas",
+    "total_operation_time" : 87598,
+    "end" : 1563440400,
+    "source" : {
+      "name" : "CERN-PROD",
+      "geo_coordinates" : {
+        "latitude" : 46.2338702,
+        "longitude" : 6.04698691754795
+      }
+    },
+    "technology" : "xrootd",
+    "begin" : 1563139781
+  }, {
+    "average_file_size" : 851770034.962312,
+    "average_operation_time" : 2189.95,
+    "transferred_volune" : 34070801398.5,
+    "destination" : {
+      "name" : "GSI-LCG2",
+      "geo_coordinates" : {
+        "latitude" : 49.9313755,
+        "longitude" : 8.676753
+      }
+    },
+    "count" : 40,
+    "vo" : "atlas",
+    "total_operation_time" : 87598,
+    "end" : 1563440400,
+    "source" : {
+      "name" : "CERN-PROD",
+      "geo_coordinates" : {
+        "latitude" : 46.2338702,
+        "longitude" : 6.04698691754795
+      }
+    },
+    "technology" : "xrootd",
+    "begin" : 1563139781
+  } ],
+  "meta" : {
+    "mode_total_operation_time" : 5,
+    "mean_total_operation_time" : 3796142.544644728,
+    "count" : 4764,
+    "min_total_operation_time" : 1,
+    "max_total_operation_time" : 1275641104.4383197
+  },
+  "latest_schema_version" : 2,
+  "current_schema_version" : 1
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>*/*</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    OK
+        <a href="#TransfersResponse">TransfersResponse</a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="federationsGet"></a>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /federations</code></pre></div>
+    <div class="method-summary">returns all federations available from CRIC (<span class="nickname">federationsGet</span>)</div>
+    <div class="method-notes"></div>
+
+
+
+
+
+    <h3 class="field-label">Query parameters</h3>
+    <div class="field-items">
+      <div class="param">schema_version (optional)</div>
+      
+            <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The schema version to be used when returning results. </div>    </div>  <!-- field-items -->
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      
+      Object
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{ }</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    all federations stored in the database and parsed from CRIC
+        <a href="#Object">Object</a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="sitesGet"></a>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /sites</code></pre></div>
+    <div class="method-summary">Gives a list of all the Sites in WLCG (<span class="nickname">sitesGet</span>)</div>
+    <div class="method-notes">Parses the CRIC database of WLCG sites and federations, the Google Earth KML and combines the information into an Array of Site Objects.</div>
+
+
+
+
+
+    <h3 class="field-label">Query parameters</h3>
+    <div class="field-items">
+      <div class="param">name (optional)</div>
+      
+            <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The name of the site </div>      <div class="param">tier (optional)</div>
+      
+            <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; Filter results based on tier. Value can be one of 0,1,2,3 </div>      <div class="param">supported_vos (optional)</div>
+      
+            <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; Filter results based on supported_vos. Examples: 1) /sites?supported_vos&#x3D;alice 2) /sites?supported_vos&#x3D;alice,atlas,cms </div>      <div class="param">country (optional)</div>
+      
+            <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; Filter results based on country Example /sites?country&#x3D;Germany </div>      <div class="param">country_code (optional)</div>
+      
+            <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; Filter results based on country code. Example /sites?country_code&#x3D;DE </div>      <div class="param">federation (optional)</div>
+      
+            <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; Filter results based on federation name </div>      <div class="param">schema_version (optional)</div>
+      
+            <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; Request a particular schema version for the results </div>    </div>  <!-- field-items -->
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#SitesResponse">SitesResponse</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "meta" : {
+    "total_sites" : 280,
+    "storage_info_available" : 5,
+    "tier_0" : 1,
+    "tier_2" : 0,
+    "atlantic_sites" : 1,
+    "tier_1" : 15,
+    "active_sites" : 273,
+    "tier_3" : 6
+  },
+  "latest_schema_version" : 2,
+  "sites" : {
+    "site_1_name" : {
+      "hepspec06" : 75164,
+      "federation" : "CERN-Tier0",
+      "country" : "Switzerland",
+      "supported_vos" : [ "atlas", "alice", "cms", "lhcb" ],
+      "total_nearline_storage" : 176,
+      "latitude" : 46.23,
+      "total_online_storage" : 162123,
+      "country_code" : "CH",
+      "cores" : 11.2,
+      "tier" : 0,
+      "name" : "CERN-PROD",
+      "id" : 143,
+      "longitude" : 6.04
+    },
+    "site_2_name" : {
+      "hepspec06" : 75164,
+      "federation" : "CERN-Tier0",
+      "country" : "Switzerland",
+      "supported_vos" : [ "atlas", "alice", "cms", "lhcb" ],
+      "total_nearline_storage" : 176,
+      "latitude" : 46.23,
+      "total_online_storage" : 162123,
+      "country_code" : "CH",
+      "cores" : 11.2,
+      "tier" : 0,
+      "name" : "CERN-PROD",
+      "id" : 143,
+      "longitude" : 6.04
+    }
+  },
+  "current_schema_version" : 1
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    Array of Site objects representing all Sites in WLCG
+        <a href="#SitesResponse">SitesResponse</a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="sitesSiteIdGet"></a>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /sites/{site_id}</code></pre></div>
+    <div class="method-summary">Get a Site by ID (<span class="nickname">sitesSiteIdGet</span>)</div>
+    <div class="method-notes"></div>
+
+    <h3 class="field-label">Path parameters</h3>
+    <div class="field-items">
+      <div class="param">site_id (required)</div>
+      
+            <div class="param-desc"><span class="param-type">Path Parameter</span> &mdash; Numeric ID of the Site to fetch </div>    </div>  <!-- field-items -->
+
+
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#SiteResponse">SiteResponse</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "site" : {
+    "hepspec06" : 75164,
+    "federation" : "CERN-Tier0",
+    "country" : "Switzerland",
+    "supported_vos" : [ "atlas", "alice", "cms", "lhcb" ],
+    "total_nearline_storage" : 176,
+    "latitude" : 46.23,
+    "total_online_storage" : 162123,
+    "country_code" : "CH",
+    "cores" : 11.2,
+    "tier" : 0,
+    "name" : "CERN-PROD",
+    "id" : 143,
+    "longitude" : 6.04
+  },
+  "meta" : {
+    "total_sites" : 280,
+    "storage_info_available" : 5,
+    "tier_0" : 1,
+    "tier_2" : 0,
+    "atlantic_sites" : 1,
+    "tier_1" : 15,
+    "active_sites" : 273,
+    "tier_3" : 6
+  },
+  "latest_schema_version" : 2,
+  "current_schema_version" : 1
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>*/*</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    OK
+        <a href="#SiteResponse">SiteResponse</a>
+    <h4 class="field-label">400</h4>
+    A site with matching site_id was not found
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="vosGet"></a>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /vos</code></pre></div>
+    <div class="method-summary">Returns the virtual organizations (VO&#x27;s) and the federations and the sites associated with each VO (<span class="nickname">vosGet</span>)</div>
+    <div class="method-notes"></div>
+
+
+
+
+
+    <h3 class="field-label">Query parameters</h3>
+    <div class="field-items">
+      <div class="param">schema_version (optional)</div>
+      
+            <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The schema version to be used when returning results. </div>    </div>  <!-- field-items -->
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      
+      Object
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{ }</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    VO info
+        <a href="#Object">Object</a>
+  </div> <!-- method -->
+  <hr/>
+
+  <h2><a name="__Models">Models</a></h2>
+  [ Jump to <a href="#__Methods">Methods</a> ]
+
+  <h3>Table of Contents</h3>
+  <ol>
+    <li><a href="#Pledge"><code>Pledge</code></a></li>
+    <li><a href="#Site"><code>Site</code></a></li>
+    <li><a href="#SiteResponse"><code>SiteResponse</code></a></li>
+    <li><a href="#SitesResponse"><code>SitesResponse</code></a></li>
+    <li><a href="#SitesResponse_meta"><code>SitesResponse_meta</code></a></li>
+    <li><a href="#SitesResponse_sites"><code>SitesResponse_sites</code></a></li>
+    <li><a href="#Transfer"><code>Transfer</code></a></li>
+    <li><a href="#Transfer_destination"><code>Transfer_destination</code></a></li>
+    <li><a href="#Transfer_destination_geo_coordinates"><code>Transfer_destination_geo_coordinates</code></a></li>
+    <li><a href="#Transfer_source"><code>Transfer_source</code></a></li>
+    <li><a href="#Transfer_source_geo_coordinates"><code>Transfer_source_geo_coordinates</code></a></li>
+    <li><a href="#TransfersResponse"><code>TransfersResponse</code></a></li>
+    <li><a href="#TransfersResponse_meta"><code>TransfersResponse_meta</code></a></li>
+  </ol>
+
+  <div class="model">
+    <h3><a name="Pledge"><code>Pledge</code></a> <a class="up" href="#__Models">Up</a></h3>
+    
+    <div class="field-items">
+      <div class="param">id </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: 121</span></div>
+<div class="param">federation </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The name of the federation this pledge is associated with </div>
+          <div class="param-desc"><span class="param-type">example: CA-EAST-T2</span></div>
+<div class="param">year </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> The year for which this pledge was made. </div>
+          <div class="param-desc"><span class="param-type">example: 2019</span></div>
+<div class="param">cpu </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Value in HEPSPEC06 of pledged CPU resources </div>
+<div class="param">disk </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Value in TBytes of pledged disk storage </div>
+<div class="param">tape </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Value in TBytes of pledged tape storage </div>
+<div class="param">vo </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The name of the VO </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="Site"><code>Site</code></a> <a class="up" href="#__Models">Up</a></h3>
+    
+    <div class="field-items">
+      <div class="param">id </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: 143</span></div>
+<div class="param">name </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: CERN-PROD</span></div>
+<div class="param">latitude </div><div class="param-desc"><span class="param-type"><a href="#BigDecimal">BigDecimal</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: 46.23</span></div>
+<div class="param">longitude </div><div class="param-desc"><span class="param-type"><a href="#BigDecimal">BigDecimal</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: 6.04</span></div>
+<div class="param">tier </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: 0</span></div>
+<div class="param">country_code </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: CH</span></div>
+<div class="param">country </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: Switzerland</span></div>
+<div class="param">hepspec06 (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> The CPU capacity in HEPSPEC06 </div>
+          <div class="param-desc"><span class="param-type">example: 75164</span></div>
+<div class="param">cores (optional)</div><div class="param-desc"><span class="param-type"><a href="#BigDecimal">BigDecimal</a></span> HEPSPEC06/Logical_CPU&#x27;s </div>
+          <div class="param-desc"><span class="param-type">example: 11.2</span></div>
+<div class="param">total_online_storage (optional)</div><div class="param-desc"><span class="param-type"><a href="#BigDecimal">BigDecimal</a></span> The total online storage available at the site in GB, if available. If value was 0 in REBUS, the value returned from EGL server is : Not Specified. If site info was not recorded in REBUS, the value returned from EGL server is: Not Available </div>
+          <div class="param-desc"><span class="param-type">example: 162123</span></div>
+<div class="param">total_nearline_storage (optional)</div><div class="param-desc"><span class="param-type"><a href="#BigDecimal">BigDecimal</a></span> The total nearline storage available at the site in GB, if available. If value was 0 in REBUS, the value returned from EGL server is : Not Specified. If site info was not recorded in REBUS, the value returned from EGL server is: Not Available </div>
+          <div class="param-desc"><span class="param-type">example: 176</span></div>
+<div class="param">supported_vos </div><div class="param-desc"><span class="param-type"><a href="#string">array[String]</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: [&quot;atlas&quot;,&quot;alice&quot;,&quot;cms&quot;,&quot;lhcb&quot;]</span></div>
+<div class="param">federation </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The federation to which the site belongs. </div>
+          <div class="param-desc"><span class="param-type">example: CERN-Tier0</span></div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="SiteResponse"><code>SiteResponse</code></a> <a class="up" href="#__Models">Up</a></h3>
+    
+    <div class="field-items">
+      <div class="param">site (optional)</div><div class="param-desc"><span class="param-type"><a href="#Site">Site</a></span>  </div>
+<div class="param">meta </div><div class="param-desc"><span class="param-type"><a href="#SitesResponse_meta">SitesResponse_meta</a></span>  </div>
+<div class="param">current_schema_version </div><div class="param-desc"><span class="param-type"><a href="#BigDecimal">BigDecimal</a></span> the requested schema_version </div>
+          <div class="param-desc"><span class="param-type">example: 1</span></div>
+<div class="param">latest_schema_version </div><div class="param-desc"><span class="param-type"><a href="#BigDecimal">BigDecimal</a></span> the latest schema_version available on the server </div>
+          <div class="param-desc"><span class="param-type">example: 2</span></div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="SitesResponse"><code>SitesResponse</code></a> <a class="up" href="#__Models">Up</a></h3>
+    
+    <div class="field-items">
+      <div class="param">sites </div><div class="param-desc"><span class="param-type"><a href="#SitesResponse_sites">SitesResponse_sites</a></span>  </div>
+<div class="param">meta </div><div class="param-desc"><span class="param-type"><a href="#SitesResponse_meta">SitesResponse_meta</a></span>  </div>
+<div class="param">current_schema_version </div><div class="param-desc"><span class="param-type"><a href="#BigDecimal">BigDecimal</a></span> the requested schema_version </div>
+          <div class="param-desc"><span class="param-type">example: 1</span></div>
+<div class="param">latest_schema_version </div><div class="param-desc"><span class="param-type"><a href="#BigDecimal">BigDecimal</a></span> the latest schema_version available on the server </div>
+          <div class="param-desc"><span class="param-type">example: 2</span></div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="SitesResponse_meta"><code>SitesResponse_meta</code></a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Meta information about search results</div>
+    <div class="field-items">
+      <div class="param">total_sites (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> total number of sites stored in the database </div>
+          <div class="param-desc"><span class="param-type">example: 280</span></div>
+<div class="param">active_sites (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> number of sites that passed validation checks </div>
+          <div class="param-desc"><span class="param-type">example: 273</span></div>
+<div class="param">tier_0 (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> number of tier-0 sites in the search results. </div>
+          <div class="param-desc"><span class="param-type">example: 1</span></div>
+<div class="param">tier_1 (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> number of tier-1 sites in the search results </div>
+          <div class="param-desc"><span class="param-type">example: 15</span></div>
+<div class="param">tier_2 (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> number of tier-2 sites in the search results </div>
+<div class="param">tier_3 (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> number of tier-3 sites in the search results </div>
+<div class="param">atlantic_sites (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> number of sites with either latitude &#x3D; 0.0 or longitude &#x3D; 0.0 in search results </div>
+<div class="param">storage_info_available (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> number of sites in search results for which storage information was available from WLCG REBUS </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="SitesResponse_sites"><code>SitesResponse_sites</code></a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Array of sites that match the requested filter criterion.</div>
+    <div class="field-items">
+      <div class="param">site_1_name (optional)</div><div class="param-desc"><span class="param-type"><a href="#Site">Site</a></span>  </div>
+<div class="param">site_2_name (optional)</div><div class="param-desc"><span class="param-type"><a href="#Site">Site</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="Transfer"><code>Transfer</code></a> <a class="up" href="#__Models">Up</a></h3>
+    
+    <div class="field-items">
+      <div class="param">source </div><div class="param-desc"><span class="param-type"><a href="#Transfer_source">Transfer_source</a></span>  </div>
+<div class="param">destination </div><div class="param-desc"><span class="param-type"><a href="#Transfer_destination">Transfer_destination</a></span>  </div>
+<div class="param">vo </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The VO to which this transfer is associated with </div>
+          <div class="param-desc"><span class="param-type">example: atlas</span></div>
+<div class="param">begin </div><div class="param-desc"><span class="param-type"><a href="#BigDecimal">BigDecimal</a></span> The starting timestamp for this transfer. (UNIX timestamp) </div>
+          <div class="param-desc"><span class="param-type">example: 1563139781</span></div>
+<div class="param">end </div><div class="param-desc"><span class="param-type"><a href="#BigDecimal">BigDecimal</a></span> The timestamp for when this transfer completed. (UNIX timestamp) </div>
+          <div class="param-desc"><span class="param-type">example: 1563440400</span></div>
+<div class="param">technology </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The transfer protocol used. One of xrootd or fts. </div>
+          <div class="param-desc"><span class="param-type">example: xrootd</span></div>
+<div class="param">average_file_size </div><div class="param-desc"><span class="param-type"><a href="#BigDecimal">BigDecimal</a></span> The average file size (unit to be obtained from monitoring team) </div>
+          <div class="param-desc"><span class="param-type">example: 851770034.962312</span></div>
+<div class="param">transferred_volune (optional)</div><div class="param-desc"><span class="param-type"><a href="#BigDecimal">BigDecimal</a></span> Total amount of data transferred during this operation (&#x3D; average_file_size* count). Unit yet to be obtained from monitoring guys. </div>
+          <div class="param-desc"><span class="param-type">example: 34070801398.5</span></div>
+<div class="param">average_operation_time </div><div class="param-desc"><span class="param-type"><a href="#BigDecimal">BigDecimal</a></span> Average time taken in seconds by each file during this transfer operation </div>
+          <div class="param-desc"><span class="param-type">example: 2189.95</span></div>
+<div class="param">total_operation_time (optional)</div><div class="param-desc"><span class="param-type"><a href="#BigDecimal">BigDecimal</a></span> Total number of seconds for completion of this tranfer operation </div>
+          <div class="param-desc"><span class="param-type">example: 87598</span></div>
+<div class="param">count </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Number of files transferred during this transfer oepraiton </div>
+          <div class="param-desc"><span class="param-type">example: 40</span></div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="Transfer_destination"><code>Transfer_destination</code></a> <a class="up" href="#__Models">Up</a></h3>
+    
+    <div class="field-items">
+      <div class="param">name (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The name of the site where the transfer terminates </div>
+          <div class="param-desc"><span class="param-type">example: GSI-LCG2</span></div>
+<div class="param">geo_coordinates (optional)</div><div class="param-desc"><span class="param-type"><a href="#Transfer_destination_geo_coordinates">Transfer_destination_geo_coordinates</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="Transfer_destination_geo_coordinates"><code>Transfer_destination_geo_coordinates</code></a> <a class="up" href="#__Models">Up</a></h3>
+    
+    <div class="field-items">
+      <div class="param">latitude (optional)</div><div class="param-desc"><span class="param-type"><a href="#BigDecimal">BigDecimal</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: 49.9313755</span></div>
+<div class="param">longitude (optional)</div><div class="param-desc"><span class="param-type"><a href="#BigDecimal">BigDecimal</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: 8.676753</span></div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="Transfer_source"><code>Transfer_source</code></a> <a class="up" href="#__Models">Up</a></h3>
+    
+    <div class="field-items">
+      <div class="param">name (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The name of the site where the transfer originated from </div>
+          <div class="param-desc"><span class="param-type">example: CERN-PROD</span></div>
+<div class="param">geo_coordinates (optional)</div><div class="param-desc"><span class="param-type"><a href="#Transfer_source_geo_coordinates">Transfer_source_geo_coordinates</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="Transfer_source_geo_coordinates"><code>Transfer_source_geo_coordinates</code></a> <a class="up" href="#__Models">Up</a></h3>
+    
+    <div class="field-items">
+      <div class="param">latitude (optional)</div><div class="param-desc"><span class="param-type"><a href="#BigDecimal">BigDecimal</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: 46.2338702</span></div>
+<div class="param">longitude (optional)</div><div class="param-desc"><span class="param-type"><a href="#BigDecimal">BigDecimal</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: 6.04698691754795</span></div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="TransfersResponse"><code>TransfersResponse</code></a> <a class="up" href="#__Models">Up</a></h3>
+    
+    <div class="field-items">
+      <div class="param">transfers </div><div class="param-desc"><span class="param-type"><a href="#Transfer">array[Transfer]</a></span>  </div>
+<div class="param">meta </div><div class="param-desc"><span class="param-type"><a href="#TransfersResponse_meta">TransfersResponse_meta</a></span>  </div>
+<div class="param">current_schema_version </div><div class="param-desc"><span class="param-type"><a href="#BigDecimal">BigDecimal</a></span> The schema version for DataLinks requested by the client </div>
+          <div class="param-desc"><span class="param-type">example: 1</span></div>
+<div class="param">latest_schema_version </div><div class="param-desc"><span class="param-type"><a href="#BigDecimal">BigDecimal</a></span> The latest schema version for DataLinks available at the server </div>
+          <div class="param-desc"><span class="param-type">example: 2</span></div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="TransfersResponse_meta"><code>TransfersResponse_meta</code></a> <a class="up" href="#__Models">Up</a></h3>
+    
+    <div class="field-items">
+      <div class="param">count (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> The number of results returned by the server. </div>
+          <div class="param-desc"><span class="param-type">example: 4764</span></div>
+<div class="param">mean_total_operation_time (optional)</div><div class="param-desc"><span class="param-type"><a href="#BigDecimal">BigDecimal</a></span> in seconds </div>
+          <div class="param-desc"><span class="param-type">example: 3796142.544644728</span></div>
+<div class="param">mode_total_operation_time (optional)</div><div class="param-desc"><span class="param-type"><a href="#BigDecimal">BigDecimal</a></span> In seconds. The most frequent total operation time in the returned results. </div>
+          <div class="param-desc"><span class="param-type">example: 5</span></div>
+<div class="param">max_total_operation_time (optional)</div><div class="param-desc"><span class="param-type"><a href="#BigDecimal">BigDecimal</a></span> In seconds </div>
+          <div class="param-desc"><span class="param-type">example: 1275641104.4383197</span></div>
+<div class="param">min_total_operation_time (optional)</div><div class="param-desc"><span class="param-type"><a href="#BigDecimal">BigDecimal</a></span> In seconds. </div>
+          <div class="param-desc"><span class="param-type">example: 1</span></div>
+    </div>  <!-- field-items -->
+  </div>
+  </body>
+</html>

@@ -53,6 +53,7 @@ class FederationData(Singleton):
         federation_dict = {
             "name": federation.name,
             "accounting_name": federation.accounting_name,
+            "tier": federation.tier,
             "supported_vos": supported_vos,
             "sites": sites,
             "pledges": pledges

@@ -56,7 +56,7 @@ class TransfersService:
         return {
             "count": len(op_time_arr),
             "mean_total_operation_time": statistics.mean(op_time_arr),
-            "mode_total_operation_time": mode ,
+            "mode_total_operation_time": mode,
             "max_total_operation_time": max(op_time_arr),
             "min_total_operation_time": min(op_time_arr)
         }
