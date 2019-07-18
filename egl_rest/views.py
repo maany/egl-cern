@@ -41,7 +41,7 @@ def sites(request):
         if val is not None:
             trimmed_filters[key] = val
 
-    filtered_sites = SiteService.get_all()
+    filtered_sites = SiteService.get_active_sites()
     filtered_sites = filtered_sites.complex_filter(trimmed_filters)
     output = SiteService.generate_site_data(filtered_sites, schema_version)
     return HttpResponse(output)

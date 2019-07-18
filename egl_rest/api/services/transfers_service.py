@@ -49,10 +49,14 @@ class TransfersService:
         op_time_arr = []
         for transfer in transfers:
             op_time_arr.append(transfer.total_operation_time)
+        try:
+            mode = statistics.mode(op_time_arr)
+        except:
+            mode = "could not find unique mode"
         return {
             "count": len(op_time_arr),
             "mean_total_operation_time": statistics.mean(op_time_arr),
-            "mode_total_operation_time": statistics.mode(op_time_arr),
+            "mode_total_operation_time": mode ,
             "max_total_operation_time": max(op_time_arr),
             "min_total_operation_time": min(op_time_arr)
         }
