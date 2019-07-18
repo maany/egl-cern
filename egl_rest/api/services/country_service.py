@@ -8,7 +8,8 @@ class CountryService:
         active_sites = SiteService.get_active_sites()
         countries = []
         for site in active_sites:
-            countries.append(site.country)
+            if site.country not in countries:
+                countries.append(site.country)
         return countries
 
     @staticmethod
