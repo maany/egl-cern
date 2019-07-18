@@ -83,6 +83,8 @@ class SiteService(Singleton):
             )
         output = {'sites': {}, 'meta': [], 'current_schema_version': version,
                   'latest_schema_version': SiteData.get_latest_schema()}
+        for site in sites:
+            output['sites'][site.name] = SiteData.render(site, version)
         output['meta'] = SiteService.analyse(sites)
         return json.dumps(output)
 
