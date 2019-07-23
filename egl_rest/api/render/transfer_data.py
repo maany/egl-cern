@@ -18,17 +18,17 @@ class TransferData:
         transfer_dict = {
             "source": {
                 "name": transfer.source.name,
-                "geo_coordinates": {
-                    "latitude": transfer.source.latitude,
-                    "longitude": transfer.source.longitude
-                }
+                "latitude": transfer.source.latitude,
+                "longitude": transfer.source.longitude,
+                "country": transfer.source.country,
+                "tier": transfer.source.tier
             },
             "destination": {
                 "name": transfer.destination.name,
-                "geo_coordinates": {
-                    "latitude": transfer.destination.latitude,
-                    "longitude": transfer.destination.longitude
-                }
+                "latitude": transfer.destination.latitude,
+                "longitude": transfer.destination.longitude,
+                "country": transfer.destination.country,
+                "tier": transfer.destination.tier
             },
             "vo": transfer.vo.name,
             "begin": transfer.begin,
