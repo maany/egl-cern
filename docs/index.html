@@ -268,9 +268,9 @@
       
             <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The VO associated with the transfers. Example: 1) alice 2) atlas </div>      <div class="param">technology (optional)</div>
       
-            <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The data transfer protocol used. Valus is one of xrootd or fts. </div>      <div class="param">starts_between (required)</div>
+            <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The data transfer protocol used. Valus is one of xrootd or fts. </div>      <div class="param">starts_between (optional)</div>
       
-            <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; One of starts_between and ends_between is REQUIRED. The time range in which the transfers begin. Format: {begining of time range}, {end of time range}. Value can be integer timestamps or influx db query parameters like now()-6h, now(). Examples: 1) /data_links?starts_between&#x3D;1560851060,1563443060 2) /data_links?starts_between&#x3D;now()-1h, now() </div>      <div class="param">ends_between (required)</div>
+            <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The time range in which the transfers begin. Format: {begining of time range}, {end of time range}. The values can NOT be influx db query parameters like now()-6h, now(). The values can ONLY be integers representing UNIX timestamps (number of seconds elapsed from epoch). Examples: 1) /data_links?starts_between&#x3D;1560851060,1563443060 2) data_links?ends_between&#x3D;now()-3h,now()&amp;amp;limit&#x3D;5000&amp;amp;starts_between&#x3D;1564358400,1564494652 </div>      <div class="param">ends_between (required)</div>
       
             <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; One of starts_between and ends_between is REQUIRED. The time range in which the transfers finish. Format: {begining of time range}, {end of time range}. Value can be integer timestamps or influx db query parameters like now()-6h, now(). Examples: 1) /data_links?ends_between&#x3D;1560851060,1563443060 2) /data_links?ends_between&#x3D;now()-1h, now() </div>      <div class="param">minimum_transferred_volume (optional)</div>
       
@@ -297,22 +297,22 @@
     "average_operation_time" : 2189.95,
     "transferred_volune" : 34070801398.5,
     "destination" : {
+      "country" : "Switzerland",
+      "tier" : 0,
+      "latitude" : 49.9313755,
       "name" : "GSI-LCG2",
-      "geo_coordinates" : {
-        "latitude" : 49.9313755,
-        "longitude" : 8.676753
-      }
+      "longitude" : 8.676753
     },
     "count" : 40,
     "vo" : "atlas",
     "total_operation_time" : 87598,
     "end" : 1563440400,
     "source" : {
+      "country" : "Switzerland",
+      "tier" : 0,
+      "latitude" : 46.2338702,
       "name" : "CERN-PROD",
-      "geo_coordinates" : {
-        "latitude" : 46.2338702,
-        "longitude" : 6.04698691754795
-      }
+      "longitude" : 6.04698691754795
     },
     "technology" : "xrootd",
     "begin" : 1563139781
@@ -321,22 +321,22 @@
     "average_operation_time" : 2189.95,
     "transferred_volune" : 34070801398.5,
     "destination" : {
+      "country" : "Switzerland",
+      "tier" : 0,
+      "latitude" : 49.9313755,
       "name" : "GSI-LCG2",
-      "geo_coordinates" : {
-        "latitude" : 49.9313755,
-        "longitude" : 8.676753
-      }
+      "longitude" : 8.676753
     },
     "count" : 40,
     "vo" : "atlas",
     "total_operation_time" : 87598,
     "end" : 1563440400,
     "source" : {
+      "country" : "Switzerland",
+      "tier" : 0,
+      "latitude" : 46.2338702,
       "name" : "CERN-PROD",
-      "geo_coordinates" : {
-        "latitude" : 46.2338702,
-        "longitude" : 6.04698691754795
-      }
+      "longitude" : 6.04698691754795
     },
     "technology" : "xrootd",
     "begin" : 1563139781
@@ -639,9 +639,7 @@
     <li><a href="#SitesResponse_sites"><code>SitesResponse_sites</code></a></li>
     <li><a href="#Transfer"><code>Transfer</code></a></li>
     <li><a href="#Transfer_destination"><code>Transfer_destination</code></a></li>
-    <li><a href="#Transfer_destination_geo_coordinates"><code>Transfer_destination_geo_coordinates</code></a></li>
     <li><a href="#Transfer_source"><code>Transfer_source</code></a></li>
-    <li><a href="#Transfer_source_geo_coordinates"><code>Transfer_source_geo_coordinates</code></a></li>
     <li><a href="#TransfersResponse"><code>TransfersResponse</code></a></li>
     <li><a href="#TransfersResponse_meta"><code>TransfersResponse_meta</code></a></li>
   </ol>
@@ -776,17 +774,14 @@
     <div class="field-items">
       <div class="param">name (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The name of the site where the transfer terminates </div>
           <div class="param-desc"><span class="param-type">example: GSI-LCG2</span></div>
-<div class="param">geo_coordinates (optional)</div><div class="param-desc"><span class="param-type"><a href="#Transfer_destination_geo_coordinates">Transfer_destination_geo_coordinates</a></span>  </div>
-    </div>  <!-- field-items -->
-  </div>
-  <div class="model">
-    <h3><a name="Transfer_destination_geo_coordinates"><code>Transfer_destination_geo_coordinates</code></a> <a class="up" href="#__Models">Up</a></h3>
-    
-    <div class="field-items">
-      <div class="param">latitude (optional)</div><div class="param-desc"><span class="param-type"><a href="#BigDecimal">BigDecimal</a></span>  </div>
+<div class="param">latitude (optional)</div><div class="param-desc"><span class="param-type"><a href="#BigDecimal">BigDecimal</a></span>  </div>
           <div class="param-desc"><span class="param-type">example: 49.9313755</span></div>
 <div class="param">longitude (optional)</div><div class="param-desc"><span class="param-type"><a href="#BigDecimal">BigDecimal</a></span>  </div>
           <div class="param-desc"><span class="param-type">example: 8.676753</span></div>
+<div class="param">country (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The country of the destination site </div>
+          <div class="param-desc"><span class="param-type">example: Switzerland</span></div>
+<div class="param">tier (optional)</div><div class="param-desc"><span class="param-type"><a href="#BigDecimal">BigDecimal</a></span> the tier of the destination site </div>
+          <div class="param-desc"><span class="param-type">example: 0</span></div>
     </div>  <!-- field-items -->
   </div>
   <div class="model">
@@ -795,17 +790,14 @@
     <div class="field-items">
       <div class="param">name (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The name of the site where the transfer originated from </div>
           <div class="param-desc"><span class="param-type">example: CERN-PROD</span></div>
-<div class="param">geo_coordinates (optional)</div><div class="param-desc"><span class="param-type"><a href="#Transfer_source_geo_coordinates">Transfer_source_geo_coordinates</a></span>  </div>
-    </div>  <!-- field-items -->
-  </div>
-  <div class="model">
-    <h3><a name="Transfer_source_geo_coordinates"><code>Transfer_source_geo_coordinates</code></a> <a class="up" href="#__Models">Up</a></h3>
-    
-    <div class="field-items">
-      <div class="param">latitude (optional)</div><div class="param-desc"><span class="param-type"><a href="#BigDecimal">BigDecimal</a></span>  </div>
+<div class="param">latitude (optional)</div><div class="param-desc"><span class="param-type"><a href="#BigDecimal">BigDecimal</a></span>  </div>
           <div class="param-desc"><span class="param-type">example: 46.2338702</span></div>
 <div class="param">longitude (optional)</div><div class="param-desc"><span class="param-type"><a href="#BigDecimal">BigDecimal</a></span>  </div>
           <div class="param-desc"><span class="param-type">example: 6.04698691754795</span></div>
+<div class="param">country (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The country of the source site </div>
+          <div class="param-desc"><span class="param-type">example: Switzerland</span></div>
+<div class="param">tier (optional)</div><div class="param-desc"><span class="param-type"><a href="#BigDecimal">BigDecimal</a></span> the tier of the source site </div>
+          <div class="param-desc"><span class="param-type">example: 0</span></div>
     </div>  <!-- field-items -->
   </div>
   <div class="model">

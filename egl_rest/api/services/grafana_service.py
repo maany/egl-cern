@@ -6,6 +6,7 @@ from time import time
 from queue import Queue
 from threading import Thread
 
+
 from egl_rest.api.models import Transfer, Site, VO
 from egl_rest.api.services.site_service import SiteService
 from egl_rest.api.services.vo_service import VOService
@@ -27,23 +28,37 @@ class GrafanaServiceWorker(Thread):
             self.transfers = self.transfers + transfer_list
             self.queue.task_done()
 
-    def process_transfer_data(self, transfers_string_array):
+    def process_transfer_data(self, transfers_string_array, filters):
         transfers_list = []
         for transfer_string in transfers_string_array:
             unknown_sites = []
             transfer_info = transfer_string.split(',')
             transfer = Transfer()
             transfer.end = int(int(transfer_info[2]) / 1000000000)
+            transfer.count = int(transfer_info[9])
+            transfer.average_operation_time = float(transfer_info[10])
+            transfer.total_operation_time = transfer.count * transfer.average_operation_time
+            transfer.begin = int(transfer.end - transfer.total_operation_time)
+
+            ## Implement starts between
+            if "starts_between" in filters:
+                starts_between = filters['starts_between'].split(',')
+                start = float(starts_between[0])
+                end = float(starts_between[-1])
+                if start <= transfer.begin <= end:
+                    pass
+                else:
+                    continue
             try:
                 site_name = GrafanaService.cric_influx_name_map(transfer_info[3])
-                transfer.source = SiteService.get(site_name)
+                transfer.source = SiteService.get_active_sites().get(name=site_name)
             except Site.DoesNotExist:
                 unknown_sites.append(site_name)
                 # logger.error("{source} source site was not found in database".format(source=site_name))
                 continue
             try:
                 site_name = GrafanaService.cric_influx_name_map(transfer_info[4])
-                transfer.destination = SiteService.get(site_name)
+                transfer.destination = SiteService.get_active_sites().get(name=site_name)
             except Site.DoesNotExist:
                 unknown_sites.append(site_name)
                 # logger.error("{destination} destination was not found in database".format(destination=site_name))
@@ -56,10 +71,6 @@ class GrafanaServiceWorker(Thread):
             transfer.technology = transfer_info[6]
             transfer.transferred_volume = float(transfer_info[7])
             transfer.average_file_size = float(transfer_info[8])
-            transfer.count = int(transfer_info[9])
-            transfer.average_operation_time = float(transfer_info[10])
-            transfer.total_operation_time = transfer.count * transfer.average_operation_time
-            transfer.begin = int(transfer.end - transfer.total_operation_time)
 
             transfers_list.append(transfer)
 
@@ -181,7 +192,7 @@ class GrafanaService:
         # for job in jobs:
         #     job.join()
         ## REGULAR
-        transfers = GrafanaServiceWorker(queue, transfers).process_transfer_data(transfers_string_array)
+        transfers = GrafanaServiceWorker(queue, transfers).process_transfer_data(transfers_string_array, filters)
         operation_time = time() - ts
         logger.info("Took {time}s".format(time=operation_time))
         print("Query Time: {query_time}, Processing Time: {time}s".format(time=operation_time, query_time=query_time))
@@ -216,16 +227,8 @@ class GrafanaService:
         GRAFANA_URL = 'https://monit-grafana.cern.ch/api/datasources/proxy/7794/query'
         query = "SELECT src_site, dst_site, vo, technology, transferred_volume, avg_file_size, count, avg_operation_time FROM {database_name} WHERE count>0 AND avg_operation_time>0"
 
-        if "starts_between" in filters and "ends_between" not in filters:
-            starts_between = filters['starts_between'].split(',')
-            start = int(starts_between[0])
-            end = int(starts_between[-1])
-            query = "{query} time - count * avg_operation_time >= {start} AND time - count * avg_operation_time " \
-                    "<= {end}".format(
-                query=query,
-                start=start,
-                end=end
-            )
+        ### starts_between handled while parsing data ###
+
         if "ends_between" in filters:
             ends_between = filters['ends_between'].split(',')
             start = ends_between[0]
