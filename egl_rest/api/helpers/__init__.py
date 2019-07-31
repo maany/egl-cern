@@ -6,7 +6,9 @@ from geopy.geocoders import OpenMapQuest
 from django.conf import settings
 import geopy
 import unidecode
-
+from py_expression_eval import Parser
+import re
+import time
 
 def md5_string(str):
     m = hashlib.md5(str.encode('utf-8'))
@@ -44,6 +46,22 @@ def get_geo_cords(address):
         "latitude": output.latitude,
         "longitude": output.longitude
     }
+
+
+def parse_influx_eq(equation):
+    matches = re.findall('(\d*.)([h,d])', equation)
+    for match in matches:
+        equation = re.sub(''.join(match), '*'.join(match), equation)
+    equation = equation.replace('()','')
+    parser = Parser()
+    parsed_eq = parser.parse(equation)
+    result = parsed_eq.evaluate({
+        'now': time.time(),
+        'h': 60*60,
+        'd': 24*60*60
+    })
+    return result
+
 
 class Singleton:
     _shared_state = {}

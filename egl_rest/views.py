@@ -12,7 +12,8 @@ from egl_rest.api.services.federations_service import FederationsService
 from egl_rest.api.services.site_service import SiteService
 from egl_rest.api.services.transfers_service import TransfersService
 from egl_rest.api.services.vo_service import VOService
-
+from egl_rest.api.helpers import parse_influx_eq
+import re
 
 # Create your views here.
 def sites(request):
@@ -137,8 +138,19 @@ def data_links(request):
     for key, val in filters.items():
         if val is not None:
             trimmed_filters[key] = val
-    if "starts_between" not in trimmed_filters.keys() and "ends_between" not in trimmed_filters.keys():
-        raise Http404("Please specify the filter 'starts_between' or 'ends_between'")
+    if "ends_between" not in trimmed_filters.keys():
+        raise Http404("Please specify the filter 'ends_between'")
+    if "starts_between" in filters:
+        starts_between = filters['starts_between'].split(',')
+        start = starts_between[0]
+        end = starts_between[-1]
+        if not (start.isdigit() and end.isdigit()):
+            try:
+                start = parse_influx_eq(start)
+                end = parse_influx_eq(end)
+            except:
+                raise Http404("Could not parse the starts_between filter. Try passing just epoch timestamp based values if the error is not obvious.")
+        trimmed_filters['starts_between'] = "{start},{end}".format(start=start,end=end)
     filtered_transfers = TransfersService.fetch_transfers(trimmed_filters)
     output = TransfersService.generate_transfer_data(filtered_transfers, schema_version)
     return HttpResponse(output)
@@ -167,12 +179,13 @@ def raw_data_links(request):
         if val is not None:
             trimmed_filters[key] = val
     if "ends_between" not in trimmed_filters.keys():
-        raise Http404("Please specify the filter 'starts_between' or 'ends_between'")
+        raise Http404("Please specify the filter 'ends_between'")
     if "starts_between" in filters:
         starts_between = filters['starts_between'].split(',')
         start = starts_between[0]
         end = starts_between[-1]
         if not (start.isdigit() and end.isdigit()):
+            parse_influx_eq(filter['starts_between'])
             raise Http404("starts_between filter in the URL must only contain epoch based timestamp values")
     filtered_transfers = TransfersService.fetch_raw_transfers(trimmed_filters)
     output = TransfersService.generate_raw_transfer_data(filtered_transfers, schema_version)
