@@ -140,8 +140,8 @@ def data_links(request):
             trimmed_filters[key] = val
     if "ends_between" not in trimmed_filters.keys():
         raise Http404("Please specify the filter 'ends_between'")
-    if "starts_between" in filters:
-        starts_between = filters['starts_between'].split(',')
+    if "starts_between" in trimmed_filters.keys():
+        starts_between = trimmed_filters['starts_between'].split(',')
         start = starts_between[0]
         end = starts_between[-1]
         if not (start.isdigit() and end.isdigit()):
