@@ -123,7 +123,7 @@ class GrafanaService:
     @staticmethod
     def fetch_influx_db_transfers_raw(filters):
         ts = time()
-        transfers_string_array = GrafanaService.query_db("transfer_xrootd", filters) + GrafanaService.query_db(
+        transfers_string_array = GrafanaService.query_transfers_db("transfer_xrootd", filters) + GrafanaService.query_transfers_db(
             "transfer_fts", filters)
         query_time = time() - ts
         output = []
@@ -167,7 +167,7 @@ class GrafanaService:
         transfers = []
         thread_count = 4
         process_count = thread_count
-        transfers_string_array = GrafanaService.query_db("transfer_xrootd", filters) + GrafanaService.query_db("transfer_fts", filters)
+        transfers_string_array = GrafanaService.query_transfers_db("transfer_xrootd", filters) + GrafanaService.query_transfers_db("transfer_fts", filters)
         query_time = time() - ts
         len_per_thread_transfer_string_array = int(len(transfers_string_array)/thread_count)
         f = lambda transfer_string_arr, n=len_per_thread_transfer_string_array: [transfer_string_arr[i:i+n] for i in range(0, len(transfer_string_arr), n)]
@@ -223,7 +223,7 @@ class GrafanaService:
         return influx_name
 
     @staticmethod
-    def query_db(db_name, filters):
+    def query_transfers_db(db_name, filters):
         GRAFANA_URL = 'https://monit-grafana.cern.ch/api/datasources/proxy/7794/query'
         query = "SELECT src_site, dst_site, vo, technology, transferred_volume, avg_file_size, count, avg_operation_time FROM {database_name} WHERE count>0 AND avg_operation_time>0"
 
@@ -268,3 +268,19 @@ class GrafanaService:
         response = requests.get(GRAFANA_URL, params=parameters, headers=headers)
         transfers_string_array = response.text.split('\n')[1:-2]
         return transfers_string_array
+
+    @staticmethod
+    def query_db(datasource_number, api_key, db_name, query):
+        url = "https://monit-grafana.cern.ch/api/datasources/proxy/{datasource_number}/query".format(
+                                                                                datasource_number=datasource_number)
+        parameters = {
+            'db': db_name,
+            'q': ' '.join(query.split()),
+            'epoch': 's'
+        }
+        headers = {
+            'Accept': 'application/csv',
+            'Authorization': 'Bearer ' + api_key,
+        }
+        response = requests.get(url, params=parameters, headers=headers, stream=True)
+        return response.text

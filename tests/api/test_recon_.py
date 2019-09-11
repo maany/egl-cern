@@ -39,8 +39,6 @@ class ReconChewbaccaSequenceTests(TestCase):
         cric_federations = output['cric_federations_message']
         cric_sites = output['cric_sites_message']
         rebus_sites = output['rebus_sites_message']
-        print(SiteData().generate_v1_0())
-        print(FederationData().generate_v1_0())
         self.assertIsNotNone(kml_message)
         self.assertIsNotNone(cric_federations)
         self.assertIsNotNone(cric_sites)

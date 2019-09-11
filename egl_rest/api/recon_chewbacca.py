@@ -87,6 +87,9 @@ class ReconChewbacca:
         def update_rebus_sites_file(self):
             return self.sync_file(self.rebus_sites_url, self.rebus_sites_file, ssl=False)
 
+        def global_stats_alice_jobs(self):
+            pass
+
         def sync_file(self, url, file, ssl):
             try:
                 response = requests.get(url, verify=ssl)
