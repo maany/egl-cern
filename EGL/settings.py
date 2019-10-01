@@ -28,7 +28,7 @@ DEBUG = config('DEBUG', default=True, cast=bool)
 ALLOWED_HOSTS = ['{host}'.format(host=config('HOST', default='localhost'))]
 if config('MODE') == 'docker':
     ALLOWED_HOSTS.append('0.0.0.0')
-if config['MODE'] == 'openshift':
+if config('MODE') == 'openshift':
     ALLOWED_HOSTS.append(config('OKD_FQDN'))
 
 # Application definition
