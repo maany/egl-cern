@@ -46,7 +46,7 @@ RUN INSTALL_PKGS="rh-python36 rh-python36-python-devel rh-python36-python-setupt
 COPY s2i/bin $STI_SCRIPTS_PATH
 
 # Copy crontab
-COPY etc ${APP_ROOT}/
+COPY etc ${APP_ROOT}/src/
 
 # - Create a Python virtual environment for use by any application to avoid
 #   potential conflicts with Python packages preinstalled in the main Python
