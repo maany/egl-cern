@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # update crontab
-echo "*/${REFRESH_INTERVAL} * * * * python $APP_ROOT/src/manage.py fetch_data" >> $APP_ROOT/src/crontab
+echo "*/${RECON_CHEWBACCA_REFRESH_INTERVAL_MINUTES} * * * * python $APP_ROOT/src/manage.py exec_recon_chewbacca" >> $APP_ROOT/src/crontab
 
 #start supercronic
 supercronic $APP_ROOT/src/crontab > $APP_ROOT/src/supercronic.out 2>&1 &
