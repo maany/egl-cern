@@ -9,6 +9,8 @@ import unidecode
 from py_expression_eval import Parser
 import re
 import time
+import datetime
+
 
 def md5_string(str):
     m = hashlib.md5(str.encode('utf-8'))
@@ -61,6 +63,16 @@ def parse_influx_eq(equation):
         'd': 24*60*60
     })
     return result
+
+
+def timestamp_datetime(timestamp):
+   return datetime.datetime.fromtimestamp(int(timestamp))
+
+
+def datetime_timestamp(date_time):
+    if type(date_time) == type(""):
+        date_time = datetime.datetime.strptime(date_time, '%Y-%m-%d %H:%M')
+    return int(1000000000 * datetime.datetime.timestamp(date_time))
 
 
 class Singleton:

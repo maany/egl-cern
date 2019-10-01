@@ -1,5 +1,7 @@
-from egl_rest.api.helpers import Singleton
+from egl_rest.api.helpers import Singleton, timestamp_datetime, datetime_timestamp
+from egl_rest.api.render.atlas_data import AtlasData
 from egl_rest.api.services.grafana_service import GrafanaService
+from egl_rest.api.services.site_service import SiteService
 
 
 class AtlasService(Singleton):
@@ -8,7 +10,7 @@ class AtlasService(Singleton):
         Singleton.__init__(self)
 
     @staticmethod
-    def collect_global_running_job_stats(time_interval_start="now() -3h", time_interval_end="now()", dst_site="~ /^.*$/"):
+    def collect_running_job_stats(time_interval_start="now() -3h", time_interval_end="now()", dst_site="~ /^.*$/"):
 
         datasource_number = '9023'
         api_key = 'eyJrIjoidG5xUFBFdmxFMTJqM1lUNGdJSGRnVDdXREFjdjllc2YiLCJuIjoicHVibGljX3Zpc3VhbGlzYXRpb24iLCJpZCI6MTd9'
@@ -43,10 +45,45 @@ class AtlasService(Singleton):
                 dst_site=dst_site
                 )
         output = GrafanaService.query_db(datasource_number, api_key, db_name, query)
-        output.split()[1:-1]
-
-        return output
+        output = output.split("\n")[1:-1]
+        objects = {}
+        for object in output:
+            values = object.split(',')
+            time = timestamp_datetime(int(values[2]))
+            activity = values[1].split('=')[-1].replace('\\', ' ')
+            value = values[3]
+            if time in objects.keys():
+                objects[time][activity] = value
+            else:
+                objects[time] = {
+                    activity: value
+                }
+        return objects
 
     @staticmethod
-    def collect_site_stats():
-        pass
+    def fetch_all_stats(time_interval_start, time_interval_end):
+        if type(time_interval_start) == type(""):
+            if "now" not in time_interval_start:
+                time_interval_start = datetime_timestamp(time_interval_start)
+
+        if type(time_interval_end) == type(""):
+            if "now" not in time_interval_end:
+                time_interval_end = datetime_timestamp(time_interval_end)
+        global_running_jobs = AtlasService.collect_running_job_stats(time_interval_start=time_interval_start,
+                                               time_interval_end=time_interval_end)
+        # site_level_stats = []
+        # active_sites = SiteService.get_active_sites()
+        # for site in active_sites:
+        #     running_jobs = AtlasService.collect_running_job_stats(time_interval_start=time_interval_start,
+        #                                                           time_interval_end=time_interval_end,
+        #                                                           dst_site=site.name)
+        #     site_level_stats.append({
+        #         "site": site.name,
+        #         "running_jobs": running_jobs
+        #     })
+        output_dict = {
+            "global_statistics": {
+                "running_jobs": global_running_jobs
+            }
+        }
+        return AtlasData.generate_v1_0(output_dict)

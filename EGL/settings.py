@@ -99,6 +99,17 @@ elif config('MODE') == 'local':
             'PORT': config('POSTGRES_PORT_LOCAL', default='5430'),
         }
     }
+elif config('MODE') == 'openshift':
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': config('POSTGRES_DB_OKD', default='postgres'),
+            'USER': config('POSTGRES_USER_OKD', default='postgres'),
+            'PASSWORD': config('POSTGRES_PASSWORD_OKD', default=''),
+            'HOST': config('POSTGRES_PASSWORD_OKD', default=''),
+            'PORT': config('POSTGRES_PORT_LOCAL', default='5430'),
+        }
+    }
 else:
     DATABASES = {
         'default': {

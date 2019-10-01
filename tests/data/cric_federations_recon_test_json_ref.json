@@ -7,16 +7,57 @@
     "name": "AT-HEPHY-VIENNA-UIBK", 
     "pledges": {
       "2019": {
-        "alice": {
-          "CPU": 5000, 
-          "Disk": 250
+        "Q1": {
+          "alice": {
+            "CPU": 5000, 
+            "Disk": 250
+          }, 
+          "atlas": {
+            "CPU": 1800
+          }, 
+          "cms": {
+            "CPU": 10000, 
+            "Disk": 500
+          }
         }, 
-        "atlas": {
-          "CPU": 1800
+        "Q2": {
+          "alice": {
+            "CPU": 5000, 
+            "Disk": 250
+          }, 
+          "atlas": {
+            "CPU": 1800
+          }, 
+          "cms": {
+            "CPU": 10000, 
+            "Disk": 500
+          }
         }, 
-        "cms": {
-          "CPU": 10000, 
-          "Disk": 500
+        "Q3": {
+          "alice": {
+            "CPU": 5000, 
+            "Disk": 250
+          }, 
+          "atlas": {
+            "CPU": 1800
+          }, 
+          "cms": {
+            "CPU": 10000, 
+            "Disk": 500
+          }
+        }, 
+        "Q4": {
+          "alice": {
+            "CPU": 5000, 
+            "Disk": 250
+          }, 
+          "atlas": {
+            "CPU": 1800
+          }, 
+          "cms": {
+            "CPU": 10000, 
+            "Disk": 500
+          }
         }
       }
     }, 
@@ -39,9 +80,29 @@
     "name": "AU-ATLAS", 
     "pledges": {
       "2019": {
-        "atlas": {
-          "CPU": 20400, 
-          "Disk": 1390
+        "Q1": {
+          "atlas": {
+            "CPU": 20400, 
+            "Disk": 1390
+          }
+        }, 
+        "Q2": {
+          "atlas": {
+            "CPU": 20400, 
+            "Disk": 1390
+          }
+        }, 
+        "Q3": {
+          "atlas": {
+            "CPU": 20400, 
+            "Disk": 1390
+          }
+        }, 
+        "Q4": {
+          "atlas": {
+            "CPU": 20400, 
+            "Disk": 1390
+          }
         }
       }
     }, 
@@ -61,9 +122,29 @@
     "name": "BE-TIER2", 
     "pledges": {
       "2019": {
-        "cms": {
-          "CPU": 62000, 
-          "Disk": 6290
+        "Q1": {
+          "cms": {
+            "CPU": 62000, 
+            "Disk": 6290
+          }
+        }, 
+        "Q2": {
+          "cms": {
+            "CPU": 62000, 
+            "Disk": 6290
+          }
+        }, 
+        "Q3": {
+          "cms": {
+            "CPU": 62000, 
+            "Disk": 6290
+          }
+        }, 
+        "Q4": {
+          "cms": {
+            "CPU": 62000, 
+            "Disk": 6290
+          }
         }
       }
     }, 
@@ -84,9 +165,29 @@
     "name": "BR-SP-SPRACE", 
     "pledges": {
       "2019": {
-        "cms": {
-          "CPU": 25200, 
-          "Disk": 1900
+        "Q1": {
+          "cms": {
+            "CPU": 25200, 
+            "Disk": 1900
+          }
+        }, 
+        "Q2": {
+          "cms": {
+            "CPU": 25200, 
+            "Disk": 1900
+          }
+        }, 
+        "Q3": {
+          "cms": {
+            "CPU": 25200, 
+            "Disk": 1900
+          }
+        }, 
+        "Q4": {
+          "cms": {
+            "CPU": 25200, 
+            "Disk": 1900
+          }
         }
       }
     }, 
@@ -106,9 +207,29 @@
     "name": "CA-EAST-T2", 
     "pledges": {
       "2019": {
-        "atlas": {
-          "CPU": 32300, 
-          "Disk": 2700
+        "Q1": {
+          "atlas": {
+            "CPU": 32300, 
+            "Disk": 2700
+          }
+        }, 
+        "Q2": {
+          "atlas": {
+            "CPU": 32300, 
+            "Disk": 2700
+          }
+        }, 
+        "Q3": {
+          "atlas": {
+            "CPU": 32300, 
+            "Disk": 2700
+          }
+        }, 
+        "Q4": {
+          "atlas": {
+            "CPU": 32300, 
+            "Disk": 2700
+          }
         }
       }
     }, 
@@ -128,10 +249,33 @@
     "name": "CA-TRIUMF", 
     "pledges": {
       "2019": {
-        "atlas": {
-          "CPU": 105700, 
-          "Disk": 8800, 
-          "Tape": 22100
+        "Q1": {
+          "atlas": {
+            "CPU": 105700, 
+            "Disk": 8800, 
+            "Tape": 22100
+          }
+        }, 
+        "Q2": {
+          "atlas": {
+            "CPU": 105700, 
+            "Disk": 8800, 
+            "Tape": 22100
+          }
+        }, 
+        "Q3": {
+          "atlas": {
+            "CPU": 105700, 
+            "Disk": 8800, 
+            "Tape": 22100
+          }
+        }, 
+        "Q4": {
+          "atlas": {
+            "CPU": 105700, 
+            "Disk": 8800, 
+            "Tape": 22100
+          }
         }
       }
     }, 
@@ -151,9 +295,29 @@
     "name": "CA-WEST-T2", 
     "pledges": {
       "2019": {
-        "atlas": {
-          "CPU": 32300, 
-          "Disk": 2700
+        "Q1": {
+          "atlas": {
+            "CPU": 32300, 
+            "Disk": 2700
+          }
+        }, 
+        "Q2": {
+          "atlas": {
+            "CPU": 32300, 
+            "Disk": 2700
+          }
+        }, 
+        "Q3": {
+          "atlas": {
+            "CPU": 32300, 
+            "Disk": 2700
+          }
+        }, 
+        "Q4": {
+          "atlas": {
+            "CPU": 32300, 
+            "Disk": 2700
+          }
         }
       }
     }, 
@@ -174,25 +338,93 @@
     "name": "CH-CERN", 
     "pledges": {
       "2019": {
-        "alice": {
-          "CPU": 350000, 
-          "Disk": 31200, 
-          "Tape": 44200
+        "Q1": {
+          "alice": {
+            "CPU": 350000, 
+            "Disk": 31200, 
+            "Tape": 44200
+          }, 
+          "atlas": {
+            "CPU": 411000, 
+            "Disk": 26000, 
+            "Tape": 94000
+          }, 
+          "cms": {
+            "CPU": 423000, 
+            "Disk": 26100, 
+            "Tape": 99000
+          }, 
+          "lhcb": {
+            "CPU": 86000, 
+            "Disk": 13400, 
+            "Tape": 35000
+          }
         }, 
-        "atlas": {
-          "CPU": 411000, 
-          "Disk": 26000, 
-          "Tape": 94000
+        "Q2": {
+          "alice": {
+            "CPU": 350000, 
+            "Disk": 31200, 
+            "Tape": 44200
+          }, 
+          "atlas": {
+            "CPU": 411000, 
+            "Disk": 26000, 
+            "Tape": 94000
+          }, 
+          "cms": {
+            "CPU": 423000, 
+            "Disk": 26100, 
+            "Tape": 99000
+          }, 
+          "lhcb": {
+            "CPU": 86000, 
+            "Disk": 13400, 
+            "Tape": 35000
+          }
         }, 
-        "cms": {
-          "CPU": 423000, 
-          "Disk": 26100, 
-          "Tape": 99000
+        "Q3": {
+          "alice": {
+            "CPU": 350000, 
+            "Disk": 31200, 
+            "Tape": 44200
+          }, 
+          "atlas": {
+            "CPU": 411000, 
+            "Disk": 26000, 
+            "Tape": 94000
+          }, 
+          "cms": {
+            "CPU": 423000, 
+            "Disk": 26100, 
+            "Tape": 99000
+          }, 
+          "lhcb": {
+            "CPU": 86000, 
+            "Disk": 13400, 
+            "Tape": 35000
+          }
         }, 
-        "lhcb": {
-          "CPU": 86000, 
-          "Disk": 13400, 
-          "Tape": 35000
+        "Q4": {
+          "alice": {
+            "CPU": 350000, 
+            "Disk": 31200, 
+            "Tape": 44200
+          }, 
+          "atlas": {
+            "CPU": 411000, 
+            "Disk": 26000, 
+            "Tape": 94000
+          }, 
+          "cms": {
+            "CPU": 423000, 
+            "Disk": 26100, 
+            "Tape": 99000
+          }, 
+          "lhcb": {
+            "CPU": 86000, 
+            "Disk": 13400, 
+            "Tape": 35000
+          }
         }
       }
     }, 
@@ -215,23 +447,67 @@
     "name": "CH-CHIPP-CSCS", 
     "pledges": {
       "2019": {
-        "atlas": {
-          "CPU": 92000, 
-          "Disk": 2440
+        "Q1": {
+          "atlas": {
+            "CPU": 92000, 
+            "Disk": 2440
+          }, 
+          "cms": {
+            "CPU": 50000, 
+            "Disk": 1840
+          }, 
+          "lhcb": {
+            "CPU": 25000, 
+            "Disk": 920
+          }
         }, 
-        "cms": {
-          "CPU": 50000, 
-          "Disk": 1840
+        "Q2": {
+          "atlas": {
+            "CPU": 92000, 
+            "Disk": 2440
+          }, 
+          "cms": {
+            "CPU": 50000, 
+            "Disk": 1840
+          }, 
+          "lhcb": {
+            "CPU": 25000, 
+            "Disk": 920
+          }
         }, 
-        "lhcb": {
-          "CPU": 25000, 
-          "Disk": 920
+        "Q3": {
+          "atlas": {
+            "CPU": 92000, 
+            "Disk": 2440
+          }, 
+          "cms": {
+            "CPU": 50000, 
+            "Disk": 1840
+          }, 
+          "lhcb": {
+            "CPU": 25000, 
+            "Disk": 920
+          }
+        }, 
+        "Q4": {
+          "atlas": {
+            "CPU": 92000, 
+            "Disk": 2440
+          }, 
+          "cms": {
+            "CPU": 50000, 
+            "Disk": 1840
+          }, 
+          "lhcb": {
+            "CPU": 25000, 
+            "Disk": 920
+          }
         }
       }
     }, 
     "rcsites": [
-      "CSCS-LCG2", 
-      "UNIBE-LHEP"
+      "UNIBE-LHEP", 
+      "CSCS-LCG2"
     ], 
     "tier_level": 2, 
     "vos": [
@@ -248,13 +524,45 @@
     "name": "CN-IHEP", 
     "pledges": {
       "2019": {
-        "atlas": {
-          "CPU": 8000, 
-          "Disk": 400
+        "Q1": {
+          "atlas": {
+            "CPU": 8000, 
+            "Disk": 400
+          }, 
+          "cms": {
+            "CPU": 8000, 
+            "Disk": 540
+          }
         }, 
-        "cms": {
-          "CPU": 8000, 
-          "Disk": 540
+        "Q2": {
+          "atlas": {
+            "CPU": 8000, 
+            "Disk": 400
+          }, 
+          "cms": {
+            "CPU": 8000, 
+            "Disk": 540
+          }
+        }, 
+        "Q3": {
+          "atlas": {
+            "CPU": 8000, 
+            "Disk": 400
+          }, 
+          "cms": {
+            "CPU": 8000, 
+            "Disk": 540
+          }
+        }, 
+        "Q4": {
+          "atlas": {
+            "CPU": 8000, 
+            "Disk": 400
+          }, 
+          "cms": {
+            "CPU": 8000, 
+            "Disk": 540
+          }
         }
       }
     }, 
@@ -275,13 +583,45 @@
     "name": "CZ-Prague-T2", 
     "pledges": {
       "2019": {
-        "alice": {
-          "CPU": 10000, 
-          "Disk": 1400
+        "Q1": {
+          "alice": {
+            "CPU": 10000, 
+            "Disk": 1400
+          }, 
+          "atlas": {
+            "CPU": 20000, 
+            "Disk": 2000
+          }
         }, 
-        "atlas": {
-          "CPU": 20000, 
-          "Disk": 2000
+        "Q2": {
+          "alice": {
+            "CPU": 10000, 
+            "Disk": 1400
+          }, 
+          "atlas": {
+            "CPU": 20000, 
+            "Disk": 2000
+          }
+        }, 
+        "Q3": {
+          "alice": {
+            "CPU": 10000, 
+            "Disk": 1400
+          }, 
+          "atlas": {
+            "CPU": 20000, 
+            "Disk": 2000
+          }
+        }, 
+        "Q4": {
+          "alice": {
+            "CPU": 10000, 
+            "Disk": 1400
+          }, 
+          "atlas": {
+            "CPU": 20000, 
+            "Disk": 2000
+          }
         }
       }
     }, 
@@ -302,13 +642,36 @@
     "name": "DE-DESY-ATLAS-T2", 
     "pledges": {
       "2019": {
-        "atlas": {
-          "CPU": 43000, 
-          "Disk": 3600
+        "Q1": {
+          "atlas": {
+            "CPU": 43000, 
+            "Disk": 3600
+          }
+        }, 
+        "Q2": {
+          "atlas": {
+            "CPU": 43000, 
+            "Disk": 3600
+          }
+        }, 
+        "Q3": {
+          "atlas": {
+            "CPU": 43000, 
+            "Disk": 3600
+          }
+        }, 
+        "Q4": {
+          "atlas": {
+            "CPU": 43000, 
+            "Disk": 3600
+          }
         }
       }
     }, 
-    "rcsites": null, 
+    "rcsites": [
+      "DESY-HH", 
+      "DESY-ZN"
+    ], 
     "tier_level": 2, 
     "vos": [
       "atlas"
@@ -322,9 +685,29 @@
     "name": "DE-DESY-GOE-ATLAS-T2", 
     "pledges": {
       "2019": {
-        "atlas": {
-          "CPU": 21533, 
-          "Disk": 1800
+        "Q1": {
+          "atlas": {
+            "CPU": 21533, 
+            "Disk": 1800
+          }
+        }, 
+        "Q2": {
+          "atlas": {
+            "CPU": 21533, 
+            "Disk": 1800
+          }
+        }, 
+        "Q3": {
+          "atlas": {
+            "CPU": 21533, 
+            "Disk": 1800
+          }
+        }, 
+        "Q4": {
+          "atlas": {
+            "CPU": 21533, 
+            "Disk": 1800
+          }
         }
       }
     }, 
@@ -344,9 +727,29 @@
     "name": "DE-DESY-LHCB", 
     "pledges": {
       "2019": {
-        "lhcb": {
-          "CPU": 8700, 
-          "Disk": 20
+        "Q1": {
+          "lhcb": {
+            "CPU": 8700, 
+            "Disk": 20
+          }
+        }, 
+        "Q2": {
+          "lhcb": {
+            "CPU": 8700, 
+            "Disk": 20
+          }
+        }, 
+        "Q3": {
+          "lhcb": {
+            "CPU": 8700, 
+            "Disk": 20
+          }
+        }, 
+        "Q4": {
+          "lhcb": {
+            "CPU": 8700, 
+            "Disk": 20
+          }
         }
       }
     }, 
@@ -366,15 +769,36 @@
     "name": "DE-DESY-RWTH-CMS-T2", 
     "pledges": {
       "2019": {
-        "cms": {
-          "CPU": 75100, 
-          "Disk": 5850
+        "Q1": {
+          "cms": {
+            "CPU": 75100, 
+            "Disk": 5850
+          }
+        }, 
+        "Q2": {
+          "cms": {
+            "CPU": 75100, 
+            "Disk": 5850
+          }
+        }, 
+        "Q3": {
+          "cms": {
+            "CPU": 75100, 
+            "Disk": 5850
+          }
+        }, 
+        "Q4": {
+          "cms": {
+            "CPU": 75100, 
+            "Disk": 5850
+          }
         }
       }
     }, 
     "rcsites": [
       "DESY-HH", 
-      "RWTH-Aachen"
+      "RWTH-Aachen", 
+      "DESY-ZN"
     ], 
     "tier_level": 2, 
     "vos": [
@@ -389,9 +813,29 @@
     "name": "DE-FREIBURGWUPPERTAL", 
     "pledges": {
       "2019": {
-        "atlas": {
-          "CPU": 43066, 
-          "Disk": 3600
+        "Q1": {
+          "atlas": {
+            "CPU": 43066, 
+            "Disk": 3600
+          }
+        }, 
+        "Q2": {
+          "atlas": {
+            "CPU": 43066, 
+            "Disk": 3600
+          }
+        }, 
+        "Q3": {
+          "atlas": {
+            "CPU": 43066, 
+            "Disk": 3600
+          }
+        }, 
+        "Q4": {
+          "atlas": {
+            "CPU": 43066, 
+            "Disk": 3600
+          }
         }
       }
     }, 
@@ -412,9 +856,29 @@
     "name": "DE-GSI", 
     "pledges": {
       "2019": {
-        "alice": {
-          "CPU": 28000, 
-          "Disk": 2600
+        "Q1": {
+          "alice": {
+            "CPU": 28000, 
+            "Disk": 2600
+          }
+        }, 
+        "Q2": {
+          "alice": {
+            "CPU": 28000, 
+            "Disk": 2600
+          }
+        }, 
+        "Q3": {
+          "alice": {
+            "CPU": 28000, 
+            "Disk": 2600
+          }
+        }, 
+        "Q4": {
+          "alice": {
+            "CPU": 28000, 
+            "Disk": 2600
+          }
         }
       }
     }, 
@@ -434,25 +898,93 @@
     "name": "DE-KIT", 
     "pledges": {
       "2019": {
-        "alice": {
-          "CPU": 91250, 
-          "Disk": 9475, 
-          "Tape": 9425
+        "Q1": {
+          "alice": {
+            "CPU": 91250, 
+            "Disk": 9475, 
+            "Tape": 9425
+          }, 
+          "atlas": {
+            "CPU": 132125, 
+            "Disk": 11000, 
+            "Tape": 27625
+          }, 
+          "cms": {
+            "CPU": 65000, 
+            "Disk": 6800, 
+            "Tape": 22000
+          }, 
+          "lhcb": {
+            "CPU": 45257, 
+            "Disk": 4659, 
+            "Tape": 8500
+          }
         }, 
-        "atlas": {
-          "CPU": 132125, 
-          "Disk": 11000, 
-          "Tape": 27625
+        "Q2": {
+          "alice": {
+            "CPU": 91250, 
+            "Disk": 9475, 
+            "Tape": 9425
+          }, 
+          "atlas": {
+            "CPU": 132125, 
+            "Disk": 11000, 
+            "Tape": 27625
+          }, 
+          "cms": {
+            "CPU": 65000, 
+            "Disk": 6800, 
+            "Tape": 22000
+          }, 
+          "lhcb": {
+            "CPU": 45257, 
+            "Disk": 4659, 
+            "Tape": 8500
+          }
         }, 
-        "cms": {
-          "CPU": 65000, 
-          "Disk": 6800, 
-          "Tape": 22000
+        "Q3": {
+          "alice": {
+            "CPU": 91250, 
+            "Disk": 9475, 
+            "Tape": 9425
+          }, 
+          "atlas": {
+            "CPU": 132125, 
+            "Disk": 11000, 
+            "Tape": 27625
+          }, 
+          "cms": {
+            "CPU": 65000, 
+            "Disk": 6800, 
+            "Tape": 22000
+          }, 
+          "lhcb": {
+            "CPU": 45257, 
+            "Disk": 4659, 
+            "Tape": 8500
+          }
         }, 
-        "lhcb": {
-          "CPU": 45257, 
-          "Disk": 4659, 
-          "Tape": 8500
+        "Q4": {
+          "alice": {
+            "CPU": 91250, 
+            "Disk": 9475, 
+            "Tape": 9425
+          }, 
+          "atlas": {
+            "CPU": 132125, 
+            "Disk": 11000, 
+            "Tape": 27625
+          }, 
+          "cms": {
+            "CPU": 65000, 
+            "Disk": 6800, 
+            "Tape": 22000
+          }, 
+          "lhcb": {
+            "CPU": 45257, 
+            "Disk": 4659, 
+            "Tape": 8500
+          }
         }
       }
     }, 
@@ -475,15 +1007,35 @@
     "name": "DE-MCAT", 
     "pledges": {
       "2019": {
-        "atlas": {
-          "CPU": 43066, 
-          "Disk": 3600
+        "Q1": {
+          "atlas": {
+            "CPU": 43066, 
+            "Disk": 3600
+          }
+        }, 
+        "Q2": {
+          "atlas": {
+            "CPU": 43066, 
+            "Disk": 3600
+          }
+        }, 
+        "Q3": {
+          "atlas": {
+            "CPU": 43066, 
+            "Disk": 3600
+          }
+        }, 
+        "Q4": {
+          "atlas": {
+            "CPU": 43066, 
+            "Disk": 3600
+          }
         }
       }
     }, 
     "rcsites": [
-      "LRZ-LMU", 
-      "MPPMU"
+      "MPPMU", 
+      "LRZ-LMU"
     ], 
     "tier_level": 2, 
     "vos": [
@@ -498,9 +1050,29 @@
     "name": "EE-NICPB", 
     "pledges": {
       "2019": {
-        "cms": {
-          "CPU": 70000, 
-          "Disk": 2000
+        "Q1": {
+          "cms": {
+            "CPU": 70000, 
+            "Disk": 2000
+          }
+        }, 
+        "Q2": {
+          "cms": {
+            "CPU": 70000, 
+            "Disk": 2000
+          }
+        }, 
+        "Q3": {
+          "cms": {
+            "CPU": 70000, 
+            "Disk": 2000
+          }
+        }, 
+        "Q4": {
+          "cms": {
+            "CPU": 70000, 
+            "Disk": 2000
+          }
         }
       }
     }, 
@@ -520,16 +1092,36 @@
     "name": "ES-ATLAS-T2", 
     "pledges": {
       "2019": {
-        "atlas": {
-          "CPU": 55680, 
-          "Disk": 4048
+        "Q1": {
+          "atlas": {
+            "CPU": 55680, 
+            "Disk": 4048
+          }
+        }, 
+        "Q2": {
+          "atlas": {
+            "CPU": 55680, 
+            "Disk": 4048
+          }
+        }, 
+        "Q3": {
+          "atlas": {
+            "CPU": 55680, 
+            "Disk": 4048
+          }
+        }, 
+        "Q4": {
+          "atlas": {
+            "CPU": 55680, 
+            "Disk": 4048
+          }
         }
       }
     }, 
     "rcsites": [
       "ifae", 
-      "IFIC-LCG2", 
-      "UAM-LCG2"
+      "UAM-LCG2", 
+      "IFIC-LCG2"
     ], 
     "tier_level": 2, 
     "vos": [
@@ -544,15 +1136,35 @@
     "name": "ES-CMS-T2", 
     "pledges": {
       "2019": {
-        "cms": {
-          "CPU": 40000, 
-          "Disk": 3120
+        "Q1": {
+          "cms": {
+            "CPU": 40000, 
+            "Disk": 3120
+          }
+        }, 
+        "Q2": {
+          "cms": {
+            "CPU": 40000, 
+            "Disk": 3120
+          }
+        }, 
+        "Q3": {
+          "cms": {
+            "CPU": 40000, 
+            "Disk": 3120
+          }
+        }, 
+        "Q4": {
+          "cms": {
+            "CPU": 40000, 
+            "Disk": 3120
+          }
         }
       }
     }, 
     "rcsites": [
-      "CIEMAT-LCG2", 
-      "IFCA-LCG2"
+      "IFCA-LCG2", 
+      "CIEMAT-LCG2"
     ], 
     "tier_level": 2, 
     "vos": [
@@ -567,15 +1179,35 @@
     "name": "ES-LHCb-T2", 
     "pledges": {
       "2019": {
-        "lhcb": {
-          "CPU": 7000, 
-          "Disk": 1
+        "Q1": {
+          "lhcb": {
+            "CPU": 7000, 
+            "Disk": 1
+          }
+        }, 
+        "Q2": {
+          "lhcb": {
+            "CPU": 7000, 
+            "Disk": 1
+          }
+        }, 
+        "Q3": {
+          "lhcb": {
+            "CPU": 7000, 
+            "Disk": 1
+          }
+        }, 
+        "Q4": {
+          "lhcb": {
+            "CPU": 7000, 
+            "Disk": 1
+          }
         }
       }
     }, 
     "rcsites": [
-      "UB-LCG2", 
-      "USC-LCG2"
+      "USC-LCG2", 
+      "UB-LCG2"
     ], 
     "tier_level": 2, 
     "vos": [
@@ -590,20 +1222,73 @@
     "name": "ES-PIC", 
     "pledges": {
       "2019": {
-        "atlas": {
-          "CPU": 42317, 
-          "Disk": 3523, 
-          "Tape": 8848
+        "Q1": {
+          "atlas": {
+            "CPU": 42317, 
+            "Disk": 3523, 
+            "Tape": 8848
+          }, 
+          "cms": {
+            "CPU": 26023, 
+            "Disk": 2722, 
+            "Tape": 8808
+          }, 
+          "lhcb": {
+            "CPU": 10840, 
+            "Disk": 1116, 
+            "Tape": 2036
+          }
         }, 
-        "cms": {
-          "CPU": 26023, 
-          "Disk": 2722, 
-          "Tape": 8808
+        "Q2": {
+          "atlas": {
+            "CPU": 42317, 
+            "Disk": 3523, 
+            "Tape": 8848
+          }, 
+          "cms": {
+            "CPU": 26023, 
+            "Disk": 2722, 
+            "Tape": 8808
+          }, 
+          "lhcb": {
+            "CPU": 10840, 
+            "Disk": 1116, 
+            "Tape": 2036
+          }
         }, 
-        "lhcb": {
-          "CPU": 10840, 
-          "Disk": 1116, 
-          "Tape": 2036
+        "Q3": {
+          "atlas": {
+            "CPU": 42317, 
+            "Disk": 3523, 
+            "Tape": 8848
+          }, 
+          "cms": {
+            "CPU": 26023, 
+            "Disk": 2722, 
+            "Tape": 8808
+          }, 
+          "lhcb": {
+            "CPU": 10840, 
+            "Disk": 1116, 
+            "Tape": 2036
+          }
+        }, 
+        "Q4": {
+          "atlas": {
+            "CPU": 42317, 
+            "Disk": 3523, 
+            "Tape": 8848
+          }, 
+          "cms": {
+            "CPU": 26023, 
+            "Disk": 2722, 
+            "Tape": 8808
+          }, 
+          "lhcb": {
+            "CPU": 10840, 
+            "Disk": 1116, 
+            "Tape": 2036
+          }
         }
       }
     }, 
@@ -625,9 +1310,29 @@
     "name": "FI-HIP-T2", 
     "pledges": {
       "2019": {
-        "cms": {
-          "CPU": 10000, 
-          "Disk": 1100
+        "Q1": {
+          "cms": {
+            "CPU": 10000, 
+            "Disk": 1100
+          }
+        }, 
+        "Q2": {
+          "cms": {
+            "CPU": 10000, 
+            "Disk": 1100
+          }
+        }, 
+        "Q3": {
+          "cms": {
+            "CPU": 10000, 
+            "Disk": 1100
+          }
+        }, 
+        "Q4": {
+          "cms": {
+            "CPU": 10000, 
+            "Disk": 1100
+          }
         }
       }
     }, 
@@ -647,25 +1352,93 @@
     "name": "FR-CCIN2P3", 
     "pledges": {
       "2019": {
-        "alice": {
-          "CPU": 41000, 
-          "Disk": 5100, 
-          "Tape": 6200
+        "Q1": {
+          "alice": {
+            "CPU": 41000, 
+            "Disk": 5100, 
+            "Tape": 6200
+          }, 
+          "atlas": {
+            "CPU": 118500, 
+            "Disk": 10100, 
+            "Tape": 25900
+          }, 
+          "cms": {
+            "CPU": 49000, 
+            "Disk": 5250, 
+            "Tape": 16900
+          }, 
+          "lhcb": {
+            "CPU": 39000, 
+            "Disk": 3800, 
+            "Tape": 7500
+          }
         }, 
-        "atlas": {
-          "CPU": 118500, 
-          "Disk": 10100, 
-          "Tape": 25900
+        "Q2": {
+          "alice": {
+            "CPU": 41000, 
+            "Disk": 5100, 
+            "Tape": 6200
+          }, 
+          "atlas": {
+            "CPU": 118500, 
+            "Disk": 10100, 
+            "Tape": 25900
+          }, 
+          "cms": {
+            "CPU": 49000, 
+            "Disk": 5250, 
+            "Tape": 16900
+          }, 
+          "lhcb": {
+            "CPU": 39000, 
+            "Disk": 3800, 
+            "Tape": 7500
+          }
         }, 
-        "cms": {
-          "CPU": 49000, 
-          "Disk": 5250, 
-          "Tape": 16900
+        "Q3": {
+          "alice": {
+            "CPU": 41000, 
+            "Disk": 5100, 
+            "Tape": 6200
+          }, 
+          "atlas": {
+            "CPU": 118500, 
+            "Disk": 10100, 
+            "Tape": 25900
+          }, 
+          "cms": {
+            "CPU": 49000, 
+            "Disk": 5250, 
+            "Tape": 16900
+          }, 
+          "lhcb": {
+            "CPU": 39000, 
+            "Disk": 3800, 
+            "Tape": 7500
+          }
         }, 
-        "lhcb": {
-          "CPU": 39000, 
-          "Disk": 3800, 
-          "Tape": 7500
+        "Q4": {
+          "alice": {
+            "CPU": 41000, 
+            "Disk": 5100, 
+            "Tape": 6200
+          }, 
+          "atlas": {
+            "CPU": 118500, 
+            "Disk": 10100, 
+            "Tape": 25900
+          }, 
+          "cms": {
+            "CPU": 49000, 
+            "Disk": 5250, 
+            "Tape": 16900
+          }, 
+          "lhcb": {
+            "CPU": 39000, 
+            "Disk": 3800, 
+            "Tape": 7500
+          }
         }
       }
     }, 
@@ -688,21 +1461,77 @@
     "name": "FR-GRIF", 
     "pledges": {
       "2019": {
-        "alice": {
-          "CPU": 20433, 
-          "Disk": 1619
+        "Q1": {
+          "alice": {
+            "CPU": 20433, 
+            "Disk": 1619
+          }, 
+          "atlas": {
+            "CPU": 46930, 
+            "Disk": 3840
+          }, 
+          "cms": {
+            "CPU": 32310, 
+            "Disk": 2602
+          }, 
+          "lhcb": {
+            "CPU": 11241, 
+            "Disk": 300
+          }
         }, 
-        "atlas": {
-          "CPU": 46930, 
-          "Disk": 3840
+        "Q2": {
+          "alice": {
+            "CPU": 20433, 
+            "Disk": 1619
+          }, 
+          "atlas": {
+            "CPU": 46930, 
+            "Disk": 3840
+          }, 
+          "cms": {
+            "CPU": 32310, 
+            "Disk": 2602
+          }, 
+          "lhcb": {
+            "CPU": 11241, 
+            "Disk": 300
+          }
         }, 
-        "cms": {
-          "CPU": 32310, 
-          "Disk": 2602
+        "Q3": {
+          "alice": {
+            "CPU": 20433, 
+            "Disk": 1619
+          }, 
+          "atlas": {
+            "CPU": 46930, 
+            "Disk": 3840
+          }, 
+          "cms": {
+            "CPU": 32310, 
+            "Disk": 2602
+          }, 
+          "lhcb": {
+            "CPU": 11241, 
+            "Disk": 300
+          }
         }, 
-        "lhcb": {
-          "CPU": 11241, 
-          "Disk": 300
+        "Q4": {
+          "alice": {
+            "CPU": 20433, 
+            "Disk": 1619
+          }, 
+          "atlas": {
+            "CPU": 46930, 
+            "Disk": 3840
+          }, 
+          "cms": {
+            "CPU": 32310, 
+            "Disk": 2602
+          }, 
+          "lhcb": {
+            "CPU": 11241, 
+            "Disk": 300
+          }
         }
       }
     }, 
@@ -725,9 +1554,29 @@
     "name": "FR-IN2P3-CC-T2", 
     "pledges": {
       "2019": {
-        "cms": {
-          "CPU": 7730, 
-          "Disk": 510
+        "Q1": {
+          "cms": {
+            "CPU": 7730, 
+            "Disk": 510
+          }
+        }, 
+        "Q2": {
+          "cms": {
+            "CPU": 7730, 
+            "Disk": 510
+          }
+        }, 
+        "Q3": {
+          "cms": {
+            "CPU": 7730, 
+            "Disk": 510
+          }
+        }, 
+        "Q4": {
+          "cms": {
+            "CPU": 7730, 
+            "Disk": 510
+          }
         }
       }
     }, 
@@ -747,13 +1596,45 @@
     "name": "FR-IN2P3-CPPM", 
     "pledges": {
       "2019": {
-        "atlas": {
-          "CPU": 14000, 
-          "Disk": 1500
+        "Q1": {
+          "atlas": {
+            "CPU": 14000, 
+            "Disk": 1500
+          }, 
+          "lhcb": {
+            "CPU": 7000, 
+            "Disk": 500
+          }
         }, 
-        "lhcb": {
-          "CPU": 7000, 
-          "Disk": 500
+        "Q2": {
+          "atlas": {
+            "CPU": 14000, 
+            "Disk": 1500
+          }, 
+          "lhcb": {
+            "CPU": 7000, 
+            "Disk": 500
+          }
+        }, 
+        "Q3": {
+          "atlas": {
+            "CPU": 14000, 
+            "Disk": 1500
+          }, 
+          "lhcb": {
+            "CPU": 7000, 
+            "Disk": 500
+          }
+        }, 
+        "Q4": {
+          "atlas": {
+            "CPU": 14000, 
+            "Disk": 1500
+          }, 
+          "lhcb": {
+            "CPU": 7000, 
+            "Disk": 500
+          }
         }
       }
     }, 
@@ -774,13 +1655,45 @@
     "name": "FR-IN2P3-IPHC", 
     "pledges": {
       "2019": {
-        "alice": {
-          "CPU": 6000, 
-          "Disk": 320
+        "Q1": {
+          "alice": {
+            "CPU": 6000, 
+            "Disk": 320
+          }, 
+          "cms": {
+            "CPU": 18000, 
+            "Disk": 1970
+          }
         }, 
-        "cms": {
-          "CPU": 18000, 
-          "Disk": 1970
+        "Q2": {
+          "alice": {
+            "CPU": 6000, 
+            "Disk": 320
+          }, 
+          "cms": {
+            "CPU": 18000, 
+            "Disk": 1970
+          }
+        }, 
+        "Q3": {
+          "alice": {
+            "CPU": 6000, 
+            "Disk": 320
+          }, 
+          "cms": {
+            "CPU": 18000, 
+            "Disk": 1970
+          }
+        }, 
+        "Q4": {
+          "alice": {
+            "CPU": 6000, 
+            "Disk": 320
+          }, 
+          "cms": {
+            "CPU": 18000, 
+            "Disk": 1970
+          }
         }
       }
     }, 
@@ -801,12 +1714,41 @@
     "name": "FR-IN2P3-LAPP", 
     "pledges": {
       "2019": {
-        "atlas": {
-          "CPU": 21000, 
-          "Disk": 2100
+        "Q1": {
+          "atlas": {
+            "CPU": 21000, 
+            "Disk": 2100
+          }, 
+          "lhcb": {
+            "CPU": 7000
+          }
         }, 
-        "lhcb": {
-          "CPU": 7000
+        "Q2": {
+          "atlas": {
+            "CPU": 21000, 
+            "Disk": 2100
+          }, 
+          "lhcb": {
+            "CPU": 7000
+          }
+        }, 
+        "Q3": {
+          "atlas": {
+            "CPU": 21000, 
+            "Disk": 2100
+          }, 
+          "lhcb": {
+            "CPU": 7000
+          }
+        }, 
+        "Q4": {
+          "atlas": {
+            "CPU": 21000, 
+            "Disk": 2100
+          }, 
+          "lhcb": {
+            "CPU": 7000
+          }
         }
       }
     }, 
@@ -827,17 +1769,61 @@
     "name": "FR-IN2P3-LPC", 
     "pledges": {
       "2019": {
-        "alice": {
-          "CPU": 5400, 
-          "Disk": 385
+        "Q1": {
+          "alice": {
+            "CPU": 5400, 
+            "Disk": 385
+          }, 
+          "atlas": {
+            "CPU": 11800, 
+            "Disk": 1400
+          }, 
+          "lhcb": {
+            "CPU": 2300, 
+            "Disk": 2
+          }
         }, 
-        "atlas": {
-          "CPU": 11800, 
-          "Disk": 1400
+        "Q2": {
+          "alice": {
+            "CPU": 5400, 
+            "Disk": 385
+          }, 
+          "atlas": {
+            "CPU": 11800, 
+            "Disk": 1400
+          }, 
+          "lhcb": {
+            "CPU": 2300, 
+            "Disk": 2
+          }
         }, 
-        "lhcb": {
-          "CPU": 2300, 
-          "Disk": 2
+        "Q3": {
+          "alice": {
+            "CPU": 5400, 
+            "Disk": 385
+          }, 
+          "atlas": {
+            "CPU": 11800, 
+            "Disk": 1400
+          }, 
+          "lhcb": {
+            "CPU": 2300, 
+            "Disk": 2
+          }
+        }, 
+        "Q4": {
+          "alice": {
+            "CPU": 5400, 
+            "Disk": 385
+          }, 
+          "atlas": {
+            "CPU": 11800, 
+            "Disk": 1400
+          }, 
+          "lhcb": {
+            "CPU": 2300, 
+            "Disk": 2
+          }
         }
       }
     }, 
@@ -859,13 +1845,45 @@
     "name": "FR-IN2P3-LPSC", 
     "pledges": {
       "2019": {
-        "alice": {
-          "CPU": 4440, 
-          "Disk": 335
+        "Q1": {
+          "alice": {
+            "CPU": 4440, 
+            "Disk": 335
+          }, 
+          "atlas": {
+            "CPU": 13325, 
+            "Disk": 850
+          }
         }, 
-        "atlas": {
-          "CPU": 13325, 
-          "Disk": 850
+        "Q2": {
+          "alice": {
+            "CPU": 4440, 
+            "Disk": 335
+          }, 
+          "atlas": {
+            "CPU": 13325, 
+            "Disk": 850
+          }
+        }, 
+        "Q3": {
+          "alice": {
+            "CPU": 4440, 
+            "Disk": 335
+          }, 
+          "atlas": {
+            "CPU": 13325, 
+            "Disk": 850
+          }
+        }, 
+        "Q4": {
+          "alice": {
+            "CPU": 4440, 
+            "Disk": 335
+          }, 
+          "atlas": {
+            "CPU": 13325, 
+            "Disk": 850
+          }
         }
       }
     }, 
@@ -886,9 +1904,29 @@
     "name": "FR-IN2P3-SUBATECH", 
     "pledges": {
       "2019": {
-        "alice": {
-          "CPU": 8500, 
-          "Disk": 1500
+        "Q1": {
+          "alice": {
+            "CPU": 8500, 
+            "Disk": 1500
+          }
+        }, 
+        "Q2": {
+          "alice": {
+            "CPU": 8500, 
+            "Disk": 1500
+          }
+        }, 
+        "Q3": {
+          "alice": {
+            "CPU": 8500, 
+            "Disk": 1500
+          }
+        }, 
+        "Q4": {
+          "alice": {
+            "CPU": 8500, 
+            "Disk": 1500
+          }
         }
       }
     }, 
@@ -921,9 +1959,29 @@
     "name": "GR-Ioannina-HEP", 
     "pledges": {
       "2019": {
-        "cms": {
-          "CPU": 1870, 
-          "Disk": 200
+        "Q1": {
+          "cms": {
+            "CPU": 1870, 
+            "Disk": 200
+          }
+        }, 
+        "Q2": {
+          "cms": {
+            "CPU": 1870, 
+            "Disk": 200
+          }
+        }, 
+        "Q3": {
+          "cms": {
+            "CPU": 1870, 
+            "Disk": 200
+          }
+        }, 
+        "Q4": {
+          "cms": {
+            "CPU": 1870, 
+            "Disk": 200
+          }
         }
       }
     }, 
@@ -943,13 +2001,45 @@
     "name": "HU-HGCC-T2", 
     "pledges": {
       "2019": {
-        "alice": {
-          "CPU": 6000, 
-          "Disk": 700
+        "Q1": {
+          "alice": {
+            "CPU": 6000, 
+            "Disk": 700
+          }, 
+          "cms": {
+            "CPU": 12000, 
+            "Disk": 900
+          }
         }, 
-        "cms": {
-          "CPU": 12000, 
-          "Disk": 900
+        "Q2": {
+          "alice": {
+            "CPU": 6000, 
+            "Disk": 700
+          }, 
+          "cms": {
+            "CPU": 12000, 
+            "Disk": 900
+          }
+        }, 
+        "Q3": {
+          "alice": {
+            "CPU": 6000, 
+            "Disk": 700
+          }, 
+          "cms": {
+            "CPU": 12000, 
+            "Disk": 900
+          }
+        }, 
+        "Q4": {
+          "alice": {
+            "CPU": 6000, 
+            "Disk": 700
+          }, 
+          "cms": {
+            "CPU": 12000, 
+            "Disk": 900
+          }
         }
       }
     }, 
@@ -970,9 +2060,29 @@
     "name": "IL-HEPTier-2", 
     "pledges": {
       "2019": {
-        "atlas": {
-          "CPU": 18300, 
-          "Disk": 1820
+        "Q1": {
+          "atlas": {
+            "CPU": 18300, 
+            "Disk": 1820
+          }
+        }, 
+        "Q2": {
+          "atlas": {
+            "CPU": 18300, 
+            "Disk": 1820
+          }
+        }, 
+        "Q3": {
+          "atlas": {
+            "CPU": 18300, 
+            "Disk": 1820
+          }
+        }, 
+        "Q4": {
+          "atlas": {
+            "CPU": 18300, 
+            "Disk": 1820
+          }
         }
       }
     }, 
@@ -994,9 +2104,29 @@
     "name": "IN-DAE-KOLKATA-TIER2", 
     "pledges": {
       "2019": {
-        "alice": {
-          "CPU": 30000, 
-          "Disk": 3500
+        "Q1": {
+          "alice": {
+            "CPU": 30000, 
+            "Disk": 3500
+          }
+        }, 
+        "Q2": {
+          "alice": {
+            "CPU": 30000, 
+            "Disk": 3500
+          }
+        }, 
+        "Q3": {
+          "alice": {
+            "CPU": 30000, 
+            "Disk": 3500
+          }
+        }, 
+        "Q4": {
+          "alice": {
+            "CPU": 30000, 
+            "Disk": 3500
+          }
         }
       }
     }, 
@@ -1016,9 +2146,29 @@
     "name": "IN-INDIACMS-TIFR", 
     "pledges": {
       "2019": {
-        "cms": {
-          "CPU": 35000, 
-          "Disk": 3000
+        "Q1": {
+          "cms": {
+            "CPU": 35000, 
+            "Disk": 3000
+          }
+        }, 
+        "Q2": {
+          "cms": {
+            "CPU": 35000, 
+            "Disk": 3000
+          }
+        }, 
+        "Q3": {
+          "cms": {
+            "CPU": 35000, 
+            "Disk": 3000
+          }
+        }, 
+        "Q4": {
+          "cms": {
+            "CPU": 35000, 
+            "Disk": 3000
+          }
         }
       }
     }, 
@@ -1038,25 +2188,93 @@
     "name": "IT-INFN-CNAF", 
     "pledges": {
       "2019": {
-        "alice": {
-          "CPU": 60600, 
-          "Disk": 6148, 
-          "Tape": 11687
+        "Q1": {
+          "alice": {
+            "CPU": 60600, 
+            "Disk": 6148, 
+            "Tape": 11687
+          }, 
+          "atlas": {
+            "CPU": 90270, 
+            "Disk": 7200, 
+            "Tape": 18720
+          }, 
+          "cms": {
+            "CPU": 78251, 
+            "Disk": 8020, 
+            "Tape": 26520
+          }, 
+          "lhcb": {
+            "CPU": 48461, 
+            "Disk": 6023, 
+            "Tape": 11891
+          }
         }, 
-        "atlas": {
-          "CPU": 90270, 
-          "Disk": 7200, 
-          "Tape": 18720
+        "Q2": {
+          "alice": {
+            "CPU": 60600, 
+            "Disk": 6148, 
+            "Tape": 11687
+          }, 
+          "atlas": {
+            "CPU": 90270, 
+            "Disk": 7200, 
+            "Tape": 18720
+          }, 
+          "cms": {
+            "CPU": 78251, 
+            "Disk": 8020, 
+            "Tape": 26520
+          }, 
+          "lhcb": {
+            "CPU": 48461, 
+            "Disk": 6023, 
+            "Tape": 11891
+          }
         }, 
-        "cms": {
-          "CPU": 78251, 
-          "Disk": 8020, 
-          "Tape": 26520
+        "Q3": {
+          "alice": {
+            "CPU": 60600, 
+            "Disk": 6148, 
+            "Tape": 11687
+          }, 
+          "atlas": {
+            "CPU": 90270, 
+            "Disk": 7200, 
+            "Tape": 18720
+          }, 
+          "cms": {
+            "CPU": 78251, 
+            "Disk": 8020, 
+            "Tape": 26520
+          }, 
+          "lhcb": {
+            "CPU": 48461, 
+            "Disk": 6023, 
+            "Tape": 11891
+          }
         }, 
-        "lhcb": {
-          "CPU": 48461, 
-          "Disk": 6023, 
-          "Tape": 11891
+        "Q4": {
+          "alice": {
+            "CPU": 60600, 
+            "Disk": 6148, 
+            "Tape": 11687
+          }, 
+          "atlas": {
+            "CPU": 90270, 
+            "Disk": 7200, 
+            "Tape": 18720
+          }, 
+          "cms": {
+            "CPU": 78251, 
+            "Disk": 8020, 
+            "Tape": 26520
+          }, 
+          "lhcb": {
+            "CPU": 48461, 
+            "Disk": 6023, 
+            "Tape": 11891
+          }
         }
       }
     }, 
@@ -1079,35 +2297,88 @@
     "name": "IT-INFN-T2", 
     "pledges": {
       "2019": {
-        "alice": {
-          "CPU": 70845, 
-          "Disk": 6659
+        "Q1": {
+          "alice": {
+            "CPU": 70845, 
+            "Disk": 6659
+          }, 
+          "atlas": {
+            "CPU": 108830, 
+            "Disk": 6858
+          }, 
+          "cms": {
+            "CPU": 119000, 
+            "Disk": 9271
+          }, 
+          "lhcb": {
+            "CPU": 27103
+          }
         }, 
-        "atlas": {
-          "CPU": 108830, 
-          "Disk": 6858
+        "Q2": {
+          "alice": {
+            "CPU": 70845, 
+            "Disk": 6659
+          }, 
+          "atlas": {
+            "CPU": 108830, 
+            "Disk": 6858
+          }, 
+          "cms": {
+            "CPU": 119000, 
+            "Disk": 9271
+          }, 
+          "lhcb": {
+            "CPU": 27103
+          }
         }, 
-        "cms": {
-          "CPU": 119000, 
-          "Disk": 9271
+        "Q3": {
+          "alice": {
+            "CPU": 70845, 
+            "Disk": 6659
+          }, 
+          "atlas": {
+            "CPU": 108830, 
+            "Disk": 6858
+          }, 
+          "cms": {
+            "CPU": 119000, 
+            "Disk": 9271
+          }, 
+          "lhcb": {
+            "CPU": 27103
+          }
         }, 
-        "lhcb": {
-          "CPU": 27103
+        "Q4": {
+          "alice": {
+            "CPU": 70845, 
+            "Disk": 6659
+          }, 
+          "atlas": {
+            "CPU": 108830, 
+            "Disk": 6858
+          }, 
+          "cms": {
+            "CPU": 119000, 
+            "Disk": 9271
+          }, 
+          "lhcb": {
+            "CPU": 27103
+          }
         }
       }
     }, 
     "rcsites": [
-      "INFN-BARI", 
-      "INFN-CATANIA", 
+      "INFN-NAPOLI-ATLAS", 
       "INFN-CNAF-LHCB", 
+      "INFN-MILANO-ATLASC", 
+      "INFN-ROMA1", 
+      "INFN-CATANIA", 
       "INFN-FRASCATI", 
       "INFN-LNL-2", 
-      "INFN-MILANO-ATLASC", 
-      "INFN-NAPOLI-ATLAS", 
-      "INFN-PISA", 
-      "INFN-ROMA1", 
       "INFN-ROMA1-CMS", 
-      "INFN-TORINO"
+      "INFN-TORINO", 
+      "INFN-PISA", 
+      "INFN-BARI"
     ], 
     "tier_level": 2, 
     "vos": [
@@ -1125,9 +2396,29 @@
     "name": "JP-Tokyo-ATLAS-T2", 
     "pledges": {
       "2019": {
-        "atlas": {
-          "CPU": 40000, 
-          "Disk": 5600
+        "Q1": {
+          "atlas": {
+            "CPU": 40000, 
+            "Disk": 5600
+          }
+        }, 
+        "Q2": {
+          "atlas": {
+            "CPU": 40000, 
+            "Disk": 5600
+          }
+        }, 
+        "Q3": {
+          "atlas": {
+            "CPU": 40000, 
+            "Disk": 5600
+          }
+        }, 
+        "Q4": {
+          "atlas": {
+            "CPU": 40000, 
+            "Disk": 5600
+          }
         }
       }
     }, 
@@ -1147,10 +2438,33 @@
     "name": "KR-KISTI-GSDC", 
     "pledges": {
       "2019": {
-        "alice": {
-          "CPU": 41000, 
-          "Disk": 3500, 
-          "Tape": 3000
+        "Q1": {
+          "alice": {
+            "CPU": 41000, 
+            "Disk": 3500, 
+            "Tape": 3000
+          }
+        }, 
+        "Q2": {
+          "alice": {
+            "CPU": 41000, 
+            "Disk": 3500, 
+            "Tape": 3000
+          }
+        }, 
+        "Q3": {
+          "alice": {
+            "CPU": 41000, 
+            "Disk": 3500, 
+            "Tape": 3000
+          }
+        }, 
+        "Q4": {
+          "alice": {
+            "CPU": 41000, 
+            "Disk": 3500, 
+            "Tape": 3000
+          }
         }
       }
     }, 
@@ -1170,9 +2484,29 @@
     "name": "KR-KISTI-GSDC-02", 
     "pledges": {
       "2019": {
-        "cms": {
-          "CPU": 10000, 
-          "Disk": 800
+        "Q1": {
+          "cms": {
+            "CPU": 10000, 
+            "Disk": 800
+          }
+        }, 
+        "Q2": {
+          "cms": {
+            "CPU": 10000, 
+            "Disk": 800
+          }
+        }, 
+        "Q3": {
+          "cms": {
+            "CPU": 10000, 
+            "Disk": 800
+          }
+        }, 
+        "Q4": {
+          "cms": {
+            "CPU": 10000, 
+            "Disk": 800
+          }
         }
       }
     }, 
@@ -1191,7 +2525,7 @@
     "id": 5, 
     "name": "MY-T2-UM", 
     "pledges": {}, 
-    "rcsites": null, 
+    "rcsites": [], 
     "tier_level": 2, 
     "vos": []
   }, 
@@ -1203,15 +2537,53 @@
     "name": "NDGF", 
     "pledges": {
       "2019": {
-        "alice": {
-          "CPU": 43850, 
-          "Disk": 4240, 
-          "Tape": 2990
+        "Q1": {
+          "alice": {
+            "CPU": 43850, 
+            "Disk": 4240, 
+            "Tape": 2990
+          }, 
+          "atlas": {
+            "CPU": 63470, 
+            "Disk": 5310, 
+            "Tape": 12510
+          }
         }, 
-        "atlas": {
-          "CPU": 63470, 
-          "Disk": 5310, 
-          "Tape": 12510
+        "Q2": {
+          "alice": {
+            "CPU": 43850, 
+            "Disk": 4240, 
+            "Tape": 2990
+          }, 
+          "atlas": {
+            "CPU": 63470, 
+            "Disk": 5310, 
+            "Tape": 12510
+          }
+        }, 
+        "Q3": {
+          "alice": {
+            "CPU": 43850, 
+            "Disk": 4240, 
+            "Tape": 2990
+          }, 
+          "atlas": {
+            "CPU": 63470, 
+            "Disk": 5310, 
+            "Tape": 12510
+          }
+        }, 
+        "Q4": {
+          "alice": {
+            "CPU": 43850, 
+            "Disk": 4240, 
+            "Tape": 2990
+          }, 
+          "atlas": {
+            "CPU": 63470, 
+            "Disk": 5310, 
+            "Tape": 12510
+          }
         }
       }
     }, 
@@ -1232,26 +2604,79 @@
     "name": "NL-T1", 
     "pledges": {
       "2019": {
-        "alice": {
-          "CPU": 13140, 
-          "Disk": 1364, 
-          "Tape": 1357
+        "Q1": {
+          "alice": {
+            "CPU": 13140, 
+            "Disk": 1364, 
+            "Tape": 1357
+          }, 
+          "atlas": {
+            "CPU": 80332, 
+            "Disk": 6688, 
+            "Tape": 16796
+          }, 
+          "lhcb": {
+            "CPU": 26287, 
+            "Disk": 2706, 
+            "Tape": 4937
+          }
         }, 
-        "atlas": {
-          "CPU": 80332, 
-          "Disk": 6688, 
-          "Tape": 16796
+        "Q2": {
+          "alice": {
+            "CPU": 13140, 
+            "Disk": 1364, 
+            "Tape": 1357
+          }, 
+          "atlas": {
+            "CPU": 80332, 
+            "Disk": 6688, 
+            "Tape": 16796
+          }, 
+          "lhcb": {
+            "CPU": 26287, 
+            "Disk": 2706, 
+            "Tape": 4937
+          }
         }, 
-        "lhcb": {
-          "CPU": 26287, 
-          "Disk": 2706, 
-          "Tape": 4937
+        "Q3": {
+          "alice": {
+            "CPU": 13140, 
+            "Disk": 1364, 
+            "Tape": 1357
+          }, 
+          "atlas": {
+            "CPU": 80332, 
+            "Disk": 6688, 
+            "Tape": 16796
+          }, 
+          "lhcb": {
+            "CPU": 26287, 
+            "Disk": 2706, 
+            "Tape": 4937
+          }
+        }, 
+        "Q4": {
+          "alice": {
+            "CPU": 13140, 
+            "Disk": 1364, 
+            "Tape": 1357
+          }, 
+          "atlas": {
+            "CPU": 80332, 
+            "Disk": 6688, 
+            "Tape": 16796
+          }, 
+          "lhcb": {
+            "CPU": 26287, 
+            "Disk": 2706, 
+            "Tape": 4937
+          }
         }
       }
     }, 
     "rcsites": [
-      "NIKHEF-ELPROD", 
-      "SARA-MATRIX"
+      "SARA-MATRIX", 
+      "NIKHEF-ELPROD"
     ], 
     "tier_level": 1, 
     "vos": [
@@ -1268,20 +2693,73 @@
     "name": "NRC-KI-T1", 
     "pledges": {
       "2019": {
-        "alice": {
-          "CPU": 32800, 
-          "Disk": 4500, 
-          "Tape": 5700
+        "Q1": {
+          "alice": {
+            "CPU": 32800, 
+            "Disk": 4500, 
+            "Tape": 5700
+          }, 
+          "atlas": {
+            "CPU": 32800, 
+            "Disk": 4500, 
+            "Tape": 5700
+          }, 
+          "lhcb": {
+            "CPU": 16400, 
+            "Disk": 2300, 
+            "Tape": 3000
+          }
         }, 
-        "atlas": {
-          "CPU": 32800, 
-          "Disk": 4500, 
-          "Tape": 5700
+        "Q2": {
+          "alice": {
+            "CPU": 32800, 
+            "Disk": 4500, 
+            "Tape": 5700
+          }, 
+          "atlas": {
+            "CPU": 32800, 
+            "Disk": 4500, 
+            "Tape": 5700
+          }, 
+          "lhcb": {
+            "CPU": 16400, 
+            "Disk": 2300, 
+            "Tape": 3000
+          }
         }, 
-        "lhcb": {
-          "CPU": 16400, 
-          "Disk": 2300, 
-          "Tape": 3000
+        "Q3": {
+          "alice": {
+            "CPU": 32800, 
+            "Disk": 4500, 
+            "Tape": 5700
+          }, 
+          "atlas": {
+            "CPU": 32800, 
+            "Disk": 4500, 
+            "Tape": 5700
+          }, 
+          "lhcb": {
+            "CPU": 16400, 
+            "Disk": 2300, 
+            "Tape": 3000
+          }
+        }, 
+        "Q4": {
+          "alice": {
+            "CPU": 32800, 
+            "Disk": 4500, 
+            "Tape": 5700
+          }, 
+          "atlas": {
+            "CPU": 32800, 
+            "Disk": 4500, 
+            "Tape": 5700
+          }, 
+          "lhcb": {
+            "CPU": 16400, 
+            "Disk": 2300, 
+            "Tape": 3000
+          }
         }
       }
     }, 
@@ -1303,782 +2781,792 @@
     "name": "NULL", 
     "pledges": {}, 
     "rcsites": [
-      "100IT", 
-      "Advanced Technology Lab", 
-      "AEGIS01-IPB-SCL", 
-      "AEGIS02-RCUB", 
-      "AEGIS03-ELEF-LEDA", 
-      "AEGIS04-KG", 
-      "AEGIS05-ETFBG", 
-      "AEGIS07-IPB-ATLAS", 
-      "AEGIS09-FTN-KM", 
-      "AEGIS10-VINCA-CMS", 
-      "AEGIS11-MISANU", 
-      "AGH-ICSR", 
-      "AGLT2_TEST", 
-      "ALBERTA-LCG2", 
-      "AM-01-IIAP", 
-      "AM-02-SEUA", 
-      "AM-03-YSU", 
-      "AM-04-YERPHI", 
-      "AM-05-YSU", 
-      "AMD64.PSNC.PL", 
-      "AMNH", 
-      "AmsterdamPRPCachingInfrastructure", 
-      "ANLASC", 
-      "Aragon", 
-      "ARAGRID-CIENCIAS", 
-      "ARAGRID-HUESCA", 
-      "ARAGRID-TERUEL", 
-      "AREA-BO", 
-      "ARNES", 
-      "ASRT", 
-      "AstrogridPUC", 
-      "ATLAND", 
-      "Australia-T2", 
-      "AUVERGRID", 
-      "AZ-IFAN", 
-      "Baylor-Kodiak", 
-      "BCBR", 
-      "BEgrid-BELNET", 
-      "BEgrid-KULeuven", 
-      "BEgrid-UGent", 
-      "BEgrid-UniversiteitAntwerpen", 
-      "BEIJING-CNIC-LCG2-IA64", 
-      "BEIJING-LCG2-t", 
-      "BELLARMINE_TIER2", 
-      "Beocat", 
-      "BG-INRNE", 
-      "BG01-IPP", 
-      "BG02-IM", 
-      "BG03-NGCC", 
-      "BG04-ACAD", 
-      "BG05-SUGrid", 
-      "BG06-GPHI", 
-      "BG07-EDU", 
-      "BG08-MADARA", 
-      "BIFI", 
-      "BIFI-IBERGRID", 
-      "BIOCOMP", 
-      "BMEGrid", 
-      "BMRZ-FRANKFURT", 
-      "BNL-ATLAS-ITB", 
-      "BNL-ATLAS-OPP", 
-      "BNL-Belle-II", 
-      "BNL-SDCC", 
-      "BNL_ATLAS_1", 
-      "BNL_Test_2", 
-      "Brandeis-Atlas-T3", 
-      "BRGM-ORLEANS", 
-      "BrookhavenCachingInfrastructure", 
-      "brown-cms", 
-      "BSC-Cloud", 
-      "BY-NCPHEP", 
-      "CA-ALBERTA-WESTGRID-T2", 
-      "CA-MCGILL-CLUMEQ-PPS", 
-      "CA-MCGILL-CLUMEQ-T2", 
-      "CA-TRIUMF-DYNAFED", 
-      "CA-TRIUMF-T2K", 
-      "CachingInfrastructure", 
-      "CachingInfrastrucutre", 
-      "CAFPE-GRANADA", 
-      "CAMK", 
-      "CancerComputer_Hotel", 
-      "CancerComputer_Kitchener", 
-      "CancerComputer_MinneUEL", 
-      "CardiffPRPCachingInfrastructure", 
-      "CARLETONU-LCG2", 
-      "CENF_Neutrino_Computing_Cluster", 
-      "CERN-CIC", 
-      "CERN-PROD-AI", 
-      "CERN-PROD-HLT", 
-      "CERN-PROD-WIGNER", 
-      "CERN-SC", 
-      "CERN_PPS", 
-      "CESGA", 
-      "CESGA-PPS", 
-      "CESIC-UNICAL", 
-      "CESNET-MCC", 
-      "CESNET-MetaCloud", 
-      "CETA-GRID", 
-      "CFP-IST", 
-      "CGG-LCG2", 
-      "CHPC Group", 
-      "CHTC", 
-      "CICESE", 
-      "CIEMAT-TIC", 
-      "CIGI-ITB", 
-      "CIGI-OSG", 
-      "CIN2", 
-      "cinvestav", 
-      "CIRMMP", 
-      "CIT_CMS_Cloud", 
-      "CIT_CMS_T2_HPC", 
-      "CIT_ITB_1", 
-      "CIT_LIGO", 
-      "Clemson-Palmetto", 
-      "CLOSED-BY-BNTU", 
-      "CLOSED-BY-JIPNR-SOSNY", 
-      "CLOSED-BY-JIPNR-SOSNY-2", 
-      "CLOSED-BY-NCPHEP", 
-      "CLOSED-BY-UIIP", 
-      "CLOUDIFIN", 
-      "ClusterUL", 
-      "CMS Glidein Systems", 
-      "CMS-BURT-ITB", 
-      "CN-BEIJING-PKU", 
-      "CNB-LCG2", 
-      "CNR-ILC-PISA", 
-      "CNR-PROD-PISA", 
-      "cns", 
-      "CREATIS-INSA-LYON", 
-      "CRS4", 
-      "CSC", 
-      "CSC-cloud", 
-      "CSIC-BELLATERRA", 
-      "CSIC-EBD-LW", 
-      "CSIU Services", 
-      "CYF-CERTIF-TB", 
-      "CYFRONET-CLOUD", 
-      "CYFRONET-IA64", 
-      "CYFRONET-PROMETHEUS", 
-      "CYFRONET-S1", 
-      "DataInfrastructure", 
-      "DataInfrastructureFlatiron", 
-      "DI-UMinho", 
-      "Discovery", 
-      "DZ-01-ARN", 
-      "e-ca-iaa", 
-      "ECHISM-GOC", 
-      "EdgesAtHome", 
-      "EELA-UNLP", 
-      "EENet", 
-      "EG-BUE-CTP", 
-      "EG-PHY-ASU-T3", 
-      "EG-ZC-T3", 
-      "egee.fesb.hr", 
-      "egee.irb.hr", 
-      "egee.man.poznan.pl", 
-      "egee.srce.hr", 
-      "EGI-CLOUD-OPS", 
-      "EGI-DATA-TRANSFER", 
-      "EGI-DATAHUB", 
-      "EGI-FGSG", 
-      "EGI-MARKETPLACE", 
-      "EGI-NOTEBOOKS", 
-      "EMBL-EBI", 
-      "ESA-ESAC", 
-      "ESA-ESRIN", 
-      "ESRF", 
-      "FBF-Brescia-IT", 
-      "fedcloud.srce.hr", 
-      "FENIX", 
-      "FI-LCG2", 
-      "FIUPG", 
-      "FI_AA", 
-      "FI_Aalto", 
-      "FI_Helsinki", 
-      "FI_JYU", 
-      "FI_LUT", 
-      "FI_Oulu", 
-      "FI_TUT", 
-      "FI_UEF", 
-      "FI_UTU", 
-      "FLTECH", 
-      "FNAL_FERMIGRID", 
-      "FNAL_FIFE_SUBMIT", 
-      "FNAL_PUBLIC_DCACHE", 
-      "FRANCE-GRILLES-TESTBED", 
-      "FRESNO-ATLAS-T3", 
-      "FSU-HEP", 
-      "FZJ", 
-      "FZU", 
-      "FZU-IPV6", 
-      "GARR-01-DIR", 
-      "GC1", 
-      "GCVO_PUJ", 
-      "GE-01-GRENA", 
-      "Geant perfSONAR", 
-      "Georgia Tech LIGO", 
-      "Georgia Tech PACE", 
-      "GILDA-INFN-CATANIA", 
-      "GILDA-NeSC", 
-      "GILDA-PADOVA", 
-      "GILDA-SIRIUS", 
-      "GILDA-VEGA", 
-      "GPGRID", 
-      "GR-01-AUTH", 
-      "GR-02-UoM", 
-      "GR-03-HEPNTUA", 
-      "GR-04-FORTH-ICS", 
-      "GR-05-DEMOKRITOS", 
-      "GR-06-IASA", 
-      "GR-08-CEID", 
-      "GR-09-UoA", 
-      "GR-10-UOI", 
-      "GR-11-UPATRAS", 
-      "GRATIA-OSG", 
-      "GRID-UNAM", 
-      "GRID-UNISON", 
-      "GRIDIFIN", 
-      "GRIDOPS-ACCPORTAL", 
-      "GRIDOPS-APEL", 
-      "GRIDOPS-APPDB", 
-      "GRIDOPS-CATCHALL", 
-      "GRIDOPS-CheckIn", 
       "GRIDOPS-CRM", 
-      "GRIDOPS-CSGF", 
-      "GRIDOPS-CTOOLS", 
-      "GRIDOPS-CVMFS", 
-      "GRIDOPS-DATAHUB", 
-      "GRIDOPS-DATATRANSFER", 
-      "GRIDOPS-DIRAC4EGI", 
-      "GRIDOPS-EC3", 
-      "GRIDOPS-eGRANT", 
-      "GRIDOPS-GGUS", 
-      "GRIDOPS-GOCDB", 
-      "GRIDOPS-GRIDVIEW", 
-      "GRIDOPS-GSTAT", 
-      "GRIDOPS-LTOS", 
-      "GRIDOPS-MARKETPLACE", 
-      "GRIDOPS-METRICSPORTAL", 
-      "GRIDOPS-MON", 
-      "GRIDOPS-MSG", 
-      "GRIDOPS-OPSPORTAL", 
-      "GRIDOPS-PERUN", 
-      "GRIDOPS-SAM", 
-      "GRIDOPS-SECTOOLS", 
-      "GRIDOPS-TMP", 
-      "GRIDOPS-UMDREPO", 
-      "GRIDOPS-WS-PGRADE", 
-      "GRIDOPS-XGUS", 
-      "GridUNESP", 
-      "GrimaPUC", 
-      "GRISU-COMETA-INAF-CT", 
       "GRISU-COMETA-INFN-CT", 
-      "GRISU-COMETA-INFN-LNS", 
-      "GRISU-COMETA-ING-MESSINA", 
-      "GRISU-COMETA-UNICT-DIIT", 
-      "GRISU-COMETA-UNICT-DMI", 
-      "GRISU-COMETA-UNIPA", 
-      "GRISU-CYBERSAR-CAGLIARI", 
-      "GRISU-ENEA-GRID", 
-      "GRISU-SPACI-LECCE", 
-      "GRISU-SPACI-NAPOLI", 
-      "GRISU-UNINA", 
-      "GROW-PROD", 
-      "GWDG-CLOUD", 
-      "HCC Submitters", 
-      "HG-01-GRNET", 
-      "HG-02-IASA", 
-      "HG-03-AUTH", 
-      "HG-04-CTI-CEID", 
-      "HG-05-FORTH", 
-      "HG-06-EKT", 
-      "HG-08-Okeanos", 
-      "HG-09-Okeanos-Cloud", 
-      "HK-HKU-CC-01", 
-      "HK-LCG2", 
-      "hp-bristol", 
-      "HPBR-LCG2", 
-      "HPCOSG", 
-      "HPTC-LCG2", 
-      "HPTC-LCG2ia64", 
-      "HR-01-RBI (closed)", 
-      "HRL_KZ", 
-      "HTC-BIGGRID", 
-      "Hyak", 
-      "IAA-CSIC", 
-      "IBCP-GBIO", 
-      "IC-UFAL", 
-      "ICEAGE-CATANIA", 
-      "IceCube", 
-      "ICM-PLGRID", 
-      "IEETA", 
-      "IFISC-GRID", 
-      "IGI-BOLOGNA", 
-      "IISAS-Bratislava", 
-      "IISAS-FedCloud", 
-      "IISAS-GILDA", 
-      "IISAS-GPUCloud", 
-      "IISAS-Nebula", 
-      "IIT", 
-      "IL-BGU", 
-      "IL-BGU-PPS", 
-      "IL-IUCC", 
-      "IL-TAU-CS", 
-      "IllinoisHEP", 
-      "IL_IUCC_IG", 
-      "IMCSUL", 
-      "IMCSUL-INF", 
-      "IN-DAE-VECC-01", 
-      "IN2P3-IPNL", 
-      "INAF-TRIESTE", 
-      "INAF-TRIESTE-STACK", 
-      "INAF-TS", 
-      "INDIGO-CATANIA-STACK", 
-      "INFN-BOLOGNA", 
-      "INFN-BOLOGNA-CMS", 
-      "INFN-BOLOGNA-T3", 
-      "INFN-CAGLIARI", 
-      "INFN-CASCINA", 
-      "INFN-CATANIA-NEBULA", 
-      "INFN-CATANIA-STACK", 
-      "INFN-COSENZA", 
-      "INFN-FERRARA", 
-      "INFN-FIRENZE", 
-      "INFN-GENOVA", 
-      "INFN-IGI-CNAF-FedCloud", 
-      "INFN-LECCE", 
-      "INFN-LNS", 
-      "INFN-MIB", 
-      "INFN-MILANO", 
-      "INFN-NAPOLI", 
-      "INFN-NAPOLI-ARGO", 
-      "INFN-NAPOLI-CMS", 
-      "INFN-NAPOLI-PAMELA", 
-      "INFN-PADOVA", 
-      "INFN-PADOVA-CMS", 
-      "INFN-PADOVA-CREAMTEST", 
-      "INFN-PADOVA-STACK", 
-      "INFN-PARMA", 
-      "INFN-PAVIA", 
-      "INFN-PERUGIA", 
-      "INFN-ROMA1-TEO", 
-      "INFN-ROMA1-VIRGO", 
-      "INFN-ROMA2", 
-      "INFN-ROMA3", 
-      "INFN-TRIESTE", 
-      "INSU01-PARIS", 
-      "IPSL-IPGP-LCG2", 
-      "IR-IPM-HEP", 
-      "ISI", 
-      "ISIS-UNIANDES", 
-      "ISMB", 
-      "ITB-BARI", 
-      "IUCC_Fed_Cloud", 
-      "Jetstream", 
-      "JetStreamTACC", 
-      "JINR-Tier2", 
-      "JINR_CLOUD", 
-      "JP-HIROSHIMA-WLCG", 
-      "JP-KEK-CRC-02", 
-      "Jupiter", 
-      "KAGROSS-GOC", 
-      "KANSAS_HOSTED_BOSCO_CE", 
-      "KEELE-NGS", 
-      "Kennesaw_Dell_Nodes", 
-      "KISTIPRPCachingInfrastructure", 
-      "KMU-PRI-LCG2", 
-      "KR-KISTI-CLOUD", 
-      "KR-KISTI-GCRT-01", 
-      "KR-KISTI-HEP", 
-      "KR-KNU-T3", 
-      "KR-UOS-SSCC", 
-      "KTH-CLOUD", 
-      "KTU-BG-GLITE", 
-      "KTU-ELEN-LCG2", 
-      "LBL_Testbed", 
-      "LCCV-UFAL", 
-      "LCG-IL-OU", 
-      "LCG-USTC", 
-      "LCG_KNU", 
-      "LEI-GLITE", 
-      "LIGO_UWM_NEMO", 
-      "LIP-Coimbra", 
-      "LIP-Lisbon", 
-      "LNCC-COMCIDIS", 
-      "LNCC-LCG", 
-      "LONI_OSG2", 
-      "LRZ", 
-      "LSG-AMC", 
-      "LSG-AMS", 
-      "LSG-BCBR", 
-      "LSG-EMC", 
-      "LSG-HTC", 
-      "LSG-HUB", 
-      "LSG-KG", 
-      "LSG-KUN", 
-      "LSG-LUMC", 
-      "LSG-NKI", 
-      "LSG-RUG", 
-      "LSG-TUD", 
-      "LSG-UM", 
-      "LSG-UU", 
-      "LSG-VU", 
-      "LSG-WUR", 
-      "LSU_SuperMIC", 
-      "LTU_Tier3", 
-      "LUH", 
-      "LUHEP_OSG", 
-      "M3PEC", 
-      "MA-01-CNRST", 
-      "MA-04-CNRST-ATLAS", 
-      "mainz", 
-      "mainzgrid", 
-      "manchester-ngs2", 
-      "MANLAN perfSONAR", 
-      "MD-01-TUM", 
-      "MD-02-IMI", 
-      "MD-03-USM", 
-      "MD-04-RENAM", 
-      "MIT_CMS_T3", 
-      "MIT_SUBMIT", 
-      "MK-01-UKIM_II", 
-      "MK-02-ETF", 
-      "MK-03-FINKI", 
-      "MK-04-FINKICLOUD", 
-      "MPI-K", 
-      "MREN-01-CIS", 
-      "MSFG-MULTI", 
-      "MSFG-OPEN", 
-      "MSU-OSG", 
-      "MSU-OSG_SE", 
-      "MWT2CachingInfrastructure", 
-      "MY-MIMOS-GC-01", 
-      "MY-NM-NEUTRON", 
-      "MY-UM-CRYSTAL", 
-      "MY-UM-SIFIR", 
-      "MY-UPM-BIRUNI-01", 
-      "MY-UPM-FSKTM-01", 
-      "MY-UPM-UGRID-01", 
-      "MY-USM-GCL", 
-      "MY-UTM-GRID", 
-      "NACAD_UFRJ", 
-      "NBI_T3", 
-      "NCBJ-CIS", 
-      "NCSA-DES", 
-      "NDGF-BENEDICT-T3", 
-      "NERSC-PDSFSRM", 
-      "Nevis", 
-      "ngi-ceta-ciemat", 
-      "NGI_BY_SERVICES", 
-      "NGI_DE_SERVICES", 
-      "NGI_IL", 
-      "NGI_IL_MED1", 
-      "NGI_IT", 
-      "NGI_MD_SERVICES", 
-      "NGI_PL_SERVICES", 
-      "NGI_UA_SERVICES", 
-      "NGS-BELFAST", 
-      "NGS-BRISTOL", 
-      "NGS-CARDIFF", 
-      "NGS-DURHAM", 
-      "NGS-EDINBURGH", 
-      "NGS-GLASGOW", 
-      "NGS-HECTOR", 
-      "NGS-HPCX", 
-      "NGS-HUDDERSFIELD", 
-      "NGS-IMPERIAL", 
-      "NGS-LANCASTER", 
-      "NGS-LEEDS", 
-      "NGS-RALVIS", 
-      "NGS-READING", 
-      "NGS-SHEFFIELD", 
-      "NGS-SOUTHAMPTON", 
-      "NGS-WESTMINSTER", 
-      "NGS-WTSI", 
-      "NGS-YORK", 
-      "NIU_ATLAS_CE", 
-      "NL-T1", 
-      "NMSU_AGGIE_GRID", 
-      "NMSU_DISCOVERY", 
-      "NO-NORGRID-T2", 
-      "NSC-IJS", 
-      "NULL", 
-      "NUMEP-OSG", 
-      "NU_CMS_TIER3_CE", 
-      "NU_CMS_TIER3_SE", 
-      "NWICG_Earth", 
-      "NWICG_Eddie", 
-      "NWICG_NDCMS", 
-      "NWICG_NotreDame", 
-      "NYSGRID-CCR-U2", 
-      "NYSGRID_CORNELL_NYS1", 
-      "NYU-ATLAS", 
-      "NZ-UOA", 
-      "OBSPM", 
-      "ORNL-T2", 
-      "OSC_OSG", 
-      "OSG_DELL_M420_ASU", 
-      "OSG_DELL_M420_ASU_hosted_ce", 
-      "OSG_IN_IUCAA_SARATHI", 
-      "OSG_SAM_TESTS", 
-      "OSG_UChicago", 
-      "OSG_US_DANFORTH_HOSTED_CE", 
-      "OSG_US_FSU_HNPGRID", 
-      "OSG_US_GSU_ACORE", 
-      "OSG_US_NDSU_CCAST_CLUSTER2", 
-      "OSG_US_NMSU_DISCOVERY", 
-      "OSG_US_USD_LEGACY", 
-      "OSG_US_WSU_GRID", 
-      "Oslo", 
-      "osu-cms", 
-      "OUHEP_ITB", 
-      "OUHEP_OSG", 
-      "OU_OSCER_CONDOR", 
-      "oxford-ngs2", 
-      "PAKGRID-LCG2", 
-      "PAKGRID3-LCG2", 
-      "PARIS-UREC-IPV6", 
-      "PDC", 
-      "PDC-arc-new", 
-      "PEARL-AMU", 
-      "PennT3", 
-      "perfSONAR Services", 
-      "PH-ASTI-BUHAWI", 
-      "PH-ASTI-DALUBHASAAN", 
-      "PH-ASTI-LIKNAYAN", 
-      "PH-ATENEO", 
-      "PIC-PPS", 
-      "PNNL_BelleII", 
-      "PNNL_HEP", 
-      "PPS-CYFRONET", 
-      "PPS-ENG", 
-      "PPS-IFIC", 
-      "PPS-LIP", 
-      "PPS-RAL", 
-      "PPS-RO-01-UPB", 
-      "PPS-SiGNET", 
-      "PPS-SNS", 
-      "PPS-TRIUMF", 
-      "prague_cesnet_lcg2", 
-      "prague_cesnet_lcg2_cert", 
-      "prague_cesnet_pps", 
-      "prague_cesnet_pt", 
-      "preprod.nikhef.nl", 
-      "Princeton_ICSE_T3_CMS", 
-      "PRISMA-INFN-BARI", 
-      "PSC Bridges", 
-      "PSK_KIELCE", 
-      "PSNC-GILDA", 
-      "ral-cloud", 
-      "ral-ngs2", 
-      "RC-GISELA-CETA", 
-      "RECAS-BARI", 
-      "RECAS-NAPOLI", 
-      "RedIRIS", 
-      "RedIRIS_GILDA", 
-      "Rhino", 
-      "Rice", 
-      "RO-01-ICI", 
-      "RO-09-UTCN", 
-      "RO-12-ICI", 
-      "RO-15-NIPNE", 
-      "ROC_Canada_SERVICES", 
-      "RTUETF", 
-      "ru-Chernogolovka-IPCP-LCG2", 
-      "RU-ISA-CGTDC", 
-      "ru-Moscow-MEPHI-LCG2", 
-      "ru-Moscow-SINP-LCG2", 
-      "ru-Moscow-SINP-T3", 
-      "RU-Novosibirsk-BINP", 
-      "RU-Phys-SPbSU", 
-      "rutgers-cms", 
-      "SARA-ASI", 
-      "SARA-LISA", 
-      "SBGrid", 
-      "SBGrid-Harvard", 
-      "SBGrid-Harvard-Infrastructure", 
-      "SBU_Tier3", 
-      "SCAI", 
-      "ScotGRID-Edinburgh", 
-      "scotgrid-gla", 
-      "SDSC-PRP", 
-      "SDSCCompInfrastructure", 
-      "SDU-LCG2", 
-      "SFU-LCG2", 
-      "SGAI-CSIC", 
-      "SISSA-Trieste", 
-      "SLING-Test", 
-      "SMU_HPC", 
-      "SMU_HPC_ITB", 
-      "SN-UCAD", 
-      "SNS-PISA", 
-      "SOLEIL", 
-      "SPACI-LECCE-IA64", 
-      "SPACI-NAPOLI-IA64", 
-      "Stampede2", 
-      "STANFORD_HOSTED_BOSCO_CE", 
-      "STAR-BNL", 
-      "STAR-OnlinePool", 
-      "Starlight perfSONARs", 
-      "StashCaches", 
-      "StratusLab", 
-      "SU-GRID", 
-      "SU-ITS", 
-      "SU-Protvino-IHEP", 
-      "SU-SUGAR", 
-      "Submitters", 
-      "SUSQU-ATLAS-T3", 
-      "SWITCH", 
-      "SWT2_CPB_TEST", 
-      "SyracuseCachingInfrastructure", 
-      "SZDG", 
-      "SZTAKI", 
-      "T2-TH-ALICE-NSTDA", 
-      "T3-TH-CHULA", 
-      "T3_CH_CERN_HelixNebula", 
-      "T3_CH_PSI", 
-      "T3_HU_Debrecen", 
-      "T3_IN_TIFRCloud", 
-      "T3_KR_KISTI", 
-      "T3_US_NEU", 
-      "Taiwan-IPAS-LCG2", 
-      "Taiwan-NCUCC-LCG2", 
-      "TAMU_BRAZOS", 
-      "TAMU_Calclab", 
-      "TASK", 
-      "TAU-LCG2", 
-      "TECHNION-LCG2", 
-      "TH-HAII", 
-      "TH-NECTEC-LSR", 
-      "TH-SUT-NPP", 
-      "Thomas Jefferson National Accelerator Facility GLUEX Glidein", 
-      "TIFR-CMS", 
-      "TIFR-LCG2", 
-      "TORONTO-LCG2", 
-      "TR-01-ULAKBIM", 
-      "TR-02-ATATURK", 
-      "TR-04-ERCIYES", 
-      "TR-05-BOUN", 
-      "TR-08-CUKUROVA", 
-      "TR-09-ITU", 
-      "TR-FC1-ULAKBIM", 
-      "TRANSP_simulations_for_EAST", 
-      "TRIGRID-INFN-CATANIA", 
-      "TTU-ANTAEUS", 
-      "TTU-TESTWULF", 
-      "TU-Kosice", 
-      "TUDresden-ZIH", 
-      "Turing", 
-      "TW-ASGC-CERT", 
-      "TW-DiCOS", 
-      "TW-EMI-PPS", 
-      "TW-eScience", 
-      "TW-NCHU-AAC-01", 
-      "TW-NCUHEP", 
-      "TW-NIU-EECS-01", 
-      "TW-NTCU-HPC-01", 
-      "TW-NTU-CC", 
-      "TW-NTU-HEP", 
-      "UA-IFBG", 
-      "UA-IMBG", 
-      "UA-IRE", 
-      "UA-MHI", 
-      "UA-NSCMBR", 
-      "UA-PIMEE", 
-      "UA_BITP_ARC", 
-      "UA_ICMP_ARC", 
-      "UA_ICYB_ARC", 
-      "UA_ILTPE_ARC", 
-      "UCD", 
-      "UChicagoCachingInfrastructure", 
-      "UCL-CCC", 
-      "UCM", 
-      "UColorado_HEP", 
-      "UColorado_HEP_ITB", 
-      "UColorado_SE", 
-      "UConn-OSG", 
-      "UCR-HEP", 
-      "ucsb-cms", 
-      "UCSCT3", 
       "UCSD CMS Glideins", 
-      "UCSD glidein", 
-      "UCSDCachingInfrastructure", 
-      "UCSDT2-ITB", 
-      "UC_ITB", 
-      "UC_ITB_SE_BESTMAN", 
-      "UC_ITB_SE_DCACHE", 
-      "UFL-LCG2", 
-      "UFlorida-PG", 
-      "UFRJ-IF", 
-      "UGA_SGrid", 
-      "UiB", 
-      "UIOWA-LCG2", 
-      "UJ-OSG", 
-      "UKI-GridPP-Cloud-IC", 
-      "UKI-LT2-IC-HEP-PPS", 
-      "UKI-LT2-IC-LeSC", 
-      "UKI-LT2-UCL-CENTRAL", 
-      "UKI-ScotGrid-Gla-PPS", 
-      "UKI-SOUTHGRID-BHAM-PPS", 
-      "UKI-SOUTHGRID-RDG", 
-      "ULA-MERIDA", 
-      "UMB-BB", 
-      "umd-cms", 
-      "UMD-IGS", 
-      "UMD_SIAB", 
-      "UMinho-CP", 
-      "UMissHEP", 
-      "UMN-CMS", 
-      "Umontreal-LCG2", 
-      "umsnh-ce", 
-      "UNI-BONN", 
-      "UNI-DORTMUND", 
-      "UNI-KARLSRUHE", 
-      "UNI-PERUGIA", 
-      "UNI-SIEGEN-HEP", 
-      "UNIANDES", 
-      "UNIBE-ID", 
-      "UNICAN", 
-      "UNICAN-IMATH", 
-      "UNICPH-NBI", 
-      "UNIGE-DPNC", 
-      "UNINA-EGEE", 
-      "UNIV-LILLE", 
-      "University of California Irvine", 
-      "UNM_HPC", 
-      "UOGRID", 
-      "UPittTier3", 
-      "UPJS-Kosice", 
-      "UPorto", 
-      "uprm-cms", 
-      "UPR_HPCF", 
-      "UPV-GRyCAP", 
-      "USF_SC", 
-      "USTC-T3", 
-      "UTD-HEP", 
-      "UT_CS", 
-      "UZH", 
-      "Vanderbilt", 
-      "Vanderbilt-ITB", 
-      "Vanderbilt_EC2", 
-      "VC3", 
-      "VDT-ITB", 
-      "VDU-IF-LCG2", 
-      "VGTU-CREAM", 
-      "VGTU-gLite", 
       "VGTU-TEST-gLite", 
-      "VICTORIA-LCG2", 
-      "VJNEAL-GOC", 
-      "VN-HPCC-HUT-HN", 
-      "VN-IFI", 
-      "VN-IFI-PPS", 
-      "VN-IOIT-DCNET", 
-      "VN-IOIT-DFCK", 
-      "VN-IOIT-HN", 
-      "VN-IOIT-KEYLAB", 
-      "VU-MIF-LCG2", 
-      "VU-MIF-TEST", 
-      "WARSAW-EGEE", 
-      "WCSS", 
-      "WCSS-PPS", 
-      "WCSS64", 
-      "Wilson Facility", 
-      "WISC-ATLAS", 
-      "WIX PerfSONAR", 
-      "WT2", 
-      "Wuhan", 
-      "Wuhan-t", 
+      "SGAI-CSIC", 
+      "IMCSUL-INF", 
+      "UCSCT3", 
+      "LSG-TUD", 
+      "TECHNION-LCG2", 
+      "egee.fesb.hr", 
+      "GRISU-COMETA-UNICT-DMI", 
+      "PDC-arc-new", 
+      "JP-HIROSHIMA-WLCG", 
+      "GILDA-INFN-CATANIA", 
+      "UChicagoCachingInfrastructure", 
+      "PPS-ENG", 
+      "EGI-RCauth", 
+      "UNICPH-NBI", 
+      "ISMB", 
+      "EELA-UNLP", 
+      "INFN-PADOVA", 
+      "PAKGRID3-LCG2", 
+      "CA-TRIUMF-T2K", 
+      "LSG-KUN", 
+      "INFN-PAVIA", 
+      "IISAS-FedCloud", 
+      "CNR-ILC-PISA", 
+      "USF_SC", 
+      "CA-TRIUMF-DYNAFED", 
+      "TRIGRID-INFN-CATANIA", 
+      "CSIC-EBD-LW", 
+      "GRIDOPS-SAM", 
       "WUT", 
+      "Vanderbilt_EC2", 
+      "AUVERGRID", 
+      "GR-08-CEID", 
+      "NZ-UOA", 
+      "PPS-SNS", 
+      "CSC-cloud", 
+      "M3PEC", 
+      "SARA-ASI", 
+      "MSFG-OPEN", 
+      "LSG-HTC", 
+      "PH-ASTI-DALUBHASAAN", 
+      "STANFORD_HOSTED_BOSCO_CE", 
+      "ICM-PLGRID", 
+      "MY-UM-SIFIR", 
+      "GRIDOPS-CVMFS", 
+      "OSG_DELL_M420_ASU_hosted_ce", 
+      "NGS-EDINBURGH", 
+      "FI_Aalto", 
+      "MA-01-CNRST", 
+      "INFN-CASCINA", 
+      "Rice", 
+      "FNAL_FIFE_SUBMIT", 
+      "manchester-ngs2", 
+      "AGLT2_TEST", 
+      "RTUETF", 
+      "LSG-EMC", 
+      "BrookhavenCachingInfrastructure", 
+      "SPACI-LECCE-IA64", 
       "YerPhI", 
-      "ZA-MERAKA", 
+      "UT_CS", 
+      "LCCV-UFAL", 
+      "FNAL_PUBLIC_DCACHE", 
+      "CA-MCGILL-CLUMEQ-T2", 
+      "FI_JYU", 
+      "Taiwan-NCUCC-LCG2", 
+      "CESIC-UNICAL", 
+      "EGI-MARKETPLACE", 
+      "VN-HPCC-HUT-HN", 
+      "SN-UCAD", 
+      "BNL-SDCC", 
+      "UMissHEP", 
+      "JetStreamTACC", 
+      "RU-Novosibirsk-BINP", 
+      "PEARL-AMU", 
+      "EGI-DATAHUB", 
+      "NGI_UA_SERVICES", 
+      "NGS-HUDDERSFIELD", 
+      "EENet", 
+      "GRATIA-OSG", 
+      "GR-10-UOI", 
+      "UMN-CMS", 
+      "UNIANDES", 
+      "VN-IFI", 
+      "GRIDOPS-GSTAT", 
+      "FI_UEF", 
+      "OSG_IN_IUCAA_SARATHI", 
+      "PPS-CYFRONET", 
+      "RECAS-BARI", 
+      "TH-SUT-NPP", 
+      "LSU_SuperMIC", 
+      "INFN-BOLOGNA-T3", 
+      "RECAS-NAPOLI", 
+      "DI-UMinho", 
+      "CYFRONET-IA64", 
+      "CancerComputer_Hotel", 
+      "HG-08-Okeanos", 
+      "UA-IMBG", 
+      "FI_AA", 
+      "GRIDOPS-SECTOOLS", 
+      "Princeton_ICSE_T3_CMS", 
+      "MA-04-CNRST-ATLAS", 
+      "HPTC-LCG2ia64", 
+      "GridUNESP", 
+      "Brandeis-Atlas-T3", 
+      "CETA-GRID", 
+      "UC_ITB", 
+      "GRIDOPS-MARKETPLACE", 
+      "CIRMMP", 
+      "AEGIS03-ELEF-LEDA", 
+      "UFlorida-PG", 
+      "CERN-CIC", 
+      "INFN-BOLOGNA", 
+      "CIT_CMS_T2_HPC", 
+      "Vanderbilt", 
+      "INFN-TRIESTE", 
+      "UC_ITB_SE_DCACHE", 
+      "GRIDOPS-DIRAC4EGI", 
+      "GCVO_PUJ", 
+      "IR-IPM-HEP", 
       "ZA-UCT-ICTS", 
-      "ZA-UFS", 
+      "CYFRONET-CLOUD", 
+      "LSG-AMC", 
+      "NGS-BRISTOL", 
+      "GRIDOPS-CTOOLS", 
+      "StashCaches", 
+      "EODC", 
+      "INFN-ROMA3", 
+      "INFN-ROMA2", 
+      "NGS-GLASGOW", 
+      "LSG-AMS", 
+      "CENF_Neutrino_Computing_Cluster", 
+      "DataInfrastructure", 
+      "TH-NECTEC-LSR", 
+      "ZA-MERAKA", 
+      "UA_ICYB_ARC", 
+      "UPittTier3", 
+      "IL-BGU", 
+      "UA-NSCMBR", 
+      "NGS-WTSI", 
+      "INFN-CATANIA-STACK", 
+      "MD-01-TUM", 
+      "LIP-Lisbon", 
+      "RO-15-NIPNE", 
+      "BEgrid-BELNET", 
+      "UNICAN", 
+      "NGI_BY_SERVICES", 
+      "VGTU-gLite", 
+      "ARAGRID-CIENCIAS", 
+      "HRL_KZ", 
+      "SMU_HPC", 
+      "CARLETONU-LCG2", 
+      "AM-03-YSU", 
+      "CHPC Group", 
+      "OBSPM", 
+      "SDU-LCG2", 
+      "AEGIS02-RCUB", 
+      "OSG_US_FSU_HNPGRID", 
+      "IIT", 
+      "NGS-SHEFFIELD", 
+      "Wuhan-t", 
+      "AM-01-IIAP", 
+      "UKI-ScotGrid-Gla-PPS", 
+      "CLOSED-BY-JIPNR-SOSNY-2", 
+      "ICEAGE-CATANIA", 
+      "IL-IUCC", 
+      "BG04-ACAD", 
+      "BNL_ATLAS_1", 
+      "TW-DiCOS", 
+      "prague_cesnet_pps", 
+      "SMU_HPC_ITB", 
+      "NU_CMS_TIER3_SE", 
+      "GRIDOPS-UMDREPO", 
+      "INFN-NAPOLI-ARGO", 
+      "INFN-NAPOLI-PAMELA", 
+      "CIT_LIGO", 
+      "Geant perfSONAR", 
+      "umd-cms", 
+      "mainzgrid", 
+      "HG-05-FORTH", 
+      "BEgrid-KULeuven", 
+      "ru-Moscow-MEPHI-LCG2", 
+      "LCG_KNU", 
+      "fedcloud.srce.hr", 
+      "INFN-NAPOLI-CMS", 
+      "AGH-ICSR", 
+      "TR-08-CUKUROVA", 
+      "FRESNO-ATLAS-T3", 
+      "LNCC-LCG", 
+      "GRISU-CYBERSAR-CAGLIARI", 
+      "GRISU-COMETA-ING-MESSINA", 
+      "GRIDOPS-LTOS", 
+      "egee.irb.hr", 
+      "TTU-ANTAEUS", 
+      "OSG_US_DANFORTH_HOSTED_CE", 
+      "IISAS-Nebula", 
+      "SU-ITS", 
+      "PIC-PPS", 
+      "NGS-SOUTHAMPTON", 
+      "RU-Phys-SPbSU", 
+      "UNICAN-IMATH", 
+      "SLING-Test", 
+      "FI-LCG2", 
+      "MY-USM-GCL", 
+      "BG02-IM", 
+      "ROC_Canada_SERVICES", 
+      "EGI-ONLINE-CA", 
+      "BNL_Test_2", 
+      "CRS4", 
+      "CA-TRIUMF-DISKLESS", 
+      "HCC Submitters", 
+      "ARAGRID-HUESCA", 
+      "WT2", 
+      "ru-Moscow-SINP-LCG2", 
+      "JINR_CLOUD", 
+      "CESNET-MetaCloud", 
+      "HG-01-GRNET", 
+      "IL_IUCC_IG", 
+      "ZIB", 
+      "TW-EMI-PPS", 
+      "GRIDOPS-MON", 
+      "HTC-BIGGRID", 
+      "HG-06-EKT", 
+      "UOGRID", 
+      "CachingInfrastructure", 
+      "NUMEP-OSG", 
+      "IN-DAE-VECC-01", 
+      "OSG_US_GSU_ACORE", 
+      "PPS-LIP", 
+      "brown-cms", 
+      "LSG-KG", 
+      "ARNES", 
+      "AM-02-SEUA", 
+      "GPGRID", 
+      "BEgrid-UGent", 
+      "INAF-TRIESTE", 
+      "Rhino", 
+      "GR-04-FORTH-ICS", 
+      "AEGIS10-VINCA-CMS", 
+      "CERN-PROD-WIGNER", 
+      "AEGIS01-IPB-SCL", 
+      "KR-KNU-T3", 
+      "CIGI-ITB", 
+      "Discovery", 
+      "CLOSED-BY-JIPNR-SOSNY", 
       "ZA-UJ", 
+      "GILDA-NeSC", 
+      "EOSChub-Helpdesk", 
+      "IFISC-GRID", 
+      "PPS-IFIC", 
+      "GC1", 
+      "ALBERTA-LCG2", 
+      "NGS-RALVIS", 
+      "UKI-LT2-IC-HEP-PPS", 
+      "GRIDOPS-OPSPORTAL", 
+      "MSFG-MULTI", 
+      "MK-04-FINKICLOUD", 
+      "MWT2CachingInfrastructure", 
+      "GRIDOPS-XGUS", 
+      "TR-FC1-ULAKBIM", 
+      "NYSGRID-CCR-U2", 
+      "CSC", 
+      "INFN-MILANO", 
+      "T3_CH_CERN_HelixNebula", 
+      "CERN-PROD-AI", 
+      "HG-02-IASA", 
+      "NCSA-DES", 
+      "TAMU_BRAZOS", 
+      "UPV-GRyCAP", 
+      "CancerComputer_MinneUEL", 
+      "Aragon", 
+      "BEgrid-UniversiteitAntwerpen", 
+      "UNI-KARLSRUHE", 
+      "BMRZ-FRANKFURT", 
+      "uprm-cms", 
+      "UNINA-EGEE", 
+      "NGI_PL_SERVICES", 
+      "USTC-T3", 
+      "KEELE-NGS", 
+      "EGI-CLOUD-OPS", 
+      "KR-KISTI-GCRT-01", 
+      "RO-09-UTCN", 
+      "KANSAS_HOSTED_BOSCO_CE", 
+      "EGI-NOTEBOOKS", 
+      "UCR-HEP", 
+      "HK-HKU-CC-01", 
+      "TU-Kosice", 
+      "GRIDOPS-GRIDVIEW", 
+      "AEGIS05-ETFBG", 
+      "NGS-BELFAST", 
+      "Jetstream", 
+      "rutgers-cms", 
+      "ISI", 
+      "INFN-ROMA1-VIRGO", 
+      "LUH", 
+      "NO-NORGRID-T2", 
+      "UNI-PERUGIA", 
+      "AREA-BO", 
+      "NGI_DE_SERVICES", 
+      "CMS-BURT-ITB", 
+      "Taiwan-IPAS-LCG2", 
+      "T2-TH-ALICE-NSTDA", 
+      "LSG-WUR", 
+      "SWITCH", 
+      "UCSDCachingInfrastructure", 
+      "hp-bristol", 
+      "UKI-SOUTHGRID-BHAM-PPS", 
+      "TW-NIU-EECS-01", 
+      "UA-MHI", 
+      "TIFR-CMS", 
+      "GRIDOPS-PERUN", 
+      "BNL-ATLAS-OPP", 
+      "NGI_IL", 
+      "prague_cesnet_lcg2", 
+      "T3_US_NEU", 
+      "MY-NM-NEUTRON", 
+      "ULA-MERIDA", 
+      "OSG_SAM_TESTS", 
+      "Advanced Technology Lab", 
+      "KR-KISTI-CLOUD", 
+      "GRISU-SPACI-LECCE", 
+      "GRIDOPS-CheckIn", 
+      "ESA-ESAC", 
+      "AMD64.PSNC.PL", 
+      "Beocat", 
+      "LSG-UU", 
+      "BG-INRNE", 
+      "EdgesAtHome", 
+      "TTU-TESTWULF", 
+      "prague_cesnet_lcg2_cert", 
+      "CICESE", 
+      "MY-MIMOS-GC-01", 
+      "GRIDOPS-DATAHUB", 
+      "OU_OSCER_CONDOR", 
+      "GR-09-UoA", 
+      "NGS-READING", 
+      "SU-GRID", 
       "ZA-WITS-CORE", 
-      "ZIB"
+      "WCSS-PPS", 
+      "INFN-PADOVA-CREAMTEST", 
+      "DataInfrastructureFlatiron", 
+      "GILDA-VEGA", 
+      "VU-MIF-TEST", 
+      "FSU-HEP", 
+      "LSG-UM", 
+      "BIFI", 
+      "EDOC", 
+      "FIUPG", 
+      "CLOSED-BY-NCPHEP", 
+      "UIOWA-LCG2", 
+      "AEGIS09-FTN-KM", 
+      "CMS Glidein Systems", 
+      "GRISU-SPACI-NAPOLI", 
+      "NWICG_NDCMS", 
+      "CIGI-OSG", 
+      "KR-KISTI-HEP", 
+      "CancerComputer_Kitchener", 
+      "CAMK", 
+      "NIU_ATLAS_CE", 
+      "MPI-K", 
+      "MIT_SUBMIT", 
+      "osu-cms", 
+      "UCM", 
+      "PPS-TRIUMF", 
+      "OSG_DELL_M420_ASU", 
+      "VU-MIF-LCG2", 
+      "CERN-PROD-HLT", 
+      "egee.srce.hr", 
+      "IBCP-GBIO", 
+      "CYFRONET-PROMETHEUS", 
+      "IN2P3-IPNL", 
+      "Wilson Facility", 
+      "CLOSED-BY-UIIP", 
+      "GRIDOPS-GGUS", 
+      "AM-05-YSU", 
+      "CN-BEIJING-PKU", 
+      "OSG_US_USD_LEGACY", 
+      "TR-05-BOUN", 
+      "NGI_IT", 
+      "RO-12-ICI", 
+      "MD-04-RENAM", 
+      "IPSL-IPGP-LCG2", 
+      "NACAD_UFRJ", 
+      "UPorto", 
+      "scotgrid-gla", 
+      "NGS-LEEDS", 
+      "INFN-PADOVA-CMS", 
+      "ZA-UFS", 
+      "SCAI", 
+      "Starlight perfSONARs", 
+      "mainz", 
+      "TW-NTCU-HPC-01", 
+      "NGI_MD_SERVICES", 
+      "PPS-RO-01-UPB", 
+      "UConn-OSG", 
+      "PH-ATENEO", 
+      "ORNL-T2", 
+      "HG-03-AUTH", 
+      "BEIJING-CNIC-LCG2-IA64", 
+      "VDT-ITB", 
+      "IC-UFAL", 
+      "UA-IRE", 
+      "BEIJING-LCG2-t", 
+      "FLTECH", 
+      "UMinho-CP", 
+      "PDC", 
+      "INFN-LNS", 
+      "ru-Chernogolovka-IPCP-LCG2", 
+      "Stampede2", 
+      "BCBR", 
+      "KTU-BG-GLITE", 
+      "LEI-GLITE", 
+      "SZTAKI", 
+      "CIT_CMS_Cloud", 
+      "OUHEP_OSG", 
+      "UJ-OSG", 
+      "TW-NTU-CC", 
+      "PRISMA-INFN-BARI", 
+      "TR-02-ATATURK", 
+      "FNAL_FERMIGRID", 
+      "SPACI-NAPOLI-IA64", 
+      "Submitters", 
+      "GRISU-COMETA-UNIPA", 
+      "NCBJ-CIS", 
+      "100IT", 
+      "INFN-PERUGIA", 
+      "IISAS-GILDA", 
+      "GRIDOPS-WS-PGRADE", 
+      "MK-03-FINKI", 
+      "BG07-EDU", 
+      "CYFRONET-S1", 
+      "HG-04-CTI-CEID", 
+      "NGS-HPCX", 
+      "NWICG_Earth", 
+      "BMEGrid", 
+      "Jupiter", 
+      "CachingInfrastrucutre", 
+      "UKI-LT2-UCL-CENTRAL", 
+      "KAGROSS-GOC", 
+      "INFN-PADOVA-STACK", 
+      "PNNL_HEP", 
+      "Thomas Jefferson National Accelerator Facility GLUEX Glidein", 
+      "INDIGO-CATANIA-STACK", 
+      "BNL-ATLAS-ITB", 
+      "ESRF", 
+      "HPBR-LCG2", 
+      "TAMU_Calclab", 
+      "e-ca-iaa", 
+      "UMB-BB", 
+      "HPCOSG", 
+      "IEETA", 
+      "AMNH", 
+      "ngi-ceta-ciemat", 
+      "CESNET-MCC", 
+      "TORONTO-LCG2", 
+      "UNI-BONN", 
+      "GRIDOPS-TMP", 
+      "TR-09-ITU", 
+      "BG06-GPHI", 
+      "BNL-Belle-II", 
+      "OSG_US_WSU_GRID", 
+      "ATLAND", 
+      "cinvestav", 
+      "IISAS-GPUCloud", 
+      "Nevis", 
+      "GRIDOPS-CATCHALL", 
+      "INFN-BOLOGNA-CMS", 
+      "VJNEAL-GOC", 
+      "KMU-PRI-LCG2", 
+      "GRIDOPS-ACCPORTAL", 
+      "SU-SUGAR", 
+      "TAU-LCG2", 
+      "SFU-LCG2", 
+      "NGS-WESTMINSTER", 
+      "IL-BGU-PPS", 
+      "OSG_UChicago", 
+      "NWICG_Eddie", 
+      "LIP-Coimbra", 
+      "BY-NCPHEP", 
+      "LBL_Testbed", 
+      "NYSGRID_CORNELL_NYS1", 
+      "Georgia Tech LIGO", 
+      "UMD_SIAB", 
+      "OUHEP_ITB", 
+      "LCG-USTC", 
+      "SZDG", 
+      "GILDA-SIRIUS", 
+      "PNNL_BelleII", 
+      "GRIDOPS-APPDB", 
+      "CLOUDIFIN", 
+      "UColorado_HEP", 
+      "CESGA-PPS", 
+      "umsnh-ce", 
+      "TW-NCHU-AAC-01", 
+      "NERSC-PDSFSRM", 
+      "CAFPE-GRANADA", 
+      "NMSU_DISCOVERY", 
+      "ScotGRID-Edinburgh", 
+      "LONI_OSG2", 
+      "BSC-Cloud", 
+      "NSC-IJS", 
+      "TH-HAII", 
+      "Georgia Tech PACE", 
+      "ITB-BARI", 
+      "DZ-01-ARN", 
+      "WISC-ATLAS", 
+      "CIT_ITB_1", 
+      "KTH-CLOUD", 
+      "AstrogridPUC", 
+      "HG-09-Okeanos-Cloud", 
+      "UFL-LCG2", 
+      "SyracuseCachingInfrastructure", 
+      "BRGM-ORLEANS", 
+      "PPS-RAL", 
+      "GRISU-ENEA-GRID", 
+      "SU-Protvino-IHEP", 
+      "FZU", 
+      "NYU-ATLAS", 
+      "FZJ", 
+      "MSU-OSG_SE", 
+      "TIFR-LCG2", 
+      "SWT2_CPB_TEST", 
+      "IAA-CSIC", 
+      "perfSONAR Services", 
+      "T3-TH-CHULA", 
+      "NDGF-BENEDICT-T3", 
+      "IMCSUL", 
+      "FI_LUT", 
+      "MY-UTM-GRID", 
+      "LSG-BCBR", 
+      "GWDG-CLOUD", 
+      "SUSQU-ATLAS-T3", 
+      "UA_ILTPE_ARC", 
+      "INFN-ROMA1-TEO", 
+      "egee.man.poznan.pl", 
+      "NMSU_AGGIE_GRID", 
+      "EG-ZC-T3", 
+      "NGS-IMPERIAL", 
+      "ARAGRID-TERUEL", 
+      "INAF-TS", 
+      "STAR-BNL", 
+      "SARA-LISA", 
+      "TR-01-ULAKBIM", 
+      "UKI-GridPP-Cloud-IC", 
+      "IUCC_Fed_Cloud", 
+      "VN-IOIT-DFCK", 
+      "AEGIS04-KG", 
+      "STAR-OnlinePool", 
+      "GRISU-COMETA-UNICT-DIIT", 
+      "UKI-LT2-IC-LeSC", 
+      "GR-03-HEPNTUA", 
+      "GRISU-COMETA-INFN-LNS", 
+      "Wuhan", 
+      "GROW-PROD", 
+      "MD-02-IMI", 
+      "ASRT", 
+      "EG-PHY-ASU-T3", 
+      "LCG-IL-OU", 
+      "CERN-SC", 
+      "TW-eScience", 
+      "RU-ISA-CGTDC", 
+      "NGS-DURHAM", 
+      "UColorado_SE", 
+      "MY-UPM-FSKTM-01", 
+      "KTU-ELEN-LCG2", 
+      "UCSDT2-ITB", 
+      "CA-MCGILL-CLUMEQ-PPS", 
+      "StratusLab", 
+      "UA_BITP_ARC", 
+      "CREATIS-INSA-LYON", 
+      "MIT_CMS_T3", 
+      "HK-LCG2", 
+      "CSIU Services", 
+      "TASK", 
+      "SDSC-PRP", 
+      "GRIDOPS-DATATRANSFER", 
+      "NBI_T3", 
+      "WARSAW-EGEE", 
+      "PSK_KIELCE", 
+      "OSG_US_NMSU_DISCOVERY", 
+      "INFN-CAGLIARI", 
+      "CIEMAT-TIC", 
+      "FRANCE-GRILLES-TESTBED", 
+      "IGI-BOLOGNA", 
+      "PSNC-GILDA", 
+      "UTD-HEP", 
+      "UPJS-Kosice", 
+      "T3_CH_PSI", 
+      "NU_CMS_TIER3_CE", 
+      "GR-11-UPATRAS", 
+      "PH-ASTI-LIKNAYAN", 
+      "RedIRIS_GILDA", 
+      "VN-IOIT-KEYLAB", 
+      "HPTC-LCG2", 
+      "Oslo", 
+      "FI_Helsinki", 
+      "ISIS-UNIANDES", 
+      "TW-ASGC-CERT", 
+      "CGG-LCG2", 
+      "KISTIPRPCachingInfrastructure", 
+      "ral-cloud", 
+      "LUHEP_OSG", 
+      "T3_IN_TIFRCloud", 
+      "IceCube", 
+      "prague_cesnet_pt", 
+      "CIN2", 
+      "CometVirtualCluster", 
+      "INFN-IGI-CNAF-FedCloud", 
+      "UColorado_HEP_ITB", 
+      "UNI-SIEGEN-HEP", 
+      "UCD", 
+      "UA_ICMP_ARC", 
+      "MY-UPM-BIRUNI-01", 
+      "NGS-LANCASTER", 
+      "INFN-NAPOLI", 
+      "UiB", 
+      "BIFI-IBERGRID", 
+      "T3_KR_KISTI", 
+      "INFN-T1CachingInfrastructure", 
+      "UNM_HPC", 
+      "MY-UM-CRYSTAL", 
+      "GRISU-UNINA", 
+      "BIOCOMP", 
+      "VN-IOIT-DCNET", 
+      "BG05-SUGrid", 
+      "PAKGRID-LCG2", 
+      "Akbul", 
+      "SBGrid-Harvard", 
+      "NGS-CARDIFF", 
+      "INAF-TRIESTE-STACK", 
+      "MY-UPM-UGRID-01", 
+      "INFN-PARMA", 
+      "WIX PerfSONAR", 
+      "AZ-IFAN", 
+      "SOLEIL", 
+      "PennT3", 
+      "NGI_IL_MED1", 
+      "NL-T1", 
+      "UC_ITB_SE_BESTMAN", 
+      "GR-02-UoM", 
+      "NWICG_NotreDame", 
+      "LTU_Tier3", 
+      "NGS-YORK", 
+      "LNCC-COMCIDIS", 
+      "EGI-DATA-TRANSFER", 
+      "FZU-IPV6", 
+      "GRISU-COMETA-INAF-CT", 
+      "cns", 
+      "CSIC-BELLATERRA", 
+      "AEGIS11-MISANU", 
+      "TW-NCUHEP", 
+      "Baylor-Kodiak", 
+      "LSG-NKI", 
+      "UGA_SGrid", 
+      "ClusterUL", 
+      "IL-TAU-CS", 
+      "INFN-FERRARA", 
+      "SBGrid", 
+      "ru-Moscow-SINP-T3", 
+      "VN-IOIT-HN", 
+      "GRIDOPS-GOCDB", 
+      "MK-02-ETF", 
+      "HR-01-RBI (closed)", 
+      "GrimaPUC", 
+      "GRIDOPS-MSG", 
+      "Australia-T2", 
+      "INFN-FIRENZE", 
+      "UNIV-LILLE", 
+      "Clemson-Palmetto", 
+      "ESA-ESRIN", 
+      "LIGO_UWM_NEMO", 
+      "EMBL-EBI", 
+      "BG01-IPP", 
+      "LSG-HUB", 
+      "GE-01-GRENA", 
+      "oxford-ngs2", 
+      "GRIDOPS-EC3", 
+      "FBF-Brescia-IT", 
+      "preprod.nikhef.nl", 
+      "KR-UOS-SSCC", 
+      "FENIX", 
+      "FI_UTU", 
+      "VDU-IF-LCG2", 
+      "SNS-PISA", 
+      "IISAS-Bratislava", 
+      "Turing", 
+      "WCSS", 
+      "LRZ", 
+      "CNR-PROD-PISA", 
+      "GR-06-IASA", 
+      "ECHISM-GOC", 
+      "GRIDOPS-METRICSPORTAL", 
+      "GARR-01-DIR", 
+      "PPS-SiGNET", 
+      "GILDA-PADOVA", 
+      "GRID-UNISON", 
+      "PH-ASTI-BUHAWI", 
+      "UNIGE-DPNC", 
+      "CHTC", 
+      "PSC Bridges", 
+      "UA-PIMEE", 
+      "UNI-DORTMUND", 
+      "TW-NTU-HEP", 
+      "VC3", 
+      "RC-GISELA-CETA", 
+      "INSU01-PARIS", 
+      "CESGA", 
+      "LSG-RUG", 
+      "AEGIS07-IPB-ATLAS", 
+      "RedIRIS", 
+      "Hyak", 
+      "OSG_US_NDSU_CCAST_CLUSTER2", 
+      "IllinoisHEP", 
+      "ucsb-cms", 
+      "UNLCachingInfrastructure", 
+      "SBGrid-Harvard-Infrastructure", 
+      "UKI-SOUTHGRID-RDG", 
+      "INFN-LECCE", 
+      "EG-BUE-CTP", 
+      "University of California Irvine", 
+      "ral-ngs2", 
+      "Umontreal-LCG2", 
+      "PARIS-UREC-IPV6", 
+      "SISSA-Trieste", 
+      "LSG-LUMC", 
+      "FI_TUT", 
+      "WCSS64", 
+      "AmsterdamPRPCachingInfrastructure", 
+      "CERN_PPS", 
+      "VN-IFI-PPS", 
+      "INFN-COSENZA", 
+      "MD-03-USM", 
+      "SDSCCompInfrastructure", 
+      "UA-IFBG", 
+      "VGTU-CREAM", 
+      "VICTORIA-LCG2", 
+      "UMD-IGS", 
+      "INFN-CATANIA-NEBULA", 
+      "CYF-CERTIF-TB", 
+      "MK-01-UKIM_II", 
+      "CA-ALBERTA-WESTGRID-T2", 
+      "NULL", 
+      "GRIDOPS-CSGF", 
+      "UZH", 
+      "UNIBE-ID", 
+      "SBU_Tier3", 
+      "TRANSP_simulations_for_EAST", 
+      "UCSD glidein", 
+      "UPR_HPCF", 
+      "T3_HU_Debrecen", 
+      "UCL-CCC", 
+      "INFN-MIB", 
+      "CNB-LCG2", 
+      "Vanderbilt-ITB", 
+      "INFN-GENOVA", 
+      "ANLASC", 
+      "GRIDOPS-eGRANT", 
+      "CFP-IST", 
+      "GRIDOPS-APEL", 
+      "JINR-Tier2", 
+      "BELLARMINE_TIER2", 
+      "GRID-UNAM", 
+      "GR-05-DEMOKRITOS", 
+      "MREN-01-CIS", 
+      "FI_Oulu", 
+      "MANLAN perfSONAR", 
+      "CardiffPRPCachingInfrastructure", 
+      "BG03-NGCC", 
+      "AM-04-YERPHI", 
+      "JP-KEK-CRC-02", 
+      "NGS-HECTOR", 
+      "BG08-MADARA", 
+      "UFRJ-IF", 
+      "MSU-OSG", 
+      "GRIDIFIN", 
+      "TUDresden-ZIH", 
+      "RO-01-ICI", 
+      "EGI-FGSG", 
+      "GR-01-AUTH", 
+      "LSG-VU", 
+      "TR-04-ERCIYES", 
+      "CLOSED-BY-BNTU", 
+      "OSC_OSG", 
+      "Kennesaw_Dell_Nodes"
     ], 
     "tier_level": null, 
     "vos": []
@@ -2104,9 +3592,29 @@
     "name": "PK-CMS-T2", 
     "pledges": {
       "2019": {
-        "cms": {
-          "CPU": 6365, 
-          "Disk": 500
+        "Q1": {
+          "cms": {
+            "CPU": 6365, 
+            "Disk": 500
+          }
+        }, 
+        "Q2": {
+          "cms": {
+            "CPU": 6365, 
+            "Disk": 500
+          }
+        }, 
+        "Q3": {
+          "cms": {
+            "CPU": 6365, 
+            "Disk": 500
+          }
+        }, 
+        "Q4": {
+          "cms": {
+            "CPU": 6365, 
+            "Disk": 500
+          }
         }
       }
     }, 
@@ -2126,27 +3634,80 @@
     "name": "PL-TIER2-WLCG", 
     "pledges": {
       "2019": {
-        "alice": {
-          "CPU": 12000, 
-          "Disk": 900
+        "Q1": {
+          "alice": {
+            "CPU": 12000, 
+            "Disk": 900
+          }, 
+          "atlas": {
+            "CPU": 15000, 
+            "Disk": 1200
+          }, 
+          "cms": {
+            "CPU": 7000, 
+            "Disk": 300
+          }, 
+          "lhcb": {
+            "CPU": 4100
+          }
         }, 
-        "atlas": {
-          "CPU": 15000, 
-          "Disk": 1200
+        "Q2": {
+          "alice": {
+            "CPU": 12000, 
+            "Disk": 900
+          }, 
+          "atlas": {
+            "CPU": 15000, 
+            "Disk": 1200
+          }, 
+          "cms": {
+            "CPU": 7000, 
+            "Disk": 300
+          }, 
+          "lhcb": {
+            "CPU": 4100
+          }
         }, 
-        "cms": {
-          "CPU": 7000, 
-          "Disk": 300
+        "Q3": {
+          "alice": {
+            "CPU": 12000, 
+            "Disk": 900
+          }, 
+          "atlas": {
+            "CPU": 15000, 
+            "Disk": 1200
+          }, 
+          "cms": {
+            "CPU": 7000, 
+            "Disk": 300
+          }, 
+          "lhcb": {
+            "CPU": 4100
+          }
         }, 
-        "lhcb": {
-          "CPU": 4100
+        "Q4": {
+          "alice": {
+            "CPU": 12000, 
+            "Disk": 900
+          }, 
+          "atlas": {
+            "CPU": 15000, 
+            "Disk": 1200
+          }, 
+          "cms": {
+            "CPU": 7000, 
+            "Disk": 300
+          }, 
+          "lhcb": {
+            "CPU": 4100
+          }
         }
       }
     }, 
     "rcsites": [
+      "PSNC", 
       "CYFRONET-LCG2", 
-      "ICM", 
-      "PSNC"
+      "ICM"
     ], 
     "tier_level": 2, 
     "vos": [
@@ -2164,13 +3725,45 @@
     "name": "PT-LIP-LCG-Tier2", 
     "pledges": {
       "2019": {
-        "atlas": {
-          "CPU": 4000, 
-          "Disk": 220
+        "Q1": {
+          "atlas": {
+            "CPU": 4000, 
+            "Disk": 220
+          }, 
+          "cms": {
+            "CPU": 4000, 
+            "Disk": 200
+          }
         }, 
-        "cms": {
-          "CPU": 4000, 
-          "Disk": 200
+        "Q2": {
+          "atlas": {
+            "CPU": 4000, 
+            "Disk": 220
+          }, 
+          "cms": {
+            "CPU": 4000, 
+            "Disk": 200
+          }
+        }, 
+        "Q3": {
+          "atlas": {
+            "CPU": 4000, 
+            "Disk": 220
+          }, 
+          "cms": {
+            "CPU": 4000, 
+            "Disk": 200
+          }
+        }, 
+        "Q4": {
+          "atlas": {
+            "CPU": 4000, 
+            "Disk": 220
+          }, 
+          "cms": {
+            "CPU": 4000, 
+            "Disk": 200
+          }
         }
       }
     }, 
@@ -2191,29 +3784,73 @@
     "name": "RO-LCG", 
     "pledges": {
       "2019": {
-        "alice": {
-          "CPU": 27300, 
-          "Disk": 2700
+        "Q1": {
+          "alice": {
+            "CPU": 27300, 
+            "Disk": 2700
+          }, 
+          "atlas": {
+            "CPU": 40000, 
+            "Disk": 1600
+          }, 
+          "lhcb": {
+            "CPU": 6700, 
+            "Disk": 400
+          }
         }, 
-        "atlas": {
-          "CPU": 40000, 
-          "Disk": 1600
+        "Q2": {
+          "alice": {
+            "CPU": 27300, 
+            "Disk": 2700
+          }, 
+          "atlas": {
+            "CPU": 40000, 
+            "Disk": 1600
+          }, 
+          "lhcb": {
+            "CPU": 6700, 
+            "Disk": 400
+          }
         }, 
-        "lhcb": {
-          "CPU": 6700, 
-          "Disk": 400
+        "Q3": {
+          "alice": {
+            "CPU": 27300, 
+            "Disk": 2700
+          }, 
+          "atlas": {
+            "CPU": 40000, 
+            "Disk": 1600
+          }, 
+          "lhcb": {
+            "CPU": 6700, 
+            "Disk": 400
+          }
+        }, 
+        "Q4": {
+          "alice": {
+            "CPU": 27300, 
+            "Disk": 2700
+          }, 
+          "atlas": {
+            "CPU": 40000, 
+            "Disk": 1600
+          }, 
+          "lhcb": {
+            "CPU": 6700, 
+            "Disk": 400
+          }
         }
       }
     }, 
     "rcsites": [
-      "NIHAM", 
-      "RO-02-NIPNE", 
       "RO-03-UPB", 
-      "RO-07-NIPNE", 
+      "RO-16-UAIC", 
       "RO-11-NIPNE", 
       "RO-13-ISS", 
+      "RO-07-NIPNE", 
+      "NIHAM", 
       "RO-14-ITIM", 
-      "RO-16-UAIC"
+      "RO-02-NIPNE"
     ], 
     "tier_level": 2, 
     "vos": [
@@ -2230,10 +3867,33 @@
     "name": "RU-JINR-T1", 
     "pledges": {
       "2019": {
-        "cms": {
-          "CPU": 90000, 
-          "Disk": 8000, 
-          "Tape": 9000
+        "Q1": {
+          "cms": {
+            "CPU": 90000, 
+            "Disk": 8000, 
+            "Tape": 9000
+          }
+        }, 
+        "Q2": {
+          "cms": {
+            "CPU": 90000, 
+            "Disk": 8000, 
+            "Tape": 9000
+          }
+        }, 
+        "Q3": {
+          "cms": {
+            "CPU": 90000, 
+            "Disk": 8000, 
+            "Tape": 9000
+          }
+        }, 
+        "Q4": {
+          "cms": {
+            "CPU": 90000, 
+            "Disk": 8000, 
+            "Tape": 9000
+          }
         }
       }
     }, 
@@ -2253,34 +3913,90 @@
     "name": "RU-RDIG", 
     "pledges": {
       "2019": {
-        "alice": {
-          "CPU": 35253, 
-          "Disk": 2152
+        "Q1": {
+          "alice": {
+            "CPU": 35253, 
+            "Disk": 2152
+          }, 
+          "atlas": {
+            "CPU": 28500, 
+            "Disk": 2185
+          }, 
+          "cms": {
+            "CPU": 29853, 
+            "Disk": 2473
+          }, 
+          "lhcb": {
+            "CPU": 18112, 
+            "Disk": 65
+          }
         }, 
-        "atlas": {
-          "CPU": 28500, 
-          "Disk": 2185
+        "Q2": {
+          "alice": {
+            "CPU": 35253, 
+            "Disk": 2152
+          }, 
+          "atlas": {
+            "CPU": 28500, 
+            "Disk": 2185
+          }, 
+          "cms": {
+            "CPU": 29853, 
+            "Disk": 2473
+          }, 
+          "lhcb": {
+            "CPU": 18112, 
+            "Disk": 65
+          }
         }, 
-        "cms": {
-          "CPU": 29853, 
-          "Disk": 2473
+        "Q3": {
+          "alice": {
+            "CPU": 35253, 
+            "Disk": 2152
+          }, 
+          "atlas": {
+            "CPU": 28500, 
+            "Disk": 2185
+          }, 
+          "cms": {
+            "CPU": 29853, 
+            "Disk": 2473
+          }, 
+          "lhcb": {
+            "CPU": 18112, 
+            "Disk": 65
+          }
         }, 
-        "lhcb": {
-          "CPU": 18112, 
-          "Disk": 65
+        "Q4": {
+          "alice": {
+            "CPU": 35253, 
+            "Disk": 2152
+          }, 
+          "atlas": {
+            "CPU": 28500, 
+            "Disk": 2185
+          }, 
+          "cms": {
+            "CPU": 29853, 
+            "Disk": 2473
+          }, 
+          "lhcb": {
+            "CPU": 18112, 
+            "Disk": 65
+          }
         }
       }
     }, 
     "rcsites": [
-      "ITEP", 
       "JINR-LCG2", 
-      "RRC-KI", 
-      "ru-Moscow-FIAN-LCG2", 
-      "ru-PNPI", 
-      "RU-Protvino-IHEP", 
-      "RU-SARFTI", 
+      "Ru-Troitsk-INR-LCG2", 
       "RU-SPbSU", 
-      "Ru-Troitsk-INR-LCG2"
+      "RU-Protvino-IHEP", 
+      "ITEP", 
+      "RRC-KI", 
+      "ru-PNPI", 
+      "RU-SARFTI", 
+      "ru-Moscow-FIAN-LCG2"
     ], 
     "tier_level": 2, 
     "vos": [
@@ -2298,13 +4014,45 @@
     "name": "SE-SNIC-T2", 
     "pledges": {
       "2019": {
-        "alice": {
-          "CPU": 2820, 
-          "Disk": 400
+        "Q1": {
+          "alice": {
+            "CPU": 2820, 
+            "Disk": 400
+          }, 
+          "atlas": {
+            "CPU": 5050, 
+            "Disk": 520
+          }
         }, 
-        "atlas": {
-          "CPU": 5050, 
-          "Disk": 520
+        "Q2": {
+          "alice": {
+            "CPU": 2820, 
+            "Disk": 400
+          }, 
+          "atlas": {
+            "CPU": 5050, 
+            "Disk": 520
+          }
+        }, 
+        "Q3": {
+          "alice": {
+            "CPU": 2820, 
+            "Disk": 400
+          }, 
+          "atlas": {
+            "CPU": 5050, 
+            "Disk": 520
+          }
+        }, 
+        "Q4": {
+          "alice": {
+            "CPU": 2820, 
+            "Disk": 400
+          }, 
+          "atlas": {
+            "CPU": 5050, 
+            "Disk": 520
+          }
         }
       }
     }, 
@@ -2325,9 +4073,29 @@
     "name": "SI-SiGNET", 
     "pledges": {
       "2019": {
-        "atlas": {
-          "CPU": 50000, 
-          "Disk": 4000
+        "Q1": {
+          "atlas": {
+            "CPU": 50000, 
+            "Disk": 4000
+          }
+        }, 
+        "Q2": {
+          "atlas": {
+            "CPU": 50000, 
+            "Disk": 4000
+          }
+        }, 
+        "Q3": {
+          "atlas": {
+            "CPU": 50000, 
+            "Disk": 4000
+          }
+        }, 
+        "Q4": {
+          "atlas": {
+            "CPU": 50000, 
+            "Disk": 4000
+          }
         }
       }
     }, 
@@ -2347,13 +4115,45 @@
     "name": "SK-Tier2-Federation", 
     "pledges": {
       "2019": {
-        "alice": {
-          "CPU": 7000, 
-          "Disk": 800
+        "Q1": {
+          "alice": {
+            "CPU": 7000, 
+            "Disk": 800
+          }, 
+          "atlas": {
+            "CPU": 7000, 
+            "Disk": 800
+          }
         }, 
-        "atlas": {
-          "CPU": 7000, 
-          "Disk": 800
+        "Q2": {
+          "alice": {
+            "CPU": 7000, 
+            "Disk": 800
+          }, 
+          "atlas": {
+            "CPU": 7000, 
+            "Disk": 800
+          }
+        }, 
+        "Q3": {
+          "alice": {
+            "CPU": 7000, 
+            "Disk": 800
+          }, 
+          "atlas": {
+            "CPU": 7000, 
+            "Disk": 800
+          }
+        }, 
+        "Q4": {
+          "alice": {
+            "CPU": 7000, 
+            "Disk": 800
+          }, 
+          "atlas": {
+            "CPU": 7000, 
+            "Disk": 800
+          }
         }
       }
     }, 
@@ -2375,30 +4175,86 @@
     "name": "T2-LATINAMERICA", 
     "pledges": {
       "2019": {
-        "alice": {
-          "CPU": 27500, 
-          "Disk": 900
+        "Q1": {
+          "alice": {
+            "CPU": 27500, 
+            "Disk": 900
+          }, 
+          "atlas": {
+            "CPU": 4500, 
+            "Disk": 300
+          }, 
+          "cms": {
+            "CPU": 8600, 
+            "Disk": 700
+          }, 
+          "lhcb": {
+            "CPU": 37152, 
+            "Disk": 300
+          }
         }, 
-        "atlas": {
-          "CPU": 4500, 
-          "Disk": 300
+        "Q2": {
+          "alice": {
+            "CPU": 27500, 
+            "Disk": 900
+          }, 
+          "atlas": {
+            "CPU": 4500, 
+            "Disk": 300
+          }, 
+          "cms": {
+            "CPU": 8600, 
+            "Disk": 700
+          }, 
+          "lhcb": {
+            "CPU": 37152, 
+            "Disk": 300
+          }
         }, 
-        "cms": {
-          "CPU": 8600, 
-          "Disk": 700
+        "Q3": {
+          "alice": {
+            "CPU": 27500, 
+            "Disk": 900
+          }, 
+          "atlas": {
+            "CPU": 4500, 
+            "Disk": 300
+          }, 
+          "cms": {
+            "CPU": 8600, 
+            "Disk": 700
+          }, 
+          "lhcb": {
+            "CPU": 37152, 
+            "Disk": 300
+          }
         }, 
-        "lhcb": {
-          "CPU": 37152, 
-          "Disk": 300
+        "Q4": {
+          "alice": {
+            "CPU": 27500, 
+            "Disk": 900
+          }, 
+          "atlas": {
+            "CPU": 4500, 
+            "Disk": 300
+          }, 
+          "cms": {
+            "CPU": 8600, 
+            "Disk": 700
+          }, 
+          "lhcb": {
+            "CPU": 37152, 
+            "Disk": 300
+          }
         }
       }
     }, 
     "rcsites": [
       "CBPF", 
-      "EELA-UTFSM", 
+      "UERJ", 
       "ICN-UNAM", 
-      "SAMPA", 
-      "UERJ"
+      "EELA-UTFSM", 
+      "SAMPA"
     ], 
     "tier_level": 2, 
     "vos": [
@@ -2416,9 +4272,29 @@
     "name": "T2_UNAM", 
     "pledges": {
       "2019": {
-        "alice": {
-          "CPU": 4900, 
-          "Disk": 1000
+        "Q1": {
+          "alice": {
+            "CPU": 4900, 
+            "Disk": 1000
+          }
+        }, 
+        "Q2": {
+          "alice": {
+            "CPU": 4900, 
+            "Disk": 1000
+          }
+        }, 
+        "Q3": {
+          "alice": {
+            "CPU": 4900, 
+            "Disk": 1000
+          }
+        }, 
+        "Q4": {
+          "alice": {
+            "CPU": 4900, 
+            "Disk": 1000
+          }
         }
       }
     }, 
@@ -2438,9 +4314,29 @@
     "name": "T2_US_Caltech", 
     "pledges": {
       "2019": {
-        "cms": {
-          "CPU": 35715, 
-          "Disk": 2785
+        "Q1": {
+          "cms": {
+            "CPU": 35715, 
+            "Disk": 2785
+          }
+        }, 
+        "Q2": {
+          "cms": {
+            "CPU": 35715, 
+            "Disk": 2785
+          }
+        }, 
+        "Q3": {
+          "cms": {
+            "CPU": 35715, 
+            "Disk": 2785
+          }
+        }, 
+        "Q4": {
+          "cms": {
+            "CPU": 35715, 
+            "Disk": 2785
+          }
         }
       }
     }, 
@@ -2460,9 +4356,29 @@
     "name": "T2_US_Florida", 
     "pledges": {
       "2019": {
-        "cms": {
-          "CPU": 35715, 
-          "Disk": 2785
+        "Q1": {
+          "cms": {
+            "CPU": 35715, 
+            "Disk": 2785
+          }
+        }, 
+        "Q2": {
+          "cms": {
+            "CPU": 35715, 
+            "Disk": 2785
+          }
+        }, 
+        "Q3": {
+          "cms": {
+            "CPU": 35715, 
+            "Disk": 2785
+          }
+        }, 
+        "Q4": {
+          "cms": {
+            "CPU": 35715, 
+            "Disk": 2785
+          }
         }
       }
     }, 
@@ -2482,9 +4398,29 @@
     "name": "T2_US_MIT", 
     "pledges": {
       "2019": {
-        "cms": {
-          "CPU": 35715, 
-          "Disk": 2785
+        "Q1": {
+          "cms": {
+            "CPU": 35715, 
+            "Disk": 2785
+          }
+        }, 
+        "Q2": {
+          "cms": {
+            "CPU": 35715, 
+            "Disk": 2785
+          }
+        }, 
+        "Q3": {
+          "cms": {
+            "CPU": 35715, 
+            "Disk": 2785
+          }
+        }, 
+        "Q4": {
+          "cms": {
+            "CPU": 35715, 
+            "Disk": 2785
+          }
         }
       }
     }, 
@@ -2504,17 +4440,37 @@
     "name": "T2_US_Nebraska", 
     "pledges": {
       "2019": {
-        "cms": {
-          "CPU": 35715, 
-          "Disk": 2785
+        "Q1": {
+          "cms": {
+            "CPU": 35715, 
+            "Disk": 2785
+          }
+        }, 
+        "Q2": {
+          "cms": {
+            "CPU": 35715, 
+            "Disk": 2785
+          }
+        }, 
+        "Q3": {
+          "cms": {
+            "CPU": 35715, 
+            "Disk": 2785
+          }
+        }, 
+        "Q4": {
+          "cms": {
+            "CPU": 35715, 
+            "Disk": 2785
+          }
         }
       }
     }, 
     "rcsites": [
+      "Tusker", 
       "Crane", 
       "Nebraska", 
-      "Sandhills", 
-      "Tusker"
+      "Sandhills"
     ], 
     "tier_level": 2, 
     "vos": [
@@ -2529,19 +4485,39 @@
     "name": "T2_US_Purdue", 
     "pledges": {
       "2019": {
-        "cms": {
-          "CPU": 35715, 
-          "Disk": 2785
+        "Q1": {
+          "cms": {
+            "CPU": 35715, 
+            "Disk": 2785
+          }
+        }, 
+        "Q2": {
+          "cms": {
+            "CPU": 35715, 
+            "Disk": 2785
+          }
+        }, 
+        "Q3": {
+          "cms": {
+            "CPU": 35715, 
+            "Disk": 2785
+          }
+        }, 
+        "Q4": {
+          "cms": {
+            "CPU": 35715, 
+            "Disk": 2785
+          }
         }
       }
     }, 
     "rcsites": [
-      "Purdue-Brown", 
-      "Purdue-Conte", 
-      "Purdue-Hadoop", 
-      "Purdue-Halstead", 
       "Purdue-Hammer", 
-      "Purdue-Rice"
+      "Purdue-Hadoop", 
+      "Purdue-Rice", 
+      "Purdue-Conte", 
+      "Purdue-Brown", 
+      "Purdue-Halstead"
     ], 
     "tier_level": 2, 
     "vos": [
@@ -2556,9 +4532,29 @@
     "name": "T2_US_UCSD", 
     "pledges": {
       "2019": {
-        "cms": {
-          "CPU": 35715, 
-          "Disk": 2785
+        "Q1": {
+          "cms": {
+            "CPU": 35715, 
+            "Disk": 2785
+          }
+        }, 
+        "Q2": {
+          "cms": {
+            "CPU": 35715, 
+            "Disk": 2785
+          }
+        }, 
+        "Q3": {
+          "cms": {
+            "CPU": 35715, 
+            "Disk": 2785
+          }
+        }, 
+        "Q4": {
+          "cms": {
+            "CPU": 35715, 
+            "Disk": 2785
+          }
         }
       }
     }, 
@@ -2578,9 +4574,29 @@
     "name": "T2_US_Wisconsin", 
     "pledges": {
       "2019": {
-        "cms": {
-          "CPU": 35715, 
-          "Disk": 2785
+        "Q1": {
+          "cms": {
+            "CPU": 35715, 
+            "Disk": 2785
+          }
+        }, 
+        "Q2": {
+          "cms": {
+            "CPU": 35715, 
+            "Disk": 2785
+          }
+        }, 
+        "Q3": {
+          "cms": {
+            "CPU": 35715, 
+            "Disk": 2785
+          }
+        }, 
+        "Q4": {
+          "cms": {
+            "CPU": 35715, 
+            "Disk": 2785
+          }
         }
       }
     }, 
@@ -2600,8 +4616,8 @@
     "name": "TH-Tier2", 
     "pledges": {}, 
     "rcsites": [
-      "T2-TH-CUNSTDA", 
-      "T2-TH-SUT"
+      "T2-TH-SUT", 
+      "T2-TH-CUNSTDA"
     ], 
     "tier_level": 2, 
     "vos": []
@@ -2614,13 +4630,45 @@
     "name": "TR-Tier2-federation", 
     "pledges": {
       "2019": {
-        "atlas": {
-          "CPU": 7508, 
-          "Disk": 750
+        "Q1": {
+          "atlas": {
+            "CPU": 7508, 
+            "Disk": 750
+          }, 
+          "cms": {
+            "CPU": 5160, 
+            "Disk": 550
+          }
         }, 
-        "cms": {
-          "CPU": 5160, 
-          "Disk": 550
+        "Q2": {
+          "atlas": {
+            "CPU": 7508, 
+            "Disk": 750
+          }, 
+          "cms": {
+            "CPU": 5160, 
+            "Disk": 550
+          }
+        }, 
+        "Q3": {
+          "atlas": {
+            "CPU": 7508, 
+            "Disk": 750
+          }, 
+          "cms": {
+            "CPU": 5160, 
+            "Disk": 550
+          }
+        }, 
+        "Q4": {
+          "atlas": {
+            "CPU": 7508, 
+            "Disk": 750
+          }, 
+          "cms": {
+            "CPU": 5160, 
+            "Disk": 550
+          }
         }
       }
     }, 
@@ -2636,15 +4684,35 @@
   }, 
   "TW-ASGC": {
     "accounting_name": "Taiwan-LCG2", 
-    "country": "Taiwan, Province of China", 
+    "country": "Taiwan", 
     "country_code": "TW", 
     "id": 7, 
     "name": "TW-ASGC", 
     "pledges": {
       "2019": {
-        "atlas": {
-          "CPU": 43000, 
-          "Disk": 6100
+        "Q1": {
+          "atlas": {
+            "CPU": 43000, 
+            "Disk": 6100
+          }
+        }, 
+        "Q2": {
+          "atlas": {
+            "CPU": 43000, 
+            "Disk": 6100
+          }
+        }, 
+        "Q3": {
+          "atlas": {
+            "CPU": 43000, 
+            "Disk": 6100
+          }
+        }, 
+        "Q4": {
+          "atlas": {
+            "CPU": 43000, 
+            "Disk": 6100
+          }
         }
       }
     }, 
@@ -2658,15 +4726,35 @@
   }, 
   "TW-CMS-T2": {
     "accounting_name": "Taiwan CMS Federation", 
-    "country": "Taiwan, Province of China", 
+    "country": "Taiwan", 
     "country_code": "TW", 
     "id": 78, 
     "name": "TW-CMS-T2", 
     "pledges": {
       "2019": {
-        "cms": {
-          "CPU": 5000, 
-          "Disk": 500
+        "Q1": {
+          "cms": {
+            "CPU": 5000, 
+            "Disk": 500
+          }
+        }, 
+        "Q2": {
+          "cms": {
+            "CPU": 5000, 
+            "Disk": 500
+          }
+        }, 
+        "Q3": {
+          "cms": {
+            "CPU": 5000, 
+            "Disk": 500
+          }
+        }, 
+        "Q4": {
+          "cms": {
+            "CPU": 5000, 
+            "Disk": 500
+          }
         }
       }
     }, 
@@ -2680,15 +4768,35 @@
   }, 
   "TW-FTT-T2": {
     "accounting_name": "Taiwan Analysis Facility Federation", 
-    "country": "Taiwan, Province of China", 
+    "country": "Taiwan", 
     "country_code": "TW", 
     "id": 24, 
     "name": "TW-FTT-T2", 
     "pledges": {
       "2019": {
-        "atlas": {
-          "CPU": 8372, 
-          "Disk": 726
+        "Q1": {
+          "atlas": {
+            "CPU": 8372, 
+            "Disk": 726
+          }
+        }, 
+        "Q2": {
+          "atlas": {
+            "CPU": 8372, 
+            "Disk": 726
+          }
+        }, 
+        "Q3": {
+          "atlas": {
+            "CPU": 8372, 
+            "Disk": 726
+          }
+        }, 
+        "Q4": {
+          "atlas": {
+            "CPU": 8372, 
+            "Disk": 726
+          }
         }
       }
     }, 
@@ -2708,21 +4816,53 @@
     "name": "UA-Tier2-Federation", 
     "pledges": {
       "2019": {
-        "alice": {
-          "CPU": 3000, 
-          "Disk": 200
+        "Q1": {
+          "alice": {
+            "CPU": 3000, 
+            "Disk": 200
+          }, 
+          "cms": {
+            "CPU": 9300, 
+            "Disk": 950
+          }
         }, 
-        "cms": {
-          "CPU": 9300, 
-          "Disk": 950
+        "Q2": {
+          "alice": {
+            "CPU": 3000, 
+            "Disk": 200
+          }, 
+          "cms": {
+            "CPU": 9300, 
+            "Disk": 950
+          }
+        }, 
+        "Q3": {
+          "alice": {
+            "CPU": 3000, 
+            "Disk": 200
+          }, 
+          "cms": {
+            "CPU": 9300, 
+            "Disk": 950
+          }
+        }, 
+        "Q4": {
+          "alice": {
+            "CPU": 3000, 
+            "Disk": 200
+          }, 
+          "cms": {
+            "CPU": 9300, 
+            "Disk": 950
+          }
         }
       }
     }, 
     "rcsites": [
-      "Kharkov-KIPT-LCG2", 
       "UA-BITP", 
+      "UA-KNU", 
       "UA-ISMA", 
-      "UA-KNU"
+      "Kharkov-KIPT-LCG2"
     ], 
     "tier_level": 2, 
     "vos": [
@@ -2738,26 +4878,70 @@
     "name": "UK-London-Tier2", 
     "pledges": {
       "2019": {
-        "atlas": {
-          "CPU": 32641, 
-          "Disk": 3423
+        "Q1": {
+          "atlas": {
+            "CPU": 32641, 
+            "Disk": 3423
+          }, 
+          "cms": {
+            "CPU": 32674, 
+            "Disk": 2925
+          }, 
+          "lhcb": {
+            "CPU": 6537, 
+            "Disk": 300
+          }
         }, 
-        "cms": {
-          "CPU": 32674, 
-          "Disk": 2925
+        "Q2": {
+          "atlas": {
+            "CPU": 32641, 
+            "Disk": 3423
+          }, 
+          "cms": {
+            "CPU": 32674, 
+            "Disk": 2925
+          }, 
+          "lhcb": {
+            "CPU": 6537, 
+            "Disk": 300
+          }
         }, 
-        "lhcb": {
-          "CPU": 6537, 
-          "Disk": 300
+        "Q3": {
+          "atlas": {
+            "CPU": 32641, 
+            "Disk": 3423
+          }, 
+          "cms": {
+            "CPU": 32674, 
+            "Disk": 2925
+          }, 
+          "lhcb": {
+            "CPU": 6537, 
+            "Disk": 300
+          }
+        }, 
+        "Q4": {
+          "atlas": {
+            "CPU": 32641, 
+            "Disk": 3423
+          }, 
+          "cms": {
+            "CPU": 32674, 
+            "Disk": 2925
+          }, 
+          "lhcb": {
+            "CPU": 6537, 
+            "Disk": 300
+          }
         }
       }
     }, 
     "rcsites": [
+      "UKI-LT2-UCL-HEP", 
       "UKI-LT2-Brunel", 
       "UKI-LT2-IC-HEP", 
       "UKI-LT2-QMUL", 
-      "UKI-LT2-RHUL", 
-      "UKI-LT2-UCL-HEP"
+      "UKI-LT2-RHUL"
     ], 
     "tier_level": 2, 
     "vos": [
@@ -2774,21 +4958,53 @@
     "name": "UK-NorthGrid", 
     "pledges": {
       "2019": {
-        "atlas": {
-          "CPU": 39173, 
-          "Disk": 4196
+        "Q1": {
+          "atlas": {
+            "CPU": 39173, 
+            "Disk": 4196
+          }, 
+          "lhcb": {
+            "CPU": 6801, 
+            "Disk": 600
+          }
         }, 
-        "lhcb": {
-          "CPU": 6801, 
-          "Disk": 600
+        "Q2": {
+          "atlas": {
+            "CPU": 39173, 
+            "Disk": 4196
+          }, 
+          "lhcb": {
+            "CPU": 6801, 
+            "Disk": 600
+          }
+        }, 
+        "Q3": {
+          "atlas": {
+            "CPU": 39173, 
+            "Disk": 4196
+          }, 
+          "lhcb": {
+            "CPU": 6801, 
+            "Disk": 600
+          }
+        }, 
+        "Q4": {
+          "atlas": {
+            "CPU": 39173, 
+            "Disk": 4196
+          }, 
+          "lhcb": {
+            "CPU": 6801, 
+            "Disk": 600
+          }
         }
       }
     }, 
     "rcsites": [
-      "UKI-NORTHGRID-LANCS-HEP", 
       "UKI-NORTHGRID-LIV-HEP", 
-      "UKI-NORTHGRID-MAN-HEP", 
-      "UKI-NORTHGRID-SHEF-HEP"
+      "UKI-NORTHGRID-SHEF-HEP", 
+      "UKI-NORTHGRID-LANCS-HEP", 
+      "UKI-NORTHGRID-MAN-HEP"
     ], 
     "tier_level": 2, 
     "vos": [
@@ -2804,20 +5020,52 @@
     "name": "UK-ScotGrid", 
     "pledges": {
       "2019": {
-        "atlas": {
-          "CPU": 37339, 
-          "Disk": 2635
+        "Q1": {
+          "atlas": {
+            "CPU": 37339, 
+            "Disk": 2635
+          }, 
+          "lhcb": {
+            "CPU": 12890, 
+            "Disk": 300
+          }
         }, 
-        "lhcb": {
-          "CPU": 12890, 
-          "Disk": 300
+        "Q2": {
+          "atlas": {
+            "CPU": 37339, 
+            "Disk": 2635
+          }, 
+          "lhcb": {
+            "CPU": 12890, 
+            "Disk": 300
+          }
+        }, 
+        "Q3": {
+          "atlas": {
+            "CPU": 37339, 
+            "Disk": 2635
+          }, 
+          "lhcb": {
+            "CPU": 12890, 
+            "Disk": 300
+          }
+        }, 
+        "Q4": {
+          "atlas": {
+            "CPU": 37339, 
+            "Disk": 2635
+          }, 
+          "lhcb": {
+            "CPU": 12890, 
+            "Disk": 300
+          }
         }
       }
     }, 
     "rcsites": [
+      "UKI-SCOTGRID-GLASGOW", 
       "UKI-SCOTGRID-DURHAM", 
-      "UKI-SCOTGRID-ECDF", 
-      "UKI-SCOTGRID-GLASGOW"
+      "UKI-SCOTGRID-ECDF"
     ], 
     "tier_level": 2, 
     "vos": [
@@ -2833,31 +5081,87 @@
     "name": "UK-SouthGrid", 
     "pledges": {
       "2019": {
-        "alice": {
-          "CPU": 7520, 
-          "Disk": 678
+        "Q1": {
+          "alice": {
+            "CPU": 7520, 
+            "Disk": 678
+          }, 
+          "atlas": {
+            "CPU": 20047, 
+            "Disk": 547
+          }, 
+          "cms": {
+            "CPU": 17326, 
+            "Disk": 975
+          }, 
+          "lhcb": {
+            "CPU": 5692, 
+            "Disk": 300
+          }
         }, 
-        "atlas": {
-          "CPU": 20047, 
-          "Disk": 547
+        "Q2": {
+          "alice": {
+            "CPU": 7520, 
+            "Disk": 678
+          }, 
+          "atlas": {
+            "CPU": 20047, 
+            "Disk": 547
+          }, 
+          "cms": {
+            "CPU": 17326, 
+            "Disk": 975
+          }, 
+          "lhcb": {
+            "CPU": 5692, 
+            "Disk": 300
+          }
         }, 
-        "cms": {
-          "CPU": 17326, 
-          "Disk": 975
+        "Q3": {
+          "alice": {
+            "CPU": 7520, 
+            "Disk": 678
+          }, 
+          "atlas": {
+            "CPU": 20047, 
+            "Disk": 547
+          }, 
+          "cms": {
+            "CPU": 17326, 
+            "Disk": 975
+          }, 
+          "lhcb": {
+            "CPU": 5692, 
+            "Disk": 300
+          }
         }, 
-        "lhcb": {
-          "CPU": 5692, 
-          "Disk": 300
+        "Q4": {
+          "alice": {
+            "CPU": 7520, 
+            "Disk": 678
+          }, 
+          "atlas": {
+            "CPU": 20047, 
+            "Disk": 547
+          }, 
+          "cms": {
+            "CPU": 17326, 
+            "Disk": 975
+          }, 
+          "lhcb": {
+            "CPU": 5692, 
+            "Disk": 300
+          }
         }
       }
     }, 
     "rcsites": [
       "EFDA-JET", 
-      "UKI-SOUTHGRID-BHAM-HEP", 
-      "UKI-SOUTHGRID-BRIS-HEP", 
-      "UKI-SOUTHGRID-CAM-HEP", 
       "UKI-SOUTHGRID-OX-HEP", 
       "UKI-SOUTHGRID-RALPP", 
+      "UKI-SOUTHGRID-BRIS-HEP", 
+      "UKI-SOUTHGRID-BHAM-HEP", 
+      "UKI-SOUTHGRID-CAM-HEP", 
       "UKI-SOUTHGRID-SUSX"
     ], 
     "tier_level": 2, 
@@ -2876,25 +5180,93 @@
     "name": "UK-T1-RAL", 
     "pledges": {
       "2019": {
-        "alice": {
-          "CPU": 7300, 
-          "Disk": 758, 
-          "Tape": 754
+        "Q1": {
+          "alice": {
+            "CPU": 7300, 
+            "Disk": 758, 
+            "Tape": 754
+          }, 
+          "atlas": {
+            "CPU": 132125, 
+            "Disk": 11000, 
+            "Tape": 27625
+          }, 
+          "cms": {
+            "CPU": 52000, 
+            "Disk": 5440, 
+            "Tape": 17600
+          }, 
+          "lhcb": {
+            "CPU": 81300, 
+            "Disk": 8370, 
+            "Tape": 15270
+          }
         }, 
-        "atlas": {
-          "CPU": 132125, 
-          "Disk": 11000, 
-          "Tape": 27625
+        "Q2": {
+          "alice": {
+            "CPU": 7300, 
+            "Disk": 758, 
+            "Tape": 754
+          }, 
+          "atlas": {
+            "CPU": 132125, 
+            "Disk": 11000, 
+            "Tape": 27625
+          }, 
+          "cms": {
+            "CPU": 52000, 
+            "Disk": 5440, 
+            "Tape": 17600
+          }, 
+          "lhcb": {
+            "CPU": 81300, 
+            "Disk": 8370, 
+            "Tape": 15270
+          }
         }, 
-        "cms": {
-          "CPU": 52000, 
-          "Disk": 5440, 
-          "Tape": 17600
+        "Q3": {
+          "alice": {
+            "CPU": 7300, 
+            "Disk": 758, 
+            "Tape": 754
+          }, 
+          "atlas": {
+            "CPU": 132125, 
+            "Disk": 11000, 
+            "Tape": 27625
+          }, 
+          "cms": {
+            "CPU": 52000, 
+            "Disk": 5440, 
+            "Tape": 17600
+          }, 
+          "lhcb": {
+            "CPU": 81300, 
+            "Disk": 8370, 
+            "Tape": 15270
+          }
         }, 
-        "lhcb": {
-          "CPU": 81300, 
-          "Disk": 8370, 
-          "Tape": 15270
+        "Q4": {
+          "alice": {
+            "CPU": 7300, 
+            "Disk": 758, 
+            "Tape": 754
+          }, 
+          "atlas": {
+            "CPU": 132125, 
+            "Disk": 11000, 
+            "Tape": 27625
+          }, 
+          "cms": {
+            "CPU": 52000, 
+            "Disk": 5440, 
+            "Tape": 17600
+          }, 
+          "lhcb": {
+            "CPU": 81300, 
+            "Disk": 8370, 
+            "Tape": 15270
+          }
         }
       }
     }, 
@@ -2917,9 +5289,29 @@
     "name": "US-AGLT2", 
     "pledges": {
       "2019": {
-        "atlas": {
-          "CPU": 66000, 
-          "Disk": 5500
+        "Q1": {
+          "atlas": {
+            "CPU": 66000, 
+            "Disk": 5500
+          }
+        }, 
+        "Q2": {
+          "atlas": {
+            "CPU": 66000, 
+            "Disk": 5500
+          }
+        }, 
+        "Q3": {
+          "atlas": {
+            "CPU": 66000, 
+            "Disk": 5500
+          }
+        }, 
+        "Q4": {
+          "atlas": {
+            "CPU": 66000, 
+            "Disk": 5500
+          }
         }
       }
     }, 
@@ -2939,10 +5331,33 @@
     "name": "US-FNAL-CMS", 
     "pledges": {
       "2019": {
-        "cms": {
-          "CPU": 260000, 
-          "Disk": 27200, 
-          "Tape": 88000
+        "Q1": {
+          "cms": {
+            "CPU": 260000, 
+            "Disk": 27200, 
+            "Tape": 88000
+          }
+        }, 
+        "Q2": {
+          "cms": {
+            "CPU": 260000, 
+            "Disk": 27200, 
+            "Tape": 88000
+          }
+        }, 
+        "Q3": {
+          "cms": {
+            "CPU": 260000, 
+            "Disk": 27200, 
+            "Tape": 88000
+          }
+        }, 
+        "Q4": {
+          "cms": {
+            "CPU": 260000, 
+            "Disk": 27200, 
+            "Tape": 88000
+          }
         }
       }
     }, 
@@ -2962,9 +5377,29 @@
     "name": "US-LBNL-ALICE", 
     "pledges": {
       "2019": {
-        "alice": {
-          "CPU": 36000, 
-          "Disk": 3000
+        "Q1": {
+          "alice": {
+            "CPU": 36000, 
+            "Disk": 3000
+          }
+        }, 
+        "Q2": {
+          "alice": {
+            "CPU": 36000, 
+            "Disk": 3000
+          }
+        }, 
+        "Q3": {
+          "alice": {
+            "CPU": 36000, 
+            "Disk": 3000
+          }
+        }, 
+        "Q4": {
+          "alice": {
+            "CPU": 36000, 
+            "Disk": 3000
+          }
         }
       }
     }, 
@@ -2984,9 +5419,29 @@
     "name": "US-MWT2", 
     "pledges": {
       "2019": {
-        "atlas": {
-          "CPU": 99000, 
-          "Disk": 8300
+        "Q1": {
+          "atlas": {
+            "CPU": 99000, 
+            "Disk": 8300
+          }
+        }, 
+        "Q2": {
+          "atlas": {
+            "CPU": 99000, 
+            "Disk": 8300
+          }
+        }, 
+        "Q3": {
+          "atlas": {
+            "CPU": 99000, 
+            "Disk": 8300
+          }
+        }, 
+        "Q4": {
+          "atlas": {
+            "CPU": 99000, 
+            "Disk": 8300
+          }
         }
       }
     }, 
@@ -3006,15 +5461,35 @@
     "name": "US-NET2", 
     "pledges": {
       "2019": {
-        "atlas": {
-          "CPU": 66000, 
-          "Disk": 5500
+        "Q1": {
+          "atlas": {
+            "CPU": 66000, 
+            "Disk": 5500
+          }
+        }, 
+        "Q2": {
+          "atlas": {
+            "CPU": 66000, 
+            "Disk": 5500
+          }
+        }, 
+        "Q3": {
+          "atlas": {
+            "CPU": 66000, 
+            "Disk": 5500
+          }
+        }, 
+        "Q4": {
+          "atlas": {
+            "CPU": 66000, 
+            "Disk": 5500
+          }
         }
       }
     }, 
     "rcsites": [
-      "BU_ATLAS_Tier2", 
-      "HU_ATLAS_Tier2"
+      "HU_ATLAS_Tier2", 
+      "BU_ATLAS_Tier2"
     ], 
     "tier_level": 2, 
     "vos": [
@@ -3029,18 +5504,38 @@
     "name": "US-SWT2", 
     "pledges": {
       "2019": {
-        "atlas": {
-          "CPU": 66000, 
-          "Disk": 5500
+        "Q1": {
+          "atlas": {
+            "CPU": 66000, 
+            "Disk": 5500
+          }
+        }, 
+        "Q2": {
+          "atlas": {
+            "CPU": 66000, 
+            "Disk": 5500
+          }
+        }, 
+        "Q3": {
+          "atlas": {
+            "CPU": 66000, 
+            "Disk": 5500
+          }
+        }, 
+        "Q4": {
+          "atlas": {
+            "CPU": 66000, 
+            "Disk": 5500
+          }
         }
       }
     }, 
     "rcsites": [
       "LUCILLE", 
-      "OU_OCHEP_SWT2", 
-      "OU_OSCER_ATLAS", 
+      "UTA_SWT2", 
       "SWT2_CPB", 
-      "UTA_SWT2"
+      "OU_OCHEP_SWT2", 
+      "OU_OSCER_ATLAS"
     ], 
     "tier_level": 2, 
     "vos": [
@@ -3055,10 +5550,33 @@
     "name": "US-T1-BNL", 
     "pledges": {
       "2019": {
-        "atlas": {
-          "CPU": 243000, 
-          "Disk": 20200, 
-          "Tape": 51000
+        "Q1": {
+          "atlas": {
+            "CPU": 243000, 
+            "Disk": 20200, 
+            "Tape": 51000
+          }
+        }, 
+        "Q2": {
+          "atlas": {
+            "CPU": 243000, 
+            "Disk": 20200, 
+            "Tape": 51000
+          }
+        }, 
+        "Q3": {
+          "atlas": {
+            "CPU": 243000, 
+            "Disk": 20200, 
+            "Tape": 51000
+          }
+        }, 
+        "Q4": {
+          "atlas": {
+            "CPU": 243000, 
+            "Disk": 20200, 
+            "Tape": 51000
+          }
         }
       }
     }, 
@@ -3078,13 +5596,45 @@
     "name": "ZA-CHPC-T2", 
     "pledges": {
       "2019": {
-        "alice": {
-          "CPU": 12000, 
-          "Disk": 1500
+        "Q1": {
+          "alice": {
+            "CPU": 12000, 
+            "Disk": 1500
+          }, 
+          "atlas": {
+            "CPU": 10000, 
+            "Disk": 1000
+          }
         }, 
-        "atlas": {
-          "CPU": 10000, 
-          "Disk": 1000
+        "Q2": {
+          "alice": {
+            "CPU": 12000, 
+            "Disk": 1500
+          }, 
+          "atlas": {
+            "CPU": 10000, 
+            "Disk": 1000
+          }
+        }, 
+        "Q3": {
+          "alice": {
+            "CPU": 12000, 
+            "Disk": 1500
+          }, 
+          "atlas": {
+            "CPU": 10000, 
+            "Disk": 1000
+          }
+        }, 
+        "Q4": {
+          "alice": {
+            "CPU": 12000, 
+            "Disk": 1500
+          }, 
+          "atlas": {
+            "CPU": 10000, 
+            "Disk": 1000
+          }
         }
       }
     }, 
