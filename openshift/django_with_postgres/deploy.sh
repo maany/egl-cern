@@ -7,3 +7,5 @@ docker push maany/openshift-egl-django
 
 oc delete all -l app=egl-cern
 oc new-app maany/openshift-egl-django~https://github.com/maany/egl-cern --env-file ../../.env.okd
+oc expose svc/egl-cern
+oc annotate route egl-cern --overwrite haproxy.router.openshift.io/timeout=15m
