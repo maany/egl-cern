@@ -96,7 +96,7 @@ if is_gunicorn_installed; then
     export WEB_CONCURRENCY=${WEB_CONCURRENCY:-$(get_default_web_concurrency)}
 
     echo "---> Serving application with gunicorn ($APP_MODULE) ..."
-    exec gunicorn "EGL.wsgi:application" --bind=0.0.0.0:8080 --access-logfile=- --config "$APP_CONFIG"
+    exec gunicorn "EGL.wsgi:application" --bind=0.0.0.0:8080 --access-logfile=- --timeout {GUNICORN_WORKER_TIMEOUT_SECONDS} --config "$APP_CONFIG"
   fi
 fi
 
