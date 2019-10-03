@@ -23,5 +23,7 @@ class RebusService(Singleton):
                     continue
                 site_obj.total_online_storage = site['TotalNearlineSize']
                 site_obj.total_online_storage = site['TotalOnlineSize']
+                if site_name == "T2_Estonia":
+                    return
                 SiteService.save(site_obj)
 

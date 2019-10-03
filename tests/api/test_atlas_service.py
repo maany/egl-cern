@@ -6,11 +6,12 @@ from django.test import TestCase
 from egl_rest.api.recon_chewbacca import ReconChewbacca
 from egl_rest.api.services.atlas_service import AtlasService
 from egl_rest.api.egl import EGL_API
+from egl_rest.api.services.cms_service import CMSService
 
 TEST_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
-class TestAtlasService(TestCase):
+class TestGridStatisticsServices(TestCase):
 
     def setUp(self):
         self.egl = EGL_API()
@@ -40,13 +41,21 @@ class TestAtlasService(TestCase):
         self.recon_chewbacca.cric_sites_file = self.cric_sites_file
         self.recon_chewbacca.rebus_sites_file = self.rebus_sites_file
         self.egl.recon_chewbacca = self.recon_chewbacca
-        self.recon_chewbacca.hunt_for_updates()
+        try:
+            self.recon_chewbacca.hunt_for_updates()
+        except Exception as e:
+            print(e)
 
-    def test_collect_global_running_job_stats(self):
+    def test_atlas_collect_global_running_job_stats(self):
 
         global_job_stats = AtlasService.fetch_all_stats(time_interval_start="2019-09-10 00:00",
                                                         time_interval_end="2019-09-11 00:00")
         print(global_job_stats)
+
+    def test_cms_collect_global_running_job_stats_cms(self):
+        cms_global_job_stats = CMSService.fetch_all_stats(time_interval_start="2019-09-10 00:00",
+                                                        time_interval_end="2019-09-11 00:00")
+        print(cms_global_job_stats)
 
     def tearDown(self) -> None:
         super().tearDown()

@@ -2,7 +2,7 @@ from egl_rest.api.helpers import Singleton, timestamp_datetime, datetime_timesta
 from egl_rest.api.render.atlas_data import AtlasData
 from egl_rest.api.services.grafana_service import GrafanaService
 from egl_rest.api.services.site_service import SiteService
-
+from django.conf import settings
 
 class AtlasService(Singleton):
 
@@ -13,7 +13,7 @@ class AtlasService(Singleton):
     def collect_running_job_stats(time_interval_start="now() -3h", time_interval_end="now()", dst_site=".*"):
 
         datasource_number = '9023'
-        api_key = 'eyJrIjoidG5xUFBFdmxFMTJqM1lUNGdJSGRnVDdXREFjdjllc2YiLCJuIjoicHVibGljX3Zpc3VhbGlzYXRpb24iLCJpZCI6MTd9'
+        api_key = settings.GRAFANA_ATLAS_API_KEY
         db_name = 'monit_production_atlasjm_running'
         query = 'SELECT sum("wavg_count") / 1 FROM "long_1h"."atlasjm_current_1h" WHERE  ' \
                 'time >= {time_interval_start} ' \
@@ -83,8 +83,9 @@ class AtlasService(Singleton):
             })
         output_dict = {
             "global_statistics": {
-                "running_jobs": global_running_jobs,
-                "site_level_stats": site_level_stats
-            }
+                "running_jobs": global_running_jobs
+            },
+            "site_level_stats": site_level_stats
         }
+
         return AtlasData.generate_v1_0(output_dict)
