@@ -10,7 +10,7 @@ class AtlasService(Singleton):
         Singleton.__init__(self)
 
     @staticmethod
-    def collect_running_job_stats(time_interval_start="now() -3h", time_interval_end="now()", dst_site="~ /^.*$/"):
+    def collect_running_job_stats(time_interval_start="now() -3h", time_interval_end="now()", dst_site=".*"):
 
         datasource_number = '9023'
         api_key = 'eyJrIjoidG5xUFBFdmxFMTJqM1lUNGdJSGRnVDdXREFjdjllc2YiLCJuIjoicHVibGljX3Zpc3VhbGlzYXRpb24iLCJpZCI6MTd9'
@@ -19,7 +19,7 @@ class AtlasService(Singleton):
                 'time >= {time_interval_start} ' \
                 'and time <= {time_interval_end} ' \
                 'AND ("jobstatus" = \'running\' ' \
-                'AND "dst_experiment_site" ={dst_site} ' \
+                'AND "dst_experiment_site" =~ /^{dst_site}$/' \
                 'AND "dst_cloud" =~ /^.*$/ ' \
                 'AND "dst_country" =~ /^.*$/ ' \
                 'AND "dst_federation" =~ /^.*$/ ' \
@@ -71,19 +71,20 @@ class AtlasService(Singleton):
                 time_interval_end = datetime_timestamp(time_interval_end)
         global_running_jobs = AtlasService.collect_running_job_stats(time_interval_start=time_interval_start,
                                                time_interval_end=time_interval_end)
-        # site_level_stats = []
-        # active_sites = SiteService.get_active_sites()
-        # for site in active_sites:
-        #     running_jobs = AtlasService.collect_running_job_stats(time_interval_start=time_interval_start,
-        #                                                           time_interval_end=time_interval_end,
-        #                                                           dst_site=site.name)
-        #     site_level_stats.append({
-        #         "site": site.name,
-        #         "running_jobs": running_jobs
-        #     })
+        site_level_stats = []
+        active_atlas_sites = SiteService.get_active_sites().filter(supported_vos__name__contains="atlas")
+        for site in active_atlas_sites:
+            running_jobs = AtlasService.collect_running_job_stats(time_interval_start=time_interval_start,
+                                                                  time_interval_end=time_interval_end,
+                                                                  dst_site=site.name)
+            site_level_stats.append({
+                "site": site.name,
+                "running_jobs": running_jobs
+            })
         output_dict = {
             "global_statistics": {
-                "running_jobs": global_running_jobs
+                "running_jobs": global_running_jobs,
+                "site_level_stats": site_level_stats
             }
         }
         return AtlasData.generate_v1_0(output_dict)

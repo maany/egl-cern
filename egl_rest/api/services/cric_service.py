@@ -99,7 +99,7 @@ class CRICService(Singleton):
             geo_cords = get_geo_cords("University of Florida")
         elif site_name == "T3_US_OSG":
             return site #virtual site
-        print(site_name)
+        
         site['latitude'] = geo_cords['latitude']
         site['longitude'] = geo_cords['longitude']
         return site
