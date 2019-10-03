@@ -95,6 +95,11 @@ class CRICService(Singleton):
             geo_cords = get_geo_cords("Moscow State University")
         elif site_name == "ucsb-cms":
             geo_cords = get_geo_cords("University of California Santa Barbara")
+        elif site_name == "FSU-HEP":
+            geo_cords = get_geo_cords("University of Florida")
+        elif site_name == "T3_US_OSG":
+            return site #virtual site
+        print(site_name)
         site['latitude'] = geo_cords['latitude']
         site['longitude'] = geo_cords['longitude']
         return site

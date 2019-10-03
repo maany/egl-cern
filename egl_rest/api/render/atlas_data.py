@@ -17,4 +17,4 @@ class AtlasData:
 
     @staticmethod
     def generate_v1_0(atlas_data):
-        return json.dump(atlas_data)
+        return json.dumps(atlas_data)

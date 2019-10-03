@@ -49,7 +49,7 @@ class AtlasService(Singleton):
         objects = {}
         for object in output:
             values = object.split(',')
-            time = timestamp_datetime(int(values[2]))
+            time = timestamp_datetime(int(values[2])).strftime("%Y-%m-%d %H:%M:%S")
             activity = values[1].split('=')[-1].replace('\\', ' ')
             value = values[3]
             if time in objects.keys():
