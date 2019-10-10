@@ -63,6 +63,7 @@ class TestGridStatisticsServices(TestCase):
         AliceService.collect_running_job_stats(time_interval_start="2019-09-10 00:00",
                                                          time_interval_end="2019-09-11 00:00",
                                                          data_dir="{TEST_DIR}/../data".format(TEST_DIR=TEST_DIR))
+
     def tearDown(self) -> None:
         super().tearDown()
         if os.path.isfile(self.cric_federations_file):

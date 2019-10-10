@@ -27,7 +27,6 @@ class ReconChewbacca:
             self.rebus_sites_url = "http://wlcg-rebus.cern.ch/apps/capacities/sites/ALL/{year}/{month}/json".format(year=datetime.datetime.now().year, month=datetime.datetime.now().month)
             self.rebus_sites_file = "./data/rebus_sites.json"
 
-
         def hunt_for_updates(self):
             output = {}
             data = {
@@ -130,10 +129,6 @@ class ReconChewbacca:
     def __setattr__(self, name, value):
         return setattr(self.instance, name, value)
 
-
-if __name__ == "__main__":
-    pass
-    #hunt_for_updates()
 
 
 

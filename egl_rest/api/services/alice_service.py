@@ -5,6 +5,12 @@ from os import walk
 import os
 from django.conf import settings
 from egl_rest.api.helpers import datetime_timestamp
+from egl_rest.api.services.site_service import SiteService
+from egl_rest.api.models import Site
+import logging
+from datetime import timedelta
+
+logger = logging.getLogger(__name__)
 
 
 class AliceService:
@@ -14,14 +20,22 @@ class AliceService:
         time_interval_start = datetime_timestamp(time_interval_start)
         time_interval_end = datetime_timestamp(time_interval_end)
         combined_data = AliceService.get_combined_data_for_time_interval(time_interval_start, time_interval_end, data_dir)
-        global_running_jobs = 0
         site_level_stats = []
-        for site in combined_data:
-            site_level_stats.append({
-                'site': combined_data[site]["MLname"],
-                'running_jobs': combined_data[site]['parallel_jobs']
-            })
-            global_running_jobs += combined_data[site]['parallel_jobs']
+        cric_alice_sites = SiteService.get_active_sites().filter(supported_vos__name__contains="alice")
+        global_running_jobs = 0
+        for site in cric_alice_sites:
+            running_jobs=0
+            for site_vo in site.sitevo_set.filter(vo__name="alice"):
+                alice_name = site_vo.name
+                if alice_name in combined_data.keys():
+                    running_jobs += combined_data[alice_name]['parallel_jobs']
+                    global_running_jobs += running_jobs
+                else:
+                    logger.error("Site {site_name} does not exist in combined data for alice job statistics".format(site_name=alice_name))
+                site_level_stats.append({
+                            'site': site.name,
+                            'running_jobs': running_jobs
+                        })
 
         output_dict = {
             "global_statistics": {
@@ -36,26 +50,31 @@ class AliceService:
     def get_combined_data_for_time_interval(time_interval_start, time_interval_end, data_dir):
         cron_interval = int(settings.ALICE_CRON_INTERVAL_MINUTES)
         requested_duration = int((time_interval_end - time_interval_start)/60000000000)
-
+        files_per_hour = int(60/cron_interval)
         if not os.path.exists("{data_dir}/alice".format(data_dir=data_dir)):
             AliceService.download_alice_files(data_dir)
         number_of_files_to_read = int(requested_duration/cron_interval)
-
         filenames = []
         for (dirpath, dirnames, files) in walk("{data_dir}/alice".format(data_dir=data_dir)):
             filenames.extend(files)
         number_of_files_available = len(filenames)
         num_files = min(number_of_files_to_read, number_of_files_available)
         filenames.sort(key=AliceService.cmp_key)
+        hourly_files = filenames[::files_per_hour]
         combined_data = {}
+        for file in hourly_files:
+            minutes_delta = int(file.split('_')[-1])
+            timestamp = time_interval_start + timedelta(minutes=minutes_delta)
+            formatted_timestamp = timestamp.strftime("%Y-%m-%d %H:%M:%S")
+
         current_file = 0
-        for file in filenames:
-            current_file = current_file + 1
+        for file in filenames[::files_per_hour]:
+            current_file = current_file + files_per_hour
             if current_file > num_files:
                 break
-            with open("{data_dir}/alice/{file}".format(data_dir=data_dir, file=file), 'r') as file:
-                file_data = json.load(file)
-                combined_data = AliceService.combine_files(combined_data, file_data)
+            with open("{data_dir}/alice/{file}".format(data_dir=data_dir, file=file), 'r') as f:
+                file_data = json.load(f)
+                combined_data[time_interval_start + timedelta(minutes=int(file.split['_'][-1]))] = AliceService.combine_files(combined_data, file_data)
         return combined_data
 
     @staticmethod
@@ -73,6 +92,7 @@ class AliceService:
             combined_data[site]["wall_time_KSI2Ks"] = int(combined_data[site]["wall_time_KSI2K"]) + int(file_data[site]["wall_time_KSI2K"])
 
         return combined_data
+
     @staticmethod
     def format_file(filedata):
         formatted_data = {}
