@@ -22,15 +22,20 @@ class AliceService:
         combined_data = AliceService.get_combined_data_for_time_interval(time_interval_start, time_interval_end, data_dir)
         site_level_stats = []
         cric_alice_sites = SiteService.get_active_sites().filter(supported_vos__name__contains="alice")
-        global_running_jobs = 0
+        global_running_jobs_dict = {}
+        for timestamp in combined_data:
+            global_running_jobs_dict[int(timestamp)] = 0
+            for site in combined_data[timestamp]:
+                global_running_jobs_dict[int(timestamp)] += int(combined_data[timestamp][site]['parallel_jobs'])
+
         for site in cric_alice_sites:
             running_jobs = {}
             for site_vo in site.sitevo_set.filter(vo__name="alice"):
                 alice_name = site_vo.name
                 if alice_name in AliceService.generate_file_dict_template(data_dir).keys():
                     for timestamp in combined_data.keys():
-                        running_jobs[int(timestamp)] = int(combined_data[timestamp][alice_name]['parallel_jobs'])
-                        global_running_jobs += running_jobs[timestamp]
+                        int_timestamp = int(timestamp)
+                        running_jobs[int_timestamp] = int(combined_data[timestamp][alice_name]['parallel_jobs'])
                 else:
                     logger.error("Site {site_name} does not exist in combined data for alice job statistics".format(site_name=alice_name))
 
@@ -40,7 +45,7 @@ class AliceService:
             })
         output_dict = {
             "global_statistics": {
-                "running_jobs": global_running_jobs
+                "running_jobs": global_running_jobs_dict
             },
             "site_level_stats": site_level_stats
         }
@@ -69,7 +74,7 @@ class AliceService:
                 if file_end_time <= timestamp:
                     files_to_parse.append(file)
             if len(files_to_parse) == 0:
-                logger.error("Alice jon statistics data not available for {timestamp} i.e {datetime}".format(
+                logger.error("Alice job statistics data not available for {timestamp} i.e {datetime}".format(
                     timestamp = timestamp,
                     datetime = timestamp_datetime(timestamp)
                 ))
@@ -81,43 +86,7 @@ class AliceService:
                 file_data = json.load(f)
                 output[timestamp] = file_data
         return output
-        # for index, file in enumerate(files_to_parse):
-        #     delta_minutes = int(file.split('_')[-1])
-        #     delta_seconds = delta_minutes * 60
-        #     timestamp = time_interval_end - delta_seconds
-        #     timestamp_str = timestamp_datetime(timestamp).strftime("%Y-%m-%d %H:%M:%S")
-        #     output[timestamp_str] = delta_minutes
-        #
-        # cron_interval = int(settings.ALICE_CRON_INTERVAL_MINUTES)
-        # requested_duration = int((time_interval_end - time_interval_start)/60000000000)
-        # files_per_hour = int(60/cron_interval)
-        #
-        #
-        # if not os.path.exists("{data_dir}/alice".format(data_dir=data_dir)):
-        #     AliceService.download_alice_files(data_dir)
-        # number_of_files_to_read = int(requested_duration/cron_interval)
-        # filenames = []
-        # for (dirpath, dirnames, files) in walk("{data_dir}/alice".format(data_dir=data_dir)):
-        #     filenames.extend(files)
-        # number_of_files_available = len(filenames)
-        # num_files = min(number_of_files_to_read, number_of_files_available)
-        # filenames.sort(key=AliceService.cmp_key)
-        # hourly_files = filenames[::files_per_hour]
-        # combined_data = {}
-        # for file in hourly_files:
-        #     minutes_delta = int(file.split('_')[-1])
-        #     timestamp = time_interval_start + timedelta(minutes=minutes_delta)
-        #     formatted_timestamp = timestamp.strftime("%Y-%m-%d %H:%M:%S")
-        #
-        # current_file = 0
-        # for file in filenames[::files_per_hour]:
-        #     current_file = current_file + files_per_hour
-        #     if current_file > num_files:
-        #         break
-        #     with open("{data_dir}/alice/{file}".format(data_dir=data_dir, file=file), 'r') as f:
-        #         file_data = json.load(f)
-        #         combined_data[time_interval_start + timedelta(minutes=int(file.split['_'][-1]))] = AliceService.combine_files(combined_data, file_data)
-        # return combined_data
+
 
     @staticmethod
     def generate_file_dict_template(data_dir):

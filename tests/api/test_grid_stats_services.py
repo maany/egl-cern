@@ -47,7 +47,6 @@ class TestGridStatisticsServices(TestCase):
         self.egl.recon_chewbacca = self.recon_chewbacca
         try:
             self.recon_chewbacca.hunt_for_updates()
-            self.egl.sequence_service.sequence_queue
         except Exception as e:
             print(e)
         EventHub.register_listener(self, SequenceCompletedEvent)
