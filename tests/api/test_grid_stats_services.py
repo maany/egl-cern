@@ -3,6 +3,9 @@ from shutil import copyfile
 
 from django.test import TestCase
 
+from egl_rest.api.event_hub import EventHub
+from egl_rest.api.event_hub.event_managers import IEGLEventListener
+from egl_rest.api.event_hub.events.data_fetch_parse_events import SequenceCompletedEvent
 from egl_rest.api.recon_chewbacca import ReconChewbacca
 from egl_rest.api.services.alice_service import AliceService
 from egl_rest.api.services.atlas_service import AtlasService
@@ -44,9 +47,10 @@ class TestGridStatisticsServices(TestCase):
         self.egl.recon_chewbacca = self.recon_chewbacca
         try:
             self.recon_chewbacca.hunt_for_updates()
+            self.egl.sequence_service.sequence_queue
         except Exception as e:
             print(e)
-
+        EventHub.register_listener(self, SequenceCompletedEvent)
     # def test_atlas_collect_global_running_job_stats(self):
     #
     #     global_job_stats = AtlasService.fetch_all_stats(time_interval_start="2019-09-10 00:00",
@@ -60,9 +64,13 @@ class TestGridStatisticsServices(TestCase):
 
     def test_alice_download_files(self):
         stats = AliceService.download_alice_files("{TEST_DIR}/../data".format(TEST_DIR=TEST_DIR))
-        AliceService.collect_running_job_stats(time_interval_start="2019-09-10 00:00",
-                                                         time_interval_end="2019-09-11 00:00",
+        AliceService.collect_running_job_stats(time_interval_start="2019-10-10 00:00",
+                                                         time_interval_end="2019-10-11 00:00",
                                                          data_dir="{TEST_DIR}/../data".format(TEST_DIR=TEST_DIR))
+
+    def notify(self, egl_event):
+        if type(egl_event) == SequenceCompletedEvent:
+            self.test_alice_download_files()
 
     def tearDown(self) -> None:
         super().tearDown()

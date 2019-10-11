@@ -66,8 +66,8 @@ class ReconChewbacca:
                 logger.info(rebus_sites_message)
 
             output['rebus_sites_message'] = rebus_sites_message
-
-            if was_rebus_sites_updated or was_cric_sites_updated or was_cric_federation_updated or was_kml_updated:
+            # update: not checking for kml updates, MapQuest query limit expires quickly otherwise
+            if was_rebus_sites_updated or was_cric_sites_updated or was_cric_federation_updated:
                 EventHub.announce_event(NewDataAvailableOnlineEvent(
                     created_by=ReconChewbacca.__name__,
                     holder=data
