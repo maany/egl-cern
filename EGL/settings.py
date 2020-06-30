@@ -15,7 +15,6 @@ from decouple import config
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
@@ -88,17 +87,6 @@ if config('MODE') == 'docker':
             'PASSWORD': config('POSTGRES_PASSWORD'),
             'HOST': 'db',
             'PORT': '5432',
-        }
-    }
-elif config('MODE') == 'local':
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': config('POSTGRES_DB_LOCAL', default='postgres'),
-            'USER': config('POSTGRES_USER_LOCAL', default='postgres'),
-            'PASSWORD': config('POSTGRES_PASSWORD_LOCAL', default=''),
-            'HOST': 'localhost',
-            'PORT': config('POSTGRES_PORT_LOCAL', default='5430'),
         }
     }
 elif config('MODE') == 'openshift':

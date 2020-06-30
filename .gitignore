@@ -105,4 +105,8 @@ venv.bak/
 # mypy
 .mypy_cache/
 
+.idea/
+postgres-data/
+
+
 

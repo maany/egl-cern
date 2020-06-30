@@ -1,3 +1,5 @@
+import os
+
 from egl_rest.api.helpers import Singleton, timestamp_datetime, datetime_timestamp
 from egl_rest.api.render.atlas_data import AtlasData
 from egl_rest.api.services.grafana_service import GrafanaService
@@ -13,7 +15,11 @@ class AtlasService(Singleton):
     def collect_running_job_stats(time_interval_start="now() -3h", time_interval_end="now()", dst_site="~ /^.*$/"):
 
         datasource_number = '9023'
-        api_key = 'eyJrIjoidG5xUFBFdmxFMTJqM1lUNGdJSGRnVDdXREFjdjllc2YiLCJuIjoicHVibGljX3Zpc3VhbGlzYXRpb24iLCJpZCI6MTd9'
+        api_key = os.environ.get('GRAFANA_ATLAS_API_KEY')
+
+        if not api_key:
+            raise Exception("Missing ATLAS job status API key")
+
         db_name = 'monit_production_atlasjm_running'
         query = 'SELECT sum("wavg_count") / 1 FROM "long_1h"."atlasjm_current_1h" WHERE  ' \
                 'time >= {time_interval_start} ' \
