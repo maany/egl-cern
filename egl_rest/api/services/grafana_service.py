@@ -1,7 +1,7 @@
 import multiprocessing
 
+import os
 import requests
-from django.conf import settings
 from time import time
 from queue import Queue
 from threading import Thread
@@ -118,7 +118,7 @@ def worker(transfers_string_array):
 
 
 class GrafanaService:
-    api_key = settings.GRAFANA_API_KEY
+    api_key = os.environ.get('GRAFANA_API_KEY')
 
     @staticmethod
     def fetch_influx_db_transfers_raw(filters):
@@ -226,6 +226,9 @@ class GrafanaService:
     def query_transfers_db(db_name, filters):
         GRAFANA_URL = 'https://monit-grafana.cern.ch/api/datasources/proxy/7794/query'
         query = "SELECT src_site, dst_site, vo, technology, transferred_volume, avg_file_size, count, avg_operation_time FROM {database_name} WHERE count>0 AND avg_operation_time>0"
+
+        if not GrafanaService.api_key:
+            raise Exception("Missing WLCG data transfers API key")
 
         ### starts_between handled while parsing data ###
 
