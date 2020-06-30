@@ -89,17 +89,6 @@ if config('MODE') == 'docker':
             'PORT': '5432',
         }
     }
-elif config('MODE') == 'local':
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': config('POSTGRES_DB_LOCAL', default='postgres'),
-            'USER': config('POSTGRES_USER_LOCAL', default='postgres'),
-            'PASSWORD': config('POSTGRES_PASSWORD_LOCAL', default=''),
-            'HOST': 'localhost',
-            'PORT': config('POSTGRES_PORT_LOCAL', default='5430'),
-        }
-    }
 elif config('MODE') == 'openshift':
     DATABASES = {
         'default': {
