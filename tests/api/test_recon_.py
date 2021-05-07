@@ -2,15 +2,16 @@ from django.test import TestCase
 from egl_rest.api.recon_chewbacca import ReconChewbacca
 import os
 from shutil import copyfile
-from egl_rest.api.render.site_data import SiteData
-from egl_rest.api.render.federation_data import FederationData
-
+from unittest.mock import patch
 TEST_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
 class ReconChewbaccaSequenceTests(TestCase):
 
     # def setUp(self):
+    #     self.patcher = patch('egl_rest.api.helpers.get_geo_coords')
+    #     self.patcher.start()
+    #
     #     self.google_earth_kml_file = "{TEST_DIR}/../data/google_earth_recon_test_kml.xml".format(TEST_DIR=TEST_DIR)
     #     self.cric_federations_file = "{TEST_DIR}/../data/cric_federations_recon_test_json.json".format(TEST_DIR=TEST_DIR)
     #     self.cric_sites_file = "{TEST_DIR}/../data/cric_sites_recon_test_json.json".format(TEST_DIR=TEST_DIR)
@@ -55,6 +56,6 @@ class ReconChewbaccaSequenceTests(TestCase):
     #     if os.path.isfile(self.cric_sites_file):
     #         copyfile(self.cric_sites_file, self.ref_cric_sites)
     #         os.remove(self.cric_sites_file)
-    #
-    #
+    #     self.patcher.stop()
     pass
+

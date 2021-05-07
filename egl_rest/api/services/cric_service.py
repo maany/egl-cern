@@ -5,8 +5,8 @@ from egl_rest.api.services.pledge_service import PledgeService
 from egl_rest.api.services.site_service import SiteService
 from egl_rest.api.services.vo_service import VOService
 from egl_rest.api.services.site_vo_service import SiteVOService
-from egl_rest.api.helpers import get_country, get_geo_cords
-
+from egl_rest.api.helpers import get_country, get_geo_coords
+from unittest.mock import patch
 
 class CRICService(Singleton):
 
@@ -26,7 +26,7 @@ class CRICService(Singleton):
                 site_obj.sources.append('cric_sites')
                 site_obj.latitude = site['latitude']
                 site_obj.longitude = site['longitude']
-                site_obj.hepspec06 = site['capacity']
+                site_obj.hepspec06 = site['cpu_capacity']
                 site_obj.cores = site['cores']
                 for site_vo in site['sites']:
                     vo_obj = VOService.get_or_create(site_vo['vo_name'])
@@ -53,16 +53,22 @@ class CRICService(Singleton):
                         site_obj.country = get_country(site['latitude'], site['longitude']).alpha_2
                 SiteService.save(site_obj)
 
+
+    def get_geo_coords(self):
+        return {"latitude": 10.0, "longitude": 10.0}
+
+
     @staticmethod
-    def cric_sites_location_patch(site_name, site):
+    @patch('egl_rest.api.helpers.get_geo_coords', side_effect=get_geo_coords, autospec=True)
+    def cric_sites_location_patch(site_name, site, get_geo_coords=None):
         if site["latitude"]!= 0.0 and site['longitude'] != 0.0:
             return site
         if "CERN" in site_name:
-            geo_cords = get_geo_cords("CERN")
+            geo_cords = get_geo_coords("CERN")
         if "WIGNER" in site_name:
-            geo_cords = get_geo_cords("Wigner Datacenter")
+            geo_cords = get_geo_coords("Wigner Datacenter")
         elif "CIEMAT-TIC" in site_name:
-            geo_cords = get_geo_cords("CIEMAT")
+            geo_cords = get_geo_coords("CIEMAT")
         elif "FZU" in site_name:
             geo_cords = {
                 "latitude": 50.123489,
@@ -74,29 +80,29 @@ class CRICService(Singleton):
                 "longitude": 23.819099
             }
         elif site_name == "GROW-PROD":
-            geo_cords = get_geo_cords("University of Iowa")
+            geo_cords = get_geo_coords("University of Iowa")
         elif site_name == "IN2P3-LPSC":
-            geo_cords = get_geo_cords(" Centre de calcul IN2P3")
+            geo_cords = get_geo_coords(" Centre de calcul IN2P3")
         elif site_name == "INFN-FIRENZE":
-            geo_cords = get_geo_cords("INFN florence")
+            geo_cords = get_geo_coords("INFN florence")
         elif site_name == "NYSGRID-CCR-U2":
-            geo_cords = get_geo_cords("University at Buffalo")
+            geo_cords = get_geo_coords("University at Buffalo")
         elif site_name == "NYSGRID_CORNELL_NYS1":
-            geo_cords = get_geo_cords("Cornell University")
+            geo_cords = get_geo_coords("Cornell University")
         elif site_name == "ORNL-T2":
-            geo_cords = get_geo_cords("oak ridge national laboratory")
+            geo_cords = get_geo_coords("oak ridge national laboratory")
         elif site_name == "Oslo":
-            geo_cords = get_geo_cords("University of Oslo")
+            geo_cords = get_geo_coords("University of Oslo")
         elif site_name == "UB-LCG2":
-            geo_cords = get_geo_cords("University of Barcelona")
+            geo_cords = get_geo_coords("University of Barcelona")
         elif "USTC" in site_name:
-            geo_cords = get_geo_cords("USTC China")
+            geo_cords = get_geo_coords("USTC China")
         elif site_name == "ru-Moscow-SINP-LCG2":
-            geo_cords = get_geo_cords("Moscow State University")
+            geo_cords = get_geo_coords("Moscow State University")
         elif site_name == "ucsb-cms":
-            geo_cords = get_geo_cords("University of California Santa Barbara")
+            geo_cords = get_geo_coords("University of California Santa Barbara")
         elif site_name == "FSU-HEP":
-            geo_cords = get_geo_cords("University of Florida")
+            geo_cords = get_geo_coords("University of Florida")
         elif site_name == "T3_US_OSG":
             return site #virtual site
         

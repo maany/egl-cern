@@ -38,7 +38,7 @@ def get_country(latitude, longitude):
     return py_country
 
 
-def get_geo_cords(address):
+def get_geo_coords(address):
     ctx = ssl.create_default_context(cafile=certifi.where())
     geopy.geocoders.options.default_ssl_context = ctx
     geolocation_api_key = settings.GEOLOCATION_API_KEY
