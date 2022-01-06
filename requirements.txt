@@ -2,7 +2,7 @@ PyYAML
 amqp==2.5.0
 attrs==19.1.0
 billiard==3.6.0.0
-celery==4.3.0
+celery==5.2.2
 certifi==2018.11.29
 chardet==3.0.4
 circuits==3.2
